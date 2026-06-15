@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-|> Last updated: 2026-06-15 | Total pages: 29
+|> Last updated: 2026-06-16 | Total pages: 30
 
 ## Entities
 
@@ -34,6 +34,8 @@
 - [[privileged-basis|Privileged Basis]] — architectural property where activation functions make basis directions special, encouraging feature-neuron alignment
 
 - [[cognitive-superposition|Cognitive Superposition]] — ability of a cognitive system to co-activate multiple independently acquired representations; backprop-trained DNNs fail at it, brain-constrained networks succeed via cell assemblies
+
+- [[belief-state-geometry|Belief State Geometry]] — linear representation of posterior distributions over hidden states in the transformer residual stream; encodes information about the entire future, not just next-token prediction
 
 - [[positional-encoding|Positional Encoding]] — sinusoidal encoding that gives transformers "3D semantic vision" by fusing position and meaning in a multi-scale coordinate system
 
@@ -71,6 +73,7 @@
 
 - [Toy Models of Superposition](raw/papers/toy-models-superposition/) (Anthropic Transformer Circuits Thread, 2022)
 - [On the ability of standard and brain-constrained DNNs to support cognitive superposition](raw/papers/cognitive-superposition-garagnani/) (Max Garagnani, Cognitive Neurodynamics, 2024)
+- [Transformers Represent Belief State Geometry in their Residual Stream](raw/papers/belief-state-geometry-residual-stream/) (Adam Shai et al., arXiv, 2024)
 
 ## Comparisons
 

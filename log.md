@@ -133,3 +133,12 @@
 - Updated concept: semantic-interference (added cross-link: contracts as structural antidote)
 - Updated concept: vibe-coding (added cross-link: contract programming as methodology)
 - Cross-links: contract-programming ↔ semantic-fractal, semantic-anchors, semantic-interference, vibe-coding, retrieval-augmented-generation, vladimir-ivanov
+
+## [2026-06-16] ingest | Transformers Represent Belief State Geometry in their Residual Stream
+- Raw source: raw/papers/belief-state-geometry-residual-stream/ (index.md)
+- Source: Adam Shai et al., arXiv:2405.15943 (cs.LG, cs.CL), May 2024
+- Created concept: belief-state-geometry
+- Updated concept: semantic-fractal (added source, wikilink to belief-state-geometry, replaced bare arxiv link with wikilink + provenance marker)
+- Updated concept: contract-programming (added source, wikilinks to belief-state-geometry and residual-connection, provenance marker)
+- Cross-links: belief-state-geometry ↔ semantic-fractal, contract-programming, residual-connection, transformer, superposition, cognitive-superposition
+

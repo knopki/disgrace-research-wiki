@@ -1,13 +1,14 @@
 ---
 title: Semantic Fractal
 created: 2026-06-16
-updated: 2026-06-17
+updated: 2026-06-16
 type: concept
 tags: [architecture, methodology]
 sources:
   - "[AI угрожает программистам могуществом параллелизма](raw/articles/2025-06-30-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/index.md)"
   - "[Позиционные кодировки: «объемное зрение» GPT и секреты AI-агентов](raw/articles/2025-07-04-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/index.md)"
   - "[Контрактное программирование: Ваш семантический щит в эпоху искусственного интеллекта](raw/articles/2025-07-05-kontraktnoe-programmirovanie-vash-semanticheskii-schit-v-epo/index.md)"
+  - "[Transformers Represent Belief State Geometry in their Residual Stream](raw/papers/belief-state-geometry-residual-stream/index.md)"
 confidence: medium
 ---
 
@@ -36,7 +37,7 @@ If the semantic fractal is a faithful model of how LLMs represent code, then:
 
 ## Belief State Geometry
 
-A 2024 study by Adam Shai et al. ([arxiv 2405.15943](https://arxiv.org/abs/2405.15943)) discovered that as a transformer generates output, it constructs a measurable **belief state geometry** in its residual stream. The model builds an internal fractal "plan" of the answer: each node is the model's belief about which semantic state it occupies, and edges are transitions between states. When the model writes code, it is effectively unfolding this inner semantic fractal.
+[[belief-state-geometry|Belief State Geometry]] (Shai et al., 2024) provides the empirical foundation for the semantic fractal metaphor. The study discovered that as a transformer generates output, it constructs a measurable belief state geometry — a linear representation of posterior distributions over hidden states — in its residual stream. The model builds an internal fractal "plan" of the answer: each node is the model's belief about which semantic state it occupies, and edges are transitions between states. When the model writes code, it is effectively unfolding this inner semantic fractal. ^[raw/papers/belief-state-geometry-residual-stream/index.md]
 
 Vladimir Ivanov connects this to [[contract-programming|Contract Programming]]: structured code contracts function as **belief state refiners** — they force the model to narrow its belief state precisely, constraining its internal fractal navigation to the correct path. This makes contracts a natural, not an imposed, mechanism for controlling LLM code generation. ^[raw/articles/2025-07-05-kontraktnoe-programmirovanie-vash-semanticheskii-schit-v-epo/index.md]
 
@@ -45,4 +46,5 @@ Vladimir Ivanov connects this to [[contract-programming|Contract Programming]]: 
 - [[innate-parallelism|Innate Parallelism]] — the broader thesis built on this metaphor
 - [[positional-encoding|Positional Encoding]] — the architectural mechanism that creates the multi-scale nested representations the fractal describes
 - [[contract-programming|Contract Programming]] — uses belief state geometry as its scientific foundation; contracts refine the model's internal fractal plan
+- [[belief-state-geometry|Belief State Geometry]] — the empirical phenomenon that grounds the fractal metaphor
 - [[vladimir-ivanov|Vladimir Ivanov]] — author who introduced the concept

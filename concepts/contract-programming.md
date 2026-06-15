@@ -1,12 +1,13 @@
 ---
 title: Contract Programming
 created: 2026-06-15
-updated: 2026-06-15
+updated: 2026-06-16
 type: concept
 tags: [technique, methodology, agent, tool-use]
 sources:
   - "[Контрактное программирование: Ваш семантический щит в эпоху искусственного интеллекта](raw/articles/2025-07-05-kontraktnoe-programmirovanie-vash-semanticheskii-schit-v-epo/index.md)"
   - "[Design by Contract (Wikipedia)](raw/articles/design-by-contract-wikipedia/index.md)"
+  - "[Transformers Represent Belief State Geometry in their Residual Stream](raw/papers/belief-state-geometry-residual-stream/index.md)"
 confidence: medium
 ---
 
@@ -78,7 +79,7 @@ A function's contract links it to specific spec items. Log statements like `logg
 
 ## Scientific Basis: Belief State Geometry
 
-The article grounds contract programming's effectiveness in a specific transformer property discovered by Adam Shai and colleagues ([arxiv 2405.15943](https://arxiv.org/abs/2405.15943)): as an LLM generates output, it constructs a complex **belief state geometry** in its residual stream — an internal fractal plan where each node is the model's "belief" about which semantic state it occupies, and edges are transitions between states.
+The article grounds contract programming's effectiveness in a specific transformer property discovered by Adam Shai and colleagues: [[belief-state-geometry|belief state geometry]] (Shai et al., 2024). As an LLM generates output, it constructs a complex belief state geometry in its [[residual-connection|residual stream]] — an internal fractal plan where each node is the model's "belief" about which semantic state it occupies, and edges are transitions between states. ^[raw/papers/belief-state-geometry-residual-stream/index.md]
 
 Contracts act as **belief state refiners**. When the model encounters a contract, it does not simply read instructions — the contract *forces* the model to narrow its belief state to exactly what the contract specifies: "Right now your belief state should be: you are writing a payment validation function. Your goal is to return True or False. Your input is a card number and an amount. Nothing else exists." ^[raw/articles/2025-07-05-kontraktnoe-programmirovanie-vash-semanticheskii-schit-v-epo/index.md]
 
