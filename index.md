@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-17 | Total pages: 20
+|> Last updated: 2026-06-17 | Total pages: 21
 
 ## Entities
 
@@ -33,9 +33,12 @@
 
 - [[privileged-basis|Privileged Basis]] — architectural property where activation functions make basis directions special, encouraging feature-neuron alignment
 
+- [[cognitive-superposition|Cognitive Superposition]] — ability of a cognitive system to co-activate multiple independently acquired representations; backprop-trained DNNs fail at it, brain-constrained networks succeed via cell assemblies
 - [[superposition|Superposition]] — phenomenon where neural networks represent more features than dimensions by tolerating interference between non-orthogonal feature directions
 
 ## Raw Sources
+
+### Articles
 
 - [AI угрожает программистам могуществом параллелизма](raw/articles/2025-06-30-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/) (Vladimir Ivanov, 2025-06-30)
 - [AI в управлении проектами — теперь Resource Leveling уже работает](raw/articles/2025-07-01-ai-v-upravlenii-proektami-teper-resource-leveling-uzhe-rab/) (Vladimir Ivanov, 2025-07-01)
@@ -46,7 +49,11 @@
 - [Дистрибутивная семантика](raw/articles/distributional-semantics-wikipedia/) (Wikipedia, 2026)
 - [Корпусная лингвистика](raw/articles/corpus-linguistics-wikipedia/) (Wikipedia, 2026)
 - [Frank Rosenblatt](raw/articles/frank-rosenblatt-wikipedia/) (Wikipedia, 2026)
-- [Toy Models of Superposition](raw/articles/toy-models-superposition/) (Anthropic Transformer Circuits Thread, 2022)
+
+### Papers
+
+- [Toy Models of Superposition](raw/papers/toy-models-superposition/) (Anthropic Transformer Circuits Thread, 2022)
+- [On the ability of standard and brain-constrained DNNs to support cognitive superposition](raw/papers/cognitive-superposition-garagnani/) (Max Garagnani, Cognitive Neurodynamics, 2024)
 
 ## Comparisons
 

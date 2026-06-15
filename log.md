@@ -62,10 +62,26 @@
 - Cross-links: perceptron ↔ frank-rosenblatt, word-embeddings, distributional-semantics
 
 ## [2026-06-17] ingest | Toy Models of Superposition (Anthropic, 2022)
-- Raw source: raw/articles/toy-models-superposition/ (index.html + index.txt + index.md)
+- Raw source: raw/papers/toy-models-superposition/ (index.html + index.txt + index.md)
 - Source: https://transformer-circuits.pub/2022/toy_model/index.html
 - Created entity: anthropic
 - Created concepts: superposition, polysemantic-neurons, privileged-basis
 - Updated: word-embeddings (added wikilinks to superposition, privileged-basis, anthropic)
 - Updated: distributional-semantics (added wikilink to superposition)
 - New tag added: organization (Meta category in SCHEMA.md)
+
+## [2026-06-17] restructure | raw/ split into articles/ and papers/
+
+- Added `raw/ Structure` section to SCHEMA.md defining `articles/` (blog posts, Wikipedia) vs `papers/` (academic publications).
+- Moved `raw/articles/toy-models-superposition/` to `raw/papers/toy-models-superposition/`.
+- Updated all 6 wiki pages referencing `raw/articles/toy-models-superposition/` (superposition, polysemantic-neurons, privileged-basis, anthropic, index.md, log.md).
+- Updated index.md Raw Sources section: added "Articles" and "Papers" subheadings.
+
+## [2026-06-17] ingest | Cognitive Superposition position paper (Garagnani, 2024)
+
+- Raw source: raw/papers/cognitive-superposition-garagnani/ (index.md)
+- Source: https://link.springer.com/article/10.1007/s11571-023-10061-1
+- Author: Max Garagnani
+- Created concept: cognitive-superposition
+- Updated: superposition (added distinguishing note + cross-link)
+- Cross-links: cognitive-superposition ↔ superposition, word-embeddings, polysemantic-neurons, anthropic

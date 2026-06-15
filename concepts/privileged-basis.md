@@ -5,13 +5,13 @@ updated: 2026-06-17
 type: concept
 tags: [model, architecture, paper]
 sources:
-  - "[Toy Models of Superposition](raw/articles/toy-models-superposition/index.md)"
+  - "[Toy Models of Superposition](raw/papers/toy-models-superposition/index.md)"
 confidence: high
 ---
 
 # Privileged Basis
 
-An architectural property of certain neural network layers where the basis directions (neurons) are structurally special, encouraging features to align with them rather than arbitrary directions in activation space. ^[raw/articles/toy-models-superposition/index.md]
+An architectural property of certain neural network layers where the basis directions (neurons) are structurally special, encouraging features to align with them rather than arbitrary directions in activation space. ^[raw/papers/toy-models-superposition/index.md]
 
 A privileged basis is created when an activation function is applied to the hidden layer — ReLU in particular breaks the rotational symmetry of the representation. Without this symmetry-breaking, any rotation of the activation space produces an identical model, and it is meaningless to ask whether a specific "neuron" is interpretable.
 
@@ -25,7 +25,7 @@ A privileged basis is created when an activation function is applied to the hidd
 | Superposition manifests as | Polysemantic neurons | Feature directions with interference |
 | Interpretability approach | Inspect individual neurons | Find meaningful directions (e.g., embedding arithmetic) |
 
-In a non-privileged basis, applying a random linear transformation `M` to the representation and `M^{-1}` to the downstream weights produces an identical model. This means basis directions have no special status — the interpretable structure is in the *directions*, not the basis. ^[raw/articles/toy-models-superposition/index.md]
+In a non-privileged basis, applying a random linear transformation `M` to the representation and `M^{-1}` to the downstream weights produces an identical model. This means basis directions have no special status — the interpretable structure is in the *directions*, not the basis. ^[raw/papers/toy-models-superposition/index.md]
 
 ## Role in Superposition
 
@@ -33,17 +33,17 @@ In a non-privileged basis, applying a random linear transformation `M` to the re
 
 - **In a privileged basis** (e.g., the ReLU hidden layer model): features align with basis directions to take advantage of the activation function. This creates [[polysemantic-neurons|polysemantic neurons]] — individual neurons that respond to multiple features. The toy model visualisation of `W` (features × neurons) directly shows which features each neuron encodes.
 
-- **Without a privileged basis** (e.g., the ReLU output model): features can be any direction. The model prefers negative interference (antipodal pairs) because ReLU at the output makes it free. Visualisation requires examining `W^TW` rather than `W`. ^[raw/articles/toy-models-superposition/index.md]
+- **Without a privileged basis** (e.g., the ReLU output model): features can be any direction. The model prefers negative interference (antipodal pairs) because ReLU at the output makes it free. Visualisation requires examining `W^TW` rather than `W`. ^[raw/papers/toy-models-superposition/index.md]
 
 ## The ReLU Hidden Layer Limitation
 
-In the toy model where a ReLU hidden layer creates a privileged basis, the model will try to *circumvent* the activation function if given any opportunity. For example, setting hidden biases all positive shifts neurons into the linear regime. When biases are removed, the model simulates a bias by averaging over many features. The model only uses the ReLU when absolutely forced to. ^[raw/articles/toy-models-superposition/index.md]
+In the toy model where a ReLU hidden layer creates a privileged basis, the model will try to *circumvent* the activation function if given any opportunity. For example, setting hidden biases all positive shifts neurons into the linear regime. When biases are removed, the model simulates a bias by averaging over many features. The model only uses the ReLU when absolutely forced to. ^[raw/papers/toy-models-superposition/index.md]
 
 The "computation in superposition" model (computing absolute value) does not have this issue because it *needs* the ReLU to compute absolute value, making the privileged basis genuinely functional.
 
 ## Linear Representation Hypothesis
 
-The broader claim underlying the privileged basis framework: features in neural networks are represented as **directions in activation space**, regardless of whether the basis is privileged. This is hypothesised to be widespread because: ^[raw/articles/toy-models-superposition/index.md]
+The broader claim underlying the privileged basis framework: features in neural networks are represented as **directions in activation space**, regardless of whether the basis is privileged. This is hypothesised to be widespread because: ^[raw/papers/toy-models-superposition/index.md]
 
 - Linear transformations dominate neural network computation (measured in FLOPs)
 - Linear representations make features "linearly accessible" to the next layer
