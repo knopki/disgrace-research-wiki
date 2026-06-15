@@ -349,7 +349,12 @@
 - Updated concept: longformer (added [[wikilink]] to big-bird in table + Relationship)
 - Cross-links: big-bird ↔ sparse-transformer, longformer, transformer, kv-caching, chain-of-continuous-thought
 
-## [2026-06-17] ingest | SpargeAttention (Zhang et al., 2025)
+## [2026-06-15] ingest | Small Language Models are the Future of Agentic AI (Belcak et al., NVIDIA, 2025)
+- Raw source: `raw/papers/2025-06-belcak-slm-agentic-ai/` (2506.02153.pdf + index.md)
+- Source: arXiv:2506.02153v1 — "Small Language Models are the Future of Agentic AI"
+- Authors: Peter Belcak, Greg Heinrich, Shizhe Diao, Yonggan Fu, Xin Dong, Saurav Muralidharan, Yingyan Celine Lin, Pavlo Molchanov (NVIDIA Research)
+- Content: position paper arguing SLMs (<10B) are sufficiently powerful, inherently more suitable, and necessarily more economical for most agentic AI invocations; explicitly advocates heterogeneous systems (LLM orchestrator + SLM workers) where general conversation is needed; includes A1 benchmark table, A2–A7 supporting arguments, and AV1–AV3 rebuttal of counter-views
+- Updated comparison: slm-moe-agentic-ai (retrofitted from concept→comparison; added Belcak raw source; nuanced position as heterogeneous not SLM-only; added A1 table; marked contested/medium-confidence; balanced synthesis)
 - Raw source: `raw/papers/2025-02-zhang-spargeattention/` (2502.18137.pdf + zhang2025spargeattn.md)
 - Source: arXiv:2502.18137 — "SpargeAttention: Accurate and Training-free Sparse Attention Accelerating Any Model Inference"
 - Authors: Jintao Zhang, Chendong Xiang, Haofeng Huang, Jia Wei, Haocheng Xi, Jun Zhu, Jianfei Chen (Tsinghua University / UC Berkeley, ICML 2025)
