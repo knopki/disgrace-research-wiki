@@ -91,4 +91,6 @@
 
 ## Comparisons
 
+- [[bfs-vs-dfs|BFS vs DFS]] — Standard comparison of graph traversal algorithms BFS and DFS; reference anchor for LLM reasoning analogies
+
 ## Queries

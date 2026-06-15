@@ -198,7 +198,17 @@
 - Cross-links: rational-unified-process ↔ contract-programming, vibe-coding
 
 
-|## [2026-06-15] schema | schema audit and fixes
+## [2026-06-15] ingest | BFS vs DFS (GeeksforGeeks)
+
+- Raw source: raw/articles/bfs-vs-dfs-gfg/ (index.md)
+- Source: https://www.geeksforgeeks.org/dsa/difference-between-bfs-and-dfs/
+- Content: classic comparison of Breadth-First Search and Depth-First Search; queue vs stack, level-by-level vs sub-tree-by-sub-tree
+- Created comparison: bfs-vs-dfs (reference anchor for BFS/DFS analogies in LLM reasoning pages)
+- Updated concept: semantic-superposition (wikilinked BFS/DFS mentions to new comparison page)
+- Updated concept: chain-of-continuous-thought (wikilinked BFS mention to new comparison page)
+- Cross-links: bfs-vs-dfs ↔ semantic-superposition, chain-of-continuous-thought
+
+||## [2026-06-15] schema | schema audit and fixes
 |- SCHEMA.md: added `technique` to tag taxonomy under Techniques (was in use on 8 pages but missing from schema)
 |- SCHEMA.md: updated `sources:` frontmatter example to YAML block list with markdown links (was inline array with bare paths)
 |- SCHEMA.md: fixed provenance marker convention to `^[raw/*/dir-name/index.md]` (was `source.md`; actual raw sources are directories)

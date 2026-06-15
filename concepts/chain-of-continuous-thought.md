@@ -47,7 +47,7 @@ The paper's central finding: continuous thoughts encode **multiple alternative n
 
 > "While 'lempus' initially has the highest value (0.33) at the first reasoning step... the model subsequently assigns the highest value (0.87) to 'rorpus,' a child of 'grimpus,' rather than following 'lempus.'"
 
-This demonstrates genuine **breadth-first search (BFS)** — the model maintains probability mass over several candidate branches and dynamically reweights them as more information accumulates. Unlike language CoT which greedily commits to a single path at each step, Coconut explores the reasoning graph in width. ^[raw/papers/2412.06769-coconut/index.md]
+This demonstrates genuine [[bfs-vs-dfs|breadth-first search (BFS)]] — the model maintains probability mass over several candidate branches and dynamically reweights them as more information accumulates. Unlike language CoT which greedily commits to a single path at each step, Coconut explores the reasoning graph in width. ^[raw/papers/2412.06769-coconut/index.md]
 
 ## Performance
 

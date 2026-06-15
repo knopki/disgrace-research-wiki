@@ -38,7 +38,7 @@ The user then tries to correct the model, but each correction fights against the
 
 ## BFS-Like Reasoning
 
-Delaying collapse allows breadth-first exploration of the solution space, analogous to graph traversal in width (BFS) rather than greedy depth-first search (DFS):
+Delaying collapse allows breadth-first exploration of the solution space, analogous to graph traversal in width ([[bfs-vs-dfs|BFS]]) rather than greedy depth-first search ([[bfs-vs-dfs|DFS]]):
 
 | Approach | Behavior | Result |
 |----------|----------|--------|
