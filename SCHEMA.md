@@ -13,10 +13,10 @@ agent frameworks, evaluation benchmarks, and research methodology.
 - When updating a page, always bump the `updated` date
 - Every new page must be added to `index.md` under the correct section
 - Every action must be appended to `log.md`
-- **Provenance markers:** On pages that synthesize 3+ sources, append `^[raw/articles/source-file.md]`
-  at the end of paragraphs whose claims come from a specific source. This lets a reader trace each
-  claim back without re-reading the whole raw file. Optional on single-source pages where the
-  `sources:` frontmatter is enough.
+- **Provenance markers:** On pages that synthesize 3+ sources, append `^[raw/articles/source.md]`
+  or `^[raw/papers/source.md]` at the end of paragraphs whose claims come from a specific source.
+  This lets a reader trace each claim back without re-reading the whole raw file. Optional on
+  single-source pages where the `sources:` frontmatter is enough.
 
 ## Frontmatter
   ```yaml
@@ -50,9 +50,16 @@ sha256: <hex digest of the raw content below the frontmatter>
 ---
 ```
 
-The `sha256:` lets a future re-ingest of the same URL skip processing when content is unchanged,
+|The `sha256:` lets a future re-ingest of the same URL skip processing when content is unchanged,
 and flag drift when it has changed. Compute over the body only (everything after the closing
 `---`), not the frontmatter itself.
+
+### raw/ Structure
+
+| Directory | Contents |
+|-----------|----------|
+| `raw/articles/` | Blog posts, news, Wikipedia pages, and other non-academic sources |
+| `raw/papers/` | Academic papers, preprints, conference publications, and theses |
 
 ## Tag Taxonomy
 - Models: model, architecture, benchmark, training, inference
