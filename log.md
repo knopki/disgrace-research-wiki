@@ -178,3 +178,11 @@
 - Updated concept: vibe-coding (added Microsoft dual programming → AI operator transition as real-world case study, added source to frontmatter)
 - Cross-links: microsoft ↔ vladimir-ivanov, vibe-coding
 
+## [2026-06-15] ingest | Rational Unified Process Wikipedia article
+
+- Raw source: raw/articles/rational-unified-process-wikipedia/ (index.md)
+- Source: https://en.wikipedia.org/wiki/Rational_unified_process
+- Content: iterative software development process framework by Rational/IBM; four life-cycle phases (Inception, Elaboration, Construction, Transition), nine disciplines, six best practices, RUP building blocks (roles, tasks, artifacts, guidance), certification, and relationship to UML
+- Created concept: rational-unified-process (methodology, iterative risk mitigation, contrasts with vibe-coding and connects to contract-programming through shared emphasis on explicit specification)
+- Cross-links: rational-unified-process ↔ contract-programming, vibe-coding
+
