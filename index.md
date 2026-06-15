@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-16 | Total pages: 12
+> Last updated: 2026-06-16 | Total pages: 13
 
 ## Entities
 
@@ -20,6 +20,7 @@
 - [[distributional-semantics|Distributional Semantics]] — Firth's principle that word meaning is entirely determined by context; validated by LLM embeddings
 - [[word-embeddings|Word Embeddings]] — how LLMs represent concepts as vectors in high-dimensional space, superposition catastrophe
 - [[retrieval-augmented-generation|Retrieval-Augmented Generation (RAG)]] — architectural pattern grounding LLM responses in externally retrieved knowledge
+- [[knowledge-graph|Knowledge Graph]] — structured entity-relationship knowledge base for grounding AI answers
 
 ## Raw Sources
 
@@ -28,6 +29,7 @@
 - [Семантическая интерференция. Или нажать «газ и тормоз» сразу в промптах](raw/articles/2025-07-01-semanticheskaya-interferenciya-ili-nazhat-gaz-i-tormoz-srazu/) (Vladimir Ivanov, 2025-07-01)
 - [Вектора GPT или почему для GPT ваше слово — пустота без контекста](raw/articles/2025-07-02-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon/) (Vladimir Ivanov, 2025-07-02)
 - [Генерация с дополненной выборкой (RAG)](raw/articles/rag-wikipedia/) (Wikipedia, 2026)
+- [Knowledge Graph (Google)](raw/articles/knowledge-graph-google-wikipedia/) (Wikipedia, 2026)
 
 ## Comparisons
 

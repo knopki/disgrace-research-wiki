@@ -61,6 +61,7 @@ and flag drift when it has changed. Compute over the body only (everything after
 - Infrastructure: serving, deployment, hardware, gpu, distributed
 - Research: methodology, evaluation, reproducibility, scaling-law, paper
 - Meta: comparison, timeline, controversy, prediction, survey
+- Knowledge: knowledge-graph, search, information-retrieval
 
 Rule: every tag on a page must appear in this taxonomy. If a new tag is needed,
 add it here first, then use it. This prevents tag sprawl.

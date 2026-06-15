@@ -26,6 +26,7 @@
 - Author: Vladimir Ivanov (2025-07-01)
 - Created concept: semantic-interference
 - Updated entity: vladimir-ivanov (added known work + source)
+
 ## [2026-06-16] ingest | Word Embeddings / Distributional Semantics article
 - Raw source: raw/articles/2025-07-02-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon/ (index.md + 5 images)
 - Author: Vladimir Ivanov (2025-07-02)
@@ -37,3 +38,10 @@
 - Source: Wikipedia (Russian), page "Генерация с дополненной выборкой"
 - Created concept: retrieval-augmented-generation
 - Cross-links: word-embeddings, distributional-semantics
+
+## [2026-06-16] ingest | Knowledge Graph (Google) Wikipedia article
+- Raw source: raw/articles/knowledge-graph-google-wikipedia/ (index.md)
+- Source: Wikipedia (English), page "Knowledge Graph (Google)"
+- Created concept: knowledge-graph
+- Cross-links: retrieval-augmented-generation, distributional-semantics, word-embeddings
+- New tag added: knowledge-graph (Knowledge category in SCHEMA.md)
