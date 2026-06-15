@@ -31,3 +31,9 @@
 - Author: Vladimir Ivanov (2025-07-02)
 - Updated entity: vladimir-ivanov (added known work + source)
 - Created concepts: distributional-semantics, word-embeddings
+
+## [2026-06-16] ingest | Retrieval-Augmented Generation (RAG) Wikipedia article
+- Raw source: raw/articles/rag-wikipedia/ (index.md)
+- Source: Wikipedia (Russian), page "Генерация с дополненной выборкой"
+- Created concept: retrieval-augmented-generation
+- Cross-links: word-embeddings, distributional-semantics
