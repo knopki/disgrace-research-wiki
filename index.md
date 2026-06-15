@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-|> Last updated: 2026-06-15 | Total pages: 33
+|> Last updated: 2026-06-15 | Total pages: 34
 
 ## Entities
 
@@ -55,6 +55,8 @@
 - [[transformer|Transformer]] — architecture using self-attention and positional encodings that superseded RNNs and became the foundation of modern LLMs
 - [[kv-caching|KV Caching]] — inference optimisation caching Key/Value states in auto-regressive transformers to avoid redundant recomputation
 
+- [[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]] — training paradigm replacing language CoT with reasoning directly in the continuous latent space of an LLM; enables emergent BFS-like reasoning
+
 ## Raw Sources
 
 ### Articles
@@ -85,6 +87,7 @@
 - [Toy Models of Superposition](raw/papers/toy-models-superposition/) (Anthropic Transformer Circuits Thread, 2022)
 - [On the ability of standard and brain-constrained DNNs to support cognitive superposition](raw/papers/cognitive-superposition-garagnani/) (Max Garagnani, Cognitive Neurodynamics, 2024)
 - [Transformers Represent Belief State Geometry in their Residual Stream](raw/papers/belief-state-geometry-residual-stream/) (Adam Shai et al., arXiv, 2024)
+- [Training Large Language Models to Reason in a Continuous Latent Space](raw/papers/2412.06769-coconut/) (Shibo Hao et al., FAIR at Meta / UC San Diego, arXiv, COLM 2025)
 
 ## Comparisons
 

@@ -6,7 +6,8 @@ type: concept
 tags: [technique, methodology, optimization]
 sources:
   - "[Кот Шрёдингера в голове у GPT: Как суперпозиция смыслов меняет правила игры с ИИ](raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/index.md)"
-confidence: medium
+  - "[Training Large Language Models to Reason in a Continuous Latent Space](raw/papers/2412.06769-coconut/index.md)"
+confidence: high
 ---
 
 # Semantic Superposition
@@ -44,7 +45,7 @@ Delaying collapse allows breadth-first exploration of the solution space, analog
 | Standard (greedy) | Model picks most probable first token → conditions everything on it | Premature collapse, narrow search |
 | Superposition (BFS-like) | Model evaluates multiple approach branches in latent space before committing | Broader search, better solutions |
 
-Meta's paper *"Training Large Language Models to Reason in a Continuous Latent Space"* (arXiv:2412.06769, 2024) is cited as supporting this: reasoning in continuous latent space lets the model explore a graph of possible solutions without forcing early token-level choices. ^[raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/index.md]
+Meta's paper [[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]] (arXiv:2412.06769, 2024) is cited as supporting this: reasoning in continuous latent space lets the model explore a graph of possible solutions without forcing early token-level choices. ^[raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/index.md]
 
 ## Practical Technique
 
@@ -71,11 +72,12 @@ The KV Cache, normally a trap, becomes a **stabilizer of structured thought**: t
 - **[[semantic-fractal|Semantic Fractal]]** — the representation architecture (code as branching vectors, not linear instructions) that makes semantic superposition possible. The fractal is the *structure* of the internal space; superposition is the *operational technique* that exploits it.
 - **[[contract-programming|Contract Programming]]** — contracts function as a practical mechanism for controlling when and how collapse happens. Well-structured pre/post conditions narrow the model's belief state (per [[belief-state-geometry|Belief State Geometry]]) without forcing premature commitment to an implementation.
 - **[[word-embeddings|Word Embeddings]]** — the vector basis: every token is a point in high-dimensional space. Semantic superposition works because these vectors are always linear combinations of many latent correlations.
+- **[[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]]** — the training paradigm that operationalises latent-space reasoning in LLMs, providing the mechanism (continuous thought) that enables deliberate delay of semantic collapse.
 - **[[kv-caching|KV Caching]]** — the mechanism behind semantic collapse: the KV Cache freezes generated tokens' trajectories, making collapse irreversible. Also serves as a stabiliser in structured superposition prompting.
 - **[[vibe-coding|Vibe Coding]]** — the high-level paradigm shift where programmers direct intent rather than write instructions. Semantic superposition provides one concrete methodology for how to direct that intent effectively.
 - **[[vladimir-ivanov|Vladimir Ivanov]]** — author who introduced and formalised the concept.
 
 ## References
 
-- Meta (2024). *Training Large Language Models to Reason in a Continuous Latent Space.* arXiv:2412.06769. — empirical basis for latent-space parallel exploration.
+- [[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]] — empirical basis for latent-space parallel exploration.
 

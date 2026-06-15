@@ -178,6 +178,17 @@
 - Updated concept: vibe-coding (added Microsoft dual programming → AI operator transition as real-world case study, added source to frontmatter)
 - Cross-links: microsoft ↔ vladimir-ivanov, vibe-coding
 
+## [2026-06-15] ingest | Training Large Language Models to Reason in a Continuous Latent Space (Coconut)
+
+- Raw source: raw/papers/2412.06769-coconut/ (index.md)
+- Source: Shibo Hao et al., FAIR at Meta / UC San Diego, arXiv:2412.06769, COLM 2025
+- Content: Chain of Continuous Thought (Coconut) — training paradigm replacing language chain-of-thought with reasoning directly in the continuous latent space of LLMs; enables emergent BFS-like reasoning via multi-stage curriculum; outperforms CoT on logical reasoning tasks with far fewer tokens
+- Created concept: chain-of-continuous-thought (Coconut paradigm, latent reasoning, BFS emergence, ProsQA dataset)
+- Updated concept: semantic-superposition (added as source + wikilink, bumped confidence to high)
+- Updated concept: kv-caching (added cross-link: latent reasoning sidesteps KV-cache rigidity)
+- Updated concept: transformer (added cross-link: latent reasoning exploits any-vector input capability)
+- Cross-links: chain-of-continuous-thought ↔ semantic-superposition, kv-caching, superposition, belief-state-geometry, transformer, word-embeddings, vibe-coding
+
 ## [2026-06-15] ingest | Rational Unified Process Wikipedia article
 
 - Raw source: raw/articles/rational-unified-process-wikipedia/ (index.md)

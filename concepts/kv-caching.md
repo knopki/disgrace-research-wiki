@@ -60,6 +60,7 @@ KV caching yields approximately **4.7× speedup** for 1000-token generation. The
 ## Relationship to Other Concepts
 
 - **[[transformer|Transformer]]** — KV caching is a property of the decoder-side self-attention mechanism; it does not apply to encoder self-attention or cross-attention in the same way.
+- **[[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]]** — a training paradigm that treats reasoning as a continuous latent loop, sidestepping KV-cache-induced rigidity by never committing to discrete tokens during reasoning.
 - **[[semantic-superposition|Semantic Superposition]]** — the KV Cache is the mechanism that makes semantic collapse irreversible: once a reasoning path is chosen and its tokens are generated, the cached K and V cement that trajectory, making it costly to backtrack. The cache also serves as a "stabilizer of structured thought" in superposition prompting by encoding the direction of investigation.
 - **[[positional-encoding|Positional Encoding]]** — positional information is embedded in the cached K and V representations, so the cache preserves each token's position-sensitive vector context.
 - **[[residual-connection|Residual Connection]]** — the cached K and V states come from specific attention layers, and the residual stream carries information up through the network independently of the cache.
