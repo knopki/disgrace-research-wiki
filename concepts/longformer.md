@@ -85,9 +85,9 @@ A seq2seq variant initialized from BART with:
 | Model | arXiv R-1 | arXiv R-2 | arXiv R-L |
 |-------|-----------|-----------|-----------|
 | LED-large (seqlen 16K) | **46.63** | **19.62** | **41.83** |
-| BigBird (seqlen 4K) | 46.63 | 19.02 | 41.77 |
+| [[big-bird|BigBird]] (seqlen 4K) | 46.63 | 19.02 | 41.77 |
 
-LED slightly outperforms BigBird (which uses task-specific Pegasus initialization) with no pretraining beyond BART init, purely by supporting longer inputs. Longer sequences consistently improve ROUGE scores.
+LED slightly outperforms [[big-bird|BigBird]] (which uses task-specific Pegasus initialization) with no pretraining beyond BART init, purely by supporting longer inputs. Longer sequences consistently improve ROUGE scores.
 
 ## Ablation Insights
 
@@ -100,6 +100,8 @@ From WikiHop development set ablations (all Longformer-base, 5 epochs):
 - **Performance gains are NOT from extra pretraining:** Longformer at seqlen 512 with full n² attention → 71.7 (worse than RoBERTa's 72.4)
 
 ## Relationship to Other Concepts
+
+- **[[big-bird|BigBird]]** — the closest contemporary (NeurIPS 2020, same venue). Both achieve O(n) attention with window + global components. BigBird uniquely adds random attention and provides theoretical guarantees (universal approximation, Turing completeness). On summarization, LED's advantage (seqlen 16K vs 4K) suggests input length is the binding constraint.
 
 - **[[sparse-transformer|Sparse Transformer]]** — the most closely related predecessor; both use sparse attention patterns for long sequences. Sparse Transformer uses factorized strided/fixed patterns (O(n√n)), while Longformer uses sliding window + global attention (O(n)). Longformer's CUDA kernel was partly inspired by Sparse Transformer's BlockSparse approach but is more flexible and maintainable. Sparse Transformer was the first to demonstrate 1M+ token sequences (at heavily reduced capacity); Longformer focused on practical deployment at 4K-16K tokens with pretrained weights.
 

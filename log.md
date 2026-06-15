@@ -338,3 +338,13 @@
 - Created concept: longformer (attention mechanism, three implementations, pretraining strategy, LED, ablation insights, results on text8, enwik8, WikiHop, TriviaQA, HotpotQA, arXiv summarization)
 - Updated concept: sparse-transformer (added [[wikilink]] to longformer in Significance & Legacy)
 - Cross-links: longformer ↔ sparse-transformer, transformer, kv-caching, chain-of-continuous-thought
+
+## [2026-06-17] ingest | BigBird (Zaheer et al., 2020)
+- Raw source: `raw/papers/2020-07-zaheer-big-bird/` (2007.14062.pdf + zaheer2020bigbird.md)
+- Source: arXiv:2007.14062 -- "Big Bird: Transformers for Longer Sequences"
+- Authors: Manzil Zaheer et al. (Google Research, NeurIPS 2020)
+- Content: linear-complexity attention combining random + window + global tokens; theoretical guarantees (universal approximation, Turing completeness); SOTA on TriviaQA, WikiHop, Natural Questions; summarization via RoBERTa/Pegasus warm-start; first genomics application of transformer-based DNA MLM
+- Created concept: big-bird (three-component attention, theoretical proofs, NLP results, genomics)
+- Updated concept: sparse-transformer (added [[wikilink]] to big-bird in Relationship and Legacy)
+- Updated concept: longformer (added [[wikilink]] to big-bird in table + Relationship)
+- Cross-links: big-bird ↔ sparse-transformer, longformer, transformer, kv-caching, chain-of-continuous-thought
