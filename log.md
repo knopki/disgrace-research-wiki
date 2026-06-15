@@ -206,7 +206,16 @@
 - Created comparison: bfs-vs-dfs (reference anchor for BFS/DFS analogies in LLM reasoning pages)
 - Updated concept: semantic-superposition (wikilinked BFS/DFS mentions to new comparison page)
 - Updated concept: chain-of-continuous-thought (wikilinked BFS mention to new comparison page)
-- Cross-links: bfs-vs-dfs ↔ semantic-superposition, chain-of-continuous-thought
+|||Cross-links: bfs-vs-dfs ↔ semantic-superposition, chain-of-continuous-thought
+
+## [2026-06-15] ingest | BFS for a Graph (GeeksforGeeks)
+
+- Raw source: raw/articles/bfs-gfg/ (index.md)
+- Source: https://www.geeksforgeeks.org/dsa/breadth-first-search-or-bfs-for-a-graph/
+- Content: full BFS algorithm — queue-based level-by-level traversal, visited array, O(V+E) complexity, disconnected graph handling, applications (shortest path, web crawling, social networks, GPS, cycle detection, Ford-Fulkerson)
+- Created concept: bfs (algorithm mechanics, disconnected graphs, applications, LLM reasoning relevance)
+- Updated comparison: bfs-vs-dfs (added See Also section with wikilink to new bfs page)
+- Cross-links: bfs ↔ bfs-vs-dfs, semantic-superposition, chain-of-continuous-thought, kv-caching
 
 ||## [2026-06-15] schema | schema audit and fixes
 |- SCHEMA.md: added `technique` to tag taxonomy under Techniques (was in use on 8 pages but missing from schema)

@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-|> Last updated: 2026-06-15 | Total pages: 34
+|> Last updated: 2026-06-15 | Total pages: 35
 
 ## Entities
 
@@ -15,6 +15,8 @@
 - [[anthropic|Anthropic]] — AI safety research company; published Toy Models of Superposition foundational interpretability work
 
 ## Concepts
+
+- [[bfs|Breadth-First Search (BFS)]] — graph traversal algorithm exploring level by level; mechanics, complexity, disconnected graphs, applications, and relevance to LLM reasoning analogies
 
 - [[perceptron|Perceptron]] — first neural network architecture; linear binary classifier invented by Rosenblatt that learns through trial and error
 
@@ -79,8 +81,10 @@
 - [Кот Шрёдингера в голове у GPT: Как суперпозиция смыслов меняет правила игры с ИИ](raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/) (Vladimir Ivanov, 2025-07-06)
 - [KV Caching Explained](raw/articles/kv-caching-explained/) (João Lages, Medium, 2023-10-08)
 
-- [За кулисами Microsoft: тайные элитные партнерские программы и ИИ-трансформация](raw/articles/2025-07-10-za-kulisami-microsoft-tainye-elitnye-partnerskie-programmy-i/) (Vladimir Ivanov, 2025-07-10)
-- [Rational Unified Process](raw/articles/rational-unified-process-wikipedia/) (Wikipedia, 2026)
+|- [За кулисами Microsoft: тайные элитные партнерские программы и ИИ-трансформация](raw/articles/2025-07-10-za-kulisami-microsoft-tainye-elitnye-partnerskie-programmy-i/) (Vladimir Ivanov, 2025-07-10)
+|- [Rational Unified Process](raw/articles/rational-unified-process-wikipedia/) (Wikipedia, 2026)
+|- [Difference between BFS and DFS](raw/articles/bfs-vs-dfs-gfg/) (GeeksforGeeks)
+|- [Breadth First Search or BFS for a Graph](raw/articles/bfs-gfg/) (GeeksforGeeks)
 
 ### Papers
 

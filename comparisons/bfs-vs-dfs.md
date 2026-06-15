@@ -30,6 +30,10 @@ Both algorithms serve as conceptual models for how LLMs explore their solution s
 - **Latent-space reasoning ([[chain-of-continuous-thought|Coconut]])** enables BFS-like behaviour: the model maintains probability mass over multiple candidate reasoning paths simultaneously, dynamically reweighting them as evidence accumulates. ^[raw/papers/2412.06769-coconut/index.md]
 - **[[semantic-superposition]]** exploits the same BFS analogy — delaying semantic collapse allows breadth-first exploration of reasoning branches before committing to a discrete token. ^[raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/index.md]
 
+## See Also
+
+- [[bfs|Breadth-First Search (BFS)]] — full BFS algorithm page (mechanics, disconnected graphs, applications)
+
 ## Source
 
 GeeksforGeeks — educational computer science resource.
