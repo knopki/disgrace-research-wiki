@@ -302,3 +302,14 @@
 - SCHEMA.md and AGENTS.md updated
 - 116 markers migrated across 30 wiki pages
 - Labels: Ivanov, 2025 (articles); Hao et al. 2024, Shai et al. 2024, Garagnani 2024, Anthropic 2022 (papers); Wikipedia (encyclopedic)
+
+## [2026-06-15] re-ingest | Garagnani cognitive superposition paper
+- **Corrected naming:** `raw/papers/cognitive-superposition-garagnani/` → `raw/papers/2024-02-garagnani-cognitive-superposition/`
+- **Added PDF:** downloaded original PDF (11571_2023_Article_10061.pdf, Open Access CC BY 4.0) from Springer
+- **New index.md:** frontmatter + abstract only, no transcription — links to PDF for full text
+- **Old directory removed:** `raw/papers/cognitive-superposition-garagnani/` deleted
+- **Fixes to concepts/cognitive-superposition.md:**
+  - Bowers violation corrected: condition (1), not (2) — items co-activated during training, violating the independently-acquired requirement
+  - Fabricated "thousands to tens of thousands of neurons per CA" claim removed — model has 6×625 = 3,750 cells total, no such claim in the PDF
+  - All provenance markers updated to new path
+- Updated: index.md (link path), concepts/cognitive-superposition.md (sources + provenance paths)
