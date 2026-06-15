@@ -112,6 +112,14 @@
 - Updated concept: vibe-coding (added source, cross-links to positional-encoding and semantic-anchors)
 - Cross-links: positional-encoding ↔ transformer, semantic-fractal, word-embeddings, vibe-coding, semantic-anchors
 
+## [2026-06-15] ingest | Design by Contract Wikipedia article
+
+- Raw source: raw/articles/design-by-contract-wikipedia/ (index.md)
+- Source: https://en.wikipedia.org/wiki/Design_by_contract
+- Content: Original DbC by Bertrand Meyer (1986-1988): client/supplier metaphor, Hoare triple, three questions, inheritance rules, offensive vs defensive programming, language support, history
+- Updated concept: contract-programming (added historical background, offensive vs defensive, performance/testing sections; added Wikipedia as second source; added wikilinks to vibe-coding, semantic-interference)
+- Cross-links: contract-programming ↔ vibe-coding, semantic-interference
+
 ## [2026-06-15] ingest | Contract Programming article (Vladimir Ivanov, 2025-07-05)
 
 - Raw source: raw/articles/2025-07-05-kontraktnoe-programmirovanie-vash-semanticheskii-schit-v-epo/ (index.md + 1 image)

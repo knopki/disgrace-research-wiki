@@ -6,12 +6,43 @@ type: concept
 tags: [technique, methodology, agent, tool-use]
 sources:
   - "[Контрактное программирование: Ваш семантический щит в эпоху искусственного интеллекта](raw/articles/2025-07-05-kontraktnoe-programmirovanie-vash-semanticheskii-schit-v-epo/index.md)"
+  - "[Design by Contract (Wikipedia)](raw/articles/design-by-contract-wikipedia/index.md)"
 confidence: medium
 ---
 
 # Contract Programming
 
-**Contract Programming** is the adaptation of Bertrand Meyer's Design by Contract (DbC) methodology for the era of AI-assisted software development. Where traditional DbC used formal preconditions, postconditions, and invariants to guarantee correctness, AI-era contracts embed rich natural-language semantic specifications directly in code comments — serving as a "semantic shield" that prevents LLM agents from making destructive modifications.
+**Contract Programming** is the adaptation of Bertrand Meyer's Design by Contract (DbC) methodology for the era of AI-assisted software development.
+
+## Historical Background: Meyer's Original DbC
+
+The original Design by Contract was introduced by **Bertrand Meyer** between 1986 and 1988 in connection with the **Eiffel** programming language. Meyer formalised the concept in his book *Object-Oriented Software Construction* (1988, 2nd ed. 1997), and "Design by Contract" was later registered as a trademark by Eiffel Software in 2004. The roots of DbC lie in Hoare logic (C. A. R. Hoare, 1969) — the formal verification framework that treats programs as triples of preconditions, computation, and postconditions. ^[raw/articles/design-by-contract-wikipedia/index.md]
+
+### The Core Metaphor
+
+Meyer's model uses a business contract between a **client** and a **supplier** (or **server**), defining mutual obligations and benefits:
+
+- The supplier may **require** certain conditions to be met (precondition) — the client's obligation.
+- The supplier **guarantees** certain results (postcondition) — the client's benefit.
+- The supplier must **maintain** a property throughout (invariant) — checked before and after every public method.
+
+This is semantically equivalent to a Hoare triple `{P} C {Q}`.
+
+### The Three Questions
+
+Every designer must answer three questions for each routine:
+
+1. **What does the contract expect?** (precondition)
+2. **What does the contract guarantee?** (postcondition)
+3. **What does the contract maintain?** (invariant)
+
+### Inheritance Rules (Behavioural Subtyping)
+
+Following the Liskov substitution principle:
+- Subclasses may **weaken** preconditions (accept wider input), not strengthen them.
+- Subclasses may **strengthen** postconditions and invariants (guarantee more), not weaken them. ^[raw/articles/design-by-contract-wikipedia/index.md]
+
+These rules ensure that a subclass object can always substitute its parent without violating client expectations — a concern that becomes critical when [[vibe-coding|vibe-coding]] agents inherit and extend code without understanding the original contract. Where traditional DbC used formal preconditions, postconditions, and invariants to guarantee correctness, AI-era contracts embed rich natural-language semantic specifications directly in code comments — serving as a "semantic shield" that prevents LLM agents from making destructive modifications.
 
 ## Motivation: The Problem of Semantic Incompleteness
 
@@ -89,6 +120,22 @@ The article argues that prompt engineering alone is insufficient for building re
 2. Writing contracts understood by both humans and machines
 3. Building logging systems integrated with code for navigation and debugging
 4. Training AI agents (like Cursor) to work with the markup rules
+
+## Offensive vs. Defensive Programming
+
+Meyer distinguished two philosophical approaches to contracts that carry forward into the AI era:
+
+**DbC (offensive programming):** The supplier assumes the client meets preconditions. If not, the supplier "fails hard" (assertion failure). This catches contract violations at their source — a LLM agent that calls a function without satisfying its precondition gets an immediate assertion error, making the failure obvious and localised. ^[raw/articles/design-by-contract-wikipedia/index.md]
+
+**Defensive programming:** The supplier tests preconditions and handles failures gracefully (exceptions, error codes). Used in distributed systems where client behaviour cannot be guaranteed.
+
+The AI-era shift: contracts in natural language make the *offensive* approach viable even with imprecise LLM agents. The contract explicitly states the precondition, and the LLM can reason about it before making the call — so "fail hard" becomes a clean signal rather than a crash. ^[raw/articles/2025-07-05-kontraktnoe-programmirovanie-vash-semanticheskii-schit-v-epo/index.md]
+
+## Performance and Testing Implications
+
+Traditional DbC disables contract checks in production (via `assert` removal or compiler flags) to avoid runtime overhead. AI-era contracts invert this: they are **never executed** — they live as comments and documentation — so there is zero runtime cost by design. This makes them strictly additive: they improve LLM reasoning without any performance tradeoff. ^[raw/articles/design-by-contract-wikipedia/index.md]
+
+DbC does not replace testing — contracts act as **test oracles**, specifying expected behaviour so both human-written and AI-generated tests can automatically verify correctness. However, the AI-era critique challenges this: for LLM agents, executable tests create [[semantic-interference|semantic noise]] that competes with core logic for context window space, while natural-language contract specifications serve as more direct reasoning anchors. ^[raw/articles/2025-07-05-kontraktnoe-programmirovanie-vash-semanticheskii-schit-v-epo/index.md]
 
 ## Related Concepts
 

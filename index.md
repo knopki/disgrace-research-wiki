@@ -65,6 +65,8 @@
 
 - [Позиционные кодировки: «объемное зрение» GPT и секреты AI-агентов](raw/articles/2025-07-04-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/) (Vladimir Ivanov, 2025-07-04)
 
+- [Design by Contract](raw/articles/design-by-contract-wikipedia/) (Wikipedia, 2026)
+
 ### Papers
 
 - [Toy Models of Superposition](raw/papers/toy-models-superposition/) (Anthropic Transformer Circuits Thread, 2022)
