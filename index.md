@@ -2,13 +2,15 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-17 | Total pages: 16
+> Last updated: 2026-06-17 | Total pages: 20
 
 ## Entities
 
 - [[vladimir-ivanov|Vladimir Ivanov]] — Turboplanner author; wrote on AI parallelism advantage
 
 - [[frank-rosenblatt|Frank Rosenblatt]] — American psychologist, inventor of the Perceptron, foundational contributor to neural networks and deep learning
+
+- [[anthropic|Anthropic]] — AI safety research company; published Toy Models of Superposition foundational interpretability work
 
 ## Concepts
 
@@ -27,6 +29,12 @@
 - [[knowledge-graph|Knowledge Graph]] — structured entity-relationship knowledge base for grounding AI answers
 - [[corpus-linguistics|Corpus Linguistics]] — branch of linguistics building annotated text corpora; foundational to NLP training data and RAG knowledge bases
 
+- [[polysemantic-neurons|Polysemantic Neurons]] — neurons that respond to multiple unrelated features; explained by the superposition hypothesis
+
+- [[privileged-basis|Privileged Basis]] — architectural property where activation functions make basis directions special, encouraging feature-neuron alignment
+
+- [[superposition|Superposition]] — phenomenon where neural networks represent more features than dimensions by tolerating interference between non-orthogonal feature directions
+
 ## Raw Sources
 
 - [AI угрожает программистам могуществом параллелизма](raw/articles/2025-06-30-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/) (Vladimir Ivanov, 2025-06-30)
@@ -38,6 +46,7 @@
 - [Дистрибутивная семантика](raw/articles/distributional-semantics-wikipedia/) (Wikipedia, 2026)
 - [Корпусная лингвистика](raw/articles/corpus-linguistics-wikipedia/) (Wikipedia, 2026)
 - [Frank Rosenblatt](raw/articles/frank-rosenblatt-wikipedia/) (Wikipedia, 2026)
+- [Toy Models of Superposition](raw/articles/toy-models-superposition/) (Anthropic Transformer Circuits Thread, 2022)
 
 ## Comparisons
 

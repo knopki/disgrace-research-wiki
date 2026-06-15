@@ -1,7 +1,7 @@
 ---
 title: Word Embeddings
 created: 2026-06-16
-updated: 2026-06-16
+updated: 2026-06-17
 type: concept
 tags: [architecture, technique]
 sources:
@@ -34,7 +34,7 @@ Each character's row is a semantic vector in a toy 4-dimensional space. Real GPT
 
 ## Superposition Catastrophe
 
-Why so many dimensions? When a model tries to encode multiple distinct concepts in a low-dimensional space, they collapse into a blended "mutant" — neither one concept nor the other. This is the **superposition catastrophe**, studied by Anthropic (toy models of superposition) and predicted by [[frank-rosenblatt|Frank Rosenblatt]] (perceptron inventor).
+Why so many dimensions? When a model tries to encode multiple distinct concepts in a low-dimensional space, they collapse into a blended "mutant" — neither one concept nor the other. This is the **superposition catastrophe**, a practical manifestation of [[superposition]] in embedding spaces without a [[privileged-basis|privileged basis]]. It was systematically studied by [[anthropic|Anthropic]] in their toy models and independently predicted by [[frank-rosenblatt|Frank Rosenblatt]].
 
 With low dimensionality, an apple vector and a pear vector merge into a "fruit-mutant" hallucination — the model forgets the originals. High-dimensional space (10k+) prevents this by giving each concept enough orthogonal axes to maintain its distinct correlation structure. ^[raw/articles/2025-07-02-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon/index.md]
 

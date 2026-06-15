@@ -60,3 +60,12 @@
 - Created concept: perceptron
 - Updated concept: word-embeddings (added wikilink to frank-rosenblatt)
 - Cross-links: perceptron ↔ frank-rosenblatt, word-embeddings, distributional-semantics
+
+## [2026-06-17] ingest | Toy Models of Superposition (Anthropic, 2022)
+- Raw source: raw/articles/toy-models-superposition/ (index.html + index.txt + index.md)
+- Source: https://transformer-circuits.pub/2022/toy_model/index.html
+- Created entity: anthropic
+- Created concepts: superposition, polysemantic-neurons, privileged-basis
+- Updated: word-embeddings (added wikilinks to superposition, privileged-basis, anthropic)
+- Updated: distributional-semantics (added wikilink to superposition)
+- New tag added: organization (Meta category in SCHEMA.md)

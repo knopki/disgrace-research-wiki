@@ -60,7 +60,7 @@ and flag drift when it has changed. Compute over the body only (everything after
 - Techniques: optimization, fine-tuning, alignment, rlhf, distillation, quantization, data
 - Infrastructure: serving, deployment, hardware, gpu, distributed
 - Research: methodology, evaluation, reproducibility, scaling-law, paper
-- Meta: comparison, timeline, controversy, prediction, survey
+- Meta: comparison, timeline, controversy, prediction, survey, organization
 - Knowledge: knowledge-graph, search, information-retrieval
 
 Rule: every tag on a page must appear in this taxonomy. If a new tag is needed,

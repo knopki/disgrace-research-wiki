@@ -1,7 +1,7 @@
 ---
 title: Distributional Semantics
 created: 2026-06-16
-updated: 2026-06-16
+updated: 2026-06-17
 type: concept
 tags: [methodology]
 sources:
@@ -88,6 +88,7 @@ Stop treating individual words as carrying sacred meaning. Every word is a point
 ## Related
 
 - [[word-embeddings|Word Embeddings]] — the mathematical realisation of distributional semantics in LLMs
+- [[superposition]] — why embedding spaces need high dimensionality to avoid feature collapse
 - [[semantic-interference|Semantic Interference]] — what happens when context vectors compete destructively
 - [[corpus-linguistics|Corpus Linguistics]] — the field that builds and annotates text corpora from which distributional models are trained
 - [[vladimir-ivanov|Vladimir Ivanov]] — author who connected distributional semantics to modern LLM embeddings
