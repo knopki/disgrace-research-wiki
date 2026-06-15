@@ -375,3 +375,14 @@
 - Created concept: v4a-diff-format (format spec, context anchoring, reference implementation, relationship to GRACE/contract-programming)
 - Updated concept: grace (added [[wikilink]] to v4a-diff-format in Direct Navigation and Deterministic Patching section)
 - Cross-links: v4a-diff-format ↔ grace, contract-programming
+
+## [2026-06-15] ingest | CoT Harms Performance of Rather Smaller Language Models (Shim et al., IEOM 2024)
+- Raw source: `raw/papers/2024-10-09-ship-cot-harms/` (shim2024cotharms.pdf + shim2024cotharms.md)
+- Source: https://index.ieomsociety.org/index.cfm/item/55021 — IEOM 1st World Congress 2024 Detroit
+- Authors: Jihoo Shim, Shin Dong Ho (My Paul School), Jeongwon Kim (Nihon University)
+- Track: High School STEM Poster Competition
+- Content: investigates CoT prompting on SLMs (GPT-2 117M–1558M, GPT-Neo 125M–2.7B) on GSM8K. CoT degrades accuracy by 15–30%+ with relative losses of 31–47% (GPT-2) and up to 100% (GPT-Neo 125M). Loss is multiplicative (proportional to baseline), not additive. Convergence effect: CoT scores cluster toward a ceiling. GPT-Neo shows slightly more resilience than GPT-2.
+- Created concept: chain-of-thought (CoT definition, effect by model size with results table, usage patterns, relationship to Continuous Thought)
+- Updated comparison: slm-moe-agentic-ai (added raw source + synthesis table row "Prompting robustness" + additional evidence paragraph)
+- Updated concept: chain-of-continuous-thought (added [[wikilink]] to chain-of-thought in Relationship to Other Concepts)
+- Cross-links: chain-of-thought ↔ chain-of-continuous-thought, slm-moe-agentic-ai

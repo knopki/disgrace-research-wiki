@@ -14,6 +14,7 @@ contradictions: []
 sources:
   - "[Small Language Models are the Future of Agentic AI](raw/papers/2025-06-belcak-slm-agentic-ai/belcak2025slm.md)"
   - "[Причины наблюдаемого провала малых SLM против LLM на MoE в AI-агентах](raw/articles/2025-09-14-ivanov-prichiny-nabludaemogo-provala-malyh-slm-protiv-llm-na-moe-v/ivanov2025slmvsllm.md)"
+  - "[CoT Harms Performance of Rather Smaller Language Models](raw/papers/2024-10-09-ship-cot-harms/shim2024cotharms.md)"
 ---
 
 # SLM vs MoE for Agentic AI
@@ -21,8 +22,6 @@ sources:
 The debate over whether Small Language Models (SLM, <10B parameters) or large Mixture-of-Experts (MoE) models will dominate AI agent workloads. Belcak et al. (NVIDIA Research, June 2025) argue SLMs are the future of agentic AI with significant caveats for heterogeneous systems. Ivanov (September 2025) counters with market data and architectural arguments. The two positions are not fully opposed — Belcak explicitly argues for heterogeneous systems (SLMs for subordinate tasks, LLMs for orchestration), while Ivanov argues MoE + MTP collapses the cost-quality gap to favor large models even at SLM-level compute.
 
 ## Belcak et al. (2025) Position
-
-**Source:** NVIDIA Research. arXiv:2506.02153v1. CC BY 4.0.
 
 ### Core Thesis (V1–V3)
 - **V1** — SLMs are sufficiently powerful for agentic language modeling errands
@@ -105,11 +104,14 @@ The two positions overlap more than they conflict.
 | **Cost-compute ratio** | SLMs win on absolute cost | MoE wins on quality-per-FLOP at similar active-parameter count |
 | **Edge deployment** | Critical advantage for SLMs | Acknowledged niche, not mainstream |
 | **Key evidence** | Benchmarks showing SLMs match larger models | Market usage data showing no SLM adoption |
+| **Prompting robustness** | Not addressed | CoT prompting — standard for LLMs — degrades SLM accuracy by 15–30%+, with losses of 31–47% on GPT-2 and up to 100% on GPT-Neo 125M (Shim et al., 2024) |
 | **Time horizon** | Forward-looking (SLM capabilities improving) | Present-day (what developers actually use) |
 
 **Key tension:** Both sides agree that agents expose narrow functionality. Belcak concludes "therefore SLM suffices." Ivanov counters "therefore why would I self-host a SLM when a free API gives me a better model?" The unresolved question is whether MoE + MTP can sustain its cost-quality advantage as SLM architectures continue to improve.
 
 **Bottom line:** The agentic AI future is unlikely to be SLM-dominant, but Belcak et al.'s heterogeneous system view is consistent with current practice (medium models dominate tool-use, large models handle orchestration). Ivanov's strongest counter is that MoE defeats the SLM cost argument — not that SLMs lack capability.
+
+**Additional evidence:** Shim et al. (IEOM, 2024) provide experimental evidence that CoT prompting degrades SLM accuracy by 15–30%+ on GSM8K — with relative losses of 31–47% on GPT-2 (345M–1558M) and up to 100% on GPT-Neo 125M. The loss is multiplicative (proportional to baseline), not additive, and CoT scores converge toward a ceiling, suggesting SLMs lack capacity to benefit from CoT's reasoning decomposition. ([Shim et al., 2024](raw/papers/2024-10-09-ship-cot-harms/shim2024cotharms.md))
 
 ## Related
 
@@ -117,4 +119,5 @@ The two positions overlap more than they conflict.
 - [[vibe-coding|Vibe Coding]] — agent-driven development context where model choice matters
 - [[kv-caching|KV Caching]] — inference optimisation; MTP provides orthogonal throughput gains
 - [[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]] — architectural innovation changing cost-quality landscape
+- [[chain-of-thought|Chain-of-Thought Prompting (CoT)]] — CoT harms SLMs, relevant to both sides of the SLM debate
 - [[sparse-transformer|Sparse Transformer]] — foundational sparse attention work for MoE architectures

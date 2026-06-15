@@ -64,6 +64,7 @@ Coconut excels on tasks requiring **substantial planning and search** (ProsQA), 
 
 ## Relationship to Other Concepts
 
+- **[[chain-of-thought|Chain-of-Thought Prompting (CoT)]]** — standard CoT that Coconut aims to improve upon; CoT also harms SLM performance (Shim et al., 2024), making Coconut's latent approach potentially valuable for smaller models
 - **[[semantic-superposition]]** — cites this paper as empirical basis for BFS-like reasoning in latent space. Coconut provides the mechanism (continuous thought) that enables deliberate delay of semantic collapse.
 - **[[kv-caching|KV Caching]]** — in language CoT, the KV Cache freezes the model's trajectory once a token is generated. Coconut avoids this by never committing to a discrete token during reasoning — the latent loop is fully within the hidden state, sidestepping cache-induced rigidity.
 - **[[superposition]]** — continuous thoughts encoding multiple alternatives is a direct expression of superposition: the hidden state represents more candidate reasoning paths than it has dimensions, tolerating interference between them.
