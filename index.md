@@ -2,13 +2,17 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-16 | Total pages: 13
+> Last updated: 2026-06-17 | Total pages: 16
 
 ## Entities
 
 - [[vladimir-ivanov|Vladimir Ivanov]] — Turboplanner author; wrote on AI parallelism advantage
 
+- [[frank-rosenblatt|Frank Rosenblatt]] — American psychologist, inventor of the Perceptron, foundational contributor to neural networks and deep learning
+
 ## Concepts
+
+- [[perceptron|Perceptron]] — first neural network architecture; linear binary classifier invented by Rosenblatt that learns through trial and error
 
 - [[innate-parallelism|Innate Parallelism]] — LLMs structurally generate parallel code by architectural design
 - [[semantic-fractal|Semantic Fractal]] — how LLMs represent code as branching semantic vectors, not linear instructions
@@ -21,6 +25,7 @@
 - [[word-embeddings|Word Embeddings]] — how LLMs represent concepts as vectors in high-dimensional space, superposition catastrophe
 - [[retrieval-augmented-generation|Retrieval-Augmented Generation (RAG)]] — architectural pattern grounding LLM responses in externally retrieved knowledge
 - [[knowledge-graph|Knowledge Graph]] — structured entity-relationship knowledge base for grounding AI answers
+- [[corpus-linguistics|Corpus Linguistics]] — branch of linguistics building annotated text corpora; foundational to NLP training data and RAG knowledge bases
 
 ## Raw Sources
 
@@ -31,6 +36,8 @@
 - [Генерация с дополненной выборкой (RAG)](raw/articles/rag-wikipedia/) (Wikipedia, 2026)
 - [Knowledge Graph (Google)](raw/articles/knowledge-graph-google-wikipedia/) (Wikipedia, 2026)
 - [Дистрибутивная семантика](raw/articles/distributional-semantics-wikipedia/) (Wikipedia, 2026)
+- [Корпусная лингвистика](raw/articles/corpus-linguistics-wikipedia/) (Wikipedia, 2026)
+- [Frank Rosenblatt](raw/articles/frank-rosenblatt-wikipedia/) (Wikipedia, 2026)
 
 ## Comparisons
 

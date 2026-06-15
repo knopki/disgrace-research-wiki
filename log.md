@@ -46,8 +46,17 @@
 - Cross-links: retrieval-augmented-generation, distributional-semantics, word-embeddings
 - New tag added: knowledge-graph (Knowledge category in SCHEMA.md)
 
-## [2026-06-16] ingest | Distributional Semantics (Wikipedia)
-- Raw source: raw/articles/distributional-semantics-wikipedia/ (index.md + 5 images in images/)
-- Source: Wikipedia (Russian), page "Дистрибутивная семантика"
-- Updated concept: distributional-semantics (added historical roots, math model, predictive models, applications)
-- Cross-links: word-embeddings, semantic-interference, vladimir-ivanov
+## [2026-06-17] ingest | Corpus Linguistics Wikipedia article
+- Raw source: raw/articles/corpus-linguistics-wikipedia/ (index.md)
+- Source: Wikipedia (Russian), page "Корпусная лингвистика"
+- Created concept: corpus-linguistics
+- Cross-links: distributional-semantics, retrieval-augmented-generation, word-embeddings, knowledge-graph
+- Updated: distributional-semantics (added cross-link to corpus-linguistics)
+
+## [2026-06-17] ingest | Frank Rosenblatt Wikipedia article
+- Raw source: raw/articles/frank-rosenblatt-wikipedia/ (index.md)
+- Source: Wikipedia (English), page "Frank Rosenblatt"
+- Created entity: frank-rosenblatt
+- Created concept: perceptron
+- Updated concept: word-embeddings (added wikilink to frank-rosenblatt)
+- Cross-links: perceptron ↔ frank-rosenblatt, word-embeddings, distributional-semantics

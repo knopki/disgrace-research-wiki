@@ -89,4 +89,5 @@ Stop treating individual words as carrying sacred meaning. Every word is a point
 
 - [[word-embeddings|Word Embeddings]] — the mathematical realisation of distributional semantics in LLMs
 - [[semantic-interference|Semantic Interference]] — what happens when context vectors compete destructively
+- [[corpus-linguistics|Corpus Linguistics]] — the field that builds and annotates text corpora from which distributional models are trained
 - [[vladimir-ivanov|Vladimir Ivanov]] — author who connected distributional semantics to modern LLM embeddings
