@@ -95,7 +95,7 @@
 
 ### Papers
 
-- [Toy Models of Superposition](raw/papers/toy-models-superposition/) (Anthropic Transformer Circuits Thread, 2022)
+- [Toy Models of Superposition](raw/papers/2022-09-elhage-toy-models-superposition/) (Anthropic Transformer Circuits Thread, 2022)
 - [On the ability of standard and brain-constrained DNNs to support cognitive superposition](raw/papers/2024-02-garagnani-cognitive-superposition/) (Max Garagnani, Cognitive Neurodynamics, 2024)
 - [Transformers Represent Belief State Geometry in their Residual Stream](raw/papers/2024-05-shai-belief-state-geometry/) (Adam Shai et al., NeurIPS 2024)
 - [Training Large Language Models to Reason in a Continuous Latent Space](raw/papers/2024-12-hao-coconut/) — abstract, full PDF, and plain-text at [index.md](raw/papers/2024-12-hao-coconut/index.md) (Shibo Hao et al., FAIR at Meta / UC San Diego, arXiv, COLM 2025)

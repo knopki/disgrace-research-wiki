@@ -5,7 +5,7 @@ updated: 2026-06-17
 type: entity
 tags: [paper, methodology, organization]
 sources:
-  - "[Toy Models of Superposition](raw/papers/toy-models-superposition/index.md)"
+  - "[Toy Models of Superposition](raw/papers/2022-09-elhage-toy-models-superposition/index.md)"
 confidence: high
 ---
 

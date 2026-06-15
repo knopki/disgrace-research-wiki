@@ -62,7 +62,7 @@
 - Cross-links: perceptron ↔ frank-rosenblatt, word-embeddings, distributional-semantics
 
 ## [2026-06-17] ingest | Toy Models of Superposition (Anthropic, 2022)
-- Raw source: raw/papers/toy-models-superposition/ (index.html + index.txt + index.md)
+- Raw source: raw/papers/2022-09-elhage-toy-models-superposition/ (index.html + index.txt + index.md)
 - Source: https://transformer-circuits.pub/2022/toy_model/index.html
 - Created entity: anthropic
 - Created concepts: superposition, polysemantic-neurons, privileged-basis
@@ -313,3 +313,10 @@
   - Fabricated "thousands to tens of thousands of neurons per CA" claim removed — model has 6×625 = 3,750 cells total, no such claim in the PDF
   - All provenance markers updated to new path
 - Updated: index.md (link path), concepts/cognitive-superposition.md (sources + provenance paths)
+
+## [2026-06-16] re-ingest | Toy Models of Superposition (Elhage et al., 2022)
+- Raw source renamed: `raw/papers/toy-models-superposition/` → `raw/papers/2022-09-elhage-toy-models-superposition/`
+- raw/index.md rewritten: now contains the paper's original abstract (verbatim from HTML) instead of a summary
+- Full source read (1023-line extraction from index.html); all 4 wiki pages cross-checked against source — no hallucinations found
+- All 6 wiki page references updated (superposition, polysemantic-neurons, privileged-basis, anthropic, index.md, log.md)
+- index.md paper entry link updated
