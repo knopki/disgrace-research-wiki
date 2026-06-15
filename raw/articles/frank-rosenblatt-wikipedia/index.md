@@ -1,7 +1,6 @@
 ---
 source_url: https://en.wikipedia.org/wiki/Frank_Rosenblatt
 ingested: 2026-06-17
-sha256: 9e960d9c480d771f31b26327fddca079f086099f9f2df7778f4b3c8f3550f813
 ---
 
 Frank Rosenblatt (July 11, 1928 – July 11, 1971) was an American psychologist notable in the field of artificial intelligence. He is sometimes called the father of deep learning for his pioneering work on artificial neural networks.

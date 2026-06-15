@@ -5,7 +5,6 @@ author: "Vladimir Ivanov"
 original_url: https://vk.com/@turboplanner-ai-ugrozhaet-programmistam-moguschestvom-parallelizma
 source_url: https://vk.com/@turboplanner-ai-ugrozhaet-programmistam-moguschestvom-parallelizma
 ingested: 2026-06-16
-sha256: 670c529f74c1913ab0c9c6877caef0b4321412563398eda1b2fbdc3a220e18fb
 ---
 
 # AI угрожает программистам могуществом параллелизма

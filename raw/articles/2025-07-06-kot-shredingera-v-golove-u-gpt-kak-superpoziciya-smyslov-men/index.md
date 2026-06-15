@@ -2,7 +2,6 @@
 title: "Кот Шрёдингера в голове у GPT: Как суперпозиция смыслов меняет правила игры с ИИ"
 source_url: https://vk.com/@turboplanner-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men
 ingested: 2026-06-17
-sha256: dff4791f4ef8c0b4cc3a9b34f42537e4c7b54c4a3eaee27a2f2acfacd69d5b82
 author: "Vladimir Ivanov"
 ---
 

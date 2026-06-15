@@ -1,7 +1,6 @@
 ---
 source_url: https://www.geeksforgeeks.org/dsa/breadth-first-search-or-bfs-for-a-graph/
 ingested: 2026-06-15
-sha256: 923a354be31a87334d69d849fb1c1dc435c3977e5d1bfe5763c99ccf93b67318
 ---
 
 # Breadth First Search (BFS) for a Graph — GeeksforGeeks

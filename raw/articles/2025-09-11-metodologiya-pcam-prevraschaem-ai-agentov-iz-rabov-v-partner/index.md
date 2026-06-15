@@ -1,7 +1,6 @@
 ---
 source_url: https://vk.com/@turboplanner-metodologiya-pcam-prevraschaem-ai-agentov-iz-rabov-v-partner
 ingested: 2026-06-15
-sha256: ccdee2bb731d943370c20debc639f59e02ab0f274279951cf5e592e3279a0080
 ---
 
 # Методология PCAM: Превращаем AI-агентов из рабов в партнеров

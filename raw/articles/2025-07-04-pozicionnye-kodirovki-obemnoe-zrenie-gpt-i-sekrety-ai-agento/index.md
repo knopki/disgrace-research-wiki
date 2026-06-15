@@ -4,7 +4,6 @@ date: 2025-07-04
 original_url: https://vk.com/@turboplanner-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento
 author: "Vladimir Ivanov"
 ingested: 2026-06-17
-sha256: b3228bce5383be392849dc4381650251b7d4f85c7ecdd758bb66d56c5fc12551
 ---
 
 # Позиционные кодировки: «объемное зрение» GPT и секреты AI-агентов

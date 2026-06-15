@@ -37,8 +37,8 @@ Skipping orientation causes duplicates, missed cross-references, and contradicte
 ## Workflow
 
 ### Ingest a source
-1. Save to `raw/` with frontmatter (source_url, ingested, sha256 of body)
-2. If same URL re-ingested: compare sha256 — skip if identical, flag drift if different
+1. Save to `raw/` with frontmatter (source_url, ingested)
+2. Compare body (after `---`) of new content vs old index.md. Same → skip, no `ingested` update.
 3. Discuss takeaways with user (skip in automated/cron contexts)
 4. Check existing pages — search index.md and grep for entities/concepts
 5. Create or update wiki pages following schema rules

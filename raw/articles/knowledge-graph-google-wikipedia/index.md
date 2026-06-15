@@ -1,7 +1,6 @@
 ---
 source_url: https://en.wikipedia.org/wiki/Knowledge_Graph_(Google)
 ingested: 2026-06-16
-sha256: c528c0008d4ffc6909ee990c0cd2bc488774add827aaae551a326c0ea10b9d16
 ---
 
 # Knowledge Graph (Google) — Wikipedia Summary

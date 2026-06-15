@@ -1,7 +1,6 @@
 ---
 source_url: https://en.wikipedia.org/wiki/Design_by_contract
 ingested: 2026-06-15
-sha256: c35a334fdda1f85941d03c4243583026178dd032811d5e53431fe05e82b0c4e3
 ---
 
 # Design by Contract (Wikipedia)

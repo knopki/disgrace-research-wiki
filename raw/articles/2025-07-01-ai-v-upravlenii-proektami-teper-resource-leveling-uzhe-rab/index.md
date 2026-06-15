@@ -3,7 +3,6 @@ title: "AI в управлении проектами - теперь Resource Le
 date: 2025-07-01
 source_url: https://vk.com/@turboplanner-ai-v-upravlenii-proektami-teper-resource-leveling-uzhe-rab
 ingested: 2026-06-16
-sha256: 967e7ddd4b1cb5575795c61455bc6aba2bcc8fd24f8e570e51fa0491cef952a6
 author: "Vladimir Ivanov"
 ---
 

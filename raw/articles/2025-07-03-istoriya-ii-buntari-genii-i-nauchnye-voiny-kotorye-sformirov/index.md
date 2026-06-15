@@ -1,7 +1,6 @@
 ---
 source_url: https://vk.com/@turboplanner-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov
 ingested: 2026-06-17
-sha256: 1de48fb6d2bf155666c3778b641570541d202cd2067196571f5e25077dce87c0
 ---
 
 # История ИИ: бунтари, гении и научные войны, которые сформировали наш мир

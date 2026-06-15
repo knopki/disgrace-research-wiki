@@ -1,7 +1,6 @@
 ---
 source_url: https://medium.com/@joaolages/transformers-kv-caching-explained-8e8f3d9e7b5e
 ingested: 2026-06-17
-sha256: 4993a5e3062111c3b55228cfb849e43f67115c722e3776d56080ffa6b997e845
 ---
 
 

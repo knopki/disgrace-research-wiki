@@ -1,7 +1,6 @@
 ---
 source_url: https://arxiv.org/abs/2412.06769
 ingested: 2026-06-15
-sha256: 6eb32c71eaa571b727ee95bce20396243fd70dc1ee8a37f91a7de717790d5b46
 ---
 
 # Training Large Language Models to Reason in a Continuous Latent Space

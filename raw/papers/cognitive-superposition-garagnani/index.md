@@ -1,7 +1,6 @@
 ---
 source_url: https://link.springer.com/article/10.1007/s11571-023-10061-1
 ingested: 2026-06-17
-sha256: 3e33487f0737038b5689269ea8bb1b70626f0514678d1c074a368a406bb71f20
 ---
 
 # On the Ability of Standard and Brain-Constrained Deep Neural Networks to Support Cognitive Superposition: A Position Paper

@@ -1,7 +1,6 @@
 ---
 source_url: https://en.wikipedia.org/wiki/Rational_unified_process
 ingested: 2026-06-15
-sha256: e50c795b83fcbfc9c1eed1ada8d229f33442cc40f7845ae570cf926f540d34c5
 ---
 
 The Rational Unified Process (RUP) is an iterative software development process framework created by the Rational Software Corporation, a division of IBM since 2003. RUP is not a single concrete prescriptive process, but rather an adaptable process framework, intended to be tailored by the development organizations and software project teams that will select the elements of the process that are appropriate for their needs. RUP is a specific implementation of the Unified Process.

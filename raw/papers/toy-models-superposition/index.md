@@ -1,7 +1,6 @@
 ---
 source_url: https://transformer-circuits.pub/2022/toy_model/index.html
 ingested: 2026-06-17
-sha256: e9dcfdf8caff5779d2ccbdc92bf182f2ec3df07725d511cadaed654fa6e4a6b2
 ---
 
 # Toy Models of Superposition

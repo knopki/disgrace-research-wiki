@@ -1,7 +1,6 @@
 ---
 source_url: https://www.geeksforgeeks.org/dsa/difference-between-bfs-and-dfs/
 ingested: 2026-06-15
-sha256: 4469426fe771e46e13137d676e7ba1605a81b80d9b89e2ac60cf17c79c7fb62e
 ---
 
 # Difference between BFS and DFS — GeeksforGeeks

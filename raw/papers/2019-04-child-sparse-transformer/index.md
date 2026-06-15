@@ -1,7 +1,6 @@
 ---
 source_url: https://arxiv.org/abs/1904.10509
 ingested: 2026-06-15
-sha256: 5b6a655a493557f38d2a40fc6ed4f88f0f111ee32197cebddceb4f4fdd10b415
 ---
 
 # Generating Long Sequences with Sparse Transformers

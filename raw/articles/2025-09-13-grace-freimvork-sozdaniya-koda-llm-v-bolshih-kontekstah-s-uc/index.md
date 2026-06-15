@@ -1,7 +1,6 @@
 ---
 source_url: https://vk.com/@turboplanner-grace-freimvork-sozdaniya-koda-llm-v-bolshih-kontekstah-s-uc
 ingested: 2026-06-15
-sha256: 7614a0f78ee5e963d03714f09e9a526df3b466525abf55b1e8e383790e2fffab
 ---
 
 # GRACE: Фреймворк создания кода LLM в больших контекстах с учетом sparse attention и особенностей RAG-агентов

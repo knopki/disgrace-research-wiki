@@ -1,7 +1,6 @@
 ---
 source_url: https://arxiv.org/abs/2405.15943
 ingested: 2026-06-17
-sha256: a4d7ea32691907de73d35481ee127f6bf4cedcb39f764f11a564c60abe2ab50a
 ---
 
 # Transformers Represent Belief State Geometry in their Residual Stream
