@@ -26,9 +26,10 @@ Author on VK for Turboplanner. Writes on AI in software engineering and project 
 - "[За кулисами Microsoft: тайные элитные партнерские программы и ИИ-трансформация](raw/articles/2025-07-10-za-kulisami-microsoft-tainye-elitnye-partnerskie-programmy-i/index.md)" (2025-07-10) — insider perspective on Microsoft's elite partnership programs (MVP, Partner Engagement Board, TAP) and how AI is transforming each; describes dual programming → AI operator transition as concrete vibe coding case study
 
 - "[Методология PCAM: Превращаем AI-агентов из рабов в партнеров](raw/articles/2025-09-11-metodologiya-pcam-prevraschaem-ai-agentov-iz-rabov-v-partner/index.md)" (2025-09-11) — introduces Purpose Centric Agent Methodology (PCAM), shifting agent management from deterministic plans to purpose-driven guidance; defines six principles of autonomous goal-oriented agent architecture
+- "[GRACE: Фреймворк создания кода LLM в больших контекстах с учетом sparse attention и особенностей RAG-агентов](raw/articles/2025-09-13-grace-freimvork-sozdaniya-koda-llm-v-bolshih-kontekstah-s-uc/index.md)" (2025-09-13) — introduces the GRACE (Graph-RAG Anchored Code Engineering) framework: dual-purpose semantic markup for both generative models and RAG agents, ten principles of scaffold-driven code generation, and a five-stage process model for deterministic LLM code synthesis
 ## Topics
 
-LLMs, parallel computing, project management automation, Microsoft partnership programs, AI-assisted planning, resource optimization, prompt engineering, word embeddings, distributional semantics, contract programming, semantic annotation architecture, semantic superposition, PCAM, agent methodology.
+LLMs, parallel computing, project management automation, Microsoft partnership programs, AI-assisted planning, resource optimization, prompt engineering, word embeddings, distributional semantics, contract programming, semantic annotation architecture, semantic superposition, PCAM, GRACE, agent methodology.
 
 ## Related
 
@@ -36,3 +37,4 @@ LLMs, parallel computing, project management automation, Microsoft partnership p
 - [[vibe-coding|Vibe Coding]] — his dual programming → AI operator analysis is a core case study
 - [[contract-programming|Contract Programming]] — he authored the foundational article adapting DbC for AI agents
 - [[pcam|PCAM]] — he authored the Purpose Centric Agent Methodology for autonomous agent architecture
+- [[grace|GRACE]] — he authored the GRACE framework for scaffold-driven code synthesis with dual-purpose semantic markup

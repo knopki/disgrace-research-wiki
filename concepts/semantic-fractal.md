@@ -49,3 +49,4 @@ Vladimir Ivanov connects this to [[contract-programming|Contract Programming]]: 
 - [[belief-state-geometry|Belief State Geometry]] — the empirical phenomenon that grounds the fractal metaphor
 - [[semantic-superposition|Semantic Superposition]] — the operational technique that exploits the fractal's branching structure; the fractal is the *representation*, superposition is the *prompt engineering paradigm* that navigates it
 - [[vladimir-ivanov|Vladimir Ivanov]] — author who introduced the concept
+- [[grace|GRACE]] — GRACE's hierarchical markup (knowledge graph → module contract → function contract) is a concrete engineering instantiation of the semantic fractal; the scaffold mirrors the model's internal fractal representation at every scale

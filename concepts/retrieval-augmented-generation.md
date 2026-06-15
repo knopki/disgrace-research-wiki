@@ -111,3 +111,4 @@ Key finding from RGB benchmarks: at 80%+ noise ratio, accuracy drops significant
 
 - [[word-embeddings|Word Embeddings]] — RAG depends on embedding models for semantic search; the embedding quality directly determines retrieval precision
 - [[distributional-semantics|Distributional Semantics]] — the theoretical foundation for why embedding-based retrieval works (meaning from context)
+- [[grace|GRACE]] — the GRACE framework explicitly addresses RAG agent limitations with its dual-purpose semantic markup: hierarchical navigation, progressive context collection, and deterministic patching via stable semantic coordinates for RAG agents

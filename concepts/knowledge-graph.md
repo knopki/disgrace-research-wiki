@@ -65,3 +65,4 @@ The two approaches are not mutually exclusive — hybrid architectures use a KG 
 - [[retrieval-augmented-generation|Retrieval-Augmented Generation (RAG)]] — the alternative grounding paradigm
 - [[distributional-semantics|Distributional Semantics]] — theoretical basis for entity embeddings in knowledge graphs
 - [[word-embeddings|Word Embeddings]] — how entities are represented as vectors in graph space
+- [[grace|GRACE]] — the GRACE framework explicitly uses knowledge graph linking of project artifacts as its 4th principle (Context via Knowledge Graph); all artifacts are linked via LINKS references to support cross-component reasoning

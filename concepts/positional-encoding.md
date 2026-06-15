@@ -58,3 +58,4 @@ This is why tools like Cursor generate patches as semantic descriptions ("find t
 - [[semantic-anchors|Semantic Anchors]] — a technique that exploits PE's weaknesses for reliable code patching
 - [[word-embeddings|Word Embeddings]] — PE is added to embeddings, so understanding embeddings is prerequisite
 - [[vibe-coding|Vibe Coding]] — the paradigm shift enabled by AI's structural understanding of code, of which PE is a foundational component
+- [[grace|GRACE]] — the GRACE framework's semantic anchors address the line-number problem that PE creates; XML-like paired tags leverage PE's ability to correlate identical tokens across large distances to overcome sparse attention degradation

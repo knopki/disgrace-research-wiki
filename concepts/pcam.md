@@ -73,3 +73,4 @@ This multi-agent feedback cycle is the mechanism that makes the system self-impr
 - [[semantic-anchors|Semantic Anchors]] — guides function as semantic knowledge anchors that orient the agent within its task domain
 - [[semantic-superposition|Semantic Superposition]] — both reject premature commitment; PCAM allows agents to explore alternatives before converging on a course of action
 - [[human-sequential-bottleneck|Human Sequential Bottleneck]] — deterministic plans encode human-linear thinking; PCAM liberates agents to parallelise and explore non-sequential approaches
+- [[grace|GRACE]] — PCAM defines the agent *management* paradigm; GRACE defines the code *creation* methodology; together they form complementary layers of the same engineering shift from control-based to scaffold-driven AI development

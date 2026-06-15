@@ -233,3 +233,14 @@
 - Created concept: pcam (six principles, plugin architecture, self-healing, feedback loop)
 - Updated entity: vladimir-ivanov (added known work + topics + Related wikilink)
 - Cross-links: pcam ↔ vladimir-ivanov, vibe-coding, contract-programming, semantic-anchors, semantic-superposition, human-sequential-bottleneck
+
+## [2026-06-15] ingest | GRACE framework article (Vladimir Ivanov, 2025-09-13)
+
+- Raw source: raw/articles/2025-09-13-grace-freimvork-sozdaniya-koda-llm-v-bolshih-kontekstah-s-uc/ (index.md + images/)
+- Source: vk.com/@turboplanner
+- Author: Vladimir Ivanov (2025-09-13)
+- Content: introduces GRACE (Graph-RAG Anchored Code Engineering) — framework for deterministic LLM code generation in large contexts addressing sparse attention and RAG agent limitations; ten principles (Intent-First Architecture, Synthesis from Approved Blueprints, AI-Readable Scaffolding, Context via Knowledge Graph, Dual-Purpose Semantic Markup, Proportional Granularity, Code as Living Document, Observable AI Belief State, End-to-End Traceability, Governed Autonomy); five-stage process model (Requirements Analysis → Technology Stack → Architectural Scaffold → Code Generation → Verification); dual-purpose semantic markup for generative models (top-down template) vs RAG agents (navigation map); sparse attention mitigation via XML tag beacons; belief state declaration via structured logging
+- Created concept: grace (ten principles, five-stage process, dual-purpose markup, sparse attention mitigation, knowledge graph linking)
+- Updated entity: vladimir-ivanov (added known work, GRACE to topics, wikilink to grace)
+- Updated concepts: semantic-anchors, contract-programming, pcam, vibe-coding, positional-encoding, belief-state-geometry, semantic-fractal, semantic-interference, knowledge-graph, retrieval-augmented-generation (added cross-link to grace)
+- Cross-links: grace ↔ vladimir-ivanov, semantic-anchors, contract-programming, pcam, vibe-coding, positional-encoding, belief-state-geometry, semantic-fractal, semantic-interference, knowledge-graph, retrieval-augmented-generation, human-sequential-bottleneck

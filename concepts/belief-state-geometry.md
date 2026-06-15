@@ -54,3 +54,4 @@ Belief state information may be distributed across transformer layers rather tha
 - [[contract-programming|Contract Programming]] — practical application that exploits belief state geometry
 - [[superposition|Superposition]] — related phenomenon of representing more features than dimensions
 - [[cognitive-superposition|Cognitive Superposition]] — the ability to maintain multiple independent representations, contrasted with belief state linear encoding
+- [[grace|GRACE]] — the GRACE framework operationalises belief state visibility as the "Observable AI Belief State" principle: structured logs tied to semantic blocks become explicit belief declarations, turning the model's hidden state into auditable artifacts

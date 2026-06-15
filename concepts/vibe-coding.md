@@ -47,4 +47,5 @@ This confirms the vibe coding thesis at enterprise scale: the bottleneck shifts 
 - [[semantic-anchors|Semantic Anchors]] — a concrete tooling technique that aligns with vibe coding's shift from line-based to semantic programming
 - [[contract-programming|Contract Programming]] — a concrete methodology for implementing vibe coding's intent-delegation model; contracts act as the "specification layer" the vibe coder defines
 - [[semantic-superposition|Semantic Superposition]] — a concrete prompting methodology that aligns with vibe coding's intent-delegation model; structuring instructions to keep options open before collapsing into the best solution
+- [[grace|GRACE]] — a concrete, production-grade methodology for implementing vibe coding's intent-delegation paradigm at enterprise scale; GRACE's scaffold-driven generation makes the shift from writing code to directing architectural decisions operational
 - [[microsoft|Microsoft]] — large-scale case study of the dual programming → AI operator transition
