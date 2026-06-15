@@ -26,3 +26,8 @@
 - Author: Vladimir Ivanov (2025-07-01)
 - Created concept: semantic-interference
 - Updated entity: vladimir-ivanov (added known work + source)
+## [2026-06-16] ingest | Word Embeddings / Distributional Semantics article
+- Raw source: raw/articles/2025-07-02-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon/ (index.md + 5 images)
+- Author: Vladimir Ivanov (2025-07-02)
+- Updated entity: vladimir-ivanov (added known work + source)
+- Created concepts: distributional-semantics, word-embeddings
