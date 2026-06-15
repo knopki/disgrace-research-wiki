@@ -2,9 +2,11 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-|> Last updated: 2026-06-17 | Total pages: 31
+|> Last updated: 2026-06-17 | Total pages: 32
 
 ## Entities
+
+- [[microsoft|Microsoft]] — Corporation behind Azure, GitHub Copilot; analyst describes elite partnership programs (MVP, TAP, Partner Engagement Board) and AI transformation via dual programming → AI operator model
 
 - [[vladimir-ivanov|Vladimir Ivanov]] — Turboplanner author; wrote on AI parallelism advantage
 
@@ -72,6 +74,8 @@
 - [Design by Contract](raw/articles/design-by-contract-wikipedia/) (Wikipedia, 2026)
 - [Кот Шрёдингера в голове у GPT: Как суперпозиция смыслов меняет правила игры с ИИ](raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/) (Vladimir Ivanov, 2025-07-06)
 - [KV Caching Explained](raw/articles/kv-caching-explained/) (João Lages, Medium, 2023-10-08)
+
+- [За кулисами Microsoft: тайные элитные партнерские программы и ИИ-трансформация](raw/articles/2025-07-10-za-kulisami-microsoft-tainye-elitnye-partnerskie-programmy-i/) (Vladimir Ivanov, 2025-07-10)
 
 ### Papers
 

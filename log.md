@@ -167,3 +167,14 @@
 - Updated concept: transformer (added cross-link to kv-caching)
 - Cross-links: kv-caching ↔ transformer, semantic-superposition, positional-encoding, residual-connection
 
+## [2026-06-17] ingest | Microsoft insider article (Vladimir Ivanov, 2025-07-10)
+
+- Raw source: raw/articles/2025-07-10-za-kulisami-microsoft-tainye-elitnye-partnerskie-programmy-i/ (index.md + 4 images)
+- Source: vk.com/@turboplanner
+- Author: Vladimir Ivanov (2025-07-10)
+- Content: insider perspective on Microsoft's elite partnership programs — MVP (Most Valuable Professional), Partner Engagement Board, Technology Adoption Program (TAP) — and their roles in product Vision validation and code review; 2010 partner network reform stripping Gold status from major Russian integrators; dual programming model's natural transition to AI operator model; AI replacing closed expert boards with large-scale sentiment analysis
+- Created entity: microsoft (partnership programs, AI transformation, dual programming case study)
+- Updated entity: vladimir-ivanov (added known work + source)
+- Updated concept: vibe-coding (added Microsoft dual programming → AI operator transition as real-world case study, added source to frontmatter)
+- Cross-links: microsoft ↔ vladimir-ivanov, vibe-coding
+
