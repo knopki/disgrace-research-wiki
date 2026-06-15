@@ -116,6 +116,7 @@ Sparse patterns **converged to lower error than dense attention** while running 
 - **[[longformer|Longformer]] and [[big-bird|BigBird]]** — the direct successors that refined sparse attention into practical linear-complexity architectures. Longformer (sliding window + global) and BigBird (random + window + global) both achieve O(n) instead of Sparse Transformer's O(n√n), and introduced pretrained weights for downstream finetuning.
 
 - **[[transformer|Transformer]]** — the base architecture that Sparse Transformer modifies by introducing sparse attention factorizations
+- **[[spargeattn|SpargeAttn]]** — a training-free dynamic sparse attention operator applied post-hoc to any pretrained model, unlike Sparse Transformer's fixed architectural sparse patterns. SpargeAttn achieves 4.5× speedup on Llama3.1 128K with near-zero metric loss.
 - **[[kv-caching|KV Caching]]** — a complementary inference-time optimisation; sparse attention reduces per-step compute (O(√n) per position), KV caching avoids recomputation across steps. Both can be combined
 - **[[positional-encoding|Positional Encoding]]** — Sparse Transformer uses learned positional embeddings (data-dim for images, attention-dim for text), differing from sinusoidal encodings
 - **[[residual-connection|Residual Connection]]** — pre-activation residual blocks are the architectural backbone enabling 128+ layer stacks

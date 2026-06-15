@@ -348,3 +348,15 @@
 - Updated concept: sparse-transformer (added [[wikilink]] to big-bird in Relationship and Legacy)
 - Updated concept: longformer (added [[wikilink]] to big-bird in table + Relationship)
 - Cross-links: big-bird ↔ sparse-transformer, longformer, transformer, kv-caching, chain-of-continuous-thought
+
+## [2026-06-17] ingest | SpargeAttention (Zhang et al., 2025)
+- Raw source: `raw/papers/2025-02-zhang-spargeattention/` (2502.18137.pdf + zhang2025spargeattn.md)
+- Source: arXiv:2502.18137 — "SpargeAttention: Accurate and Training-free Sparse Attention Accelerating Any Model Inference"
+- Authors: Jintao Zhang, Chendong Xiang, Haofeng Huang, Jia Wei, Haocheng Xi, Jun Zhu, Jianfei Chen (Tsinghua University / UC Berkeley, ICML 2025)
+- Content: universal training-free sparse attention operator with two-stage online filter — (1) selective token compression for sparse mask prediction, (2) sparse warp online softmax to skip P̃V products; self-similarity judge for fix block protection; HilbertCurve permutation for visual tokens; integrated with SageAttention (8-bit quantized); 1.83× speedup on Mochi (L40), 4.5× speed on Llama3.1 128K, up to 54% sparsity
+- Created concept: spargeattn (two-stage filter, selective token compression, sparse warp online softmax, HilbertCurve permutation, self-similarity judge, SageAttention integration, hyper-parameter tuning, results table, comparison with architectural sparse methods)
+- Updated concept: sparse-transformer (added [[wikilink]] to spargeattn)
+- Updated concept: longformer (added [[wikilink]] to spargeattn)
+- Updated concept: big-bird (added [[wikilink]] to spargeattn)
+- Updated concept: kv-caching (added [[wikilink]] to spargeattn)
+- Cross-links: spargeattn ↔ sparse-transformer, longformer, big-bird, kv-caching, transformer

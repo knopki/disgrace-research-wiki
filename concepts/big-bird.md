@@ -97,6 +97,7 @@ A novel contribution — BigBird is the first attention-based contextual languag
 - **[[kv-caching|KV Caching]]** — complementary inference optimisation compatible with BigBird's O(n) attention.
 
 - **[[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]]** — both address transformer efficiency: BigBird via attention sparsity, Coconut via latent-space reasoning.
+- **[[spargeattn|SpargeAttn]]** — training-free post-hoc sparse attention operator, orthogonal to BigBird's architectural approach. SpargeAttn can accelerate any pretrained model including BigBird-style architectures.
 
 ## Significance & Legacy
 

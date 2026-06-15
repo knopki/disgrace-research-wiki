@@ -108,5 +108,6 @@ From WikiHop development set ablations (all Longformer-base, 5 epochs):
 - **[[transformer|Transformer]]** — the base architecture Longformer modifies; Longformer's attention mechanism is a drop-in replacement requiring no other architecture changes.
 
 - **[[kv-caching|KV Caching]]** — complementary inference optimisation; Longformer's O(n) attention per layer is compatible with KV caching during auto-regressive generation.
+- **[[spargeattn|SpargeAttn]]** — a different paradigm: training-free dynamic sparse attention applied post-hoc to any model, unlike Longformer's built-in architectural sparse patterns. SpargeAttn achieves higher sparsity at long sequences (54% at 128K) but requires no model retraining.
 
 - **[[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]]** — both address transformer efficiency limits from different angles: Longformer via attention sparsity, Coconut via latent-space reasoning that sidesteps token-by-token generation.
