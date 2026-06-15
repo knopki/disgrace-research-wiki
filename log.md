@@ -97,3 +97,17 @@
 - Updated concept: perceptron (added cross-links to new pages)
 - Created concepts: backpropagation, lstm, residual-connection, transformer
 - Cross-links: all 4 new pages interconnected; backpropagation ↔ perceptron ↔ frank-rosenblatt; transformer ↔ residual-connection; lstm ↔ backpropagation
+
+## [2026-06-17] ingest | Positional Encodings / Semantic Anchors article (Vladimir Ivanov, 2025-07-04)
+
+- Raw source: raw/articles/2025-07-04-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/ (index.md + 3 images)
+- Source: vk.com/@turboplanner
+- Author: Vladimir Ivanov (2025-07-04)
+- Content: deep dive into sinusoidal PE geometry (sin/cos, frequency nesting, phase/angle), the semantic fractal as a concrete PE phenomenon, the line-number problem, and the `# ANCHOR:` semantic anchor pattern as Anthropic's "secret sauce"
+- Created concept: positional-encoding (PE geometry, frequency nesting, code-as-AST, line-number problem)
+- Created concept: semantic-anchors (anchor markers, SWE Bench implications, relation to PE)
+- Updated entity: vladimir-ivanov (added known work + source)
+- Updated concept: semantic-fractal (added PE mechanism section, expanded cross-links)
+- Updated concept: transformer (added source, cross-links to positional-encoding and semantic-anchors)
+- Updated concept: vibe-coding (added source, cross-links to positional-encoding and semantic-anchors)
+- Cross-links: positional-encoding ↔ transformer, semantic-fractal, word-embeddings, vibe-coding, semantic-anchors

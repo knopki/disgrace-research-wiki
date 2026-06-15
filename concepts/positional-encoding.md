@@ -1,0 +1,60 @@
+---
+title: Positional Encoding
+created: 2026-06-17
+updated: 2026-06-17
+type: concept
+tags: [architecture, model, training]
+sources:
+  - "[Позиционные кодировки: «объемное зрение» GPT и секреты AI-агентов](raw/articles/2025-07-04-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/index.md)"
+confidence: high
+---
+
+# Positional Encoding
+
+Positional Encoding (PE) is a technique that injects token order information into the [[transformer|Transformer]] architecture, which otherwise processes all tokens in parallel and has no inherent notion of sequence position. Beyond simple indexing, sinusoidal PE creates a multi-scale coordinate system that gives the model "3D semantic vision" — the ability to perceive nested structural hierarchies in text and code simultaneously.
+
+## Why Positional Encoding Exists
+
+The Transformer processes all tokens in a single parallel pass via self-attention. Unlike [[lstm|LSTM]] or RNNs, it has no sequential state. Without position information, the bag-of-words permutation-invariance problem is fatal: "dog bit man" and "man bit dog" produce identical representations. PE solves this by adding a position-dependent signal to each token's embedding before the first attention layer. ^[raw/articles/2025-07-04-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/index.md]
+
+## Sinusoidal Geometry
+
+The original "Attention Is All You Need" paper (Vaswani et al., 2017) proposed sine and cosine functions at varying frequencies:
+
+- **Position through phase.** Each dimension `i` of the encoding vector uses a wave with a unique frequency. The sin/cos value at position `pos` is the token's **phase** on that wave, encoding where it falls in a structure of that wavelength.
+- **Proximity through angle.** Two tokens at a fixed distance `k` have the same angle between their PE vectors regardless of absolute position, letting the model learn relational patterns like "the word three positions after this one."
+- **Nesting through frequency bands.** The model uses hundreds of waves with periods ranging from ~2 tokens to thousands of tokens simultaneously, enabling it to see position at multiple scales at once:
+  - Low-frequency (long period) waves encode position at the **chapter** level
+  - Mid-frequency waves encode position at the **paragraph** level
+  - High-frequency (short period) waves encode position at the **sentence** level
+
+Because a single token's PE vector contains values for all these frequencies simultaneously, it carries position information across every level of the hierarchy — creating a [[semantic-fractal|Semantic Fractal]]: a self-similar, multi-scale representation of text structure.
+
+## Fusion with Semantic Embeddings
+
+Crucially, PE is **not** appended as separate dimensions — it is **added directly** to the token's semantic embedding vector. The resulting vector that enters the first attention layer is a fused representation containing both *what* the token means and *where* it sits in the text hierarchy. This means position and semantics are entangled from the start, not processed separately. ^[raw/articles/2025-07-04-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/index.md]
+
+## Code as Nested Structure
+
+PE's multi-scale nature is especially powerful for code. To the model, code is not a flat sequence of lines but a deeply nested structure analogous to an Abstract Syntax Tree (AST), but more flexible:
+
+- A token like `library_name` in `print(f"{library_name}: ...")` has a position at the character level
+- That `print` call sits inside an `else` block
+- The `if/elif/else` construct lives inside a `try` block
+- The `try` block is inside function `print_library_version`
+
+GPT sees all these nesting levels simultaneously, understanding that `library_name` is simultaneously a function argument, a `try`-block local, and part of a format string in an `else` branch. This makes competitive programming (Codeforces-level) problems trivial for LLMs.
+
+## The Line-Number Problem
+
+The same "3D vision" that makes code understanding effortless creates a surprising weakness: **LLMs are bad at line numbers**. A line number is a flat, human-centric abstraction. For a model that thinks in nested semantic coordinates, "replace line 25" is nearly meaningless — that coordinate doesn't exist in its internal space. ^[raw/articles/2025-07-04-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/index.md]
+
+This is why tools like Cursor generate patches as semantic descriptions ("find the `validatePassword` call inside the hash-check block") rather than line-number diffs. It also motivates the [[semantic-anchors|Semantic Anchors]] technique — placing stable, unique markers in code that give the model reliable semantic coordinates for patch application.
+
+## Cross-Links
+
+- [[transformer|Transformer]] — the architecture that requires PE
+- [[semantic-fractal|Semantic Fractal]] — the multi-scale nested structure PE creates in the model's internal representation
+- [[semantic-anchors|Semantic Anchors]] — a technique that exploits PE's weaknesses for reliable code patching
+- [[word-embeddings|Word Embeddings]] — PE is added to embeddings, so understanding embeddings is prerequisite
+- [[vibe-coding|Vibe Coding]] — the paradigm shift enabled by AI's structural understanding of code, of which PE is a foundational component

@@ -6,6 +6,7 @@ type: concept
 tags: [model, architecture, benchmark]
 sources:
   - "[История ИИ: бунтари, гении и научные войны](raw/articles/2025-07-03-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/index.md)"
+  - "[Позиционные кодировки: «объемное зрение» GPT и секреты AI-агентов](raw/articles/2025-07-04-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/index.md)"
 confidence: high
 ---
 
@@ -51,3 +52,5 @@ The result: a fully parallelisable architecture where every token can directly a
 - [[residual-connection|Residual Connection]] — essential architectural component enabling depth
 - [[perceptron|Perceptron]] — the foundational unit of all neural networks
 - [[superposition|Superposition]] — the feature-representation phenomenon that emerges in trained Transformers
+- [[positional-encoding|Positional Encoding]] — the component that gives tokens their "semantic coordinates," enabling the Transformer to process text in parallel
+- [[semantic-anchors|Semantic Anchors]] — a technique exploiting a practical consequence of positional encoding for AI-assisted code editing
