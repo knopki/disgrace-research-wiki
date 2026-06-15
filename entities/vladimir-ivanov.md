@@ -4,7 +4,7 @@ created: 2026-06-16
 updated: 2026-06-16
 type: entity
 tags: [author]
-sources: [raw/articles/vk-turboplanner-ai-parallelism/index.md]
+sources: [raw/articles/2025-06-30-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/index.md]
 ---
 
 # Vladimir Ivanov

@@ -4,7 +4,7 @@ created: 2026-06-16
 updated: 2026-06-16
 type: concept
 tags: [architecture, methodology]
-sources: [raw/articles/vk-turboplanner-ai-parallelism/index.md]
+sources: [raw/articles/2025-06-30-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/index.md]
 ---
 
 # Semantic Fractal
@@ -13,7 +13,7 @@ A metaphor proposed by Vladimir Ivanov to describe how large language models int
 
 ## The Metaphor
 
-Where a human sees `Block A → Block B`, an LLM sees two nodes linked by many possible relations — sequence, parallelism, dependency, data flow, mutual exclusion. Sequential execution is just one of thousands of edges the model could traverse between them. ^[raw/articles/vk-turboplanner-ai-parallelism/index.md]
+Where a human sees `Block A → Block B`, an LLM sees two nodes linked by many possible relations — sequence, parallelism, dependency, data flow, mutual exclusion. Sequential execution is just one of thousands of edges the model could traverse between them. ^[raw/articles/2025-06-30-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/index.md]
 
 The term "fractal" captures the recursive, self-similar structure: at every level of granularity (function, module, system), the same branching semantic graph applies. The model does not impose a single traversal order; the order emerges from the specific task.
 

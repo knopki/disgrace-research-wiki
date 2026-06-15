@@ -4,7 +4,7 @@ created: 2026-06-16
 updated: 2026-06-16
 type: concept
 tags: [architecture, prediction]
-sources: [raw/articles/vk-turboplanner-ai-parallelism/index.md]
+sources: [raw/articles/2025-06-30-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/index.md]
 ---
 
 # Innate Parallelism
@@ -13,13 +13,13 @@ The thesis that large language models possess a structural, architectural advant
 
 ## Core Claim
 
-Human cognition is inherently linear: a programmer holds one state at a time, walks through code instruction by instruction, and must consciously reason about concurrency. An LLM, by contrast, represents code as a high-dimensional graph of semantic relationships — branching "vectors of plan" in latent space — where sequential order is just one connection among thousands. Any two logical blocks can be related as "run in parallel," "wait for signal," or any other dependency with equal ease. ^[raw/articles/vk-turboplanner-ai-parallelism/index.md]
+Human cognition is inherently linear: a programmer holds one state at a time, walks through code instruction by instruction, and must consciously reason about concurrency. An LLM, by contrast, represents code as a high-dimensional graph of semantic relationships — branching "vectors of plan" in latent space — where sequential order is just one connection among thousands. Any two logical blocks can be related as "run in parallel," "wait for signal," or any other dependency with equal ease. ^[raw/articles/2025-06-30-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/index.md]
 
 This is not a skill the model learns; it is a byproduct of the transformer architecture and its attention mechanism, which processes all tokens in parallel during inference.
 
 ## Practical Implications
 
-If the thesis holds, AI-generated code could exploit multi-core hardware far more aggressively than human-written code, simply because the cost of reasoning about concurrency is negligible for the model. The article projects speedups of 4–16× on the same hardware through intelligent task distribution across cores. ^[raw/articles/vk-turboplanner-ai-parallelism/index.md]
+If the thesis holds, AI-generated code could exploit multi-core hardware far more aggressively than human-written code, simply because the cost of reasoning about concurrency is negligible for the model. The article projects speedups of 4–16× on the same hardware through intelligent task distribution across cores. ^[raw/articles/2025-06-30-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/index.md]
 
 ## Open Questions
 
