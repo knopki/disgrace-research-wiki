@@ -25,7 +25,7 @@ Skipping orientation causes duplicates, missed cross-references, and contradicte
 - Every action logged to `log.md`. Every new page added to `index.md`.
 - Contradictions: don't silently overwrite. Note both claims, mark in frontmatter, flag for review.
 - Pages over 200 lines → split with cross-links.
-- Provenance markers (`^[raw/...]`) on paragraphs when synthesizing 3+ sources.
+- Provenance markers (`([Author, Year](raw/...))`) on paragraphs when synthesizing 3+ sources.
 
 ## Conventions
 

@@ -23,7 +23,7 @@ The Transformer synthesised several prior innovations:
 - **Self-attention** — refined from Bahdanau attention and correlation-of-vectors ideas from [[lstm|LSTM]] research
 - **Positional encoding** — sine/cosine functions that give each token a "semantic coordinate" in the embedding space, preserving order information without sequential processing
 
-The result: a fully parallelisable architecture where every token can directly attend to every other token in a single forward pass. ^[raw/articles/2025-07-03-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/index.md]
+The result: a fully parallelisable architecture where every token can directly attend to every other token in a single forward pass. ([Ivanov, 2025](raw/articles/2025-07-03-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/index.md))
 
 ## Key Innovations
 

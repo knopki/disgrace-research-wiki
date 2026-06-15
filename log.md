@@ -283,3 +283,9 @@
 - Updated index.md entry to link PDF + index.md
 - Updated wikilinks in 5 pages (bfs-vs-dfs, bfs, semantic-superposition, chain-of-continuous-thought, index.md)
 - Old raw/papers/2412.06769-coconut/ removed
+
+## [2026-06-15] schema | provenance markers migrated to clickable links
+- Convention: `^[raw/...]` → `([Author, Year](raw/...))` (clickable markdown link in parentheses)
+- SCHEMA.md and AGENTS.md updated
+- 116 markers migrated across 30 wiki pages
+- Labels: Ivanov, 2025 (articles); Hao et al. 2024, Shai et al. 2024, Garagnani 2024, Anthropic 2022 (papers); Wikipedia (encyclopedic)

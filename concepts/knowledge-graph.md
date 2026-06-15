@@ -52,7 +52,7 @@ A separate research project (reported Aug 2014) that automatically extracted fac
 | Update mechanism | Graph maintenance pipeline | Re-index document corpus |
 | Latency | Fast (indexed facts) | Slower (retrieval + generation) |
 
-The two approaches are not mutually exclusive — hybrid architectures use a KG to retrieve precise facts and RAG for contextual synthesis. ^[raw/articles/knowledge-graph-google-wikipedia/index.md]
+The two approaches are not mutually exclusive — hybrid architectures use a KG to retrieve precise facts and RAG for contextual synthesis. ([Wikipedia](raw/articles/knowledge-graph-google-wikipedia/index.md))
 
 ## Criticism of Google's Implementation
 

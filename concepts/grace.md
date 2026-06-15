@@ -29,7 +29,7 @@ The fundamental goal of GRACE is to **extract hidden architectural decisions, bu
 
 And capture them in **explicit, structured, machine-readable form** — as XML artifacts, semantic markup, typed contracts, and linked knowledge graph entries.
 
-This extraction and externalisation is what turns stochastic LLM code generation into a repeatable engineering discipline. ^[raw/articles/2025-09-13-grace-freimvork-sozdaniya-koda-llm-v-bolshih-kontekstah-s-uc/index.md]
+This extraction and externalisation is what turns stochastic LLM code generation into a repeatable engineering discipline. ([Ivanov, 2025](raw/articles/2025-09-13-grace-freimvork-sozdaniya-koda-llm-v-bolshih-kontekstah-s-uc/index.md))
 
 ## The Problem: Semantic Gap
 
@@ -39,7 +39,7 @@ The integration of LLMs into software engineering creates a **semantic gap** bet
 2. **Hallucination and context fragmentation** — inability to maintain coherent understanding across large projects; the model sees local details but loses the global picture
 3. **Semantic gap** — the disconnect between what the developer intends and what the LLM produces is invisible until runtime, making errors expensive and unpredictable
 
-Existing approaches (prompt engineering, RAG agents) address context problems **unsystematically** — they treat symptoms rather than causes. GRACE replaces unstructured interpretation with a **deterministic top-down refinement process** where each step is an approved refinement of the previous one, and the human approves every level before proceeding. ^[raw/articles/2025-09-13-grace-freimvork-sozdaniya-koda-llm-v-bolshih-kontekstah-s-uc/index.md]
+Existing approaches (prompt engineering, RAG agents) address context problems **unsystematically** — they treat symptoms rather than causes. GRACE replaces unstructured interpretation with a **deterministic top-down refinement process** where each step is an approved refinement of the previous one, and the human approves every level before proceeding. ([Ivanov, 2025](raw/articles/2025-09-13-grace-freimvork-sozdaniya-koda-llm-v-bolshih-kontekstah-s-uc/index.md))
 
 ## Ten Principles
 
@@ -91,7 +91,7 @@ GRACE defines a five-stage iterative process that systematically reduces uncerta
 
 4. **Deterministic Code Generation from Semantic Template.** The AI "compiles" the approved DevelopmentPlan.xml using the provided semantic scaffold. Every file, class, and function follows contracts and markup defined in the plan — generation becomes filling in predefined slots, not free creation.
 
-5. **Verification and Maintenance.** Generated code is verified against structured logs. Deviations trigger new cycles starting from the appropriate stage (Stage 3 for logic errors, Stage 1 for misunderstood requirements). This staged rollback is what makes the process robust — errors are caught at the level where they originate. ^[raw/articles/2025-09-13-grace-freimvork-sozdaniya-koda-llm-v-bolshih-kontekstah-s-uc/index.md]
+5. **Verification and Maintenance.** Generated code is verified against structured logs. Deviations trigger new cycles starting from the appropriate stage (Stage 3 for logic errors, Stage 1 for misunderstood requirements). This staged rollback is what makes the process robust — errors are caught at the level where they originate. ([Ivanov, 2025](raw/articles/2025-09-13-grace-freimvork-sozdaniya-koda-llm-v-bolshih-kontekstah-s-uc/index.md))
 
 ## Dual-Purpose Semantic Markup in Action
 
@@ -99,7 +99,7 @@ The semantic markup is not just comments — it is a structured language that se
 
 ### Overcoming Sparse Attention Limitations
 
-In large contexts (>100K tokens), the transformer's attention mechanism degrades non-linearly — attention becomes sparse and long-range dependencies are lost. XML-like paired tags act as high-signal "vector beacons" — the model easily establishes correlation between identical tag tokens even at large distances, semantically "stitching" logically related but physically separated code sections. ^[raw/articles/2025-09-13-grace-freimvork-sozdaniya-koda-llm-v-bolshih-kontekstah-s-uc/index.md]
+In large contexts (>100K tokens), the transformer's attention mechanism degrades non-linearly — attention becomes sparse and long-range dependencies are lost. XML-like paired tags act as high-signal "vector beacons" — the model easily establishes correlation between identical tag tokens even at large distances, semantically "stitching" logically related but physically separated code sections. ([Ivanov, 2025](raw/articles/2025-09-13-grace-freimvork-sozdaniya-koda-llm-v-bolshih-kontekstah-s-uc/index.md))
 
 ### Materialising the Internal Generation Plan
 
@@ -107,7 +107,7 @@ LLMs form a hidden internal plan before generating text. The GRACE semantic scaf
 
 ### Belief State Declaration
 
-Working inside a named block lets the AI focus on a single atomic task. The log line created in that block becomes an explicit declaration of the AI's "belief state" — a hypothesis about how the code should behave at that point. This transforms logging from passive fact-recording into **active self-reflection**: the model articulates what it believes the code should do, and the log becomes auditable evidence of that belief. ^[raw/articles/2025-09-13-grace-freimvork-sozdaniya-koda-llm-v-bolshih-kontekstah-s-uc/index.md]
+Working inside a named block lets the AI focus on a single atomic task. The log line created in that block becomes an explicit declaration of the AI's "belief state" — a hypothesis about how the code should behave at that point. This transforms logging from passive fact-recording into **active self-reflection**: the model articulates what it believes the code should do, and the log becomes auditable evidence of that belief. ([Ivanov, 2025](raw/articles/2025-09-13-grace-freimvork-sozdaniya-koda-llm-v-bolshih-kontekstah-s-uc/index.md))
 
 ### Hierarchical Navigation for RAG Agents
 
@@ -116,7 +116,7 @@ GRACE provides RAG agents (Cursor, Claude Code) with a highly efficient navigati
 2. Navigate to a specific module's MODULE_CONTRACT
 3. Navigate to the target function's contract
 
-This hierarchy lets the agent **progressively collect all relevant context** for modification, rather than scanning the entire codebase. The article reports >90% of cases require no further context-seeking beyond this hierarchical approach. ^[raw/articles/2025-09-13-grace-freimvork-sozdaniya-koda-llm-v-bolshih-kontekstah-s-uc/index.md]
+This hierarchy lets the agent **progressively collect all relevant context** for modification, rather than scanning the entire codebase. The article reports >90% of cases require no further context-seeking beyond this hierarchical approach. ([Ivanov, 2025](raw/articles/2025-09-13-grace-freimvork-sozdaniya-koda-llm-v-bolshih-kontekstah-s-uc/index.md))
 
 ### Direct Navigation and Deterministic Patching
 

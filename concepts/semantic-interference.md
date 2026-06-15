@@ -16,18 +16,18 @@ Unlike a traditional program that executes steps one by one, an LLM encodes ever
 - Randomly leans toward one at inference time, or
 - Attempts a meaningless semantic blend of all of them
 
-The result is unpredictable and often incoherent — as if pressing both the accelerator and brake at the same time. ^[raw/articles/2025-07-01-semanticheskaya-interferenciya-ili-nazhat-gaz-i-tormoz-srazu/index.md]
+The result is unpredictable and often incoherent — as if pressing both the accelerator and brake at the same time. ([Ivanov, 2025](raw/articles/2025-07-01-semanticheskaya-interferenciya-ili-nazhat-gaz-i-tormoz-srazu/index.md))
 
 ## Common Examples
 
 - **Marketing / SEO prompts:** "Strictly follow the product spec sheet, don't invent details" **and** "Be maximally creative, reject all rules, amplify emotional effect" — the model produces nonsense that the client may excuse as 'creative vision'.
-- **Code generation:** contradictory constraints produce plainly broken code — the error is immediately visible, so the problem surfaces faster. ^[raw/articles/2025-07-01-semanticheskaya-interferenciya-ili-nazhat-gaz-i-tormoz-srazu/index.md]
+- **Code generation:** contradictory constraints produce plainly broken code — the error is immediately visible, so the problem surfaces faster. ([Ivanov, 2025](raw/articles/2025-07-01-semanticheskaya-interferenciya-ili-nazhat-gaz-i-tormoz-srazu/index.md))
 
 ## Mitigation Strategies
 
 1. **Constrain rule scope.** Attach each rule to a specific zone of the output text with a clear trigger or activation condition, instead of applying all rules globally.
 2. **Define text blocks explicitly.** A block ends where the model _thinks_ it ends — the prompt must make those boundaries unambiguous.
-3. **Fractal prompting** (see [[semantic-fractal|Semantic Fractal]]). Pre-define a semantic template with labeled zones — e.g., using `structured output` — so each zone has its own governing rule (creativity for headlines, strictness for specs, emotional appeal for conclusions) without cross-contamination. ^[raw/articles/2025-07-01-semanticheskaya-interferenciya-ili-nazhat-gaz-i-tormoz-srazu/index.md]
+3. **Fractal prompting** (see [[semantic-fractal|Semantic Fractal]]). Pre-define a semantic template with labeled zones — e.g., using `structured output` — so each zone has its own governing rule (creativity for headlines, strictness for specs, emotional appeal for conclusions) without cross-contamination. ([Ivanov, 2025](raw/articles/2025-07-01-semanticheskaya-interferenciya-ili-nazhat-gaz-i-tormoz-srazu/index.md))
 
 ## Relationship to Other Concepts
 

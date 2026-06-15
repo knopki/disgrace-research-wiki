@@ -13,10 +13,12 @@ agent frameworks, evaluation benchmarks, and research methodology.
 - When updating a page, always bump the `updated` date
 - Every new page must be added to `index.md` under the correct section
 - Every action must be appended to `log.md`
-- **Provenance markers:** On pages that synthesize 3+ sources, append `^[raw/articles/dir-name/index.md]`
-  or `^[raw/papers/dir-name/index.md]` at the end of paragraphs whose claims come from a specific source.
-  This lets a reader trace each claim back without re-reading the whole raw file. Optional on
-  single-source pages where the `sources:` frontmatter is enough.
+|- **Provenance markers:** On pages that synthesize 3+ sources, append
+  `([Author, Year](raw/path/to/index.md))` at the end of paragraphs whose claims come from a
+  specific source. The short label follows "Author, Year" format (e.g., `Ivanov, 2025`,
+  `Hao et al., 2024`, `Anthropic, 2022`), and links to the raw source. This lets a reader
+  trace each claim back without re-reading the whole raw file. Optional on single-source
+  pages where the `sources:` frontmatter is enough.
 
 ## Frontmatter
   ```yaml

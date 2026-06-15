@@ -14,7 +14,7 @@ confidence: high
 
 The linguistic theory that a word's meaning is entirely determined by the contexts in which it appears — an isolated word carries no intrinsic meaning. Formally articulated by John Rupert Firth in 1957: *"You shall know a word by the company it keeps."*
 
-Firth's position was considered heretical against traditional linguistics (rooted in Plato's essentialist view of language) in the 1950s. Modern LLMs — with their vector-based representation of word meaning — have validated his theory at industrial scale. ^[raw/articles/2025-07-02-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon/index.md]
+Firth's position was considered heretical against traditional linguistics (rooted in Plato's essentialist view of language) in the 1950s. Modern LLMs — with their vector-based representation of word meaning — have validated his theory at industrial scale. ([Ivanov, 2025](raw/articles/2025-07-02-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon/index.md))
 
 ## Core Principle
 
@@ -23,7 +23,7 @@ A word in isolation has near-zero semantic content. Its meaning crystallises onl
 > "Строительный рабочий" → profession, physical labour
 > "Рабочий момент" → business process, organisational question
 
-The same word `рабочий` maps to entirely different semantic territories depending on its neighbours. Traditional dictionaries define words in isolation — Firth's thesis denies that such a definition is even possible. ^[raw/articles/2025-07-02-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon/index.md]
+The same word `рабочий` maps to entirely different semantic territories depending on its neighbours. Traditional dictionaries define words in isolation — Firth's thesis denies that such a definition is even possible. ([Ivanov, 2025](raw/articles/2025-07-02-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon/index.md))
 
 ## Historical Roots
 
@@ -36,11 +36,11 @@ Distributional semantics has deeper roots than Firth:
 - **2000s:** Word2vec and subsequent embedding methods turned the theoretical principle into a working algorithm.
 - **2020s:** GPT-scale models validate the thesis at a level Firth could not have imagined.
 
-^[raw/articles/distributional-semantics-wikipedia/index.md]
+([Wikipedia](raw/articles/distributional-semantics-wikipedia/index.md))
 
 ## The Distributional Hypothesis
 
-The formal hypothesis: linguistic units that appear in similar contexts have similar meanings. Psychological experiments have confirmed a positive correlation between semantic similarity of words and similarity of their contexts. ^[raw/articles/distributional-semantics-wikipedia/index.md]
+The formal hypothesis: linguistic units that appear in similar contexts have similar meanings. Psychological experiments have confirmed a positive correlation between semantic similarity of words and similarity of their contexts. ([Wikipedia](raw/articles/distributional-semantics-wikipedia/index.md))
 
 ## Mathematical Model
 
@@ -55,7 +55,7 @@ Semantic distance is most commonly measured via **cosine similarity**:
 
 $cos(A,B) = \frac{\sum_{i=1}^{n} A_i \times B_i}{\sqrt{\sum_{i=1}^{n} (A_i)^2} \times \sqrt{\sum_{i=1}^{n} (B_i)^2}}$
 
-^[raw/articles/distributional-semantics-wikipedia/index.md]
+([Wikipedia](raw/articles/distributional-semantics-wikipedia/index.md))
 
 ## Predictive Models
 
@@ -65,7 +65,7 @@ Traditional **count models** (LSA, HAL) build large sparse matrices then apply d
 - **Continuous Skipgram:** predict the context from the word
 - Both first implemented in **word2vec** (2013)
 
-Predictive models represent semantics more accurately than count models and have spawned tools like **Gensim**, **RusVectōrēs** (for Russian), and **WebVectors**. ^[raw/articles/distributional-semantics-wikipedia/index.md]
+Predictive models represent semantics more accurately than count models and have spawned tools like **Gensim**, **RusVectōrēs** (for Russian), and **WebVectors**. ([Wikipedia](raw/articles/distributional-semantics-wikipedia/index.md))
 
 ## Connection to LLMs
 
@@ -75,11 +75,11 @@ GPT and similar models operationalise distributional semantics through vector em
 - The vector does not encode explicit features — it is a compressed archive of correlations with every other token in the training corpus
 - Meaning is **emergent**: it arises from the model's analysis of billions of contexts during training, not from any pre-assigned definition
 
-The equivalence of model performance across languages — despite radically different tokenisation (English `[worker]` vs Russian `[Раб][оч][ий]`) — proves that individual tokens carry no Platonic essence. ^[raw/articles/2025-07-02-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon/index.md]
+The equivalence of model performance across languages — despite radically different tokenisation (English `[worker]` vs Russian `[Раб][оч][ий]`) — proves that individual tokens carry no Platonic essence. ([Ivanov, 2025](raw/articles/2025-07-02-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon/index.md))
 
 ## Applications
 
-Distributional models are used for: semantic similarity detection, automatic thesaurus generation, word sense disambiguation, query expansion, document clustering, information extraction, sentiment analysis, machine translation, and semantic mapping of knowledge domains. ^[raw/articles/distributional-semantics-wikipedia/index.md]
+Distributional models are used for: semantic similarity detection, automatic thesaurus generation, word sense disambiguation, query expansion, document clustering, information extraction, sentiment analysis, machine translation, and semantic mapping of knowledge domains. ([Wikipedia](raw/articles/distributional-semantics-wikipedia/index.md))
 
 ## Practical Implications for Prompt Engineering
 

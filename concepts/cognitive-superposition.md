@@ -33,11 +33,11 @@ WM capacity correlates with fluid intelligence (Conway et al. 2003); the average
 
 ## The Superposition Catastrophe
 
-In standard neural networks, distinct items are encoded as **non-orthogonal vectors** over the same set of processing units. Summing two such vectors produces an ambiguous blend from which original components cannot be uniquely retrieved. This is known as the **superposition catastrophe** (Milner 1974; Page 2000; Rosenblatt 1962). ^[raw/papers/cognitive-superposition-garagnani/index.md]
+In standard neural networks, distinct items are encoded as **non-orthogonal vectors** over the same set of processing units. Summing two such vectors produces an ambiguous blend from which original components cannot be uniquely retrieved. This is known as the **superposition catastrophe** (Milner 1974; Page 2000; Rosenblatt 1962). ([Garagnani, 2024](raw/papers/cognitive-superposition-garagnani/index.md))
 
 ### Why Backpropagation Fails
 
-Gradient descent creates **uniform weight distributions** — no single node becomes fully selective to one input. All nodes contribute to all learned outputs, producing graded, overlapping representations. ^[raw/papers/cognitive-superposition-garagnani/index.md]
+Gradient descent creates **uniform weight distributions** — no single node becomes fully selective to one input. All nodes contribute to all learned outputs, producing graded, overlapping representations. ([Garagnani, 2024](raw/papers/cognitive-superposition-garagnani/index.md))
 
 Failed attempts to solve this:
 - **Bowers et al. (2014):** Trained recurrent net on superposed inputs — selective nodes emerged, but items were co-activated *during training*, violating condition (2).
@@ -69,11 +69,11 @@ CAs are sets of strongly and reciprocally connected cells that spontaneously eme
 1. **LTP:** Strengthens links between cells co-activated by the same stimulus → binds them into a CA.
 2. **LTD:** Weakens links between cells activated by different stimuli → separates distinct CAs.
 
-"Recruitment learning" (Valiant 2000) ensures each node becomes selectively responsive to one stimulus, and distinct CAs are almost disjoint. ^[raw/papers/cognitive-superposition-garagnani/index.md]
+"Recruitment learning" (Valiant 2000) ensures each node becomes selectively responsive to one stimulus, and distinct CAs are almost disjoint. ([Garagnani, 2024](raw/papers/cognitive-superposition-garagnani/index.md))
 
 ### Proof-of-Concept (Fig. 3B)
 
-CA #5 self-sustained → input for CA #2 presented → CA #2 ignites → both CAs co-exist without blending → external input removed → CA #2 fades, CA #5 remains. The two circuits remained functionally distinct throughout. ^[raw/papers/cognitive-superposition-garagnani/index.md]
+CA #5 self-sustained → input for CA #2 presented → CA #2 ignites → both CAs co-exist without blending → external input removed → CA #2 fades, CA #5 remains. The two circuits remained functionally distinct throughout. ([Garagnani, 2024](raw/papers/cognitive-superposition-garagnani/index.md))
 
 ## Role of Sparse Connectivity
 
@@ -81,7 +81,7 @@ Sparse between-area projections alone are insufficient — it is the **combinati
 1. A local learning rule inducing input selectivity
 2. Sparse and topographic between-area projections
 
-that enables quasi-orthogonal CA circuits. The deep hierarchy also contributes: patterns initially overlapping in the lowest layer are progressively "pulled apart" in deeper layers (Henningsen-Schomers et al. 2023). ^[raw/papers/cognitive-superposition-garagnani/index.md]
+that enables quasi-orthogonal CA circuits. The deep hierarchy also contributes: patterns initially overlapping in the lowest layer are progressively "pulled apart" in deeper layers (Henningsen-Schomers et al. 2023). ([Garagnani, 2024](raw/papers/cognitive-superposition-garagnani/index.md))
 
 ## Two Code Types in Cortex
 
