@@ -319,4 +319,13 @@
 - raw/index.md rewritten: now contains the paper's original abstract (verbatim from HTML) instead of a summary
 - Full source read (1023-line extraction from index.html); all 4 wiki pages cross-checked against source — no hallucinations found
 - All 6 wiki page references updated (superposition, polysemantic-neurons, privileged-basis, anthropic, index.md, log.md)
-- index.md paper entry link updated
+|- index.md paper entry link updated
+
+## [2026-06-15] ingest | SLM vs MoE for Agentic AI article (Vladimir Ivanov, 2025-09-14)
+- Raw source: raw/articles/2025-09-14-ivanov-prichiny-nabludaemogo-provala-malyh-slm-protiv-llm-na-moe-v/ (ivanov2025slmvsllm.md + 2 images)
+- Source: vk.com/@turboplanner
+- Author: Vladimir Ivanov (2025-09-14)
+- Content: rebuttal of Belcak et al. (2025, NVIDIA Research) SLM-centric thesis; three arguments — (1) OpenRouter market data shows tool-use dominated by medium models, not SLM; (2) MoE + MTP (Qwen3-Next-80B-A3B) eliminates SLM cost advantage with 3B active params at LLM quality; (3) free API tiers (Gemini Flash) commoditize low-intensity tasks, making self-hosted SLM uneconomical
+- Created concept: slm-moe-agentic-ai (market data, MoE+MTP argument, free tier commoditization, synthesis)
+- Updated entity: vladimir-ivanov (added Known Work, topics, wikilink to new concept)
+- Cross-links: slm-moe-agentic-ai ↔ vladimir-ivanov, vibe-coding, kv-caching, chain-of-continuous-thought, sparse-transformer

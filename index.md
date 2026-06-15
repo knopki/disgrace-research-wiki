@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-|> Last updated: 2026-06-15 | Total pages: 38
+|> Last updated: 2026-06-15 | Total pages: 39
 
 ## Entities
 
@@ -36,6 +36,8 @@
 - [[pcam|Purpose Centric Agent Methodology (PCAM)]] — agent management paradigm shifting from deterministic plans to purpose-driven guidance; six principles for autonomous goal-oriented agent architecture, plugin-based scalability, and multi-agent feedback loops
 
 - [[grace|GRACE (Graph-RAG Anchored Code Engineering)]] — framework for deterministic LLM code generation in large contexts; dual-purpose semantic markup serving both generative models (top-down synthesis template) and RAG agents (indexed navigation map); ten principles including Intent-First Architecture, Observable AI Belief State, and Governed Autonomy
+
+- [[slm-moe-agentic-ai|SLM vs MoE for Agentic AI]] — rebuttal of the SLM-centric thesis for AI agents; argues MoE + MTP eliminates SLM cost advantage, OpenRouter data shows no real SLM adoption, free API tiers commoditize low-intensity use cases
 
 - [[polysemantic-neurons|Polysemantic Neurons]] — neurons that respond to multiple unrelated features; explained by the superposition hypothesis
 
@@ -92,6 +94,8 @@
 - [Breadth First Search or BFS for a Graph](raw/articles/bfs-gfg/) (GeeksforGeeks)
 - [Методология PCAM: Превращаем AI-агентов из рабов в партнеров](raw/articles/2025-09-11-metodologiya-pcam-prevraschaem-ai-agentov-iz-rabov-v-partner/) (Vladimir Ivanov, 2025-09-11)
 - [GRACE: Фреймворк создания кода LLM в больших контекстах](raw/articles/2025-09-13-grace-freimvork-sozdaniya-koda-llm-v-bolshih-kontekstah-s-uc/) (Vladimir Ivanov, 2025-09-13)
+
+- [Причины наблюдаемого провала малых SLM против LLM на MoE в AI-агентах](raw/articles/2025-09-14-ivanov-prichiny-nabludaemogo-provala-malyh-slm-protiv-llm-na-moe-v/) (Vladimir Ivanov, 2025-09-14)
 
 ### Papers
 
