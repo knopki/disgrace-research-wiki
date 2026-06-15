@@ -107,7 +107,7 @@ Sparse patterns **converged to lower error than dense attention** while running 
 
 - **First demonstration of self-attention at 1M+ tokens**, though with heavily reduced capacity (3M params) and significant quality degradation — proved feasibility, not practicality
 - Showed sparse patterns **outperform dense attention** (lower error, faster convergence), suggesting a beneficial inductive bias rather than a compromise
-- Established **two sparse attention archetypes** — strided (periodic) and fixed (non-periodic) — that directly informed later architectures: Longformer (sliding window + global), BigBird (random + window + global), and Sparse Sinkhorn
+- Established **two sparse attention archetypes** — strided (periodic) and fixed (non-periodic) — that directly informed later architectures: [[longformer|Longformer]] (sliding window + global), BigBird (random + window + global), and Sparse Sinkhorn
 - Showed the **same architecture processes text, images, and audio from raw bytes**, reinforcing the Transformer's universality
 - Gradient checkpointing for attention became a standard memory-saving technique in production training
 

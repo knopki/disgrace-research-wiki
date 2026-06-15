@@ -329,3 +329,12 @@
 - Created concept: slm-moe-agentic-ai (market data, MoE+MTP argument, free tier commoditization, synthesis)
 - Updated entity: vladimir-ivanov (added Known Work, topics, wikilink to new concept)
 - Cross-links: slm-moe-agentic-ai ↔ vladimir-ivanov, vibe-coding, kv-caching, chain-of-continuous-thought, sparse-transformer
+
+## [2026-06-17] ingest | Longformer (Beltagy et al., 2020)
+- Raw source: `raw/papers/2020-04-beltagy-longformer/` (2004.05150.pdf + index.md)
+- Source: arXiv:2004.05150 — "Longformer: The Long-Document Transformer"
+- Authors: Iz Beltagy, Matthew E. Peters, Arman Cohan (Allen Institute for AI, 2020)
+- Content: linear-complexity attention combining sliding window + dilated window + task-specific global attention; pretrained from RoBERTa, finetuned on long-document tasks; LED variant for seq2seq summarization
+- Created concept: longformer (attention mechanism, three implementations, pretraining strategy, LED, ablation insights, results on text8, enwik8, WikiHop, TriviaQA, HotpotQA, arXiv summarization)
+- Updated concept: sparse-transformer (added [[wikilink]] to longformer in Significance & Legacy)
+- Cross-links: longformer ↔ sparse-transformer, transformer, kv-caching, chain-of-continuous-thought
