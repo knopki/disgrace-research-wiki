@@ -60,7 +60,7 @@ BFS serves as a conceptual model for how advanced LLM reasoning methods explore 
 
 - **Standard auto-regressive decoding** resembles DFS — greedy token-by-token commitment along a single path.
 - **[[semantic-superposition]]** exploits BFS-like behaviour: maintaining multiple hypotheses in latent space delays semantic collapse, allowing breadth-first exploration before committing to discrete tokens.
-- **[[chain-of-continuous-thought|Coconut]]** demonstrates genuine BFS in continuous latent space: the model encodes multiple candidate next steps simultaneously and dynamically reweights them as evidence accumulates — exactly analogous to queue-based level-by-level exploration. ^[raw/papers/2412.06769-coconut/index.md]
+- **[[chain-of-continuous-thought|Coconut]]** demonstrates genuine BFS in continuous latent space: the model encodes multiple candidate next steps simultaneously and dynamically reweights them as evidence accumulates — exactly analogous to queue-based level-by-level exploration. ^[raw/papers/2024-12-hao-coconut/index.md]
 
 ## See Also
 

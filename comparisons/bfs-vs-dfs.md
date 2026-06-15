@@ -27,7 +27,7 @@ Standard comparison of the two fundamental graph traversal algorithms: Breadth-F
 Both algorithms serve as conceptual models for how LLMs explore their solution space during generation:
 
 - **Standard auto-regressive decoding** resembles DFS — the model commits greedily to the first token, then explores ever-deeper conditioned on that choice. This is fast but can miss better solutions that require backtracking.
-- **Latent-space reasoning ([[chain-of-continuous-thought|Coconut]])** enables BFS-like behaviour: the model maintains probability mass over multiple candidate reasoning paths simultaneously, dynamically reweighting them as evidence accumulates. ^[raw/papers/2412.06769-coconut/index.md]
+- **Latent-space reasoning ([[chain-of-continuous-thought|Coconut]])** enables BFS-like behaviour: the model maintains probability mass over multiple candidate reasoning paths simultaneously, dynamically reweighting them as evidence accumulates. ^[raw/papers/2024-12-hao-coconut/index.md]
 - **[[semantic-superposition]]** exploits the same BFS analogy — delaying semantic collapse allows breadth-first exploration of reasoning branches before committing to a discrete token. ^[raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/index.md]
 
 ## See Also

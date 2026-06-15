@@ -65,8 +65,3 @@ KV caching yields approximately **4.7× speedup** for 1000-token generation. The
 - **[[positional-encoding|Positional Encoding]]** — positional information is embedded in the cached K and V representations, so the cache preserves each token's position-sensitive vector context.
 - **[[residual-connection|Residual Connection]]** — the cached K and V states come from specific attention layers, and the residual stream carries information up through the network independently of the cache.
 - **[[sparse-transformer|Sparse Transformer]]** — orthogonal efficiency approach: KV caching avoids recomputation across inference steps, sparse attention reduces per-step complexity. Can be combined.
-
-## References
-
-- Hugging Face Transformers: KV caching (via `use_cache` parameter) is enabled by default in `model.generate()`.
-- Discuss.huggingface.co: [Report of minimal memory overhead with KV caching](https://discuss.huggingface.co/t/generate-using-k-v-cache-is-faster-but-no-difference-to-memory-usage/31272)

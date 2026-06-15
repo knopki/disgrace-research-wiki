@@ -6,7 +6,7 @@ type: concept
 tags: [technique, methodology, optimization]
 sources:
   - "[Кот Шрёдингера в голове у GPT: Как суперпозиция смыслов меняет правила игры с ИИ](raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/index.md)"
-  - "[Training Large Language Models to Reason in a Continuous Latent Space](raw/papers/2412.06769-coconut/index.md)"
+  - "[Training Large Language Models to Reason in a Continuous Latent Space](raw/papers/2024-12-hao-coconut/index.md)"
 confidence: high
 ---
 

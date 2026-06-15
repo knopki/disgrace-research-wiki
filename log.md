@@ -180,7 +180,7 @@
 
 ## [2026-06-15] ingest | Training Large Language Models to Reason in a Continuous Latent Space (Coconut)
 
-- Raw source: raw/papers/2412.06769-coconut/ (index.md)
+- Raw source: raw/papers/2024-12-hao-coconut/ (index.md + PDF)
 - Source: Shibo Hao et al., FAIR at Meta / UC San Diego, arXiv:2412.06769, COLM 2025
 - Content: Chain of Continuous Thought (Coconut) — training paradigm replacing language chain-of-thought with reasoning directly in the continuous latent space of LLMs; enables emergent BFS-like reasoning via multi-stage curriculum; outperforms CoT on logical reasoning tasks with far fewer tokens
 - Created concept: chain-of-continuous-thought (Coconut paradigm, latent reasoning, BFS emergence, ProsQA dataset)
@@ -270,3 +270,16 @@
   - Audio capacity scaling: corrected ∜4 ≈ 1.4x → 8x per 4x length increase (O(n√n) scaling)
 - Sources updated in concept page: sparse-transformer/index.md → 2019-04-child-sparse-transformer/index.md
 - Old raw/papers/sparse-transformer/ directory removed
+
+## [2026-06-15] reimport | Coconut paper — proper naming + PDF + synthesis audit
+- **Renamed:** raw/papers/2412.06769-coconut/ → raw/papers/2024-12-hao-coconut/ (date-prefix + author + slug convention)
+- **Original PDF saved:** raw/papers/2024-12-hao-coconut/2412.06769.pdf (3.2 MB, 18 pages, SHA256: 6eb32c71)
+- **New raw/index.md:** abstract only, links to PDF for full content — no synthetic summary in raw/
+- **Hallucinations fixed (2) after full PDF read-through:**
+  - "Haviv et al., 2024 (Thinking LLMs)" — removed from related work; never cited in actual paper
+  - "Yang et al., 2024 (Continuous Chain-of-Thought)" — corrected description; actual Yang 2024 work is about latent multi-hop reasoning, not "compressing CoT"
+- **Typo fixed:** "the the transformer" → "the transformer" in concept page
+- **References updated:** Fedorenko 2024 and Deng 2024 corrected to proper titles; added Zhu et al. 2025a, 2025b (theoretical follow-ups cited in paper)
+- Updated index.md entry to link PDF + index.md
+- Updated wikilinks in 5 pages (bfs-vs-dfs, bfs, semantic-superposition, chain-of-continuous-thought, index.md)
+- Old raw/papers/2412.06769-coconut/ removed
