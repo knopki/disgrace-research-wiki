@@ -85,3 +85,15 @@
 - Created concept: cognitive-superposition
 - Updated: superposition (added distinguishing note + cross-link)
 - Cross-links: cognitive-superposition ↔ superposition, word-embeddings, polysemantic-neurons, anthropic
+
+## [2026-06-17] ingest | AI History overview article (Vladimir Ivanov, 2025-07-03)
+
+- Raw source: raw/articles/2025-07-03-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/ (index.md + 2 images)
+- Source: vk.com/@turboplanner
+- Author: Vladimir Ivanov (2025-07-03)
+- Historical overview: Rosenblatt → Minsky/Papert dark ages → backpropagation → LSTM → ResNet → Transformer
+- Updated entity: vladimir-ivanov (added known work + source)
+- Updated entity: frank-rosenblatt (added source, updated cross-links)
+- Updated concept: perceptron (added cross-links to new pages)
+- Created concepts: backpropagation, lstm, residual-connection, transformer
+- Cross-links: all 4 new pages interconnected; backpropagation ↔ perceptron ↔ frank-rosenblatt; transformer ↔ residual-connection; lstm ↔ backpropagation

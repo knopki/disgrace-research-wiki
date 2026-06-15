@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-|> Last updated: 2026-06-17 | Total pages: 21
+|> Last updated: 2026-06-17 | Total pages: 25
 
 ## Entities
 
@@ -36,6 +36,11 @@
 - [[cognitive-superposition|Cognitive Superposition]] — ability of a cognitive system to co-activate multiple independently acquired representations; backprop-trained DNNs fail at it, brain-constrained networks succeed via cell assemblies
 - [[superposition|Superposition]] — phenomenon where neural networks represent more features than dimensions by tolerating interference between non-orthogonal feature directions
 
+- [[backpropagation|Backpropagation]] — fundamental algorithm for training multi-layer neural networks by propagating error gradients backwards through the network
+- [[lstm|LSTM]] — recurrent architecture with gating mechanisms that solved the vanishing gradient problem for sequential data
+- [[residual-connection|Residual Connection]] — skip connections enabling training of very deep networks by creating gradient highways through the network
+- [[transformer|Transformer]] — architecture using self-attention and positional encodings that superseded RNNs and became the foundation of modern LLMs
+
 ## Raw Sources
 
 ### Articles
@@ -49,6 +54,7 @@
 - [Дистрибутивная семантика](raw/articles/distributional-semantics-wikipedia/) (Wikipedia, 2026)
 - [Корпусная лингвистика](raw/articles/corpus-linguistics-wikipedia/) (Wikipedia, 2026)
 - [Frank Rosenblatt](raw/articles/frank-rosenblatt-wikipedia/) (Wikipedia, 2026)
+- [История ИИ: бунтари, гении и научные войны, которые сформировали наш мир](raw/articles/2025-07-03-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/) (Vladimir Ivanov, 2025-07-03)
 
 ### Papers
 

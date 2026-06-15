@@ -54,6 +54,10 @@ The cross-coupled perceptron variant studied by Rosenblatt is now known as a **[
 ## Cross-Links
 
 - [[frank-rosenblatt|Frank Rosenblatt]] — inventor
+- [[backpropagation|Backpropagation]] — the training algorithm that made multi-layer perceptrons learn
+- [[lstm|LSTM]] — gated architecture that improved on perceptron-based RNNs
+- [[residual-connection|Residual Connection]] — architectural pattern enabling very deep perceptron stacks
+- [[transformer|Transformer]] — modern architecture built on perceptron foundations
 - [[word-embeddings|Word Embeddings]] — modern vector-space representations descended from perceptron-based distributional models
 - [[distributional-semantics|Distributional Semantics]] — language models built on the same linear-algebra foundations
 - [[semantic-interference|Semantic Interference]] — the contraction/constraint problem has echoes in how restricted perceptrons fail on certain tasks

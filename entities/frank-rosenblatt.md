@@ -4,7 +4,9 @@ created: 2026-06-17
 updated: 2026-06-17
 type: entity
 tags: [model, architecture, controversy, paper]
-sources: "[Frank Rosenblatt — Wikipedia](raw/articles/frank-rosenblatt-wikipedia/index.md)"
+sources:
+  - "[Frank Rosenblatt — Wikipedia](raw/articles/frank-rosenblatt-wikipedia/index.md)"
+  - "[История ИИ: бунтари, гении и научные войны](raw/articles/2025-07-03-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/index.md)"
 confidence: high
 ---
 
@@ -70,4 +72,6 @@ The episode is often cited in discussions of [[semantic-interference|scientific 
 - [[perceptron|Perceptron]]
 - [[word-embeddings|Word Embeddings]]
 - [[distributional-semantics|Distributional Semantics]]
-- [[vladimir-ivanov|Vladimir Ivanov]] (contemporary researcher on AI parallelism, different era but same domain)
+- [[backpropagation|Backpropagation]] — the training algorithm that vindicated Rosenblatt's multi-layer vision
+- [[transformer|Transformer]] — modern architecture carrying Rosenblatt's connectionist lineage
+- [[vladimir-ivanov|Vladimir Ivanov]] (contemporary researcher on AI parallelism, same domain)
