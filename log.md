@@ -20,3 +20,9 @@
 - Author: Vladimir Ivanov (2025-07-01)
 - Updated entity: entities/vladimir-ivanov.md
 - Created concepts: ai-resource-leveling, skill-scheduling
+
+## [2026-06-16] ingest | Semantic Interference article
+- Raw source: raw/articles/2025-07-01-semanticheskaya-interferenciya-ili-nazhat-gaz-i-tormoz-srazu/ (index.md + empty images/)
+- Author: Vladimir Ivanov (2025-07-01)
+- Created concept: semantic-interference
+- Updated entity: vladimir-ivanov (added known work + source)
