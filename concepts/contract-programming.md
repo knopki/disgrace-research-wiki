@@ -7,7 +7,7 @@ tags: [technique, methodology, agent, tool-use]
 sources:
   - "[Контрактное программирование: Ваш семантический щит в эпоху искусственного интеллекта](raw/articles/2025-07-05-kontraktnoe-programmirovanie-vash-semanticheskii-schit-v-epo/index.md)"
   - "[Design by Contract (Wikipedia)](raw/articles/design-by-contract-wikipedia/index.md)"
-  - "[Transformers Represent Belief State Geometry in their Residual Stream](raw/papers/belief-state-geometry-residual-stream/index.md)"
+  - "[Transformers Represent Belief State Geometry in their Residual Stream](raw/papers/2024-05-shai-belief-state-geometry/index.md)"
 confidence: medium
 ---
 
@@ -79,7 +79,7 @@ A function's contract links it to specific spec items. Log statements like `logg
 
 ## Scientific Basis: Belief State Geometry
 
-The article grounds contract programming's effectiveness in a specific transformer property discovered by Adam Shai and colleagues: [[belief-state-geometry|belief state geometry]] (Shai et al., 2024). As an LLM generates output, it constructs a complex belief state geometry in its [[residual-connection|residual stream]] — an internal fractal plan where each node is the model's "belief" about which semantic state it occupies, and edges are transitions between states. ([Shai et al., 2024](raw/papers/belief-state-geometry-residual-stream/index.md))
+The article grounds contract programming's effectiveness in a specific transformer property discovered by Adam Shai and colleagues: [[belief-state-geometry|belief state geometry]] (Shai et al., 2024). As an LLM generates output, it constructs a complex belief state geometry in its [[residual-connection|residual stream]] — an internal fractal plan where each node is the model's "belief" about which semantic state it occupies, and edges are transitions between states. ([Shai et al., 2024](raw/papers/2024-05-shai-belief-state-geometry/index.md))
 
 Contracts act as **belief state refiners**. When the model encounters a contract, it does not simply read instructions — the contract *forces* the model to narrow its belief state to exactly what the contract specifies: "Right now your belief state should be: you are writing a payment validation function. Your goal is to return True or False. Your input is a card number and an amount. Nothing else exists." ([Ivanov, 2025](raw/articles/2025-07-05-kontraktnoe-programmirovanie-vash-semanticheskii-schit-v-epo/index.md))
 

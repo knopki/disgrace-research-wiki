@@ -8,7 +8,7 @@ sources:
   - "[AI угрожает программистам могуществом параллелизма](raw/articles/2025-06-30-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/index.md)"
   - "[Позиционные кодировки: «объемное зрение» GPT и секреты AI-агентов](raw/articles/2025-07-04-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/index.md)"
   - "[Контрактное программирование: Ваш семантический щит в эпоху искусственного интеллекта](raw/articles/2025-07-05-kontraktnoe-programmirovanie-vash-semanticheskii-schit-v-epo/index.md)"
-  - "[Transformers Represent Belief State Geometry in their Residual Stream](raw/papers/belief-state-geometry-residual-stream/index.md)"
+  - "[Transformers Represent Belief State Geometry in their Residual Stream](raw/papers/2024-05-shai-belief-state-geometry/index.md)"
 confidence: medium
 ---
 
@@ -37,7 +37,7 @@ If the semantic fractal is a faithful model of how LLMs represent code, then:
 
 ## Belief State Geometry
 
-[[belief-state-geometry|Belief State Geometry]] (Shai et al., 2024) provides the empirical foundation for the semantic fractal metaphor. The study discovered that as a transformer generates output, it constructs a measurable belief state geometry — a linear representation of posterior distributions over hidden states — in its residual stream. The model builds an internal fractal "plan" of the answer: each node is the model's belief about which semantic state it occupies, and edges are transitions between states. When the model writes code, it is effectively unfolding this inner semantic fractal. ([Shai et al., 2024](raw/papers/belief-state-geometry-residual-stream/index.md))
+[[belief-state-geometry|Belief State Geometry]] (Shai et al., 2024) provides the empirical foundation for the semantic fractal metaphor. The study discovered that as a transformer generates output, it constructs a measurable belief state geometry — a linear representation of posterior distributions over hidden states — in its residual stream. The model builds an internal fractal "plan" of the answer: each node is the model's belief about which semantic state it occupies, and edges are transitions between states. When the model writes code, it is effectively unfolding this inner semantic fractal. ([Shai et al., 2024](raw/papers/2024-05-shai-belief-state-geometry/index.md))
 
 Vladimir Ivanov connects this to [[contract-programming|Contract Programming]]: structured code contracts function as **belief state refiners** — they force the model to narrow its belief state precisely, constraining its internal fractal navigation to the correct path. This makes contracts a natural, not an imposed, mechanism for controlling LLM code generation. ([Ivanov, 2025](raw/articles/2025-07-05-kontraktnoe-programmirovanie-vash-semanticheskii-schit-v-epo/index.md))
 

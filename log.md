@@ -284,6 +284,19 @@
 - Updated wikilinks in 5 pages (bfs-vs-dfs, bfs, semantic-superposition, chain-of-continuous-thought, index.md)
 - Old raw/papers/2412.06769-coconut/ removed
 
+## [2026-06-17] reingest | belief state geometry paper (Shai et al., 2024)
+
+- **Renamed:** raw/papers/belief-state-geometry-residual-stream/ → raw/papers/2024-05-shai-belief-state-geometry/ (date-prefix + author + slug convention)
+- **Original PDF saved:** raw/papers/2024-05-shai-belief-state-geometry/2405.15943.pdf (3.1 MB, 15 pages + appendix, SHA256: a4d7ea3269)
+- **New raw/index.md:** abstract + PDF link only — no synthetic summary
+- **Hallucination fixed (major) after full PDF read-through:**
+  - Old raw/index.md listed authors as "Adam Shai, Kathryn Br_rewards, Sam Buchanan, Daniel L. K. Yamins, M. I. Jordan, Michael W. DeWeese, Sandra J. Berman, Christopher J. Cueva" — **none of these except Shai are on the paper**
+  - Correct authors: Adam S. Shai, Sarah E. Marzen, Lucas Teixeira, Alexander Gietelink Oldenziel, Paul M. Riechers
+- **Venue corrected:** "arXiv preprint" → **NeurIPS 2024** (paper was accepted at NeurIPS)
+- **Synthesis verified against full PDF:** existing belief-state-geometry.md content is accurate — no further hallucination found (MSP mechanism, Mess3 fractal, RRXOR degeneracy with R² values, distributed layers, architecture independence, linearity as empirical finding from SGD, limitations all confirmed)
+- Updated references in: belief-state-geometry.md (7 references), semantic-fractal.md (2), contract-programming.md (2), index.md
+- Old raw/papers/belief-state-geometry-residual-stream/ removed
+
 ## [2026-06-15] schema | provenance markers migrated to clickable links
 - Convention: `^[raw/...]` → `([Author, Year](raw/...))` (clickable markdown link in parentheses)
 - SCHEMA.md and AGENTS.md updated
