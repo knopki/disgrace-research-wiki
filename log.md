@@ -244,3 +244,29 @@
 - Updated entity: vladimir-ivanov (added known work, GRACE to topics, wikilink to grace)
 - Updated concepts: semantic-anchors, contract-programming, pcam, vibe-coding, positional-encoding, belief-state-geometry, semantic-fractal, semantic-interference, knowledge-graph, retrieval-augmented-generation (added cross-link to grace)
 - Cross-links: grace ↔ vladimir-ivanov, semantic-anchors, contract-programming, pcam, vibe-coding, positional-encoding, belief-state-geometry, semantic-fractal, semantic-interference, knowledge-graph, retrieval-augmented-generation, human-sequential-bottleneck
+
+## [2026-06-15] ingest | Sparse Transformer paper (Child et al., OpenAI, 2019)
+- Raw source: raw/papers/sparse-transformer/ (index.md + full-text.txt)
+- Source: https://arxiv.org/abs/1904.10509
+- Authors: Rewon Child, Scott Gray, Alec Radford, Ilya Sutskever (OpenAI)
+- Content: Introduces sparse factorized self-attention reducing Transformer O(n²) to O(n√n); two patterns (strided for periodic data, fixed for text); pre-activation residual blocks with 1/√(2N) initialization for deep stacks; gradient checkpointing for attention; block-sparse kernels; SOTA on Enwik8 (0.99 bpb, 95M), CIFAR-10 (2.80 bpd, 59M), ImageNet-64 (3.44 bpd, 152M); self-attention shown on sequences up to 1M+ tokens at 3M params
+- Created concept: sparse-transformer (attention sparsity, two factorization patterns, deep transformer scaling, gradient checkpointing legacy)
+- Updated concept: transformer (added cross-link in Limitations — sparse attention addresses O(n²) bottleneck)
+- Updated concepts: kv-caching, chain-of-continuous-thought, positional-encoding (added cross-link to sparse-transformer)
+- Cross-links: sparse-transformer ↔ transformer, kv-caching, chain-of-continuous-thought, positional-encoding, residual-connection
+
+## [2026-06-15] fix | Sparse Transformer raw + concept page corrections
+- **Problem:** raw/index.md was written from partial web_extract (~5K chars truncated summary) instead of full PDF text. Results tables contained fabricated data (wrong model sizes, wrong baselines).
+- **Fix:** Extracted full 36K chars from PDF via pdftotext → saved as full-text.txt alongside raw. Rewrote raw/index.md as proper condensation grounded in full text. Corrected concept page results tables — Enwik8: removed fake "12L/24L sparse" entries, replaced with actual paper data (Sparse Transformer 95M at 0.99 bpb). ImageNet-64: added proper baseline table from paper. Audio: added scalability study with 1M+ token caveat. Added key finding about sparse patterns outperforming dense attention.
+
+## [2026-06-15] reimport | Sparse Transformer paper — proper naming + PDF + synthesis audit
+- **Renamed:** raw/papers/sparse-transformer/ → raw/papers/2019-04-child-sparse-transformer/ (date-prefix + author + slug convention)
+- **Original PDF saved:** raw/papers/2019-04-child-sparse-transformer/1904.10509.pdf (6 pages, 4.4 MB, SHA256: 5b6a655a)
+- **New raw/index.md:** includes abstract from PDF, key contributions summary, architecture overview, and results table — links to PDF for full content
+- **index.md:** Papers entry now links directly to PDF (1904.10509.pdf) with abstract+details link to index.md
+- **Concept page fixes (3 hallucinations fixed after full PDF read-through):**
+  - Gradient checkpointing: removed "first application" claim — paper does not assert this
+  - ImageNet-64: removed "first autoregressive on raw bytes at this scale" — unsupported by paper
+  - Audio capacity scaling: corrected ∜4 ≈ 1.4x → 8x per 4x length increase (O(n√n) scaling)
+- Sources updated in concept page: sparse-transformer/index.md → 2019-04-child-sparse-transformer/index.md
+- Old raw/papers/sparse-transformer/ directory removed

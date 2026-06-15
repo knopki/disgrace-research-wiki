@@ -68,6 +68,7 @@ Coconut excels on tasks requiring **substantial planning and search** (ProsQA), 
 - **[[transformer]]** — the base architecture. Coconut's latent mode exploits the the transformer's ability to process any vector as input, not just token embeddings.
 - **[[word-embeddings|Word Embeddings]]** — Coconut bypasses learned token embeddings during reasoning, demonstrating that the embedding layer is not essential for computation — any vector in the representational space suffices.
 - **[[vibe-coding]]** — Coconut's BFS pattern is the machine-level analog: the model explores solution branches in parallel before committing, mirroring the shift from "writing code step by step" to "exploring solution space."
+- **[[sparse-transformer|Sparse Transformer]]** — both address transformer efficiency limits from different angles: Sparse Transformer reduces attention complexity (O(n²) → O(n√n)), Coconut sidesteps token-by-token generation entirely via latent space reasoning.
 
 ## Open Questions
 

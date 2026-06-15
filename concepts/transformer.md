@@ -1,7 +1,7 @@
 ---
 title: Transformer
 created: 2026-06-17
-updated: 2026-06-17
+updated: 2026-06-15
 type: concept
 tags: [model, architecture, benchmark]
 sources:
@@ -41,7 +41,7 @@ The result: a fully parallelisable architecture where every token can directly a
 
 ## Limitations
 
-- Quadratic memory cost in sequence length (O(n²) attention)
+- Quadratic memory cost in sequence length (O(n²) attention) — partially addressed by [[sparse-transformer|Sparse Transformer]] architectures and later efficient-attention variants
 - No inherent notion of order (positional encoding is added externally)
 - Requires enormous amounts of training data and compute
 

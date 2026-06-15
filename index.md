@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-|> Last updated: 2026-06-15 | Total pages: 37
+|> Last updated: 2026-06-15 | Total pages: 38
 
 ## Entities
 
@@ -62,6 +62,7 @@
 - [[kv-caching|KV Caching]] — inference optimisation caching Key/Value states in auto-regressive transformers to avoid redundant recomputation
 
 - [[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]] — training paradigm replacing language CoT with reasoning directly in the continuous latent space of an LLM; enables emergent BFS-like reasoning
+- [[sparse-transformer|Sparse Transformer]] — OpenAI architecture replacing quadratic attention with O(n√n) sparse factorized patterns; first to demonstrate self-attention on 1M+ token sequences
 
 ## Raw Sources
 
@@ -98,6 +99,7 @@
 - [On the ability of standard and brain-constrained DNNs to support cognitive superposition](raw/papers/cognitive-superposition-garagnani/) (Max Garagnani, Cognitive Neurodynamics, 2024)
 - [Transformers Represent Belief State Geometry in their Residual Stream](raw/papers/belief-state-geometry-residual-stream/) (Adam Shai et al., arXiv, 2024)
 - [Training Large Language Models to Reason in a Continuous Latent Space](raw/papers/2412.06769-coconut/) (Shibo Hao et al., FAIR at Meta / UC San Diego, arXiv, COLM 2025)
+- [Generating Long Sequences with Sparse Transformers](raw/papers/2019-04-child-sparse-transformer/1904.10509.pdf) — abstract and details at [index.md](raw/papers/2019-04-child-sparse-transformer/index.md) (Rewon Child et al., OpenAI, 2019)
 
 ## Comparisons
 

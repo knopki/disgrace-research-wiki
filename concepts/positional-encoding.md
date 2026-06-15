@@ -1,7 +1,7 @@
 ---
 title: Positional Encoding
 created: 2026-06-17
-updated: 2026-06-17
+updated: 2026-06-15
 type: concept
 tags: [architecture, model, training]
 sources:
@@ -59,3 +59,4 @@ This is why tools like Cursor generate patches as semantic descriptions ("find t
 - [[word-embeddings|Word Embeddings]] — PE is added to embeddings, so understanding embeddings is prerequisite
 - [[vibe-coding|Vibe Coding]] — the paradigm shift enabled by AI's structural understanding of code, of which PE is a foundational component
 - [[grace|GRACE]] — the GRACE framework's semantic anchors address the line-number problem that PE creates; XML-like paired tags leverage PE's ability to correlate identical tokens across large distances to overcome sparse attention degradation
+- [[sparse-transformer|Sparse Transformer]] — contrasts with sinusoidal PE: Sparse Transformer uses learned position embeddings (data-dim for images, attention-dim for text) instead of fixed sinusoidal encodings
