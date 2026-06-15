@@ -49,6 +49,7 @@
 - [[lstm|LSTM]] — recurrent architecture with gating mechanisms that solved the vanishing gradient problem for sequential data
 - [[residual-connection|Residual Connection]] — skip connections enabling training of very deep networks by creating gradient highways through the network
 - [[transformer|Transformer]] — architecture using self-attention and positional encodings that superseded RNNs and became the foundation of modern LLMs
+- [[kv-caching|KV Caching]] — inference optimisation caching Key/Value states in auto-regressive transformers to avoid redundant recomputation
 
 ## Raw Sources
 
@@ -70,6 +71,7 @@
 
 - [Design by Contract](raw/articles/design-by-contract-wikipedia/) (Wikipedia, 2026)
 - [Кот Шрёдингера в голове у GPT: Как суперпозиция смыслов меняет правила игры с ИИ](raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/) (Vladimir Ivanov, 2025-07-06)
+- [KV Caching Explained](raw/articles/kv-caching-explained/) (João Lages, Medium, 2023-10-08)
 
 ### Papers
 

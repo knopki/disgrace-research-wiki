@@ -71,9 +71,11 @@ The KV Cache, normally a trap, becomes a **stabilizer of structured thought**: t
 - **[[semantic-fractal|Semantic Fractal]]** — the representation architecture (code as branching vectors, not linear instructions) that makes semantic superposition possible. The fractal is the *structure* of the internal space; superposition is the *operational technique* that exploits it.
 - **[[contract-programming|Contract Programming]]** — contracts function as a practical mechanism for controlling when and how collapse happens. Well-structured pre/post conditions narrow the model's belief state (per [[belief-state-geometry|Belief State Geometry]]) without forcing premature commitment to an implementation.
 - **[[word-embeddings|Word Embeddings]]** — the vector basis: every token is a point in high-dimensional space. Semantic superposition works because these vectors are always linear combinations of many latent correlations.
+- **[[kv-caching|KV Caching]]** — the mechanism behind semantic collapse: the KV Cache freezes generated tokens' trajectories, making collapse irreversible. Also serves as a stabiliser in structured superposition prompting.
 - **[[vibe-coding|Vibe Coding]]** — the high-level paradigm shift where programmers direct intent rather than write instructions. Semantic superposition provides one concrete methodology for how to direct that intent effectively.
 - **[[vladimir-ivanov|Vladimir Ivanov]]** — author who introduced and formalised the concept.
 
 ## References
 
 - Meta (2024). *Training Large Language Models to Reason in a Continuous Latent Space.* arXiv:2412.06769. — empirical basis for latent-space parallel exploration.
+

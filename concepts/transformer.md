@@ -54,3 +54,4 @@ The result: a fully parallelisable architecture where every token can directly a
 - [[superposition|Superposition]] — the feature-representation phenomenon that emerges in trained Transformers
 - [[positional-encoding|Positional Encoding]] — the component that gives tokens their "semantic coordinates," enabling the Transformer to process text in parallel
 - [[semantic-anchors|Semantic Anchors]] — a technique exploiting a practical consequence of positional encoding for AI-assisted code editing
+- [[kv-caching|KV Caching]] — inference optimisation that caches Key and Value states during auto-regressive generation, avoiding redundant recomputation

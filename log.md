@@ -156,3 +156,14 @@
 - Updated concept: contract-programming (added cross-link: contracts control when/how collapse happens)
 - Cross-links: semantic-superposition ↔ semantic-interference, semantic-fractal, superposition, cognitive-superposition, word-embeddings, contract-programming, vibe-coding, vladimir-ivanov
 
+## [2026-06-17] ingest | KV Caching Explained (João Lages, Medium, 2023-10-08)
+
+- Raw source: raw/articles/kv-caching-explained/ (index.md + 4 images)
+- Source: https://medium.com/@joaolages/transformers-kv-caching-explained-8e8f3d9e7b5e
+- Author: João Lages (2023-10-08)
+- Content: inference optimisation for generative transformers; KV cache stores Key/Value states from previous tokens to avoid redundant recomputation during auto-regressive generation; 4.7× speedup on GPT-2 for 1000-token generation; memory overhead is minimal; only applies to decoder/decoder-only models
+- Created concept: kv-caching (inference optimisation, auto-regressive generation bottleneck, K/V caching mechanism, performance impact)
+- Updated concept: semantic-superposition (added direct wikilink to kv-caching as the mechanism behind semantic collapse)
+- Updated concept: transformer (added cross-link to kv-caching)
+- Cross-links: kv-caching ↔ transformer, semantic-superposition, positional-encoding, residual-connection
+
