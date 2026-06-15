@@ -13,8 +13,8 @@ agent frameworks, evaluation benchmarks, and research methodology.
 - When updating a page, always bump the `updated` date
 - Every new page must be added to `index.md` under the correct section
 - Every action must be appended to `log.md`
-- **Provenance markers:** On pages that synthesize 3+ sources, append `^[raw/articles/source.md]`
-  or `^[raw/papers/source.md]` at the end of paragraphs whose claims come from a specific source.
+- **Provenance markers:** On pages that synthesize 3+ sources, append `^[raw/articles/dir-name/index.md]`
+  or `^[raw/papers/dir-name/index.md]` at the end of paragraphs whose claims come from a specific source.
   This lets a reader trace each claim back without re-reading the whole raw file. Optional on
   single-source pages where the `sources:` frontmatter is enough.
 
@@ -26,7 +26,8 @@ agent frameworks, evaluation benchmarks, and research methodology.
   updated: YYYY-MM-DD
   type: entity | concept | comparison | query | summary
   tags: [from taxonomy below]
-  sources: [raw/articles/source-name.md]
+  sources:
+  - "[Article Title](raw/articles/dir-name/index.md)"
   # Optional quality signals:
   confidence: high | medium | low        # how well-supported the claims are
   contested: true                        # set when the page has unresolved contradictions
@@ -64,7 +65,7 @@ and flag drift when it has changed. Compute over the body only (everything after
 ## Tag Taxonomy
 - Models: model, architecture, benchmark, training, inference
 - Agents: agent, framework, tool-use, planning, orchestration, multi-agent
-- Techniques: optimization, fine-tuning, alignment, rlhf, distillation, quantization, data
+- Techniques: optimization, fine-tuning, alignment, rlhf, distillation, quantization, data, technique
 - Infrastructure: serving, deployment, hardware, gpu, distributed
 - Research: methodology, evaluation, reproducibility, scaling-law, paper
 - Meta: comparison, timeline, controversy, prediction, survey, organization

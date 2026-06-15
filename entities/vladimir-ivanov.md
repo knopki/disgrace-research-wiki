@@ -1,20 +1,12 @@
 ---
 title: Vladimir Ivanov
 created: 2026-06-16
-updated: 2026-06-17
+updated: 2026-06-15
 type: entity
 tags:
   - author
 sources:
-  - "[AI угрожает программистам могуществом параллелизма](raw/articles/2025-06-30-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/index.md)"
-  - "[AI в управлении проектами — теперь Resource Leveling уже работает](raw/articles/2025-07-01-ai-v-upravlenii-proektami-teper-resource-leveling-uzhe-rab/index.md)"
-  - "[Семантическая интерференция. Или нажать «газ и тормоз» сразу в промптах](raw/articles/2025-07-01-semanticheskaya-interferenciya-ili-nazhat-gaz-i-tormoz-srazu/index.md)"
-  - "[Вектора GPT или почему для GPT ваше слово — пустота без контекста](raw/articles/2025-07-02-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon/index.md)"
-  - "[История ИИ: бунтари, гении и научные войны, которые сформировали наш мир](raw/articles/2025-07-03-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/index.md)"
-  - "[Позиционные кодировки: «объемное зрение» GPT и секреты AI-агентов](raw/articles/2025-07-04-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/index.md)"
-  - "[Контрактное программирование: Ваш семантический щит в эпоху искусственного интеллекта](raw/articles/2025-07-05-kontraktnoe-programmirovanie-vash-semanticheskii-schit-v-epo/index.md)"
-  - "[Кот Шрёдингера в голове у GPT: Как суперпозиция смыслов меняет правила игры с ИИ](raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/index.md)"
-  - "[За кулисами Microsoft: тайные элитные партнерские программы и ИИ-трансформация](raw/articles/2025-07-10-za-kulisami-microsoft-tainye-elitnye-partnerskie-programmy-i/index.md)"
+  - "[Vladimir Ivanov - LinkedIn](https://www.linkedin.com/in/turboplanner/)"
 ---
 
 # Vladimir Ivanov
@@ -40,3 +32,5 @@ LLMs, parallel computing, project management automation, Microsoft partnership p
 ## Related
 
 - [[microsoft|Microsoft]] — source article describes Ivanov's participation as MVP and Partner Engagement Board member
+- [[vibe-coding|Vibe Coding]] — his dual programming → AI operator analysis is a core case study
+- [[contract-programming|Contract Programming]] — he authored the foundational article adapting DbC for AI agents

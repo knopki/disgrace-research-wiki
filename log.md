@@ -197,3 +197,10 @@
 - Created concept: rational-unified-process (methodology, iterative risk mitigation, contrasts with vibe-coding and connects to contract-programming through shared emphasis on explicit specification)
 - Cross-links: rational-unified-process ↔ contract-programming, vibe-coding
 
+
+|## [2026-06-15] schema | schema audit and fixes
+|- SCHEMA.md: added `technique` to tag taxonomy under Techniques (was in use on 8 pages but missing from schema)
+|- SCHEMA.md: updated `sources:` frontmatter example to YAML block list with markdown links (was inline array with bare paths)
+|- SCHEMA.md: fixed provenance marker convention to `^[raw/*/dir-name/index.md]` (was `source.md`; actual raw sources are directories)
+|- entities/vladimir-ivanov.md: removed 9 duplicate article sources (duplicated Known Works); replaced with LinkedIn profile as biographical source
+|- entities/vladimir-ivanov.md: added wikilinks to vibe-coding and contract-programming (was 1 wikilink, below min 2 rule)
