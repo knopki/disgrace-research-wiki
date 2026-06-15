@@ -25,12 +25,14 @@ Author on VK for Turboplanner. Writes on AI in software engineering and project 
 - "[Кот Шрёдингера в голове у GPT: Как суперпозиция смыслов меняет правила игры с ИИ](raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/index.md)" (2025-07-06) — introduces semantic superposition as a prompt engineering paradigm; explains how LLMs naturally hold multiple competing hypotheses and how delaying semantic collapse enables BFS-like parallel reasoning; defines the Semantic Casino anti-pattern
 - "[За кулисами Microsoft: тайные элитные партнерские программы и ИИ-трансформация](raw/articles/2025-07-10-za-kulisami-microsoft-tainye-elitnye-partnerskie-programmy-i/index.md)" (2025-07-10) — insider perspective on Microsoft's elite partnership programs (MVP, Partner Engagement Board, TAP) and how AI is transforming each; describes dual programming → AI operator transition as concrete vibe coding case study
 
+- "[Методология PCAM: Превращаем AI-агентов из рабов в партнеров](raw/articles/2025-09-11-metodologiya-pcam-prevraschaem-ai-agentov-iz-rabov-v-partner/index.md)" (2025-09-11) — introduces Purpose Centric Agent Methodology (PCAM), shifting agent management from deterministic plans to purpose-driven guidance; defines six principles of autonomous goal-oriented agent architecture
 ## Topics
 
-LLMs, parallel computing, project management automation, Microsoft partnership programs, AI-assisted planning, resource optimization, prompt engineering, word embeddings, distributional semantics, contract programming, semantic annotation architecture, semantic superposition.
+LLMs, parallel computing, project management automation, Microsoft partnership programs, AI-assisted planning, resource optimization, prompt engineering, word embeddings, distributional semantics, contract programming, semantic annotation architecture, semantic superposition, PCAM, agent methodology.
 
 ## Related
 
 - [[microsoft|Microsoft]] — source article describes Ivanov's participation as MVP and Partner Engagement Board member
 - [[vibe-coding|Vibe Coding]] — his dual programming → AI operator analysis is a core case study
 - [[contract-programming|Contract Programming]] — he authored the foundational article adapting DbC for AI agents
+- [[pcam|PCAM]] — he authored the Purpose Centric Agent Methodology for autonomous agent architecture

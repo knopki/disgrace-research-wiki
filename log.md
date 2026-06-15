@@ -223,3 +223,13 @@
 |- SCHEMA.md: fixed provenance marker convention to `^[raw/*/dir-name/index.md]` (was `source.md`; actual raw sources are directories)
 |- entities/vladimir-ivanov.md: removed 9 duplicate article sources (duplicated Known Works); replaced with LinkedIn profile as biographical source
 |- entities/vladimir-ivanov.md: added wikilinks to vibe-coding and contract-programming (was 1 wikilink, below min 2 rule)
+
+## [2026-06-15] ingest | PCAM methodology article (Vladimir Ivanov, 2025-09-11)
+
+- Raw source: raw/articles/2025-09-11-metodologiya-pcam-prevraschaem-ai-agentov-iz-rabov-v-partner/ (index.md + 4 images)
+- Source: vk.com/@turboplanner
+- Author: Vladimir Ivanov (2025-09-11)
+- Content: introduces Purpose Centric Agent Methodology (PCAM) — paradigm shift from deterministic step-by-step plans to goal-oriented guidance; six principles (goal primacy, contextual guides, standardized protocols, plugin architecture, self-healing, integrated feedback loop); practical implementation in multi-agent teams with guides, PLAN-CONFIRM workflow, and plugin-based scalability
+- Created concept: pcam (six principles, plugin architecture, self-healing, feedback loop)
+- Updated entity: vladimir-ivanov (added known work + topics + Related wikilink)
+- Cross-links: pcam ↔ vladimir-ivanov, vibe-coding, contract-programming, semantic-anchors, semantic-superposition, human-sequential-bottleneck

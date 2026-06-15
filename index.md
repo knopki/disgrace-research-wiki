@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-|> Last updated: 2026-06-15 | Total pages: 35
+|> Last updated: 2026-06-15 | Total pages: 36
 
 ## Entities
 
@@ -32,6 +32,8 @@
 - [[retrieval-augmented-generation|Retrieval-Augmented Generation (RAG)]] — architectural pattern grounding LLM responses in externally retrieved knowledge
 - [[knowledge-graph|Knowledge Graph]] — structured entity-relationship knowledge base for grounding AI answers
 - [[corpus-linguistics|Corpus Linguistics]] — branch of linguistics building annotated text corpora; foundational to NLP training data and RAG knowledge bases
+
+- [[pcam|Purpose Centric Agent Methodology (PCAM)]] — agent management paradigm shifting from deterministic plans to purpose-driven guidance; six principles for autonomous goal-oriented agent architecture, plugin-based scalability, and multi-agent feedback loops
 
 - [[polysemantic-neurons|Polysemantic Neurons]] — neurons that respond to multiple unrelated features; explained by the superposition hypothesis
 
@@ -85,6 +87,7 @@
 |- [Rational Unified Process](raw/articles/rational-unified-process-wikipedia/) (Wikipedia, 2026)
 |- [Difference between BFS and DFS](raw/articles/bfs-vs-dfs-gfg/) (GeeksforGeeks)
 |- [Breadth First Search or BFS for a Graph](raw/articles/bfs-gfg/) (GeeksforGeeks)
+- [Методология PCAM: Превращаем AI-агентов из рабов в партнеров](raw/articles/2025-09-11-metodologiya-pcam-prevraschaem-ai-agentov-iz-rabov-v-partner/) (Vladimir Ivanov, 2025-09-11)
 
 ### Papers
 
