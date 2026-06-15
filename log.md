@@ -45,3 +45,9 @@
 - Created concept: knowledge-graph
 - Cross-links: retrieval-augmented-generation, distributional-semantics, word-embeddings
 - New tag added: knowledge-graph (Knowledge category in SCHEMA.md)
+
+## [2026-06-16] ingest | Distributional Semantics (Wikipedia)
+- Raw source: raw/articles/distributional-semantics-wikipedia/ (index.md + 5 images in images/)
+- Source: Wikipedia (Russian), page "Дистрибутивная семантика"
+- Updated concept: distributional-semantics (added historical roots, math model, predictive models, applications)
+- Cross-links: word-embeddings, semantic-interference, vladimir-ivanov

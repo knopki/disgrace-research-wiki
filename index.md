@@ -30,6 +30,7 @@
 - [Вектора GPT или почему для GPT ваше слово — пустота без контекста](raw/articles/2025-07-02-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon/) (Vladimir Ivanov, 2025-07-02)
 - [Генерация с дополненной выборкой (RAG)](raw/articles/rag-wikipedia/) (Wikipedia, 2026)
 - [Knowledge Graph (Google)](raw/articles/knowledge-graph-google-wikipedia/) (Wikipedia, 2026)
+- [Дистрибутивная семантика](raw/articles/distributional-semantics-wikipedia/) (Wikipedia, 2026)
 
 ## Comparisons
 
