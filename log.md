@@ -365,3 +365,13 @@
 - Updated concept: big-bird (added [[wikilink]] to spargeattn)
 - Updated concept: kv-caching (added [[wikilink]] to spargeattn)
 - Cross-links: spargeattn ↔ sparse-transformer, longformer, big-bird, kv-caching, transformer
+
+## [2026-06-15] ingest | GPT-4.1 Prompting Guide (OpenAI Cookbook)
+
+- Raw source: `raw/articles/2026-06-15-openai-gpt41-prompting-guide/`
+- Source: https://developers.openai.com/cookbook/examples/gpt4-1_prompting_guide
+- Imported via defuddle.md (full markdown extraction, 1150 lines)
+- Content: comprehensive prompting guide covering Agentic Workflows (three-reminder system: persistence, tool-calling, planning; SWE-bench Verified at 55% SOTA for non-reasoning models), Long Context (1M tokens, two-pass re-ranking, batching patterns), Structured Outputs, Customer Service Agent example, General Advice (prompt structure, delimiters), Appendix: V4A Diff Format with reference apply_patch.py implementation
+- Created concept: v4a-diff-format (format spec, context anchoring, reference implementation, relationship to GRACE/contract-programming)
+- Updated concept: grace (added [[wikilink]] to v4a-diff-format in Direct Navigation and Deterministic Patching section)
+- Cross-links: v4a-diff-format ↔ grace, contract-programming

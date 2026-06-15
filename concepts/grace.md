@@ -122,7 +122,7 @@ This hierarchy lets the agent **progressively collect all relevant context** for
 
 Two mechanisms for precision work:
 - **Log-to-code navigation:** Structured logs contain exact coordinates (function name, block name), letting the agent jump instantly to the problem source via anchor search — one search, zero ambiguity
-- **Semantic coordinate solution:** GRACE anchors solve the [[positional-encoding|line-number problem]] — they provide stable semantic coordinates (unlike fragile line numbers) for reliable patch application, making code modification as deterministic as navigation
+- **Semantic coordinate solution:** GRACE anchors solve the [[positional-encoding|line-number problem]] — they provide stable semantic coordinates (unlike fragile line numbers) for reliable patch application via formats like [[v4a-diff-format|V4A]], making code modification as deterministic as navigation
 
 ## Connections to Other Methodologies
 
