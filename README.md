@@ -1,7 +1,6 @@
 # БЯМ & МЯМ сидели на трубе
 
-![logo](raw/assets/readme-logo.png)
-
+![](raw/assets/readme-hero.png)
 БЯМ (Большая Языковая Модель) and МЯМ (Малая Языковая Модель) — Russian shorthand for LLM and SLM, and the name of this **LLM Wiki**: a compounding knowledge base on neural architectures, AI agent workflows, coding methodologies, and the semantic weirdness that emerges when you push tokens through transformers.
 
 ## What's inside
