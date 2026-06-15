@@ -142,3 +142,17 @@
 - Updated concept: contract-programming (added source, wikilinks to belief-state-geometry and residual-connection, provenance marker)
 - Cross-links: belief-state-geometry ↔ semantic-fractal, contract-programming, residual-connection, transformer, superposition, cognitive-superposition
 
+## [2026-06-17] ingest | Semantic Superposition article (Vladimir Ivanov, 2025-07-06)
+
+- Raw source: raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/ (index.md + 5 images)
+- Source: vk.com/@turboplanner
+- Author: Vladimir Ivanov (2025-07-06)
+- Content: introduces semantic superposition as a prompt engineering paradigm; LLMs naturally hold multiple competing hypotheses in vector space; semantic collapse is the moment of commitment frozen by KV Cache; describes the Semantic Casino anti-pattern; BFS-like reasoning by delaying collapse; cites Meta's arXiv:2412.06769 on continuous latent space reasoning; two case studies (multithreading in RAG, plugin architecture)
+- Created concept: semantic-superposition (superposition/collapse, KV Cache freezing, semantic casino, BFS reasoning, practical technique)
+- Updated entity: vladimir-ivanov (added known work + source)
+- Updated concept: semantic-interference (added cross-link contrasting deliberate superposition vs accidental mush)
+- Updated concept: semantic-fractal (added cross-link to semantic-superposition as operational technique)
+- Updated concept: vibe-coding (added cross-link to semantic-superposition as a concrete prompting methodology)
+- Updated concept: contract-programming (added cross-link: contracts control when/how collapse happens)
+- Cross-links: semantic-superposition ↔ semantic-interference, semantic-fractal, superposition, cognitive-superposition, word-embeddings, contract-programming, vibe-coding, vladimir-ivanov
+

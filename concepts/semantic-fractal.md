@@ -47,4 +47,5 @@ Vladimir Ivanov connects this to [[contract-programming|Contract Programming]]: 
 - [[positional-encoding|Positional Encoding]] — the architectural mechanism that creates the multi-scale nested representations the fractal describes
 - [[contract-programming|Contract Programming]] — uses belief state geometry as its scientific foundation; contracts refine the model's internal fractal plan
 - [[belief-state-geometry|Belief State Geometry]] — the empirical phenomenon that grounds the fractal metaphor
+- [[semantic-superposition|Semantic Superposition]] — the operational technique that exploits the fractal's branching structure; the fractal is the *representation*, superposition is the *prompt engineering paradigm* that navigates it
 - [[vladimir-ivanov|Vladimir Ivanov]] — author who introduced the concept

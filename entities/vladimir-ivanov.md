@@ -13,6 +13,7 @@ sources:
   - "[История ИИ: бунтари, гении и научные войны, которые сформировали наш мир](raw/articles/2025-07-03-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/index.md)"
   - "[Позиционные кодировки: «объемное зрение» GPT и секреты AI-агентов](raw/articles/2025-07-04-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/index.md)"
   - "[Контрактное программирование: Ваш семантический щит в эпоху искусственного интеллекта](raw/articles/2025-07-05-kontraktnoe-programmirovanie-vash-semanticheskii-schit-v-epo/index.md)"
+  - "[Кот Шрёдингера в голове у GPT: Как суперпозиция смыслов меняет правила игры с ИИ](raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/index.md)"
 ---
 
 # Vladimir Ivanov
@@ -28,7 +29,8 @@ Author on VK for Turboplanner. Writes on AI in software engineering and project 
 - "[История ИИ: бунтари, гении и научные войны](raw/articles/2025-07-03-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/index.md)" (2025-07-03) — historical overview of AI from Rosenblatt's Perceptron through the Transformer revolution, covering backpropagation, LSTM, ResNet, and "Attention Is All You Need"
 - "[Позиционные кодировки: «объемное зрение» GPT и секреты AI-агентов](raw/articles/2025-07-04-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/index.md)" (2025-07-04) — explains how sinusoidal positional encodings give GPT multi-scale "3D semantic vision," the line-number problem, and the semantic anchor (# ANCHOR:) pattern for AI agent patching
 - "[Контрактное программирование: Ваш семантический щит в эпоху искусственного интеллекта](raw/articles/2025-07-05-kontraktnoe-programmirovanie-vash-semanticheskii-schit-v-epo/index.md)" (2025-07-05) — adapts Design by Contract for AI-assisted coding; introduces semantic coherence, belief state geometry as the scientific basis for contracts, and contract-driven agent navigation
+- "[Кот Шрёдингера в голове у GPT: Как суперпозиция смыслов меняет правила игры с ИИ](raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/index.md)" (2025-07-06) — introduces semantic superposition as a prompt engineering paradigm; explains how LLMs naturally hold multiple competing hypotheses and how delaying semantic collapse enables BFS-like parallel reasoning; defines the Semantic Casino anti-pattern
 
 ## Topics
 
-LLMs, parallel computing, project management automation, AI-assisted planning, resource optimization, prompt engineering, word embeddings, distributional semantics, contract programming, semantic annotation architecture.
+LLMs, parallel computing, project management automation, AI-assisted planning, resource optimization, prompt engineering, word embeddings, distributional semantics, contract programming, semantic annotation architecture, semantic superposition.

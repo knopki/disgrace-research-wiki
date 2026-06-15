@@ -145,3 +145,4 @@ DbC does not replace testing — contracts act as **test oracles**, specifying e
 - [[semantic-interference|Semantic Interference]] — contracts are the antidote: they reduce ambiguity and prevent the "skyscraper collapse"
 - [[vibe-coding|Vibe Coding]] — contract programming is a concrete methodology for implementing the vibe coding paradigm
 - [[retrieval-augmented-generation|RAG]] — the agent navigation described above depends on RAG for its fragment-based reading
+- [[semantic-superposition|Semantic Superposition]] — contracts function as a practical mechanism for controlling *when* and *how* semantic collapse happens; a well-structured contract scopes the model's belief state without forcing premature commitment to implementation
