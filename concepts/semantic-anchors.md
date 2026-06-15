@@ -53,3 +53,4 @@ Semantic anchors differ from:
 - [[positional-encoding|Positional Encoding]] — the architectural feature that necessitates semantic anchors
 - [[vibe-coding|Vibe Coding]] — anchors are part of the tooling shift toward AI-native programming
 - [[innate-parallelism|Innate Parallelism]] — the broader context of AI-adapted development workflows
+- [[contract-programming|Contract Programming]] — the higher-level semantic framework that anchors fit into; modular contracts → function contracts → ANCHOR markers form a navigation hierarchy

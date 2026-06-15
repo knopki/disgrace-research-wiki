@@ -38,3 +38,4 @@ The programmer becomes an architect and conductor — defining the app's structu
 - [[human-sequential-bottleneck|Human Sequential Bottleneck]] — the human limitation vibe coding circumvents
 - [[positional-encoding|Positional Encoding]] — the PE mechanism enables the "3D semantic vision" that makes AI-assisted vibe coding effective
 - [[semantic-anchors|Semantic Anchors]] — a concrete tooling technique that aligns with vibe coding's shift from line-based to semantic programming
+- [[contract-programming|Contract Programming]] — a concrete methodology for implementing vibe coding's intent-delegation model; contracts act as the "specification layer" the vibe coder defines

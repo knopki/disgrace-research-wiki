@@ -111,3 +111,17 @@
 - Updated concept: transformer (added source, cross-links to positional-encoding and semantic-anchors)
 - Updated concept: vibe-coding (added source, cross-links to positional-encoding and semantic-anchors)
 - Cross-links: positional-encoding ↔ transformer, semantic-fractal, word-embeddings, vibe-coding, semantic-anchors
+
+## [2026-06-15] ingest | Contract Programming article (Vladimir Ivanov, 2025-07-05)
+
+- Raw source: raw/articles/2025-07-05-kontraktnoe-programmirovanie-vash-semanticheskii-schit-v-epo/ (index.md + 1 image)
+- Source: vk.com/@turboplanner
+- Author: Vladimir Ivanov (2025-07-05)
+- Content: Design by Contract adapted for AI-assisted coding: pre/post conditions as semantic shields; semantic coherence (spec-contract-code trinity); belief state geometry (arxiv 2405.15943) as scientific basis; fractal contract structure; natural-language test specs vs executable tests; RAG-based agent navigation via two-level contracts; semantic annotation architecture as new discipline
+- Created concept: contract-programming (contracts as AI semantic shields, semantic coherence, semantic specs vs tests, fractal contract structure, contract-driven RAG agent navigation)
+- Updated entity: vladimir-ivanov (added known work + source)
+- Updated concept: semantic-fractal (added belief state geometry section, cross-link to contract-programming)
+- Updated concept: semantic-anchors (added cross-link to contract-programming)
+- Updated concept: semantic-interference (added cross-link: contracts as structural antidote)
+- Updated concept: vibe-coding (added cross-link: contract programming as methodology)
+- Cross-links: contract-programming ↔ semantic-fractal, semantic-anchors, semantic-interference, vibe-coding, retrieval-augmented-generation, vladimir-ivanov

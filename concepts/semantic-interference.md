@@ -33,3 +33,4 @@ The result is unpredictable and often incoherent — as if pressing both the acc
 
 - [[semantic-fractal|Semantic Fractal]] — fractal prompting is the primary practical antidote to semantic interference.
 - [[vibe-coding|Vibe Coding]] — shares the theme of mismatched expectation: the user assumes the model processes instructions sequentially when it actually synthesises them.
+- [[contract-programming|Contract Programming]] — contracts are the structural antidote to semantic interference: they replace broad, contradictory rules with local, scoped pre/post conditions; natural-language test specifications in contracts reduce the "semantic noise" of executable test boilerplate
