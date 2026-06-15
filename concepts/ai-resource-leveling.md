@@ -3,9 +3,12 @@ title: AI Resource Leveling
 created: 2026-06-16
 updated: 2026-06-16
 type: concept
-tags: [agent, planning, optimization]
+tags:
+  - agent
+  - planning
+  - optimization
 sources:
-  - "[AI в управлении проектами — теперь Resource Leveling уже работает](raw/articles/2025-07-01-ai-v-upravlenii-proektami-teper-resource-leveling-uzhe-rab/index.md)"
+  - "[AI в управлении проектами — теперь Resource Leveling уже работает](raw/articles/2025-07-01-ivanov-ai-v-upravlenii-proektami-teper-resource-leveling-uzhe-rab/ivanov2025aiinpm.md)"
 ---
 
 # AI Resource Leveling

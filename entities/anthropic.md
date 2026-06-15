@@ -3,9 +3,12 @@ title: Anthropic
 created: 2026-06-17
 updated: 2026-06-17
 type: entity
-tags: [paper, methodology, organization]
+tags:
+  - paper
+  - methodology
+  - organization
 sources:
-  - "[Toy Models of Superposition](raw/papers/2022-09-elhage-toy-models-superposition/index.md)"
+  - "[Toy Models of Superposition](raw/papers/2022-09-elhage-toy-models-superposition/anthropic2022toy.md)"
 confidence: high
 ---
 

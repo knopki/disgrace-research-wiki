@@ -3,9 +3,12 @@ title: Backpropagation
 created: 2026-06-17
 updated: 2026-06-17
 type: concept
-tags: [model, training, technique]
+tags:
+  - model
+  - training
+  - technique
 sources:
-  - "[История ИИ: бунтари, гении и научные войны](raw/articles/2025-07-03-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/index.md)"
+  - "[История ИИ: бунтари, гении и научные войны](raw/articles/2025-07-03-ivanov-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/ivanoc2025istoriya.md)"
 confidence: high
 ---
 
@@ -15,7 +18,7 @@ confidence: high
 
 ## History
 
-The concept was first described by **Paul Werbos** in his 1974 PhD dissertation, but remained largely unnoticed. The algorithm was independently rediscovered by **Alexandr Galushkin** in the USSR. It was not until **1986** that **David Rumelhart**, **Geoffrey Hinton** (then at Carnegie Mellon), and **Ronald Williams** popularised backpropagation by demonstrating a working neural network that could learn the XOR function — directly answering the challenge posed by Minsky and Papert in their 1969 book *Perceptrons*. ([Ivanov, 2025](raw/articles/2025-07-03-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/index.md))
+The concept was first described by **Paul Werbos** in his 1974 PhD dissertation, but remained largely unnoticed. The algorithm was independently rediscovered by **Alexandr Galushkin** in the USSR. It was not until **1986** that **David Rumelhart**, **Geoffrey Hinton** (then at Carnegie Mellon), and **Ronald Williams** popularised backpropagation by demonstrating a working neural network that could learn the XOR function — directly answering the challenge posed by Minsky and Papert in their 1969 book *Perceptrons*. ([Ivanov, 2025](raw/articles/2025-07-03-ivanov-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/ivanoc2025istoriya.md))
 
 ## How It Works
 

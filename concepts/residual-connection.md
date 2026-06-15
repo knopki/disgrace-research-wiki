@@ -3,9 +3,13 @@ title: Residual Connection (Skip Connection)
 created: 2026-06-17
 updated: 2026-06-17
 type: concept
-tags: [model, architecture, training, optimization]
+tags:
+  - model
+  - architecture
+  - training
+  - optimization
 sources:
-  - "[История ИИ: бунтари, гении и научные войны](raw/articles/2025-07-03-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/index.md)"
+  - "[История ИИ: бунтари, гении и научные войны](raw/articles/2025-07-03-ivanov-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/ivanoc2025istoriya.md)"
 confidence: high
 ---
 
@@ -15,7 +19,7 @@ A **residual connection** (also called a skip connection or shortcut connection)
 
 ## Origin: ResNet
 
-Residual connections were introduced in the 2015 paper **"Deep Residual Learning for Image Recognition"** by **Kaiming He**, **Xiangyu Zhang**, **Shaoging Ren**, and **Jian Sun** (Microsoft Research). Their model, **ResNet** (Residual Network), won the ImageNet 2015 classification competition with a staggering 152-layer network — dramatically deeper than anything previously trainable. ([Ivanov, 2025](raw/articles/2025-07-03-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/index.md))
+Residual connections were introduced in the 2015 paper **"Deep Residual Learning for Image Recognition"** by **Kaiming He**, **Xiangyu Zhang**, **Shaoging Ren**, and **Jian Sun** (Microsoft Research). Their model, **ResNet** (Residual Network), won the ImageNet 2015 classification competition with a staggering 152-layer network — dramatically deeper than anything previously trainable. ([Ivanov, 2025](raw/articles/2025-07-03-ivanov-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/ivanoc2025istoriya.md))
 
 ## Why It Works
 

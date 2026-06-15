@@ -3,9 +3,12 @@ title: Semantic Anchors
 created: 2026-06-17
 updated: 2026-06-17
 type: concept
-tags: [agent, tool-use, technique]
+tags:
+  - agent
+  - tool-use
+  - technique
 sources:
-  - "[Позиционные кодировки: «объемное зрение» GPT и секреты AI-агентов](raw/articles/2025-07-04-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/index.md)"
+  - "[Позиционные кодировки: «объемное зрение» GPT и секреты AI-агентов](raw/articles/2025-07-04-ivanov-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/ivanoc2025encodings.md)"
 confidence: medium
 ---
 
@@ -15,7 +18,7 @@ confidence: medium
 
 ## The Problem
 
-Due to [[positional-encoding|Positional Encoding]], LLMs perceive code as a multi-scale nested semantic structure — not as a flat sequence of line numbers. Asking a model to "replace line 25" is like asking someone to navigate a 3D building using only street addresses: the coordinate system doesn't align with the model's internal representation. ([Ivanov, 2025](raw/articles/2025-07-04-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/index.md))
+Due to [[positional-encoding|Positional Encoding]], LLMs perceive code as a multi-scale nested semantic structure — not as a flat sequence of line numbers. Asking a model to "replace line 25" is like asking someone to navigate a 3D building using only street addresses: the coordinate system doesn't align with the model's internal representation. ([Ivanov, 2025](raw/articles/2025-07-04-ivanov-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/ivanoc2025encodings.md))
 
 This is why tools like Cursor generate patches as semantic descriptions ("find the `validatePassword` call inside the hash-check block and replace it") rather than line-number diff formats. Semantic descriptions work, but they are fragile — ambiguous if multiple matching contexts exist.
 
@@ -38,7 +41,7 @@ These markers:
 
 ## Evidence
 
-When Vladimir Ivanov tested this hypothesis by asking Claude 4 Opus (Anthropic) to generate a patch example, the model independently proposed the `# ANCHOR:` format without prompting. The author reports extracting this as Anthropic's "secret sauce" for achieving top results on the [[superposition|SWE Bench]] benchmark — their AI agents likely use a system of semantic anchors to reliably locate patch sites and focus their sparse attention budget. ([Ivanov, 2025](raw/articles/2025-07-04-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/index.md))
+When Vladimir Ivanov tested this hypothesis by asking Claude 4 Opus (Anthropic) to generate a patch example, the model independently proposed the `# ANCHOR:` format without prompting. The author reports extracting this as Anthropic's "secret sauce" for achieving top results on the [[superposition|SWE Bench]] benchmark — their AI agents likely use a system of semantic anchors to reliably locate patch sites and focus their sparse attention budget. ([Ivanov, 2025](raw/articles/2025-07-04-ivanov-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/ivanoc2025encodings.md))
 
 ## Distinction
 

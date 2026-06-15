@@ -3,15 +3,18 @@ title: Polysemantic Neurons
 created: 2026-06-17
 updated: 2026-06-17
 type: concept
-tags: [model, architecture, paper]
+tags:
+  - model
+  - architecture
+  - paper
 sources:
-  - "[Toy Models of Superposition](raw/papers/2022-09-elhage-toy-models-superposition/index.md)"
+  - "[Toy Models of Superposition](raw/papers/2022-09-elhage-toy-models-superposition/anthropic2022toy.md)"
 confidence: high
 ---
 
 # Polysemantic Neurons
 
-Neurons that respond to multiple unrelated features. The counterpart is **monosemantic neurons**, which respond to a single interpretable feature. Both types can coexist in the same model, and the ratio between them is governed by feature sparsity. ([Anthropic, 2022](raw/papers/2022-09-elhage-toy-models-superposition/index.md))
+Neurons that respond to multiple unrelated features. The counterpart is **monosemantic neurons**, which respond to a single interpretable feature. Both types can coexist in the same model, and the ratio between them is governed by feature sparsity. ([Anthropic, 2022](raw/papers/2022-09-elhage-toy-models-superposition/anthropic2022toy.md))
 
 Polysemanticity was systematically explained by [[anthropic|Anthropic]] in *Toy Models of Superposition* (2022) as the neuron-level manifestation of [[superposition]] in a [[privileged-basis|privileged basis]].
 
@@ -23,7 +26,7 @@ In a [[privileged-basis|privileged basis]] (such as an MLP hidden layer), featur
 
 ## Phase Change with Sparsity
 
-In the ReLU hidden layer toy model, there is a clear transition: ([Anthropic, 2022](raw/papers/2022-09-elhage-toy-models-superposition/index.md))
+In the ReLU hidden layer toy model, there is a clear transition: ([Anthropic, 2022](raw/papers/2022-09-elhage-toy-models-superposition/anthropic2022toy.md))
 
 - **Dense features** (low sparsity) → neurons are monosemantic, each dedicated to one feature
 - **Moderate sparsity** → mixture of monosemantic and polysemantic neurons in the same layer
@@ -33,7 +36,7 @@ The transition mirrors the [[superposition|phase change in superposition]] itsel
 
 ## Observations in Real Models
 
-Three empirical observations from real neural networks that are consistent with the toy model: ([Anthropic, 2022](raw/papers/2022-09-elhage-toy-models-superposition/index.md))
+Three empirical observations from real neural networks that are consistent with the toy model: ([Anthropic, 2022](raw/papers/2022-09-elhage-toy-models-superposition/anthropic2022toy.md))
 
 1. **InceptionV1**: later layers have a higher fraction of polysemantic neurons. The explanation: higher-level features are sparser (e.g., a floppy ear detector fires much less often than an edge detector), which drives more superposition in later layers.
 
@@ -43,7 +46,7 @@ Three empirical observations from real neural networks that are consistent with 
 
 ## Asymmetric Superposition Motif
 
-A specific polysemantic pattern discovered in the toy model: two neurons form a pair where one stores features with unequal weights, and the other inhibits the feature that would otherwise experience positive interference. This converts harmful positive interference into harmless negative interference. ([Anthropic, 2022](raw/papers/2022-09-elhage-toy-models-superposition/index.md))
+A specific polysemantic pattern discovered in the toy model: two neurons form a pair where one stores features with unequal weights, and the other inhibits the feature that would otherwise experience positive interference. This converts harmful positive interference into harmless negative interference. ([Anthropic, 2022](raw/papers/2022-09-elhage-toy-models-superposition/anthropic2022toy.md))
 
 ## Implications for Interpretability
 

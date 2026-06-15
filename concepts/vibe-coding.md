@@ -3,11 +3,14 @@ title: Vibe Coding
 created: 2026-06-16
 updated: 2026-06-17
 type: concept
-tags: [agent, tool-use, prediction]
+tags:
+  - agent
+  - tool-use
+  - prediction
 sources:
-  - "[AI угрожает программистам могуществом параллелизма](raw/articles/2025-06-30-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/index.md)"
-  - "[Позиционные кодировки: «объемное зрение» GPT и секреты AI-агентов](raw/articles/2025-07-04-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/index.md)"
-  - "[За кулисами Microsoft: тайные элитные партнерские программы и ИИ-трансформация](raw/articles/2025-07-10-za-kulisami-microsoft-tainye-elitnye-partnerskie-programmy-i/index.md)"
+  - "[AI угрожает программистам могуществом параллелизма](raw/articles/2025-06-30-ivanov-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/ivanov2025aimenace.md)"
+  - "[Позиционные кодировки: «объемное зрение» GPT и секреты AI-агентов](raw/articles/2025-07-04-ivanov-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/ivanoc2025encodings.md)"
+  - "[За кулисами Microsoft: тайные элитные партнерские программы и ИИ-трансформация](raw/articles/2025-07-10-ivanov-za-kulisami-microsoft-tainye-elitnye-partnerskie-programmy-i/ivanoc2025microsoft.md)"
 ---
 
 # Vibe Coding
@@ -16,7 +19,7 @@ A term popularized by Andrej Karpathy (2025) describing a programming paradigm w
 
 ## In the Context of Parallelism
 
-Vladimir Ivanov frames vibe coding as the natural adaptation to AI's structural advantage in parallelism: if AI inherently handles concurrent code better than humans, then the programmer's role shifts from writing threads to directing purpose. ([Ivanov, 2025](raw/articles/2025-06-30-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/index.md))
+Vladimir Ivanov frames vibe coding as the natural adaptation to AI's structural advantage in parallelism: if AI inherently handles concurrent code better than humans, then the programmer's role shifts from writing threads to directing purpose. ([Ivanov, 2025](raw/articles/2025-06-30-ivanov-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/ivanov2025aimenace.md))
 
 The programmer becomes an architect and conductor — defining the app's structure, constraints, and "atmosphere" — while the AI handles the "highest pilotage" of deadlock-free, efficiently parallelized implementation.
 
@@ -25,7 +28,7 @@ The programmer becomes an architect and conductor — defining the app's structu
 - The bottleneck shifts from "how to implement parallelism" to "what should the system do"
 - Value of a programmer is determined less by low-level implementation skill and more by problem-framing ability
 - Tooling for expressing intent (prompts, specs, guardrails) becomes more critical than tooling for expressing implementation
-- Current tools (OpenMP, MPI, CUDA) designed for human workflows may become obsolete or be replaced by AI-native abstractions ([Ivanov, 2025](raw/articles/2025-06-30-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/index.md))
+- Current tools (OpenMP, MPI, CUDA) designed for human workflows may become obsolete or be replaced by AI-native abstractions ([Ivanov, 2025](raw/articles/2025-06-30-ivanov-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/ivanov2025aimenace.md))
 
 ## Open Questions
 
@@ -35,7 +38,7 @@ The programmer becomes an architect and conductor — defining the app's structu
 
 ## Real-World Case Study: Microsoft's Dual Programming Transition
 
-Microsoft's long-standing dual programming practice (from XP) provides a large-scale case study of vibe coding in action. The company paired experienced tester-leads with junior developers, where the lead would review code written by the junior. When AI code generation became viable, Microsoft structurally replaced junior developers with AI bots while keeping the experienced leads as AI operators. The dual programming model mapped directly onto the new pattern — experienced lead + AI implementer — rather than experienced lead + junior implementer. This organizational alignment gave Microsoft a head start over companies with senior-only coding teams. ([Ivanov, 2025](raw/articles/2025-07-10-za-kulisami-microsoft-tainye-elitnye-partnerskie-programmy-i/index.md))
+Microsoft's long-standing dual programming practice (from XP) provides a large-scale case study of vibe coding in action. The company paired experienced tester-leads with junior developers, where the lead would review code written by the junior. When AI code generation became viable, Microsoft structurally replaced junior developers with AI bots while keeping the experienced leads as AI operators. The dual programming model mapped directly onto the new pattern — experienced lead + AI implementer — rather than experienced lead + junior implementer. This organizational alignment gave Microsoft a head start over companies with senior-only coding teams. ([Ivanov, 2025](raw/articles/2025-07-10-ivanov-za-kulisami-microsoft-tainye-elitnye-partnerskie-programmy-i/ivanoc2025microsoft.md))
 
 This confirms the vibe coding thesis at enterprise scale: the bottleneck shifts from writing implementation to framing intent, and the developer's value is determined by problem-framing ability rather than implementation throughput.
 

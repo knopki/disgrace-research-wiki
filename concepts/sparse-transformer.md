@@ -3,9 +3,12 @@ title: Sparse Transformer
 created: 2026-06-15
 updated: 2026-06-15
 type: concept
-tags: [model, architecture, optimization]
+tags:
+  - model
+  - architecture
+  - optimization
 sources:
-  - "[Generating Long Sequences with Sparse Transformers](raw/papers/2019-04-child-sparse-transformer/index.md)"
+  - "[Generating Long Sequences with Sparse Transformers](raw/papers/2019-04-child-sparse-transformer/child2019sparse.md)"
 confidence: high
 ---
 

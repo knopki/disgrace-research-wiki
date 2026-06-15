@@ -3,9 +3,13 @@ title: Retrieval-Augmented Generation (RAG)
 created: 2026-06-16
 updated: 2026-06-16
 type: concept
-tags: [architecture, technique, evaluation, data]
+tags:
+  - architecture
+  - technique
+  - evaluation
+  - data
 sources:
-  - "[Wikipedia: Генерация с дополненной выборкой](raw/articles/rag-wikipedia/index.md)"
+  - "[Wikipedia: Генерация с дополненной выборкой](raw/articles/rag-wikipedia.md)"
 confidence: high
 ---
 

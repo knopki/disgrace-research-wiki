@@ -3,9 +3,11 @@ title: BFS vs DFS
 created: 2026-06-15
 updated: 2026-06-15
 type: comparison
-tags: [comparison, technique]
+tags:
+  - comparison
+  - technique
 sources:
-  - "[Difference between BFS and DFS](raw/articles/bfs-vs-dfs-gfg/index.md)"
+  - "[Difference between BFS and DFS](raw/articles/2019-bfs-vs-dfs-gfg.md)"
 ---
 
 # BFS vs DFS
@@ -27,8 +29,8 @@ Standard comparison of the two fundamental graph traversal algorithms: Breadth-F
 Both algorithms serve as conceptual models for how LLMs explore their solution space during generation:
 
 - **Standard auto-regressive decoding** resembles DFS — the model commits greedily to the first token, then explores ever-deeper conditioned on that choice. This is fast but can miss better solutions that require backtracking.
-- **Latent-space reasoning ([[chain-of-continuous-thought|Coconut]])** enables BFS-like behaviour: the model maintains probability mass over multiple candidate reasoning paths simultaneously, dynamically reweighting them as evidence accumulates. ([Hao et al., 2024](raw/papers/2024-12-hao-coconut/index.md))
-- **[[semantic-superposition]]** exploits the same BFS analogy — delaying semantic collapse allows breadth-first exploration of reasoning branches before committing to a discrete token. ([Ivanov, 2025](raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/index.md))
+- **Latent-space reasoning ([[chain-of-continuous-thought|Coconut]])** enables BFS-like behaviour: the model maintains probability mass over multiple candidate reasoning paths simultaneously, dynamically reweighting them as evidence accumulates. ([Hao et al., 2024](raw/papers/2024-12-hao-coconut/hao2025coconut.md))
+- **[[semantic-superposition]]** exploits the same BFS analogy — delaying semantic collapse allows breadth-first exploration of reasoning branches before committing to a discrete token. ([Ivanov, 2025](raw/articles/2025-07-06-ivanov-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/ivanov2025superposition.md))
 
 ## See Also
 

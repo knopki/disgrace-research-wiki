@@ -3,9 +3,12 @@ title: KV Caching
 created: 2026-06-17
 updated: 2026-06-15
 type: concept
-tags: [inference, optimization, architecture]
+tags:
+  - inference
+  - optimization
+  - architecture
 sources:
-  - "[Transformers KV Caching Explained](raw/articles/kv-caching-explained/index.md)"
+  - "[Transformers KV Caching Explained](raw/articles/2023-kv-caching-explained/joaolages2023kvcache.md)"
 confidence: high
 ---
 

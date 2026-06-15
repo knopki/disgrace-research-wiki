@@ -3,8 +3,10 @@ title: Perceptron
 created: 2026-06-17
 updated: 2026-06-17
 type: concept
-tags: [model, architecture]
-sources: "[Frank Rosenblatt — Wikipedia](raw/articles/frank-rosenblatt-wikipedia/index.md)"
+tags:
+  - model
+  - architecture
+sources: "[Frank Rosenblatt — Wikipedia](raw/articles/frank-rosenblatt-wikipedia.md)"
 confidence: high
 ---
 
@@ -18,7 +20,7 @@ A perceptron takes input features $x_1, x_2, \dots, x_n$, multiplies each by a l
 
 $$y = \begin{cases} 1 & \text{if } \sum w_i x_i + b > 0 \\ 0 & \text{otherwise} \end{cases}$$
 
-Rosenblatt's original formulation included three layers of units: a **retina** (sensory input layer), **A-units** (association layer with random connections), and **R-units** (response layer). This was the **elementary perceptron** — a three-layer series-coupled architecture. ([Wikipedia](raw/articles/frank-rosenblatt-wikipedia/index.md))
+Rosenblatt's original formulation included three layers of units: a **retina** (sensory input layer), **A-units** (association layer with random connections), and **R-units** (response layer). This was the **elementary perceptron** — a three-layer series-coupled architecture. ([Wikipedia](raw/articles/frank-rosenblatt-wikipedia.md))
 
 ## Key Results
 
@@ -32,11 +34,11 @@ The perceptron convergence theorem guarantees that if a set of weights exists th
 
 ## Hardware: The Mark I Perceptron
 
-Built in 1960 at Cornell Aeronautical Laboratory, the **Mark I Perceptron** was the first physical neural-network computer. It could learn to recognise letters and solve complex problems through trial and error. It now resides at the Smithsonian Institution. ([Wikipedia](raw/articles/frank-rosenblatt-wikipedia/index.md))
+Built in 1960 at Cornell Aeronautical Laboratory, the **Mark I Perceptron** was the first physical neural-network computer. It could learn to recognise letters and solve complex problems through trial and error. It now resides at the Smithsonian Institution. ([Wikipedia](raw/articles/frank-rosenblatt-wikipedia.md))
 
 ## Tobermory: The Speech Recognition Perceptron
 
-A scaled-up perceptron machine built between 1961–1967 with 4 layers, 12,000 weights on toroidal magnetic cores, occupying an entire room. By completion, digital simulations had surpassed purpose-built hardware in speed. ([Wikipedia](raw/articles/frank-rosenblatt-wikipedia/index.md))
+A scaled-up perceptron machine built between 1961–1967 with 4 layers, 12,000 weights on toroidal magnetic cores, occupying an entire room. By completion, digital simulations had surpassed purpose-built hardware in speed. ([Wikipedia](raw/articles/frank-rosenblatt-wikipedia.md))
 
 ## The Minsky/Papert Challenge
 
@@ -49,7 +51,7 @@ The perceptron is the direct ancestor of:
 - Any feedforward neural network
 - The neuron model used in all modern architectures (with differentiable activation functions in place of the step function)
 
-The cross-coupled perceptron variant studied by Rosenblatt is now known as a **[[hopfield-networks|Hopfield network]]** — he proved equilibrium conditions for it decades before Hopfield's 1982 paper. ([Wikipedia](raw/articles/frank-rosenblatt-wikipedia/index.md))
+The cross-coupled perceptron variant studied by Rosenblatt is now known as a **[[hopfield-networks|Hopfield network]]** — he proved equilibrium conditions for it decades before Hopfield's 1982 paper. ([Wikipedia](raw/articles/frank-rosenblatt-wikipedia.md))
 
 ## Cross-Links
 

@@ -3,9 +3,12 @@ title: Positional Encoding
 created: 2026-06-17
 updated: 2026-06-15
 type: concept
-tags: [architecture, model, training]
+tags:
+  - architecture
+  - model
+  - training
 sources:
-  - "[Позиционные кодировки: «объемное зрение» GPT и секреты AI-агентов](raw/articles/2025-07-04-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/index.md)"
+  - "[Позиционные кодировки: «объемное зрение» GPT и секреты AI-агентов](raw/articles/2025-07-04-ivanov-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/ivanoc2025encodings.md)"
 confidence: high
 ---
 
@@ -15,7 +18,7 @@ Positional Encoding (PE) is a technique that injects token order information int
 
 ## Why Positional Encoding Exists
 
-The Transformer processes all tokens in a single parallel pass via self-attention. Unlike [[lstm|LSTM]] or RNNs, it has no sequential state. Without position information, the bag-of-words permutation-invariance problem is fatal: "dog bit man" and "man bit dog" produce identical representations. PE solves this by adding a position-dependent signal to each token's embedding before the first attention layer. ([Ivanov, 2025](raw/articles/2025-07-04-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/index.md))
+The Transformer processes all tokens in a single parallel pass via self-attention. Unlike [[lstm|LSTM]] or RNNs, it has no sequential state. Without position information, the bag-of-words permutation-invariance problem is fatal: "dog bit man" and "man bit dog" produce identical representations. PE solves this by adding a position-dependent signal to each token's embedding before the first attention layer. ([Ivanov, 2025](raw/articles/2025-07-04-ivanov-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/ivanoc2025encodings.md))
 
 ## Sinusoidal Geometry
 
@@ -32,7 +35,7 @@ Because a single token's PE vector contains values for all these frequencies sim
 
 ## Fusion with Semantic Embeddings
 
-Crucially, PE is **not** appended as separate dimensions — it is **added directly** to the token's semantic embedding vector. The resulting vector that enters the first attention layer is a fused representation containing both *what* the token means and *where* it sits in the text hierarchy. This means position and semantics are entangled from the start, not processed separately. ([Ivanov, 2025](raw/articles/2025-07-04-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/index.md))
+Crucially, PE is **not** appended as separate dimensions — it is **added directly** to the token's semantic embedding vector. The resulting vector that enters the first attention layer is a fused representation containing both *what* the token means and *where* it sits in the text hierarchy. This means position and semantics are entangled from the start, not processed separately. ([Ivanov, 2025](raw/articles/2025-07-04-ivanov-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/ivanoc2025encodings.md))
 
 ## Code as Nested Structure
 
@@ -47,7 +50,7 @@ GPT sees all these nesting levels simultaneously, understanding that `library_na
 
 ## The Line-Number Problem
 
-The same "3D vision" that makes code understanding effortless creates a surprising weakness: **LLMs are bad at line numbers**. A line number is a flat, human-centric abstraction. For a model that thinks in nested semantic coordinates, "replace line 25" is nearly meaningless — that coordinate doesn't exist in its internal space. ([Ivanov, 2025](raw/articles/2025-07-04-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/index.md))
+The same "3D vision" that makes code understanding effortless creates a surprising weakness: **LLMs are bad at line numbers**. A line number is a flat, human-centric abstraction. For a model that thinks in nested semantic coordinates, "replace line 25" is nearly meaningless — that coordinate doesn't exist in its internal space. ([Ivanov, 2025](raw/articles/2025-07-04-ivanov-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/ivanoc2025encodings.md))
 
 This is why tools like Cursor generate patches as semantic descriptions ("find the `validatePassword` call inside the hash-check block") rather than line-number diffs. It also motivates the [[semantic-anchors|Semantic Anchors]] technique — placing stable, unique markers in code that give the model reliable semantic coordinates for patch application.
 

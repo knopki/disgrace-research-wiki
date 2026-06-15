@@ -3,16 +3,19 @@ title: Semantic Superposition
 created: 2026-06-17
 updated: 2026-06-17
 type: concept
-tags: [technique, methodology, optimization]
+tags:
+  - technique
+  - methodology
+  - optimization
 sources:
-  - "[Кот Шрёдингера в голове у GPT: Как суперпозиция смыслов меняет правила игры с ИИ](raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/index.md)"
-  - "[Training Large Language Models to Reason in a Continuous Latent Space](raw/papers/2024-12-hao-coconut/index.md)"
+  - "[Кот Шрёдингера в голове у GPT: Как суперпозиция смыслов меняет правила игры с ИИ](raw/articles/2025-07-06-ivanov-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/ivanov2025superposition.md)"
+  - "[Training Large Language Models to Reason in a Continuous Latent Space](raw/papers/2024-12-hao-coconut/hao2025coconut.md)"
 confidence: high
 ---
 
 # Semantic Superposition
 
-A prompt engineering paradigm that exploits the LLM's inherent ability to represent multiple competing hypotheses simultaneously in vector space, deliberately postponing commitment to a single interpretation until the solution space has been broadly explored. The term is introduced by Vladimir Ivanov (2025-07-06). ([Ivanov, 2025](raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/index.md))
+A prompt engineering paradigm that exploits the LLM's inherent ability to represent multiple competing hypotheses simultaneously in vector space, deliberately postponing commitment to a single interpretation until the solution space has been broadly explored. The term is introduced by Vladimir Ivanov (2025-07-06). ([Ivanov, 2025](raw/articles/2025-07-06-ivanov-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/ivanov2025superposition.md))
 
 ## The Core Idea
 
@@ -22,19 +25,19 @@ Where human cognition demands "either/or" decisions, an LLM's internal represent
 [concept] = 0.5*[interpretation_A] + 0.5*[interpretation_B] + 0.2*[interpretation_C]
 ```
 
-This is not a deficiency to be overcome, but the model's native operating mode. The goal of semantic superposition prompting is to keep the model in this pre-collapse state longer, letting it explore multiple reasoning paths in parallel. ([Ivanov, 2025](raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/index.md))
+This is not a deficiency to be overcome, but the model's native operating mode. The goal of semantic superposition prompting is to keep the model in this pre-collapse state longer, letting it explore multiple reasoning paths in parallel. ([Ivanov, 2025](raw/articles/2025-07-06-ivanov-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/ivanov2025superposition.md))
 
 ## Semantic Collapse
 
 The moment when the model commits to a specific interpretation or solution path. At the token level, this is when the first token of a reasoning chain is generated — all subsequent tokens are conditioned on that choice. Once collapsed, the model behaves as if it had only ever considered that single path.
 
-Collapse is irreversible because of the **KV Cache**: the key-value cache of previous token activations that provides context for subsequent tokens. A collapsed choice "freezes" the model's trajectory — the cache cements earlier decisions, making it costly (often impossible in a single session) to back out and reconsider alternatives. ([Ivanov, 2025](raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/index.md))
+Collapse is irreversible because of the **KV Cache**: the key-value cache of previous token activations that provides context for subsequent tokens. A collapsed choice "freezes" the model's trajectory — the cache cements earlier decisions, making it costly (often impossible in a single session) to back out and reconsider alternatives. ([Ivanov, 2025](raw/articles/2025-07-06-ivanov-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/ivanov2025superposition.md))
 
 ## The Semantic Casino
 
 The most common prompting pattern — and the worst. A user sends a vague instruction like "generate code" or "write a plan" without structuring the reasoning process. The model is forced to make an immediate "bet": pick the most statistically probable first token and commit. The result is a random walk through solution space, with early (probably wrong) choices frozen in the KV Cache.
 
-The user then tries to correct the model, but each correction fights against the frozen cache rather than rerouting the reasoning. The model "argues back" or doubles down — not from stubbornness, but because its entire trajectory is structurally locked. ([Ivanov, 2025](raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/index.md))
+The user then tries to correct the model, but each correction fights against the frozen cache rather than rerouting the reasoning. The model "argues back" or doubles down — not from stubbornness, but because its entire trajectory is structurally locked. ([Ivanov, 2025](raw/articles/2025-07-06-ivanov-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/ivanov2025superposition.md))
 
 ## BFS-Like Reasoning
 
@@ -45,7 +48,7 @@ Delaying collapse allows breadth-first exploration of the solution space, analog
 | Standard (greedy) | Model picks most probable first token → conditions everything on it | Premature collapse, narrow search |
 | Superposition (BFS-like) | Model evaluates multiple approach branches in latent space before committing | Broader search, better solutions |
 
-Meta's paper [[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]] (arXiv:2412.06769, 2024) is cited as supporting this: reasoning in continuous latent space lets the model explore a graph of possible solutions without forcing early token-level choices. ([Ivanov, 2025](raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/index.md))
+Meta's paper [[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]] (arXiv:2412.06769, 2024) is cited as supporting this: reasoning in continuous latent space lets the model explore a graph of possible solutions without forcing early token-level choices. ([Ivanov, 2025](raw/articles/2025-07-06-ivanov-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/ivanov2025superposition.md))
 
 ## Practical Technique
 
@@ -60,9 +63,9 @@ The KV Cache, normally a trap, becomes a **stabilizer of structured thought**: t
 
 ### Case Studies from the Source
 
-**Case 1 — Multithreading in RAG:** A request to "make code multi-threaded" triggers premature collapse into `threading` (Python's default, often wrong for CPU-bound tasks). Semantic superposition prompting instead: "Analyze the task characteristics. Evaluate threading, multiprocessing, and asyncio. Describe applicability of each. Hold these in uncertainty." Result: the model selected the correct parallelization strategy. ([Ivanov, 2025](raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/index.md))
+**Case 1 — Multithreading in RAG:** A request to "make code multi-threaded" triggers premature collapse into `threading` (Python's default, often wrong for CPU-bound tasks). Semantic superposition prompting instead: "Analyze the task characteristics. Evaluate threading, multiprocessing, and asyncio. Describe applicability of each. Hold these in uncertainty." Result: the model selected the correct parallelization strategy. ([Ivanov, 2025](raw/articles/2025-07-06-ivanov-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/ivanov2025superposition.md))
 
-**Case 2 — Plugin Architecture for RAG:** A direct "write code" prompt would collapse into a monolithic plugin system. Instead, the prompt forced architectural analysis first (simple refactoring vs hybrid vs dynamic plugin loading). The model chose the dynamic system and then generated clean, scalable code. ([Ivanov, 2025](raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/index.md))
+**Case 2 — Plugin Architecture for RAG:** A direct "write code" prompt would collapse into a monolithic plugin system. Instead, the prompt forced architectural analysis first (simple refactoring vs hybrid vs dynamic plugin loading). The model chose the dynamic system and then generated clean, scalable code. ([Ivanov, 2025](raw/articles/2025-07-06-ivanov-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/ivanov2025superposition.md))
 
 ## Relationship to Other Concepts
 

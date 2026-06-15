@@ -3,12 +3,14 @@ title: Semantic Fractal
 created: 2026-06-16
 updated: 2026-06-16
 type: concept
-tags: [architecture, methodology]
+tags:
+  - architecture
+  - methodology
 sources:
-  - "[AI угрожает программистам могуществом параллелизма](raw/articles/2025-06-30-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/index.md)"
-  - "[Позиционные кодировки: «объемное зрение» GPT и секреты AI-агентов](raw/articles/2025-07-04-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/index.md)"
-  - "[Контрактное программирование: Ваш семантический щит в эпоху искусственного интеллекта](raw/articles/2025-07-05-kontraktnoe-programmirovanie-vash-semanticheskii-schit-v-epo/index.md)"
-  - "[Transformers Represent Belief State Geometry in their Residual Stream](raw/papers/2024-05-shai-belief-state-geometry/index.md)"
+  - "[AI угрожает программистам могуществом параллелизма](raw/articles/2025-06-30-ivanov-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/ivanov2025aimenace.md)"
+  - "[Позиционные кодировки: «объемное зрение» GPT и секреты AI-агентов](raw/articles/2025-07-04-ivanov-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/ivanoc2025encodings.md)"
+  - "[Контрактное программирование: Ваш семантический щит в эпоху искусственного интеллекта](raw/articles/2025-07-05-ivanov-kontraktnoe-programmirovanie-vash-semanticheskii-schit-v-epo/ivanov2025contractdev.md)"
+  - "[Transformers Represent Belief State Geometry in their Residual Stream](raw/papers/2024-05-shai-belief-state-geometry/shai2025belief.md)"
 confidence: medium
 ---
 
@@ -18,7 +20,7 @@ A metaphor proposed by Vladimir Ivanov to describe how large language models int
 
 ## The Metaphor
 
-Where a human sees `Block A → Block B`, an LLM sees two nodes linked by many possible relations — sequence, parallelism, dependency, data flow, mutual exclusion. Sequential execution is just one of thousands of edges the model could traverse between them. ([Ivanov, 2025](raw/articles/2025-06-30-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/index.md))
+Where a human sees `Block A → Block B`, an LLM sees two nodes linked by many possible relations — sequence, parallelism, dependency, data flow, mutual exclusion. Sequential execution is just one of thousands of edges the model could traverse between them. ([Ivanov, 2025](raw/articles/2025-06-30-ivanov-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/ivanov2025aimenace.md))
 
 The term "fractal" captures the recursive, self-similar structure: at every level of granularity (function, module, system), the same branching semantic graph applies. The model does not impose a single traversal order; the order emerges from the specific task.
 
@@ -26,7 +28,7 @@ The term "fractal" captures the recursive, self-similar structure: at every leve
 
 The metaphor maps naturally onto transformer internals: attention layers compute pairwise relationships between all token representations simultaneously. The residual stream maintains a distributed, high-dimensional representation where no single "current state" dominates — consistent with the idea of parallel semantic branches rather than a sequential program counter.
 
-[[positional-encoding|Positional Encoding]] provides the mechanism that makes the semantic fractal concrete. Sinusoidal PE at multiple frequencies creates a multi-scale coordinate system where each token simultaneously knows its position at the chapter, paragraph, and sentence level — exactly the self-similar nested structure the fractal metaphor describes. When PE vectors are added directly to semantic embeddings, the resulting representation fuses *what* a token means with *where* it sits in every level of the hierarchy simultaneously. ([Ivanov, 2025](raw/articles/2025-07-04-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/index.md))
+[[positional-encoding|Positional Encoding]] provides the mechanism that makes the semantic fractal concrete. Sinusoidal PE at multiple frequencies creates a multi-scale coordinate system where each token simultaneously knows its position at the chapter, paragraph, and sentence level — exactly the self-similar nested structure the fractal metaphor describes. When PE vectors are added directly to semantic embeddings, the resulting representation fuses *what* a token means with *where* it sits in every level of the hierarchy simultaneously. ([Ivanov, 2025](raw/articles/2025-07-04-ivanov-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/ivanoc2025encodings.md))
 
 ## Why It Matters
 
@@ -37,9 +39,9 @@ If the semantic fractal is a faithful model of how LLMs represent code, then:
 
 ## Belief State Geometry
 
-[[belief-state-geometry|Belief State Geometry]] (Shai et al., 2024) provides the empirical foundation for the semantic fractal metaphor. The study discovered that as a transformer generates output, it constructs a measurable belief state geometry — a linear representation of posterior distributions over hidden states — in its residual stream. The model builds an internal fractal "plan" of the answer: each node is the model's belief about which semantic state it occupies, and edges are transitions between states. When the model writes code, it is effectively unfolding this inner semantic fractal. ([Shai et al., 2024](raw/papers/2024-05-shai-belief-state-geometry/index.md))
+[[belief-state-geometry|Belief State Geometry]] (Shai et al., 2024) provides the empirical foundation for the semantic fractal metaphor. The study discovered that as a transformer generates output, it constructs a measurable belief state geometry — a linear representation of posterior distributions over hidden states — in its residual stream. The model builds an internal fractal "plan" of the answer: each node is the model's belief about which semantic state it occupies, and edges are transitions between states. When the model writes code, it is effectively unfolding this inner semantic fractal. ([Shai et al., 2024](raw/papers/2024-05-shai-belief-state-geometry/shai2025belief.md))
 
-Vladimir Ivanov connects this to [[contract-programming|Contract Programming]]: structured code contracts function as **belief state refiners** — they force the model to narrow its belief state precisely, constraining its internal fractal navigation to the correct path. This makes contracts a natural, not an imposed, mechanism for controlling LLM code generation. ([Ivanov, 2025](raw/articles/2025-07-05-kontraktnoe-programmirovanie-vash-semanticheskii-schit-v-epo/index.md))
+Vladimir Ivanov connects this to [[contract-programming|Contract Programming]]: structured code contracts function as **belief state refiners** — they force the model to narrow its belief state precisely, constraining its internal fractal navigation to the correct path. This makes contracts a natural, not an imposed, mechanism for controlling LLM code generation. ([Ivanov, 2025](raw/articles/2025-07-05-ivanov-kontraktnoe-programmirovanie-vash-semanticheskii-schit-v-epo/ivanov2025contractdev.md))
 
 ## Related
 

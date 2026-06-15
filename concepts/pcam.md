@@ -12,7 +12,7 @@ tags:
   - multi-agent
   - technique
 sources:
-  - "[Методология PCAM: Превращаем AI-агентов из рабов в партнеров](raw/articles/2025-09-11-metodologiya-pcam-prevraschaem-ai-agentov-iz-rabov-v-partner/index.md)"
+  - "[Методология PCAM: Превращаем AI-агентов из рабов в партнеров](raw/articles/2025-09-11-ivanov-metodologiya-pcam-prevraschaem-ai-agentov-iz-rabov-v-partner/ivanov2025pcam.md)"
 ---
 
 # Purpose Centric Agent Methodology (PCAM)

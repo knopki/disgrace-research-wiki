@@ -3,9 +3,12 @@ title: Knowledge Graph
 created: 2026-06-16
 updated: 2026-06-16
 type: concept
-tags: [technique, data, knowledge-graph]
+tags:
+  - technique
+  - data
+  - knowledge-graph
 sources:
-  - "[Knowledge Graph (Google) — Wikipedia](raw/articles/knowledge-graph-google-wikipedia/index.md)"
+  - "[Knowledge Graph (Google) — Wikipedia](raw/articles/knowledge-graph-google-wikipedia.md)"
 confidence: high
 ---
 
@@ -52,7 +55,7 @@ A separate research project (reported Aug 2014) that automatically extracted fac
 | Update mechanism | Graph maintenance pipeline | Re-index document corpus |
 | Latency | Fast (indexed facts) | Slower (retrieval + generation) |
 
-The two approaches are not mutually exclusive — hybrid architectures use a KG to retrieve precise facts and RAG for contextual synthesis. ([Wikipedia](raw/articles/knowledge-graph-google-wikipedia/index.md))
+The two approaches are not mutually exclusive — hybrid architectures use a KG to retrieve precise facts and RAG for contextual synthesis. ([Wikipedia](raw/articles/knowledge-graph-google-wikipedia.md))
 
 ## Criticism of Google's Implementation
 

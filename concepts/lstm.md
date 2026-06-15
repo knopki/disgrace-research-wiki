@@ -3,9 +3,12 @@ title: LSTM (Long Short-Term Memory)
 created: 2026-06-17
 updated: 2026-06-17
 type: concept
-tags: [model, architecture, training]
+tags:
+  - model
+  - architecture
+  - training
 sources:
-  - "[История ИИ: бунтари, гении и научные войны](raw/articles/2025-07-03-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/index.md)"
+  - "[История ИИ: бунтари, гении и научные войны](raw/articles/2025-07-03-ivanov-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/ivanoc2025istoriya.md)"
 confidence: high
 ---
 
@@ -15,7 +18,7 @@ confidence: high
 
 ## History
 
-LSTM was invented by **Sepp Hochreiter** as a student of **Jürgen Schmidhuber** in 1991, published as his diploma thesis. Hochreiter and Schmidhuber formally published the architecture in 1997. LSTM dominated natural language processing from the late 1990s until the rise of the [[transformer|Transformer]] around 2017 — roughly 15 years of supremacy in machine translation, speech recognition, and text generation. ([Ivanov, 2025](raw/articles/2025-07-03-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/index.md))
+LSTM was invented by **Sepp Hochreiter** as a student of **Jürgen Schmidhuber** in 1991, published as his diploma thesis. Hochreiter and Schmidhuber formally published the architecture in 1997. LSTM dominated natural language processing from the late 1990s until the rise of the [[transformer|Transformer]] around 2017 — roughly 15 years of supremacy in machine translation, speech recognition, and text generation. ([Ivanov, 2025](raw/articles/2025-07-03-ivanov-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/ivanoc2025istoriya.md))
 
 ## Architecture: The Gates
 

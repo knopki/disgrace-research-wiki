@@ -3,9 +3,11 @@ title: Microsoft
 created: 2026-06-17
 updated: 2026-06-17
 type: entity
-tags: [organization, methodology]
+tags:
+  - organization
+  - methodology
 sources:
-  - "[За кулисами Microsoft: тайные элитные партнерские программы и ИИ-трансформация](raw/articles/2025-07-10-za-kulisami-microsoft-tainye-elitnye-partnerskie-programmy-i/index.md)"
+  - "[За кулисами Microsoft: тайные элитные партнерские программы и ИИ-трансформация](raw/articles/2025-07-10-ivanov-za-kulisami-microsoft-tainye-elitnye-partnerskie-programmy-i/ivanoc2025microsoft.md)"
 ---
 
 # Microsoft
@@ -31,7 +33,7 @@ A closed, invitation-only body of 10-16 key partner companies per product. Membe
 
 The pre-release testing layer. Board members are automatically enrolled but delegate technical work to their engineers. Only a subset of MVPs get TAP access — running a YouTube channel doesn't qualify, hands-on technical participation does.
 
-TAP participants focus on **blocking issues** — not bugs per se, but design errors where functionality matches the spec but the feature is unusable (e.g., resource assignments that "decouple" from tasks in a construction scheduling tool). Participants also perform code review on Microsoft's own code when junior developer output is below quality thresholds. This has led to Microsoft sending underperforming developers back to internal training. ([Ivanov, 2025](raw/articles/2025-07-10-za-kulisami-microsoft-tainye-elitnye-partnerskie-programmy-i/index.md))
+TAP participants focus on **blocking issues** — not bugs per se, but design errors where functionality matches the spec but the feature is unusable (e.g., resource assignments that "decouple" from tasks in a construction scheduling tool). Participants also perform code review on Microsoft's own code when junior developer output is below quality thresholds. This has led to Microsoft sending underperforming developers back to internal training. ([Ivanov, 2025](raw/articles/2025-07-10-ivanov-za-kulisami-microsoft-tainye-elitnye-partnerskie-programmy-i/ivanoc2025microsoft.md))
 
 ## AI Transformation
 
@@ -43,13 +45,13 @@ Where Microsoft once convened 10-15 top experts to debate product direction, AI 
 
 ### Dual Programming → AI Operator Model
 
-Microsoft's longstanding practice of dual programming (from eXtreme Programming) — where an experienced tester-supervisor reviews code written by a junior developer — has proven to be structurally ideal for AI adoption. Rather than supervising a junior, the senior tester now operates an AI code generation bot. The dual programming model (experienced lead + junior implementer) mapped directly onto the new pattern (experienced lead + AI implementer), giving Microsoft an organizational head start over companies that relied on senior-only coding teams. This is one driver behind the mass layoffs of junior developers at Microsoft. ([Ivanov, 2025](raw/articles/2025-07-10-za-kulisami-microsoft-tainye-elitnye-partnerskie-programmy-i/index.md))
+Microsoft's longstanding practice of dual programming (from eXtreme Programming) — where an experienced tester-supervisor reviews code written by a junior developer — has proven to be structurally ideal for AI adoption. Rather than supervising a junior, the senior tester now operates an AI code generation bot. The dual programming model (experienced lead + junior implementer) mapped directly onto the new pattern (experienced lead + AI implementer), giving Microsoft an organizational head start over companies that relied on senior-only coding teams. This is one driver behind the mass layoffs of junior developers at Microsoft. ([Ivanov, 2025](raw/articles/2025-07-10-ivanov-za-kulisami-microsoft-tainye-elitnye-partnerskie-programmy-i/ivanoc2025microsoft.md))
 
 The article also notes that Microsoft uses large-scale semantic markup for AI code generation, but this is under NDA.
 
 ## Known Works (in this wiki)
 
-- "[За кулисами Microsoft: тайные элитные партнерские программы и ИИ-трансформация](raw/articles/2025-07-10-za-kulisami-microsoft-tainye-elitnye-partnerskie-programmy-i/index.md)" by Vladimir Ivanov (2025-07-10) — insider perspective on Microsoft MVP, TAP, Partner Engagement Board, and how AI is transforming each.
+- "[За кулисами Microsoft: тайные элитные партнерские программы и ИИ-трансформация](raw/articles/2025-07-10-ivanov-za-kulisami-microsoft-tainye-elitnye-partnerskie-programmy-i/ivanoc2025microsoft.md)" by Vladimir Ivanov (2025-07-10) — insider perspective on Microsoft MVP, TAP, Partner Engagement Board, and how AI is transforming each.
 
 ## Related
 

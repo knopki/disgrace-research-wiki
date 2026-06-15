@@ -3,8 +3,10 @@ title: Rational Unified Process (RUP)
 created: 2026-06-15
 updated: 2026-06-15
 type: concept
-tags: [methodology, planning]
-sources: "[Rational unified process - Wikipedia](raw/articles/rational-unified-process-wikipedia/index.md)"
+tags:
+  - methodology
+  - planning
+sources: "[Rational unified process - Wikipedia](raw/articles/rational-unified-process-wikipedia.md)"
 confidence: high
 ---
 

@@ -3,9 +3,11 @@ title: Corpus Linguistics
 created: 2026-06-17
 updated: 2026-06-17
 type: concept
-tags: [methodology, data]
+tags:
+  - methodology
+  - data
 sources:
-  - "[Корпусная лингвистика (Wikipedia)](raw/articles/corpus-linguistics-wikipedia/index.md)"
+  - "[Корпусная лингвистика (Wikipedia)](raw/articles/corpus-linguistics-wikipedia.md)"
 confidence: high
 ---
 
@@ -32,7 +34,7 @@ Mandatory stages for any modern corpus:
 2. **Lemmatization** — reducing word forms to dictionary form (lemma)
 3. **Morphological/POS tagging** — assigning grammatical class
 
-These are the same pipeline steps that underpin modern NLP systems and LLM tokenisation. ([Wikipedia](raw/articles/corpus-linguistics-wikipedia/index.md))
+These are the same pipeline steps that underpin modern NLP systems and LLM tokenisation. ([Wikipedia](raw/articles/corpus-linguistics-wikipedia.md))
 
 ### Result Clustering
 
@@ -48,7 +50,7 @@ Large corpora generate hundreds or thousands of hits per query — impossible to
 | 1980s | **Bank of English** (Birmingham), **BNC** (UK), **Machine Fund of Russian Language** (USSR, A. P. Ershov) | Attempts at corpora larger than 1 million words.                                                                                     |
 | Today | **National Corpus of Russian** (RAS)                                                                      | 500+ million word usages and growing.                                                                                                |
 
-The 1-million-word limit was severe: `polite` and `sunshine` appear only 7 times in the Brown Corpus; `polite letter` once; `polite conversation` — never. ([Wikipedia](raw/articles/corpus-linguistics-wikipedia/index.md))
+The 1-million-word limit was severe: `polite` and `sunshine` appear only 7 times in the Brown Corpus; `polite letter` once; `polite conversation` — never. ([Wikipedia](raw/articles/corpus-linguistics-wikipedia.md))
 
 ## Current State
 
@@ -63,7 +65,7 @@ Two approaches to using the web as a linguistic corpus:
 1. **Search engine queries ("Googleology")** — hit counts and first-page results as frequency/collocation proxies. Limited by absence of linguistic markup (stress, POS, syntax boundaries) and low semantic markup adoption.
 2. **Web page download** — automatically crawl pages, then annotate and index as a standard corpus. Fast to build for any well-represented language, but genre diversity mirrors internet user interests.
 
-Wikipedia itself is increasingly used as a text corpus in academic research. ([Wikipedia](raw/articles/corpus-linguistics-wikipedia/index.md))
+Wikipedia itself is increasingly used as a text corpus in academic research. ([Wikipedia](raw/articles/corpus-linguistics-wikipedia.md))
 
 ## Notable Projects
 

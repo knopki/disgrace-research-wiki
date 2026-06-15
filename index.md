@@ -41,7 +41,7 @@
 
 - [[privileged-basis|Privileged Basis]] — architectural property where activation functions make basis directions special, encouraging feature-neuron alignment
 
-- [[rational-unified-process|Rational Unified Process (RUP)]] — iterative software development process framework by Rational/IBM; use-case driven, architecture-centric, with four life-cycle phases and six best practices
+- [[concepts/rational-unified-process|Rational Unified Process (RUP)]] — iterative software development process framework by Rational/IBM; use-case driven, architecture-centric, with four life-cycle phases and six best practices
 
 - [[cognitive-superposition|Cognitive Superposition]] — ability of a cognitive system to co-activate multiple independently acquired representations; backprop-trained DNNs fail at it, brain-constrained networks succeed via cell assemblies
 
@@ -86,10 +86,10 @@
 - [Кот Шрёдингера в голове у GPT: Как суперпозиция смыслов меняет правила игры с ИИ](raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/) (Vladimir Ivanov, 2025-07-06)
 - [KV Caching Explained](raw/articles/kv-caching-explained/) (João Lages, Medium, 2023-10-08)
 
-|- [За кулисами Microsoft: тайные элитные партнерские программы и ИИ-трансформация](raw/articles/2025-07-10-za-kulisami-microsoft-tainye-elitnye-partnerskie-programmy-i/) (Vladimir Ivanov, 2025-07-10)
-|- [Rational Unified Process](raw/articles/rational-unified-process-wikipedia/) (Wikipedia, 2026)
-|- [Difference between BFS and DFS](raw/articles/bfs-vs-dfs-gfg/) (GeeksforGeeks)
-|- [Breadth First Search or BFS for a Graph](raw/articles/bfs-gfg/) (GeeksforGeeks)
+- [За кулисами Microsoft: тайные элитные партнерские программы и ИИ-трансформация](raw/articles/2025-07-10-za-kulisami-microsoft-tainye-elitnye-partnerskie-programmy-i/) (Vladimir Ivanov, 2025-07-10)
+- [Rational Unified Process](raw/articles/rational-unified-process-wikipedia/) (Wikipedia, 2026)
+- [Difference between BFS and DFS](raw/articles/bfs-vs-dfs-gfg/) (GeeksforGeeks)
+- [Breadth First Search or BFS for a Graph](raw/articles/bfs-gfg/) (GeeksforGeeks)
 - [Методология PCAM: Превращаем AI-агентов из рабов в партнеров](raw/articles/2025-09-11-metodologiya-pcam-prevraschaem-ai-agentov-iz-rabov-v-partner/) (Vladimir Ivanov, 2025-09-11)
 - [GRACE: Фреймворк создания кода LLM в больших контекстах](raw/articles/2025-09-13-grace-freimvork-sozdaniya-koda-llm-v-bolshih-kontekstah-s-uc/) (Vladimir Ivanov, 2025-09-13)
 
@@ -98,8 +98,8 @@
 - [Toy Models of Superposition](raw/papers/2022-09-elhage-toy-models-superposition/) (Anthropic Transformer Circuits Thread, 2022)
 - [On the ability of standard and brain-constrained DNNs to support cognitive superposition](raw/papers/2024-02-garagnani-cognitive-superposition/) (Max Garagnani, Cognitive Neurodynamics, 2024)
 - [Transformers Represent Belief State Geometry in their Residual Stream](raw/papers/2024-05-shai-belief-state-geometry/) (Adam Shai et al., NeurIPS 2024)
-- [Training Large Language Models to Reason in a Continuous Latent Space](raw/papers/2024-12-hao-coconut/) — abstract, full PDF, and plain-text at [index.md](raw/papers/2024-12-hao-coconut/index.md) (Shibo Hao et al., FAIR at Meta / UC San Diego, arXiv, COLM 2025)
-- [Generating Long Sequences with Sparse Transformers](raw/papers/2019-04-child-sparse-transformer/1904.10509.pdf) — abstract and details at [index.md](raw/papers/2019-04-child-sparse-transformer/index.md) (Rewon Child et al., OpenAI, 2019)
+- [Training Large Language Models to Reason in a Continuous Latent Space](raw/papers/2024-12-hao-coconut/) — abstract, full PDF, and plain-text at [index.md](raw/papers/2024-12-hao-coconut/hao2025coconut.md) (Shibo Hao et al., FAIR at Meta / UC San Diego, arXiv, COLM 2025)
+- [Generating Long Sequences with Sparse Transformers](raw/papers/2019-04-child-sparse-transformer/1904.10509.pdf) — abstract and details at [child2019sparse](raw/papers/2019-04-child-sparse-transformer/child2019sparse.md) (Rewon Child et al., OpenAI, 2019)
 
 ## Comparisons
 

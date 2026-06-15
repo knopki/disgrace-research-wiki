@@ -3,10 +3,13 @@ title: Transformer
 created: 2026-06-17
 updated: 2026-06-15
 type: concept
-tags: [model, architecture, benchmark]
+tags:
+  - model
+  - architecture
+  - benchmark
 sources:
-  - "[История ИИ: бунтари, гении и научные войны](raw/articles/2025-07-03-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/index.md)"
-  - "[Позиционные кодировки: «объемное зрение» GPT и секреты AI-агентов](raw/articles/2025-07-04-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/index.md)"
+  - "[История ИИ: бунтари, гении и научные войны](raw/articles/2025-07-03-ivanov-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/ivanoc2025istoriya.md)"
+  - "[Позиционные кодировки: «объемное зрение» GPT и секреты AI-агентов](raw/articles/2025-07-04-ivanov-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/ivanoc2025encodings.md)"
 confidence: high
 ---
 
@@ -23,7 +26,7 @@ The Transformer synthesised several prior innovations:
 - **Self-attention** — refined from Bahdanau attention and correlation-of-vectors ideas from [[lstm|LSTM]] research
 - **Positional encoding** — sine/cosine functions that give each token a "semantic coordinate" in the embedding space, preserving order information without sequential processing
 
-The result: a fully parallelisable architecture where every token can directly attend to every other token in a single forward pass. ([Ivanov, 2025](raw/articles/2025-07-03-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/index.md))
+The result: a fully parallelisable architecture where every token can directly attend to every other token in a single forward pass. ([Ivanov, 2025](raw/articles/2025-07-03-ivanov-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/ivanoc2025istoriya.md))
 
 ## Key Innovations
 

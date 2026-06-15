@@ -3,19 +3,21 @@ title: Word Embeddings
 created: 2026-06-16
 updated: 2026-06-17
 type: concept
-tags: [architecture, technique]
+tags:
+  - architecture
+  - technique
 sources:
-  - "[Вектора GPT или почему для GPT ваше слово — пустота без контекста](raw/articles/2025-07-02-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon/index.md)"
+  - "[Вектора GPT или почему для GPT ваше слово — пустота без контекста](raw/articles/2025-07-02-ivanov-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon/ivanov2025gpgvectors.md)"
 confidence: high
 ---
 
 # Word Embeddings
 
-The representation of words and tokens as vectors in a high-dimensional continuous space. In production LLMs (GPT-class), each token maps to a vector with 10,000–14,000 dimensions. These vectors do not encode explicit features — they are compressed *correlation archives* encoding relationships to every other token in the model's training distribution. ([Ivanov, 2025](raw/articles/2025-07-02-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon/index.md))
+The representation of words and tokens as vectors in a high-dimensional continuous space. In production LLMs (GPT-class), each token maps to a vector with 10,000–14,000 dimensions. These vectors do not encode explicit features — they are compressed *correlation archives* encoding relationships to every other token in the model's training distribution. ([Ivanov, 2025](raw/articles/2025-07-02-ivanov-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon/ivanov2025gpgvectors.md))
 
 ## Semantic ZIP Archive
 
-The vector is not a feature list but a compressed archive containing potential for correlations. A 10,000-dimensional vector can encode over 100,000 correlation links when unpacked. This is what makes RAG feasible — a document corpus can be compressed into a single dense vector with acceptable semantic fidelity. ([Ivanov, 2025](raw/articles/2025-07-02-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon/index.md))
+The vector is not a feature list but a compressed archive containing potential for correlations. A 10,000-dimensional vector can encode over 100,000 correlation links when unpacked. This is what makes RAG feasible — a document corpus can be compressed into a single dense vector with acceptable semantic fidelity. ([Ivanov, 2025](raw/articles/2025-07-02-ivanov-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon/ivanov2025gpgvectors.md))
 
 Ivanov's "semantic magnifying glass" (Perceptron in GPT training video) illustrates the unpacking: the model expands a 10k-dimension vector into 40k dimensions during processing, revealing the latent correlations.
 
@@ -30,13 +32,13 @@ The simplest pedagogical example: assign four characters (Knight, Mage, Archer, 
 | Archer   | 6        | 7            | 9        | 5      |
 | Dragon   | 10       | 3            | 1        | 10     |
 
-Each character's row is a semantic vector in a toy 4-dimensional space. Real GPT vectors have thousands of axes with no human-readable labels, but the principle is identical: any concept is a point in a multidimensional space of meanings, and semantic distance between concepts is measurable. ([Ivanov, 2025](raw/articles/2025-07-02-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon/index.md))
+Each character's row is a semantic vector in a toy 4-dimensional space. Real GPT vectors have thousands of axes with no human-readable labels, but the principle is identical: any concept is a point in a multidimensional space of meanings, and semantic distance between concepts is measurable. ([Ivanov, 2025](raw/articles/2025-07-02-ivanov-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon/ivanov2025gpgvectors.md))
 
 ## Superposition Catastrophe
 
 Why so many dimensions? When a model tries to encode multiple distinct concepts in a low-dimensional space, they collapse into a blended "mutant" — neither one concept nor the other. This is the **superposition catastrophe**, a practical manifestation of [[superposition]] in embedding spaces without a [[privileged-basis|privileged basis]]. It was systematically studied by [[anthropic|Anthropic]] in their toy models and independently predicted by [[frank-rosenblatt|Frank Rosenblatt]].
 
-With low dimensionality, an apple vector and a pear vector merge into a "fruit-mutant" hallucination — the model forgets the originals. High-dimensional space (10k+) prevents this by giving each concept enough orthogonal axes to maintain its distinct correlation structure. ([Ivanov, 2025](raw/articles/2025-07-02-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon/index.md))
+With low dimensionality, an apple vector and a pear vector merge into a "fruit-mutant" hallucination — the model forgets the originals. High-dimensional space (10k+) prevents this by giving each concept enough orthogonal axes to maintain its distinct correlation structure. ([Ivanov, 2025](raw/articles/2025-07-02-ivanov-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon/ivanov2025gpgvectors.md))
 
 The practical implication: models with smaller embedding dimensions have a higher risk of superposition-induced hallucinations.
 
@@ -47,7 +49,7 @@ Comparing English and Russian tokenisation proves that the token itself carries 
 - English: `[The] [worker] [is] [walking]` — 4 tokens, each a whole word
 - Russian: `[Раб] [оч] [ий] [ид] [ёт]` — 5 tokens, some meaningless fragments like `[оч]`
 
-Despite Russian breaking words into semantically-empty fragments, GPT performs equivalently on both languages (MMLU benchmarks). This demonstrates that meaning is **emergent** from contextual vector interactions, not stored in individual token vectors — even for English, `[worker]` has no Platonic essence. ([Ivanov, 2025](raw/articles/2025-07-02-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon/index.md))
+Despite Russian breaking words into semantically-empty fragments, GPT performs equivalently on both languages (MMLU benchmarks). This demonstrates that meaning is **emergent** from contextual vector interactions, not stored in individual token vectors — even for English, `[worker]` has no Platonic essence. ([Ivanov, 2025](raw/articles/2025-07-02-ivanov-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon/ivanov2025gpgvectors.md))
 
 ## Relationship to Prompt Engineering
 
