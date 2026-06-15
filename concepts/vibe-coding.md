@@ -4,12 +4,13 @@ created: 2026-06-16
 updated: 2026-06-16
 type: concept
 tags: [agent, tool-use, prediction]
-sources: [raw/articles/2025-06-30-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/index.md]
+sources:
+  - "[AI угрожает программистам могуществом параллелизма](raw/articles/2025-06-30-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/index.md)"
 ---
 
 # Vibe Coding
 
-A term popularized by Andrej Karpathy (2025) describing a programming paradigm where the developer defines high-level intent, structure, and constraints — the "vibe" — while delegating implementation details to an AI. In the context of [[innate-parallelism]], this extends specifically to delegating parallel logic.
+A term popularized by Andrej Karpathy (2025) describing a programming paradigm where the developer defines high-level intent, structure, and constraints — the "vibe" — while delegating implementation details to an AI. In the context of [[innate-parallelism|Innate Parallelism]], this extends specifically to delegating parallel logic.
 
 ## In the Context of Parallelism
 
@@ -32,5 +33,5 @@ The programmer becomes an architect and conductor — defining the app's structu
 
 ## Related
 
-- [[innate-parallelism]] — the architectural advantage that makes vibe coding viable for parallelism
-- [[human-sequential-bottleneck]] — the human limitation vibe coding circumvents
+- [[innate-parallelism|Innate Parallelism]] — the architectural advantage that makes vibe coding viable for parallelism
+- [[human-sequential-bottleneck|Human Sequential Bottleneck]] — the human limitation vibe coding circumvents

@@ -14,3 +14,9 @@
 - Author: Vladimir Ivanov (2025-06-30)
 - Entity page created: entities/vladimir-ivanov.md
 - Concept pages created: innate-parallelism, semantic-fractal, human-sequential-bottleneck, vibe-coding
+
+## [2026-06-16] ingest | AI Resource Leveling article
+- Raw source: raw/articles/2025-07-01-ai-v-upravlenii-proektami-teper-resource-leveling-uzhe-rab/ (index.md + 2 images)
+- Author: Vladimir Ivanov (2025-07-01)
+- Updated entity: entities/vladimir-ivanov.md
+- Created concepts: ai-resource-leveling, skill-scheduling

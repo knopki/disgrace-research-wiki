@@ -4,7 +4,8 @@ created: 2026-06-16
 updated: 2026-06-16
 type: concept
 tags: [architecture, prediction]
-sources: [raw/articles/2025-06-30-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/index.md]
+sources:
+  - "[AI угрожает программистам могуществом параллелизма](raw/articles/2025-06-30-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/index.md)"
 ---
 
 # Innate Parallelism
@@ -29,6 +30,6 @@ If the thesis holds, AI-generated code could exploit multi-core hardware far mor
 
 ## Related
 
-- [[semantic-fractal]] — the specific metaphor for how LLMs represent program structure
-- [[human-sequential-bottleneck]] — the human cognitive limitation this advantage exploits
-- [[vibe-coding]] — the predicted programmer role shift if this advantage becomes decisive
+- [[semantic-fractal|Semantic Fractal]] — the specific metaphor for how LLMs represent program structure
+- [[human-sequential-bottleneck|Human Sequential Bottleneck]] — the human cognitive limitation this advantage exploits
+- [[vibe-coding|Vibe Coding]] — the predicted programmer role shift if this advantage becomes decisive

@@ -4,7 +4,8 @@ created: 2026-06-16
 updated: 2026-06-16
 type: concept
 tags: [methodology, comparison]
-sources: [raw/articles/2025-06-30-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/index.md]
+sources:
+  - "[AI угрожает программистам могуществом параллелизма](raw/articles/2025-06-30-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/index.md)"
 ---
 
 # Human Sequential Bottleneck
@@ -29,5 +30,5 @@ The bottleneck may be narrower in practice: domain experts in HPC, GPU programmi
 
 ## Related
 
-- [[innate-parallelism]] — AI's structural advantage that exploits this bottleneck
-- [[vibe-coding]] — the predicted adaptation: programmers delegate parallel logic to AI
+- [[innate-parallelism|Innate Parallelism]] — AI's structural advantage that exploits this bottleneck
+- [[vibe-coding|Vibe Coding]] — the predicted adaptation: programmers delegate parallel logic to AI

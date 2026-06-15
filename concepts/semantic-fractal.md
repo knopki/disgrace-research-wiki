@@ -4,7 +4,8 @@ created: 2026-06-16
 updated: 2026-06-16
 type: concept
 tags: [architecture, methodology]
-sources: [raw/articles/2025-06-30-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/index.md]
+sources:
+  - "[AI угрожает программистам могуществом параллелизма](raw/articles/2025-06-30-ai-ugrozhaet-programmistam-moguschestvom-parallelizma/index.md)"
 ---
 
 # Semantic Fractal
@@ -30,5 +31,5 @@ If the semantic fractal is a faithful model of how LLMs represent code, then:
 
 ## Related
 
-- [[innate-parallelism]] — the broader thesis built on this metaphor
-- [[vladimir-ivanov]] — author who introduced the concept
+- [[innate-parallelism|Innate Parallelism]] — the broader thesis built on this metaphor
+- [[vladimir-ivanov|Vladimir Ivanov]] — author who introduced the concept
