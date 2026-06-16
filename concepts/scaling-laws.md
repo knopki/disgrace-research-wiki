@@ -11,6 +11,7 @@ tags:
   - methodology
 sources:
   - "[Scaling Laws for Neural Language Models](raw/papers/2020-01-kaplan-scaling-laws/kaplan2020scaling.md)"
+  - "[Training Compute-Optimal Large Language Models](raw/papers/2022-03-hoffmann-chinchilla/hoffmann2022chinchilla.md)"
 confidence: high
 ---
 
@@ -40,11 +41,61 @@ The cross-entropy loss L follows smooth power laws spanning 7+ orders of magnitu
 
 **Training curve** (infinite data):
 
-- L(N, S) = (N_c / N)^α_N + (S_c / S_min(S))^α_S, where α_S ≈ 0.76, S_c ≈ 2.1 × 10^3
+| L(N, S) = (N_c / N)^α_N + (S_c / S_min(S))^α_S, where α_S ≈ 0.76, S_c ≈ 2.1 × 10^3
 
 **Critical batch size**:
 
 - B_crit(L) = B_*/L^(1/α_B), where α_B ≈ 0.21, B_* ≈ 2 × 10^8 tokens
+
+## Chinchilla Scaling Laws
+
+Refined by Hoffmann et al. at DeepMind (2022) — the "Chinchilla scaling laws" — which found that most existing LLMs (including GPT-3) were undertrained, and that model size and training data should scale in equal proportion ([Hoffmann et al., 2022](raw/papers/2022-03-hoffmann-chinchilla/hoffmann2022chinchilla.md)).
+
+### Core Result: N ∝ D
+
+Three independent approaches converged on the same compute-optimal allocation:
+
+1. **Fixed parameter count:** Train models of varying sizes with different numbers of tokens, fit a parametric loss function L(N, D) and minimize under a compute budget C
+2. **Fixed FLOPs:** Train models of varying shapes but identical total FLOPs, find the best loss
+3. **Large model on reduced data:** Train a very large model on varying fractions of data, extrapolate the trend
+
+All three methods agree: for compute-optimal training, model size N and dataset size D should be scaled in equal proportion — doubling N requires doubling D. The optimal parameter count for a given compute budget C follows:
+
+- N_opt(C) ∝ C^a, D_opt(C) ∝ C^b, where a ≈ b ≈ 0.50
+
+This directly contradicts the Kaplan finding that N ∝ C^0.73 (favoring larger models with less data).
+
+### Key Equations
+
+**Parametric loss fit:**
+
+- L(N, D) = E + A/N^α + B/D^β
+
+Where E = 1.69 (irreducible loss), A = 406.4, B = 410.7, α ≈ 0.34, β ≈ 0.28.
+
+**Optimal allocation:**
+
+- N_opt ≈ (C/6)^0.5, D_opt ≈ (C/6)^0.5
+
+### Chinchilla Model
+
+The prediction was validated by training **Chinchilla** — a 70B-parameter transformer on 1.4 trillion tokens:
+
+| Model | Parameters | Training Tokens | Compute Budget |
+|-------|-----------|----------------|----------------|
+| Gopher | 280B | 300B | ~ same FLOPs |
+| GPT-3 | 175B | 300B | — |
+| Chinchilla | **70B** | **1.4T** | same as Gopher |
+
+Chinchilla outperformed Gopher on every evaluated task despite 4x fewer parameters, achieving:
+
+- **MMLU:** 67.5% (vs Gopher 60.0%, +7.5%)
+- Superior performance on: LAMBADA, RACE-h, Math, Wikipedia perplexity, BIG-bench tasks
+- Substantially cheaper inference and fine-tuning due to smaller model size
+
+### Implication
+
+The Chinchilla scaling laws shifted the industry consensus from "bigger models with moderate data" (Kaplan) to "balanced scaling of model and data." Following Chinchilla, subsequent models (LLaMA, GPT-4, DeepSeek) adopted data-rich training regimes, often training smaller models on 2T+ tokens.
 
 ## Key Findings
 
@@ -89,8 +140,8 @@ The compute-efficient and data-limited scaling laws contradict each other at ver
 These scaling laws were the first comprehensive empirical framework for predicting LLM performance as a function of scale. Key influence:
 
 - Justified the training of extremely large models (GPT-3, 175B parameters) on relatively modest data
-- Later refined by Hoffmann et al. (2022) — the "Chinchilla scaling laws" — which found Kaplan et al. underestimated optimal data requirements by a factor of ~2
-- Became foundational to model sizing decisions across the industry
+- Later contradicted by Hoffmann et al. (2022) — the "Chinchilla scaling laws" — which showed Kaplan et al. overestimated optimal model size for a given compute budget, underestimating optimal data requirements by ~2x
+- Both sets of laws coexist: Kaplan explains the loss-vs-scale relationship for fixed models, Chinchilla corrects the compute-optimal allocation guidance, and later work (DeepSeek, LLaMA) largely follow the Chinchilla regime
 
 ## Notation
 

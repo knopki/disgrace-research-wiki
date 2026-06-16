@@ -448,13 +448,23 @@
 - Key facts: co-founder/CEO of Anthropic, former VP Research at OpenAI, author of "Machines of Loving Grace" and "The Adolescence of Technology", Pentagon dispute (2026)
 - Cross-links: anthropic, superposition, polysemantic-neurons, vladimir-ivanov
 
-## [2026-06-16] ingest | Scaling Laws for Neural Language Models (Kaplan et al., OpenAI, 2020)
-- Raw source: `raw/papers/2020-01-kaplan-scaling-laws/` (2001.08361.pdf + index.md)
-- Source: https://arxiv.org/abs/2001.08361
-- Authors: Jared Kaplan, Sam McCandlish, Tom Henighan, Tom B. Brown, Benjamin Chess, Rewon Child, Scott Gray, Alec Radford, Jeffrey Wu, Dario Amodei (equal contribution, random order)
-- Venue: arXiv preprint, January 2020
-- Content: Empirical scaling laws for LM performance — power-law relationships with model size (α_N ≈ 0.076), dataset size (α_D ≈ 0.095), and training compute (α_C ≈ 0.050). Larger models are more sample-efficient. Compute-optimal allocation trains large models to ~10% above converged loss. Predicted breakdown at C* ~ 10^4 PF-days, N* ~ 10^12 params.
-- Raw directory created (was referenced by existing concept page but missing)
-- Updated concept: scaling-laws (added raw_ingested: true flag, source now resolves)
-- Updated index.md: added concept entry and raw source under Papers
-- Cross-links: transformer, lstm, kv-caching, sparse-transformer, dario-amodei
+|## [2026-06-16] ingest | Scaling Laws for Neural Language Models (Kaplan et al., OpenAI, 2020)
+|- Raw source: `raw/papers/2020-01-kaplan-scaling-laws/` (2001.08361.pdf + index.md)
+|- Source: https://arxiv.org/abs/2001.08361
+|- Authors: Jared Kaplan, Sam McCandlish, Tom Henighan, Tom B. Brown, Benjamin Chess, Rewon Child, Scott Gray, Alec Radford, Jeffrey Wu, Dario Amodei (equal contribution, random order)
+|- Venue: arXiv preprint, January 2020
+|- Content: Empirical scaling laws for LM performance — power-law relationships with model size (α_N ≈ 0.076), dataset size (α_D ≈ 0.095), and training compute (α_C ≈ 0.050). Larger models are more sample-efficient. Compute-optimal allocation trains large models to ~10% above converged loss. Predicted breakdown at C* ~ 10^4 PF-days, N* ~ 10^12 params.
+|- Raw directory created (was referenced by existing concept page but missing)
+|- Updated concept: scaling-laws (added raw_ingested: true flag, source now resolves)
+|- Updated index.md: added concept entry and raw source under Papers
+|- Cross-links: transformer, lstm, kv-caching, sparse-transformer, dario-amodei
+|
+|## [2026-06-16] ingest | Training Compute-Optimal Large Language Models (Hoffmann et al., DeepMind, 2022)
+|- Raw source: `raw/papers/2022-03-hoffmann-chinchilla/` (2203.15556.pdf + hoffmann2022chinchilla.md)
+|- Source: https://arxiv.org/abs/2203.15556
+|- Authors: Jordan Hoffmann, Sebastian Borgeaud, Arthur Mensch, Elena Buchatskaya, Trevor Cai, Eliza Rutherford, Diego de Las Casas, Lisa Anne Hendricks, Johannes Welbl, Aidan Clark, Tom Hennigan, Eric Noland, Katie Millican, George van den Driessche, Bogdan Damoc, Aurelia Guy, Simon Osindero, Karen Simonyan, Erich Elsen, Jack W. Rae, Oriol Vinyals, Laurent Sifre (22 authors, DeepMind)
+|- Venue: arXiv preprint, March 2022
+|- Content: Landmark study establishing that current LLMs are undertrained. For compute-optimal training, model size and training tokens should scale equally (N ∝ D), contradicting Kaplan et al.'s earlier finding (N ∝ C^0.73). Validated by training Chinchilla (70B, 1.4T tokens) which outperforms Gopher (280B), GPT-3 (175B), Jurassic-1 (178B), and MT-NLG (530B) across all evaluated tasks. Chinchilla achieves 67.5% on MMLU (+7% over Gopher).
+|- Updated concept: scaling-laws (added Chinchilla section with equations, model comparison table, and implication paragraph; updated Historical Impact to note contradiction rather than refinement)
+|- Updated index.md: added raw source under Papers
+|- Cross-links: scaling-laws, transformer
