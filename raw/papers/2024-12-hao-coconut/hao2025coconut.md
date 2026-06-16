@@ -2,7 +2,14 @@
 source_url: https://arxiv.org/abs/2412.06769
 ingested: 2026-06-15
 title: Training Large Language Models to Reason in a Continuous Latent Space
-authors: Shibo Hao, Sainbayar Sukhbaatar, DiJia Su, Xian Li, Zhiting Hu, Jason Weston, Yuandong Tian
+authors:
+  - Shibo Hao
+  - Sainbayar Sukhbaatar
+  - DiJia Su
+  - Xian Li
+  - Zhiting Hu
+  - Jason Weston
+  - Yuandong Tian
 date: 2024-12-01
 ---
 

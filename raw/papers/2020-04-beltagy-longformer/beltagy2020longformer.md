@@ -2,7 +2,10 @@
 source_url: https://arxiv.org/abs/2004.05150
 ingested: 2026-06-17
 title: "Longformer: The Long-Document Transformer"
-authors: Iz Beltagy, Matthew E. Peters, Arman Cohan (equal contribution)
+authors:
+  - Iz Beltagy
+  - Matthew E. Peters
+  - Arman Cohan
 date: 2020-12-02
 ---
 

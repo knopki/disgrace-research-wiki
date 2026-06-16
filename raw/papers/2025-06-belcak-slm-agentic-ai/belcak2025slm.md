@@ -1,7 +1,15 @@
 ---
 source_url: https://arxiv.org/abs/2506.02153v1
 ingested: 2026-06-15
-authors: Peter Belcak, Greg Heinrich, Shizhe Diao, Yonggan Fu, Xin Dong, Saurav Muralidharan, Yingyan Celine Lin, Pavlo Molchanov
+authors:
+  - Peter Belcak
+  - Greg Heinrich
+  - Shizhe Diao
+  - Yonggan Fu
+  - Xin Dong
+  - Saurav Muralidharan
+  - Yingyan Celine Lin
+  - Pavlo Molchanov
 title: Small Language Models are the Future of Agentic AI
 date: 2025-06-01
 ---

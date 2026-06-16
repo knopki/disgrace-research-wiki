@@ -4,7 +4,7 @@ date: 2025-07-05
 ingested: 2026-06-15
 source_url: https://vk.com/@turboplanner-kontraktnoe-programmirovanie-vash-semanticheskii-schit-v-epo
 original_url: https://vk.com/@turboplanner-kontraktnoe-programmirovanie-vash-semanticheskii-schit-v-epo
-author: Vladimir Ivanov
+authors: Vladimir Ivanov
 ---
 
 # Контрактное программирование: Ваш семантический щит в эпоху искусственного интеллекта

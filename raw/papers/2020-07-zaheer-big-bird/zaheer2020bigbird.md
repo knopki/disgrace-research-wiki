@@ -2,7 +2,18 @@
 source_url: https://arxiv.org/abs/2007.14062
 ingested: 2026-06-17
 title: "Big Bird: Transformers for Longer Sequences"
-authors: Manzil Zaheer, Guru Guruganesh, Avinava Dubey, Joshua Ainslie, Chris Alberti, Santiago Ontanon, Philip Pham, Anirudh Ravula, Qifan Wang, Li Yang, Amr Ahmed
+authors:
+  - Manzil Zaheer
+  - Guru Guruganesh
+  - Avinava Dubey
+  - Joshua Ainslie
+  - Chris Alberti
+  - Santiago Ontanon
+  - Philip Pham
+  - Anirudh Ravula
+  - Qifan Wang
+  - Li Yang
+  - Amr Ahmed
 date: 2020-07-01
 ---
 

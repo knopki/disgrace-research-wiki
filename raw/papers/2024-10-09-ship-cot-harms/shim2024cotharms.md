@@ -2,7 +2,10 @@
 source_url: https://index.ieomsociety.org/index.cfm/item/55021
 ingested: 2026-06-15
 title: CoT Harms Performance of Rather Smaller Language Models
-authors: Jihoo Shim (Student, My Paul School), Shin Dong Ho (Professor, My Paul School), Jeongwon Kim (Dept. of Economics, Nihon University)
+authors:
+  - Jihoo Shim
+  - Shin Dong Ho
+  - Jeongwon Kim
 date: 2024-10-09
 ---
 

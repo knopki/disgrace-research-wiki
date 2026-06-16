@@ -2,7 +2,7 @@
 title: "Семантическая разметка GRACE как нативный интерфейс для Mamba-моделей: экспериментальное исследование возможностей архитектуры Qwen 3 Next"
 date: 2025-09-21
 original_url: https://vk.com/@turboplanner-semanticheskaya-razmetka-grace-kak-nativnyi-interfeis-dlya-m
-author: "Vladimir Ivanov"
+authors: Vladimir Ivanov
 source_url: https://vk.com/@turboplanner-semanticheskaya-razmetka-grace-kak-nativnyi-interfeis-dlya-m
 ingested: 2026-06-16
 ---

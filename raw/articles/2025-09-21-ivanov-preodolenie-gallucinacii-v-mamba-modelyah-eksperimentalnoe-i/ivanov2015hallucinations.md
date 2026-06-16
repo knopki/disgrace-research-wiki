@@ -1,7 +1,7 @@
 ---
 title: "Преодоление галлюцинаций в Mamba-моделях: Экспериментальное исследование RAG-управляемой самокоррекции на примере Qwen 3 Next"
 date: 2025-09-21
-author: "Vladimir Ivanov"
+authors: Vladimir Ivanov
 original_url: https://vk.com/@turboplanner-preodolenie-gallucinacii-v-mamba-modelyah-eksperimentalnoe-i
 source_url: https://vk.com/@turboplanner-preodolenie-gallucinacii-v-mamba-modelyah-eksperimentalnoe-i
 ingested: 2026-06-16

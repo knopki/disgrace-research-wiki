@@ -2,7 +2,7 @@
 source_url: https://vk.com/@turboplanner-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov
 ingested: 2026-06-17
 title: "История ИИ: бунтари, гении и научные войны, которые сформировали наш мир"
-author: Vladimir Ivanov
+authors: Vladimir Ivanov
 date: 2025-07-03
 ---
 

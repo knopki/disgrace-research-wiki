@@ -1,6 +1,6 @@
 ---
 title: "GRACE: Фреймворк создания кода LLM в больших контекстах с учетом sparse attention и особенностей RAG-агентов"
-author: Vladimir Ivanov
+authors: Vladimir Ivanov
 date: 2025-09-13
 source_url: https://vk.com/@turboplanner-grace-freimvork-sozdaniya-koda-llm-v-bolshih-kontekstah-s-uc
 ingested: 2026-06-15

@@ -1,9 +1,17 @@
 ---
-title: "Attention Is All You Need"
+title: Attention Is All You Need
 source_url: https://arxiv.org/abs/1706.03762
 date: 2017-06-12
-authors: "Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, Illia Polosukhin"
-venue: "NIPS 2017 (31st Conference on Neural Information Processing Systems)"
+authors:
+  - Ashish Vaswani
+  - Noam Shazeer
+  - Niki Parmar
+  -  Jakob Uszkoreit
+  - Llion Jones
+  - Aidan N. Gomez
+  - Łukasz Kaiser
+  - Illia Polosukhin
+venue: NIPS 2017 (31st Conference on Neural Information Processing Systems)
 ingested: 2026-06-16
 ---
 

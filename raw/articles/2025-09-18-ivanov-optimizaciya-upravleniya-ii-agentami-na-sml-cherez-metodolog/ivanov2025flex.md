@@ -1,8 +1,8 @@
 ---
-title: "Оптимизация управления ИИ агентами на SLM через методологию Few-shot Logit-Enabled XML (FLEX)"
+title: Оптимизация управления ИИ агентами на SLM через методологию Few-shot Logit-Enabled XML (FLEX)
 date: 2025-09-18
 original_url: https://vk.com/@turboplanner-optimizaciya-upravleniya-ii-agentami-na-sml-cherez-metodolog
-author: "Vladimir Ivanov"
+authors: Vladimir Ivanov
 source_url: https://vk.com/@turboplanner-optimizaciya-upravleniya-ii-agentami-na-sml-cherez-metodolog
 ingested: 2026-06-16
 ---

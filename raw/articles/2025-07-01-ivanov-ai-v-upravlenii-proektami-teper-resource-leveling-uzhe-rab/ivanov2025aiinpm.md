@@ -1,9 +1,9 @@
 ---
-title: "AI в управлении проектами - теперь Resource Leveling уже работает"
+title: AI в управлении проектами - теперь Resource Leveling уже работает
 date: 2025-07-01
 source_url: https://vk.com/@turboplanner-ai-v-upravlenii-proektami-teper-resource-leveling-uzhe-rab
 ingested: 2026-06-16
-author: "Vladimir Ivanov"
+authors: Vladimir Ivanov
 ---
 
 # AI в управлении проектами - теперь Resource Leveling уже работает

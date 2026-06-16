@@ -1,7 +1,7 @@
 ---
-title: "AI угрожает программистам могуществом параллелизма"
+title: AI угрожает программистам могуществом параллелизма
 date: 2025-06-30
-author: "Vladimir Ivanov"
+authors: Vladimir Ivanov
 original_url: https://vk.com/@turboplanner-ai-ugrozhaet-programmistam-moguschestvom-parallelizma
 source_url: https://vk.com/@turboplanner-ai-ugrozhaet-programmistam-moguschestvom-parallelizma
 ingested: 2026-06-16
