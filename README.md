@@ -1,11 +1,11 @@
 # БЯМ & МЯМ сидели на трубе
 
 ![](raw/assets/readme-hero.png)
-БЯМ (Большая Языковая Модель) and МЯМ (Малая Языковая Модель) — Russian shorthand for LLM and SLM, and the name of this **LLM Wiki**: a compounding knowledge base on neural architectures, AI agent workflows, coding methodologies, and the semantic weirdness that emerges when you push tokens through transformers.
+БЯМ (Большая Языковая Модель) and МЯМ (Малая Языковая Модель) — Russian shorthand for LLM and SLM, and the name of this **LLM Wiki**: a compounding knowledge base on neural architectures, AI agent workflows, coding methodologies, and the semantic weirdness that emerges when you push tokens through [[transformer|transformers]].
 
 ## What's inside
 
-- **Architectures** — transformer, positional encoding, KV caching, residual connections, LSTM, backprop
+- **Architectures** — [[transformer|transformer]], positional encoding, KV caching, residual connections, LSTM, backprop
 - **Agent methodologies** — vibe coding, contract programming, semantic anchors, semantic superposition
 - **Representation phenomena** — superposition, polysemantic neurons, privileged basis, semantic fractal, belief state geometry
 - **RAG & knowledge grounding** — retrieval-augmented generation, knowledge graphs, corpus linguistics, distributional semantics

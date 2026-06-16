@@ -1,6 +1,9 @@
 ---
 source_url: https://index.ieomsociety.org/index.cfm/item/55021
 ingested: 2026-06-15
+title: CoT Harms Performance of Rather Smaller Language Models
+authors: Jihoo Shim (Student, My Paul School), Shin Dong Ho (Professor, My Paul School), Jeongwon Kim (Dept. of Economics, Nihon University)
+date: 2024-10-09
 ---
 
 # CoT Harms Performance of Rather Smaller Language Models
@@ -13,18 +16,18 @@ Full text: [[shim2024cotharms.pdf]] (5 pages, 508).
 
 ## Metadata
 
-| Field | Value |
-|-------|-------|
-| Title | CoT Harms Performance of Rather Smaller Language Models |
-| Authors | Jihoo Shim (Student, My Paul School), Shin Dong Ho (Professor, My Paul School), Jeongwon Kim (Dept. of Economics, Nihon University) |
-| Venue | 1st World Congress on Industrial Engineering and Operations Management, Detroit |
-| Publisher | IEOM Society International |
-| Track | High School STEM Poster Competition |
-| Date | October 9–11, 2024 |
-| Pages | 5 (504–508) |
-| DOI | 10.46254/wc01.20240169 |
-| ISBN | 979-8-3507-1740-2 |
-| Keywords | CoT, Chain of Thought, LLMs, SLMs, GPT-2 |
+| Field     | Value                                                                                                                               |
+| --------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| Title     | CoT Harms Performance of Rather Smaller Language Models                                                                             |
+| Authors   | Jihoo Shim (Student, My Paul School), Shin Dong Ho (Professor, My Paul School), Jeongwon Kim (Dept. of Economics, Nihon University) |
+| Venue     | 1st World Congress on Industrial Engineering and Operations Management, Detroit                                                     |
+| Publisher | IEOM Society International                                                                                                          |
+| Track     | High School STEM Poster Competition                                                                                                 |
+| Date      | October 9–11, 2024                                                                                                                  |
+| Pages     | 5 (504–508)                                                                                                                         |
+| DOI       | 10.46254/wc01.20240169                                                                                                              |
+| ISBN      | 979-8-3507-1740-2                                                                                                                   |
+| Keywords  | CoT, Chain of Thought, LLMs, SLMs, GPT-2                                                                                            |
 
 ## Models & Benchmark
 

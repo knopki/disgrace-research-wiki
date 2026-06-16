@@ -1,6 +1,9 @@
 ---
 source_url: https://transformer-circuits.pub/2022/toy_model/index.html
 ingested: 2026-06-16
+title: Toy Models of Superposition
+authors: Nelson Elhage, Tristan Hume, Catherine Olsson, Nicholas Schiefer, Tom Henighan, Shauna Kravec, Zac Hatfield-Dodds, Robert Lasenby, Dawn Drain, Carol Chen, Roger Grosse, Sam McCandlish, Jared Kaplan, Dario Amodei, Martin Wattenberg, Christopher Olah
+date: 2022-01-01
 ---
 
 # Toy Models of Superposition

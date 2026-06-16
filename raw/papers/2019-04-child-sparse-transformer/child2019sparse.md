@@ -1,6 +1,9 @@
 ---
 source_url: https://arxiv.org/abs/1904.10509
 ingested: 2026-06-15
+authors: Rewon Child, Scott Gray, Alec Radford, Ilya Sutskever
+date: 2019-04-01
+title: Generating Long Sequences with Sparse Transformers
 ---
 
 # Generating Long Sequences with Sparse Transformers

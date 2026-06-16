@@ -1,6 +1,9 @@
 ---
 source_url: https://arxiv.org/abs/2502.18137
 ingested: 2026-06-17
+date: 2025-02-01
+title: "SpargeAttention: Accurate and Training-free Sparse Attention Accelerating Any Model Inference"
+authors: Jintao Zhang, Chendong Xiang, Haofeng Huang, Jia Wei, Haocheng Xi, Jun Zhu, Jianfei Chen
 ---
 
 # SpargeAttention: Accurate and Training-free Sparse Attention Accelerating Any Model Inference

@@ -1,6 +1,9 @@
 ---
 source_url: https://link.springer.com/article/10.1007/s11571-023-10061-1
 ingested: 2026-06-15
+title: "On the Ability of Standard and Brain-Constrained Deep Neural Networks to Support Cognitive Superposition: A Position Paper"
+authors: Max Garagnani
+date: 2024-02-01
 ---
 
 # On the Ability of Standard and Brain-Constrained Deep Neural Networks to Support Cognitive Superposition: A Position Paper

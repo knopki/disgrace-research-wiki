@@ -1,6 +1,9 @@
 ---
 source_url: https://arxiv.org/abs/2405.15943
 ingested: 2026-06-17
+title: Transformers Represent Belief State Geometry in their Residual Stream
+date: 2024-05-01
+authors: Adam S. Shai, Sarah E. Marzen, Lucas Teixeira, Alexander Gietelink Oldenziel, Paul M. Riechers
 ---
 
 # Transformers Represent Belief State Geometry in their Residual Stream
