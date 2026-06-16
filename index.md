@@ -13,7 +13,7 @@
 - [[frank-rosenblatt|Frank Rosenblatt]] — American psychologist, inventor of the Perceptron, foundational contributor to neural networks and deep learning
 
 - [[anthropic|Anthropic]] — AI safety research company; published Toy Models of Superposition foundational interpretability work
-
+- [[openai|OpenAI]] — American AI research organization; developer of GPT models, ChatGPT, and InstructGPT/RLHF
 - [[dario-amodei|Dario Amodei]] — Co-founder and CEO of Anthropic; AI researcher, proponent of democratic AI leadership, author of *Machines of Loving Grace* and *The Adolescence of Technology*
 
 ## Concepts
@@ -32,6 +32,7 @@
 - [[distributional-semantics|Distributional Semantics]] — Firth's principle that word meaning is entirely determined by context; validated by LLM embeddings
 - [[word-embeddings|Word Embeddings]] — how LLMs represent concepts as vectors in high-dimensional space, superposition catastrophe
 - [[retrieval-augmented-generation|Retrieval-Augmented Generation (RAG)]] — architectural pattern grounding LLM responses in externally retrieved knowledge
+- [[rlhf|RLHF (Reinforcement Learning from Human Feedback)]] — technique for fine-tuning language models with human preferences as reward signal; InstructGPT demonstrated 1.3B model outperforming 175B GPT-3
 - [[knowledge-graph|Knowledge Graph]] — structured entity-relationship knowledge base for grounding AI answers
 - [[corpus-linguistics|Corpus Linguistics]] — branch of linguistics building annotated text corpora; foundational to NLP training data and RAG knowledge bases
 
@@ -103,6 +104,8 @@
 - [Кот Шрёдингера в голове у GPT: Как суперпозиция смыслов меняет правила игры с ИИ](raw/articles/2025-07-06-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/) (Vladimir Ivanov, 2025-07-06)
 - [KV Caching Explained](raw/articles/kv-caching-explained/) (João Lages, Medium, 2023-10-08)
 
+- [OpenAI](raw/articles/openai-wikipedia.md) (Wikipedia, 2026)
+
 - [За кулисами Microsoft: тайные элитные партнерские программы и ИИ-трансформация](raw/articles/2025-07-10-za-kulisami-microsoft-tainye-elitnye-partnerskie-programmy-i/) (Vladimir Ivanov, 2025-07-10)
 - [Rational Unified Process](raw/articles/rational-unified-process-wikipedia/) (Wikipedia, 2026)
 - [Difference between BFS and DFS](raw/articles/bfs-vs-dfs-gfg/) (GeeksforGeeks)
@@ -120,6 +123,7 @@
 
 - [Toy Models of Superposition](raw/papers/2022-09-elhage-toy-models-superposition/) (Anthropic Transformer Circuits Thread, 2022)
 - [Training Compute-Optimal Large Language Models](raw/papers/2022-03-hoffmann-chinchilla/) (Jordan Hoffmann et al., DeepMind, arXiv, 2022)
+- [Training language models to follow instructions with human feedback](raw/papers/2022-03-ouyang-instructgpt/ouyang2022instructgpt.md) — PDF at [2203.02155.pdf](raw/papers/2022-03-ouyang-instructgpt/2203.02155.pdf) (Long Ouyang et al., OpenAI, NeurIPS 2022)
 - [On the ability of standard and brain-constrained DNNs to support cognitive superposition](raw/papers/2024-02-garagnani-cognitive-superposition/) (Max Garagnani, Cognitive Neurodynamics, 2024)
 - [Transformers Represent Belief State Geometry in their Residual Stream](raw/papers/2024-05-shai-belief-state-geometry/) (Adam Shai et al., NeurIPS 2024)
 - [Training Large Language Models to Reason in a Continuous Latent Space](raw/papers/2024-12-hao-coconut/) — abstract, full PDF, and plain-text at [index.md](raw/papers/2024-12-hao-coconut/hao2025coconut.md) (Shibo Hao et al., FAIR at Meta / UC San Diego, arXiv, COLM 2025)

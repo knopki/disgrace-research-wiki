@@ -467,4 +467,16 @@
 |- Content: Landmark study establishing that current LLMs are undertrained. For compute-optimal training, model size and training tokens should scale equally (N ∝ D), contradicting Kaplan et al.'s earlier finding (N ∝ C^0.73). Validated by training Chinchilla (70B, 1.4T tokens) which outperforms Gopher (280B), GPT-3 (175B), Jurassic-1 (178B), and MT-NLG (530B) across all evaluated tasks. Chinchilla achieves 67.5% on MMLU (+7% over Gopher).
 |- Updated concept: scaling-laws (added Chinchilla section with equations, model comparison table, and implication paragraph; updated Historical Impact to note contradiction rather than refinement)
 |- Updated index.md: added raw source under Papers
-|- Cross-links: scaling-laws, transformer
+||- Cross-links: scaling-laws, transformer
+|
+|## [2026-06-16] ingest | Training language models to follow instructions with human feedback (InstructGPT)
+|
+|- Raw source: `raw/papers/2022-03-ouyang-instructgpt/` (2203.02155.pdf + index.md)
+|- Source: https://arxiv.org/abs/2203.02155 — Long Ouyang et al., OpenAI, NeurIPS 2022
+|- Content: RLHF fine-tuning applied to GPT-3 for instruction-following; three-step procedure (SFT → RM → PPO); 1.3B InstructGPT preferred to 175B GPT-3; truthfulness improvements, toxicity reduction, alignment tax mitigation via PPO-ptx
+|- New tag: `rlhf` (already in SCHEMA.md taxonomy)
+|- Created concept: rlhf (RLHF technique, three-step procedure, InstructGPT model family, alignment tax, PPO-ptx, key results)
+|- Updated entity: dario-amodei (added InstructGPT to context: was VP of Research at OpenAI during this project)
+|- Created entity: openai (organization page with key papers table, key people, known works)
+|- Raw source added: raw/articles/openai-wikipedia.md (Wikipedia summary)
+|- Cross-links: rlhf ↔ transformer, scaling-laws, chain-of-thought, dario-amodei, anthropic, flex-prompting, grace
