@@ -100,3 +100,4 @@ A 4-layer Transformer (d_model=1024) trained on WSJ (40K sentences) achieved 91.
 - [[semantic-anchors|Semantic Anchors]] — a technique exploiting a practical consequence of positional encoding for AI-assisted code editing
 - [[kv-caching|KV Caching]] — inference optimisation that caches Key and Value states during auto-regressive generation, avoiding redundant recomputation
 - [[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]] — a training paradigm that exploits the transformer's ability to process any vector as input, not just token embeddings
+- [[rotary-position-embedding|Rotary Position Embedding (RoPE)]] — the dominant modern position encoding, using rotation matrices instead of additive sinusoidal functions; used by virtually all post-2023 LLMs

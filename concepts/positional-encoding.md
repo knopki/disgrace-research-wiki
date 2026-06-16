@@ -34,6 +34,17 @@ The original "Attention Is All You Need" paper proposed sine and cosine function
 
 Because a single token's PE vector contains values for all these frequencies simultaneously, it carries position information across every level of the hierarchy — creating a [[semantic-fractal|Semantic Fractal]]: a self-similar, multi-scale representation of text structure.
 
+## Rotary Position Embedding (RoPE)
+
+The dominant position encoding in modern LLMs (LLaMA, Mistral, Qwen, Gemma) is not additive sinusoidal PE but **[[rotary-position-embedding|Rotary Position Embedding (RoPE)]]**. Introduced by Su et al. (2021), RoPE encodes absolute position via a rotation matrix applied to query and key vectors, which naturally encodes relative position in the attention score without explicit relative embeddings.
+
+Unlike additive PE, RoPE is:
+- **Multiplicative** — the rotation is applied to q and k, not added to the input embedding
+- **Length-unbounded** — any position can be encoded without interpolation
+- **Compatible with linear attention** — rotation preserves norms, enabling relative position encoding in PerFormer-style linear mechanisms
+
+RoPE has superseded sinusoidal PE as the default choice in most Transformer architectures since 2023. See the [[rotary-position-embedding|RoPE concept page]] for full mechanism, properties, and empirical results. ([Su et al., 2021](raw/papers/2021-04-su-roformer/su2021rope.md))
+
 ## Fusion with Semantic Embeddings
 
 Crucially, PE is **not** appended as separate dimensions — it is **added directly** to the token's semantic embedding vector. The resulting vector that enters the first attention layer is a fused representation containing both *what* the token means and *where* it sits in the text hierarchy. This means position and semantics are entangled from the start, not processed separately. ([Ivanov, 2025](raw/articles/2025-07-04-ivanov-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/ivanoc2025encodings.md))
@@ -64,3 +75,4 @@ This is why tools like Cursor generate patches as semantic descriptions ("find t
 - [[vibe-coding|Vibe Coding]] — the paradigm shift enabled by AI's structural understanding of code, of which PE is a foundational component
 - [[grace|GRACE]] — the GRACE framework's semantic anchors address the line-number problem that PE creates; XML-like paired tags leverage PE's ability to correlate identical tokens across large distances to overcome sparse attention degradation
 - [[sparse-transformer|Sparse Transformer]] — contrasts with sinusoidal PE: Sparse Transformer uses learned position embeddings (data-dim for images, attention-dim for text) instead of fixed sinusoidal encodings
+- [[rotary-position-embedding|Rotary Position Embedding (RoPE)]] — the dominant modern position encoding, using rotation matrices instead of additive sinusoidal functions

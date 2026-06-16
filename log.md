@@ -495,3 +495,16 @@
 - Updated concept: sparse-transformer (added wikilink entry in Relationship)
 - Removed from TODO.md (was pending)
 - Cross-links: flash-attention ↔ spargeattn, sparse-transformer, longformer, big-bird, kv-caching, transformer, mamba, chain-of-continuous-thought
+
+## [2026-06-16] ingest | RoFormer: Rotary Position Embedding (Su et al., Zhuiyi Technology, arXiv 2021)
+
+- Raw source: `raw/papers/2021-04-su-roformer/` (2104.09864.pdf + su2021rope.md)
+- Source: https://arxiv.org/abs/2104.09864 — "RoFormer: Enhanced Transformer with Rotary Position Embedding"
+- Authors: Jianlin Su, Yu Lu, Shengfeng Pan, Ahmed Murtadha, Bo Wen, Yunfeng Liu (Zhuiyi Technology Co., Ltd.)
+- Venue: arXiv preprint, April 2021 (v5 Nov 2023)
+- Content: Introduces Rotary Position Embedding (RoPE) — encodes absolute position via rotation matrices while incorporating explicit relative position dependency in self-attention. Multiplicative (not additive) position encoding with long-term decay, sequence-length flexibility, and linear attention compatibility. RoFormer achieves 27.5 BLEU on WMT EN-DE (+0.2 over Transformer-base), faster BERT MLM convergence, outperforms on 3/6 GLUE tasks. RoPE has become the dominant position encoding in virtually all post-2023 LLMs (LLaMA, Mistral, Qwen, Gemma).
+- Created concept: rotary-position-embedding (mechanism, key properties — long-term decay, sequence-length flexibility, linear attention compatibility; empirical results table; relationship to sinusoidal PE, learned PE, relative bias, Transformer-XL styles; adoption in modern LLMs; limitations)
+- Updated concept: positional-encoding (added Rotary Position Embedding section with cross-link, added wikilink in Cross-Links)
+- Updated concept: transformer (added wikilink to rotary-position-embedding in Cross-Links)
+- Removed from TODO.md (was pending)
+- Cross-links: rotary-position-embedding ↔ positional-encoding, transformer, kv-caching, semantic-fractal, sparse-transformer
