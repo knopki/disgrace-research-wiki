@@ -39,7 +39,7 @@ In 1959 he returned to Cornell's Ithaca campus as director of the Cognitive Syst
 
 ## Known Works
 
-- **Principles of Neurodynamics: Perceptrons and the Theory of Brain Mechanisms** (Spartan Books, 1962) — the seminal book synthesising his perceptron theorems, experimental results, and theoretical framework. Originally issued as an unclassified DTIC report No. 1196-G-8 in 1961. Divided into four parts: historical review and basic perceptron concepts; three-layer series-coupled perceptrons (mathematics, experiments, variations); multi-layer and cross-coupled perceptrons (now called [[hopfield-networks|Hopfield networks]]); back-coupled perceptrons and future problems. Used to teach the interdisciplinary course "Theory of Brain Mechanisms" at Cornell. ([Wikipedia](raw/articles/frank-rosenblatt-wikipedia.md))
+- **Principles of Neurodynamics: Perceptrons and the Theory of Brain Mechanisms** (Spartan Books, 1962) — the seminal book synthesising his perceptron theorems, experimental results, and theoretical framework. Originally issued as an unclassified DTIC report No. 1196-G-8 in 1961. Divided into four parts: historical review and basic perceptron concepts; three-layer series-coupled perceptrons (mathematics, experiments, variations); multi-layer and cross-coupled perceptrons (now called Hopfield networks); back-coupled perceptrons and future problems. Used to teach the interdisciplinary course "Theory of Brain Mechanisms" at Cornell. ([Wikipedia](raw/articles/frank-rosenblatt-wikipedia.md))
 - **Mark I Perceptron** (1960) — hardware implementation of the perceptron; now at the Smithsonian Institution
 - **Tobermory** (1961–1967) — scaled-up perceptron machine for speech recognition with 4 layers and 12,000 weights on toroidal magnetic cores, occupying an entire room
 - **EPAC** (Electronic Profile Analyzing Computer, 1951–1953) — custom-built computer for psychometric multidimensional analysis
@@ -52,7 +52,7 @@ Rosenblatt proved four main theorems (with H. D. Block):
 2. **Convergence of learning** — the perceptron learning algorithm converges when a solution exists
 3. **Generalization** — the model can recognise patterns under translation, rotation, or transformation (both hardwired and learned variants studied)
 
-The cross-coupled perceptron variant anticipated what are now called [[hopfield-networks|Hopfield networks]] — Rosenblatt proved equilibrium conditions for those architectures. ([Wikipedia](raw/articles/frank-rosenblatt-wikipedia.md))
+The cross-coupled perceptron variant anticipated what are now called Hopfield networks — Rosenblatt proved equilibrium conditions for those architectures. ([Wikipedia](raw/articles/frank-rosenblatt-wikipedia.md))
 
 ## Minsky & Papert Controversy
 

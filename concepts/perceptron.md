@@ -51,7 +51,7 @@ The perceptron is the direct ancestor of:
 - Any feedforward neural network
 - The neuron model used in all modern architectures (with differentiable activation functions in place of the step function)
 
-The cross-coupled perceptron variant studied by Rosenblatt is now known as a **[[hopfield-networks|Hopfield network]]** — he proved equilibrium conditions for it decades before Hopfield's 1982 paper. ([Wikipedia](raw/articles/frank-rosenblatt-wikipedia.md))
+The cross-coupled perceptron variant studied by Rosenblatt is now known as a **Hopfield network** — he proved equilibrium conditions for it decades before Hopfield's 1982 paper. ([Wikipedia](raw/articles/frank-rosenblatt-wikipedia.md))
 
 ## Cross-Links
 

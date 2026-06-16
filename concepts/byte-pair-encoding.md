@@ -10,7 +10,7 @@ sources:
 
 Byte Pair Encoding (BPE) is a subword tokenization algorithm that learns a fixed-size vocabulary of variable-length character sequences from data. Introduced to neural machine translation by ([Sennrich, Haddow & Birch, ACL 2016](raw/papers/2016-06-sennrich-bpe-subword/sennrich2016bpe.md)), BPE adapts a data compression technique from Gage (1994): iteratively merging the most frequent pair of adjacent symbols, building a vocabulary from characters up through frequent character n-grams to whole words.
 
-BPE became the dominant tokenization method for virtually all post-2018 neural language models — including [[gpt|GPT]], [[bert|BERT]], [[roberta|RoBERTa]], [[t5|T5]], and [[llama|LLaMA]] — and remains the foundation of most modern LLM tokenizers, despite later refinements like WordPiece, Unigram, and SentencePiece.
+BPE became the dominant tokenization method for virtually all post-2018 neural language models — including GPT, [[bert|BERT]], RoBERTa, T5, and LLaMA — and remains the foundation of most modern LLM tokenizers, despite later refinements like WordPiece, Unigram, and SentencePiece.
 
 ## Algorithm
 
@@ -34,19 +34,19 @@ The final vocabulary size = initial character vocabulary + number of merge opera
 
 ## Variants
 
-| Variant | Description | Used By |
-|---------|-------------|---------|
-| **Independent BPE** | Separate vocabularies learned for source and target languages | Standard in NMT research |
-| **Joint BPE** | Single vocabulary learned on the union of source and target text, improving cross-lingual segmentation consistency | Sennrich et al. (2016), best results in paper |
-| **WordPiece** | Similar merge principle but merges based on likelihood gain under a language model, not raw frequency | [[bert\|BERT]], [[roberta\|RoBERTa]] |
-| **Unigram LM** | Probabilistic subword model trained via EM, selects vocabulary by removing low-probability units | SentencePiece (Kudo & Richardson, 2018), T5, LLaMA |
-| **SentencePiece** | Framework supporting both BPE and Unigram; operates on raw text without pre-tokenization | [[by-t5|ByT5]], [[gemma|Gemma]] |
+| Variant             | Description                                                                                                        | Used By                                            |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------ | -------------------------------------------------- |
+| **Independent BPE** | Separate vocabularies learned for source and target languages                                                      | Standard in NMT research                           |
+| **Joint BPE**       | Single vocabulary learned on the union of source and target text, improving cross-lingual segmentation consistency | Sennrich et al. (2016), best results in paper      |
+| **WordPiece**       | Similar merge principle but merges based on likelihood gain under a language model, not raw frequency              | [[bert\|BERT]], RoBERTa                            |
+| **Unigram LM**      | Probabilistic subword model trained via EM, selects vocabulary by removing low-probability units                   | SentencePiece (Kudo & Richardson, 2018), T5, LLaMA |
+| **SentencePiece**   | Framework supporting both BPE and Unigram; operates on raw text without pre-tokenization                           | ByT5, Gemma                                        |
 
 ## Impact on Translation of Rare Words
 
 The critical insight of the original BPE paper is that word classes challenging for word-level NMT — names, compounds, cognates, loanwords, morphologically complex forms — are translatable through smaller units. An analysis of 100 rare German tokens found 56 compounds, 21 names, 6 loanwords, 5 transparent affixations, 1 number, and 1 programming-language identifier — all potentially decomposable into subword units ([Sennrich, Haddow & Birch, 2016](raw/papers/2016-06-sennrich-bpe-subword/sennrich2016bpe.md)).
 
-For [[English]]→[[German]], the BPE-ensemble improved OOV recall from 0% (word-level with UNK) to ~30%, with joint BPE reaching 38.6% precision and 29.8% recall. For English→Russian (different alphabets), BPE was essential: the back-off dictionary baseline achieved only 5.2% OOV recall, while BPE-J90k reached 15.6% recall and 21.9% precision.
+For English→German, the BPE-ensemble improved OOV recall from 0% (word-level with UNK) to ~30%, with joint BPE reaching 38.6% precision and 29.8% recall. For English→Russian (different alphabets), BPE was essential: the back-off dictionary baseline achieved only 5.2% OOV recall, while BPE-J90k reached 15.6% recall and 21.9% precision.
 
 ## Limitations
 
@@ -69,5 +69,4 @@ BPE operates on a fundamentally different axis from architectural innovations li
 ## References
 
 - Sennrich, R., Haddow, B., & Birch, A. (2016). *Neural Machine Translation of Rare Words with Subword Units.* ACL 2016. [[raw/papers/2016-06-sennrich-bpe-subword/sennrich2016bpe.md]]
-- Gage, P. (1994). *A New Algorithm for Data Compression.* C Users J., 12(2):23–38.
-- Kudo, T. & Richardson, J. (2018). *SentencePiece: A simple and language independent subword tokenizer and detokenizer for Neural Text Processing.*
+

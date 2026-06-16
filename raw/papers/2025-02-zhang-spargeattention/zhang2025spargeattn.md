@@ -66,7 +66,7 @@ Grid-searched with L1 error bounds: first find (τ, θ) maximizing sparsity with
 
 ## Relationships
 
-- Builds on [[SageAttention]] (8-bit quantized attention by same group)
+- Builds on SageAttention (8-bit quantized attention by same group)
 - Compares against MInference and FlexPrefill (dynamic sparse attention baselines)
 - Related to pattern-based sparse attention (StreamingLLM, H2O, DUOAttention), dynamic sparse attention (SparQAttn, LokiAttn, SeerAttention), and training-based sparse attention (Reformer, FastAttention)
 - Orthogonal to kernel optimizations (FlashAttention 1/2/3), other quantization methods, and linear attention
