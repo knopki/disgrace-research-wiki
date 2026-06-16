@@ -67,7 +67,7 @@ as-is. `date` is especially important — it tells you how fresh the fact is.
 | `raw/papers/` | Academic papers, preprints, conference publications, and theses |
 
 ## Tag Taxonomy
-- Models: model, architecture, benchmark, training, inference
+- Models: model, architecture, benchmark, training, inference, mixture-of-experts
 - Agents: agent, framework, tool-use, planning, orchestration, multi-agent
 - Techniques: optimization, fine-tuning, alignment, rlhf, distillation, quantization, data, technique
 - Infrastructure: serving, deployment, hardware, gpu, distributed

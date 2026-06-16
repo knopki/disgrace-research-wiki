@@ -86,6 +86,7 @@ A 4-layer Transformer (d_model=1024) trained on WSJ (40K sentences) achieved 91.
 ## Limitations
 
 - Quadratic memory cost in sequence length (O(n²) attention) — partially addressed by [[sparse-transformer|Sparse Transformer]] architectures, but the practical breakthrough came from [[flash-attention|FlashAttention]]'s IO-aware tiling, which enabled dense exact attention to scale to long sequences without quality loss
+- Feed-forward networks dominate parameter count and compute — MoE architectures like [[switch-transformer|Switch Transformer]] address this by replacing dense FFNs with sparsely-activated expert modules, enabling constant compute cost with vastly more total parameters
 - No inherent notion of order (positional encoding is added externally)
 - Requires enormous amounts of training data and compute
 

@@ -16,6 +16,7 @@ sources:
   - "[Причины наблюдаемого провала малых SLM против LLM на MoE в AI-агентах](raw/articles/2025-09-14-ivanov-prichiny-nabludaemogo-provala-malyh-slm-protiv-llm-na-moe-v/ivanov2025slmvsllm.md)"
   - "[CoT Harms Performance of Rather Smaller Language Models](raw/papers/2024-10-09-ship-cot-harms/shim2024cotharms.md)"
   - "[Hallucination Detection with Small Language Models](raw/papers/2025-06-24-cheung-hallucination-detection-slm/cheung2025hallucination.md)"
+  - "[Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](raw/papers/2021-01-fedus-switch-transformers/fedus2022switch.md)"
 ---
 
 # SLM vs MoE for Agentic AI
@@ -86,6 +87,8 @@ High-sparsity MoE architectures with Multi-Token Prediction (MTP) eliminate the 
 - Active parameters per token: ~3B — same FLOPs as a 3B SLM
 - MTP generates multiple tokens per forward pass, reducing latency and increasing throughput
 
+The foundation for this architecture was laid by the [[switch-transformer|Switch Transformer]] (Fedus et al., Google, 2021), which demonstrated that simplified single-expert MoE routing enabled trillion-parameter sparse models with constant compute cost. Modern MoE models (Mixtral, Qwen MoE, DeepSeek MoE) are direct architectural descendants.
+
 For cloud-accessible developers, the same compute cost buys incomparably higher quality from MoE. MTP is unavailable in SLMs, compounding the gap.
 
 ### 3. Free Tiers Commoditize Low-Intensity Tasks
@@ -126,3 +129,4 @@ The two positions overlap more than they conflict.
 - [[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]] — architectural innovation changing cost-quality landscape
 - [[chain-of-thought|Chain-of-Thought Prompting (CoT)]] — CoT harms SLMs, relevant to both sides of the SLM debate
 - [[sparse-transformer|Sparse Transformer]] — foundational sparse attention work for MoE architectures
+- [[switch-transformer|Switch Transformer]] — foundational MoE architecture that enabled trillion-parameter sparse models with simplified routing; direct predecessor of modern MoE LLMs

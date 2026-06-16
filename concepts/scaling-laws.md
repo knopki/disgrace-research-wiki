@@ -171,4 +171,5 @@ These scaling laws were the first comprehensive empirical framework for predicti
 - [[lstm|LSTM]] — recurrent baseline that Transformers asymptotically outperform on long-range dependencies
 - [[kv-caching|KV Caching]] — inference optimization whose relevance grows with model scale
 - [[sparse-transformer|Sparse Transformer]] — cited by Kaplan et al. as enabling large model parallelism
+- [[switch-transformer|Switch Transformer]] — demonstrates a distinct scaling dimension (number of experts) orthogonal to N-D-C; expert count provides quality gains beyond model depth/width scaling
 - [[dario-amodei|Dario Amodei]] — senior author of the paper; provided guidance throughout the project

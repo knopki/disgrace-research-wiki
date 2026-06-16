@@ -508,3 +508,20 @@
 - Updated concept: transformer (added wikilink to rotary-position-embedding in Cross-Links)
 - Removed from TODO.md (was pending)
 - Cross-links: rotary-position-embedding ↔ positional-encoding, transformer, kv-caching, semantic-fractal, sparse-transformer
+
+## [2026-06-16] ingest | Switch Transformers (Fedus et al., Google, JMLR 2022)
+
+- Raw source: `raw/papers/2021-01-fedus-switch-transformers/` (2101.03961.pdf + fedus2022switch.md)
+- Source: https://arxiv.org/abs/2101.03961 — "Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity"
+- Authors: William Fedus, Barret Zoph, Noam Shazeer (Google)
+- Venue: Journal of Machine Learning Research 23 (2022) 1-40
+- Content: Simplifies MoE to single-expert routing (k=1), enabling sparsely-activated models with constant compute cost but vastly more parameters. Up to 7× pre-training speedup over T5-Base, 4× over T5-XXL. Trained up to 1.6T parameter models. Introduces selective precision (bfloat16 + float32 router), smaller initialization, expert dropout. All 101 languages improved in multilingual setting.
+- New tag: mixture-of-experts (added to SCHEMA.md Models taxonomy)
+- Concept page created: switch-transformer (architecture, single-expert routing, load balancing loss, expert capacity, training stability techniques, scaling results, distillation, multilingual results, significance)
+- Updated concept: transformer (added cross-link in Limitations — MoE as alternative scaling dimension)
+- Updated concept: scaling-laws (added cross-link — expert count as orthogonal scaling dimension)
+- Updated concept: sparse-transformer (added cross-link — attention sparsity vs parameter sparsity)
+- Updated concept: kv-caching (added cross-link — MoE memory pressure vs KV cache wall)
+- Updated comparison: slm-moe-agentic-ai (added raw source, added Switch Transformer as foundational MoE work in Ivanov MoE+MTP section, added cross-link in Related)
+- Removed from TODO.md (was pending)
+- Cross-links: switch-transformer ↔ transformer, scaling-laws, sparse-transformer, kv-caching, flash-attention, slm-moe-agentic-ai
