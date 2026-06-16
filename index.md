@@ -147,7 +147,7 @@
 - [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](raw/papers/2021-01-fedus-switch-transformers/2101.03961.pdf) — details at [fedus2022switch.md](raw/papers/2021-01-fedus-switch-transformers/fedus2022switch.md) (William Fedus et al., Google, JMLR 2022)
 - [SpargeAttention: Accurate and Training-free Sparse Attention Accelerating Any Model Inference](raw/papers/2025-02-zhang-spargeattention/2502.18137.pdf) — details at [zhang2025spargeattn](raw/papers/2025-02-zhang-spargeattention/zhang2025spargeattn.md) (Jintao Zhang et al., Tsinghua/UC Berkeley, ICML 2025)
 - [Direct Preference Optimization: Your Language Model is Secretly a Reward Model](raw/papers/2023-05-rafailov-dpo/rafailov2023dpo.md) — PDF at [2305.18290.pdf](raw/papers/2023-05-rafailov-dpo/2305.18290.pdf) (Rafael Rafailov et al., Stanford, NeurIPS 2023)
-- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](raw/papers/2018-10-devlin-bert/1810.04805.pdf) — details at [index.md](raw/papers/2018-10-devlin-bert/index.md) (Jacob Devlin et al., Google AI Language, NAACL 2019)
+- [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](raw/papers/2018-10-devlin-bert/1810.04805.pdf) — details at [index.md](raw/papers/2018-10-devlin-bert/devlin2018bert.md) (Jacob Devlin et al., Google AI Language, NAACL 2019)
 
 ## Comparisons
 

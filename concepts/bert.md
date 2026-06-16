@@ -3,14 +3,18 @@ title: BERT
 created: 2026-06-17
 updated: 2026-06-17
 type: concept
-tags: [model, architecture, training, fine-tuning]
+tags:
+  - model
+  - architecture
+  - training
+  - fine-tuning
 sources:
-  - "[BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](raw/papers/2018-10-devlin-bert/index.md)"
+  - "[BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](raw/papers/2018-10-devlin-bert/devlin2018bert.md)"
 ---
 
 # BERT
 
-**BERT (Bidirectional Encoder Representations from Transformers)** — language representation model introduced by Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova (Google AI Language, NAACL 2019). It demonstrated that deep bidirectional pre-training with [[transformer|Transformer]] encoders produces transferable representations that dramatically outperform unidirectional approaches, establishing the pre-train/fine-tune paradigm that dominated NLP for years ([Devlin et al., 2019](raw/papers/2018-10-devlin-bert/index.md)).
+**BERT (Bidirectional Encoder Representations from Transformers)** — language representation model introduced by Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova (Google AI Language, NAACL 2019). It demonstrated that deep bidirectional pre-training with [[transformer|Transformer]] encoders produces transferable representations that dramatically outperform unidirectional approaches, establishing the pre-train/fine-tune paradigm that dominated NLP for years ([Devlin et al., 2019](raw/papers/2018-10-devlin-bert/devlin2018bert.md)).
 
 ## Architecture
 
@@ -76,7 +80,7 @@ Fine-tuning is "relatively inexpensive" — all results in the paper "can be rep
 
 ## Results
 
-SOTA on **eleven NLP tasks** at time of publication ([Devlin et al., 2019](raw/papers/2018-10-devlin-bert/index.md)):
+SOTA on **eleven NLP tasks** at time of publication ([Devlin et al., 2019](raw/papers/2018-10-devlin-bert/devlin2018bert.md)):
 
 ### GLUE (Table 1)
 

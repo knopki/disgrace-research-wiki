@@ -6,7 +6,6 @@ authors: Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova
 date: 2018-10-11
 description: Introduces BERT (Bidirectional Encoder Representations from Transformers), a language representation model pre-trained on unlabeled text using masked language modeling and next sentence prediction. Achieves state-of-the-art on eleven NLP tasks including GLUE (80.5%), SQuAD v1.1 (93.2 F1), and SQuAD v2.0 (83.1 F1).
 site: arXiv
-word_count: ~14,000
 ---
 
 # BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding
