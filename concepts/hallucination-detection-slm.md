@@ -87,3 +87,4 @@ The proposed framework achieved approximately 11% improvement over ChatGPT and 6
 - [[chain-of-thought|Chain-of-Thought]] — this framework explicitly avoids CoT, using P(yes) directly; aligns with findings that CoT harms SLM performance on factual tasks
 - [[contract-programming|Contract Programming]] — the verifier acts as a post-condition checker for LLM-generated responses, executing the "assert" step of Design by Contract for AI
 - [[grace|GRACE]] — the verification stage in GRACE's five-stage process could incorporate this SLM-based checking
+- [[mamba|Mamba / SSM]] — complementary approach: SLM ensemble verifies LLM output post-hoc, while Mamba+RAG self-correction corrects the model's internal beliefs during generation

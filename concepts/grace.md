@@ -1,7 +1,7 @@
 ---
 title: GRACE (Graph-RAG Anchored Code Engineering)
 created: 2026-06-15
-updated: 2026-06-15
+updated: 2026-06-16
 type: concept
 tags:
   - methodology
@@ -151,3 +151,4 @@ Both reject the old control-based paradigm (deterministic plans for PCAM, free-f
 - [[knowledge-graph|Knowledge Graph]] — the entire project artifact graph is explicitly maintained as a knowledge graph via LINKS references between artifacts, supporting attention-based cross-component reasoning
 - [[retrieval-augmented-generation|RAG]] — the dual-purpose markup specifically addresses RAG agent limitations: hierarchical navigation, context collection, and deterministic patching
 - [[human-sequential-bottleneck|Human Sequential Bottleneck]] — GRACE's governed autonomy mirrors the shift from human-linear to AI-parallel workflows; the non-human programming techniques in Stage 3 are a concrete example of exploiting this advantage
+- [[mamba|Mamba / SSM]] — this work is the next logical step after GRACE: GRACE solved structural context integrity for code generation, Mamba+RAG self-correction addresses factual accuracy for agent knowledge

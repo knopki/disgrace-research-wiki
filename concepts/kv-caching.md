@@ -1,7 +1,7 @@
 ---
 title: KV Caching
 created: 2026-06-17
-updated: 2026-06-15
+updated: 2026-06-16
 type: concept
 tags:
   - inference
@@ -69,3 +69,4 @@ KV caching yields approximately **4.7× speedup** for 1000-token generation. The
 - **[[residual-connection|Residual Connection]]** — the cached K and V states come from specific attention layers, and the residual stream carries information up through the network independently of the cache.
 - **[[spargeattn|SpargeAttn]]** — a complementary inference acceleration method that also exploits existing attention structure, but within a single attention pass (predicting near-zero entries) rather than across decoding steps.
 - **[[sparse-transformer|Sparse Transformer]]** — orthogonal efficiency approach: KV caching avoids recomputation across inference steps, sparse attention reduces per-step complexity. Can be combined.
+- **[[mamba|Mamba / SSM]]** — the KV cache memory wall is the central argument for Mamba adoption; Mamba's constant ~24 MB state is contrasted with Transformer KV cache that reaches GB scale at 100K tokens, making iterative agent loops on Transformers extremely resource-intensive

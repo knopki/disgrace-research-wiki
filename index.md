@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-16 | Total pages: 46
+> Last updated: 2026-06-16 | Total pages: 47
 
 ## Entities
 
@@ -66,6 +66,7 @@
 - [[residual-connection|Residual Connection]] — skip connections enabling training of very deep networks by creating gradient highways through the network
 - [[transformer|Transformer]] — architecture using self-attention and positional encodings that superseded RNNs and became the foundation of modern LLMs
 - [[kv-caching|KV Caching]] — inference optimisation caching Key/Value states in auto-regressive transformers to avoid redundant recomputation
+- [[mamba|Mamba / SSM]] — state space model architecture with constant-memory state (~24 MB); RAG-driven self-correction via belief state overwriting demonstrated experimentally
 
 - [[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]] — training paradigm replacing language CoT with reasoning directly in the continuous latent space of an LLM; enables emergent BFS-like reasoning
 - [[sparse-transformer|Sparse Transformer]] — OpenAI architecture replacing quadratic attention with O(n√n) sparse factorized patterns; first to demonstrate self-attention on 1M+ token sequences
@@ -108,6 +109,7 @@
 
 - [Причины наблюдаемого провала малых SLM против LLM на MoE в AI-агентах](raw/articles/2025-09-14-ivanov-prichiny-nabludaemogo-provala-malyh-slm-protiv-llm-na-moe-v/) (Vladimir Ivanov, 2025-09-14)
 - [Оптимизация управления ИИ агентами на SLM через FLEX](raw/articles/2025-09-18-ivanov-optimizaciya-upravleniya-ii-agentami-na-sml-cherez-metodolog/) (Vladimir Ivanov, 2025-09-18)
+- [Преодоление галлюцинаций в Mamba-моделях](raw/articles/2025-09-21-ivanov-preodolenie-gallucinacii-v-mamba-modelyah-eksperimentalnoe-i/) (Vladimir Ivanov, 2025-09-21)
 - [GPT-4.1 Prompting Guide](raw/articles/2025-04-14-openai-gpt41-prompting-guide.md) (OpenAI, 2026)
 
 ### Papers

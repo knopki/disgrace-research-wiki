@@ -406,3 +406,16 @@
 - Updated comparison: slm-moe-agentic-ai (added source, "Verification performance" row to synthesis table, evidence paragraph: SLMs outperforming ChatGPT on verification task supports heterogeneous system view)
 - Updated concept: retrieval-augmented-generation (added cross-link to hallucination-detection-slm)
 - Cross-links: hallucination-detection-slm ↔ retrieval-augmented-generation, slm-moe-agentic-ai, flex-prompting, chain-of-thought, contract-programming, grace
+
+## [2026-06-16] ingest | Mamba/SSM RAG Self-Correction (Vladimir Ivanov, 2025-09-21)
+- Raw source: `raw/articles/2025-09-21-ivanov-preodolenie-gallucinacii-v-mamba-modelyah-eksperimentalnoe-i/` (ivanov2015hallucinations.md + 01.jpg)
+- Source: https://vk.com/@turboplanner-preodolenie-gallucinacii-v-mamba-modelyah-eksperimentalnoe-i
+- Author: Vladimir Ivanov (Turboplanner)
+- Content: experimental study on Mamba/SSM hallucination mitigation through RAG-driven self-correction. Qwen-Next-80B-A3B-Instruct hybrid Mamba-Transformer model demonstrated ability to identify and correct anthropomorphisms, logical exaggerations, and factual inaccuracies with 100% success rate via belief state overwriting. KV cache memory wall comparison (Table: LLaMA-3.3-70B 32.6 GB vs Mamba ~24 MB at 100K tokens). Frames Mamba+RAG as "liquid + crystallised intelligence" — Mamba provides rapid reasoning and plasticity, RAG provides external fact verification.
+- Created concept: mamba (SSM architecture, memory wall comparison, plasticity, hybrid models, RAG-driven self-correction, liquid+crystallised intelligence framing, limitations)
+- Updated entity: vladimir-ivanov (added Mamba+RAG study to Known Works + Topics + Related)
+- Updated concept: retrieval-augmented-generation (added oracle/verification paradigm + cross-link to mamba)
+- Updated concept: kv-caching (added Mamba memory comparison data + cross-link to mamba)
+- Updated concept: grace (added cross-link to mamba as next logical step: structural integrity → factual accuracy)
+- Updated concept: hallucination-detection-slm (added cross-link to mamba as complementary approach: post-hoc verification vs in-generation self-correction)
+- Cross-links: mamba ↔ kv-caching, retrieval-augmented-generation, grace, hallucination-detection-slm, transformer, sparse-transformer, vladimir-ivanov

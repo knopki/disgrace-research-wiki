@@ -97,7 +97,8 @@ The most flexible paradigm — specialised modules orchestrated in different pat
 
 Key finding from RGB benchmarks: at 80%+ noise ratio, accuracy drops significantly (ChatGPT: 96% → 76%, ChatGLM2-6B: 57%). Complex questions are more vulnerable to noise interference.
 
-## Limitations
+|
+|## Limitations
 
 - **Retrieval quality** — bad retrieval produces bad answers; irrelevant documents can degrade output below no-RAG baselines
 - **Latency** — extra retrieval step adds response time
@@ -117,3 +118,4 @@ Key finding from RGB benchmarks: at 80%+ noise ratio, accuracy drops significant
 - [[distributional-semantics|Distributional Semantics]] — the theoretical foundation for why embedding-based retrieval works (meaning from context)
 - [[grace|GRACE]] — the GRACE framework explicitly addresses RAG agent limitations with its dual-purpose semantic markup: hierarchical navigation, progressive context collection, and deterministic patching via stable semantic coordinates for RAG agents
 - [[hallucination-detection-slm|SLM-based Hallucination Detection]] — uses RAG context as the basis for SLM-based answer verification; describes a concrete post-hoc verification pipeline for RAG responses
+- [[mamba|Mamba / SSM]] — Mamba's constant-memory state (~24 MB vs GB-scale KV cache) makes it the ideal companion for iterative RAG loops; the article reframes RAG from context augmentation to external "oracle" that compensates for Mamba's hallucination tendency via belief state overwriting
