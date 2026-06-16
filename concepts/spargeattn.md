@@ -10,6 +10,7 @@ tags:
   - inference
 sources:
   - "[SpargeAttention: Accurate and Training-free Sparse Attention Accelerating Any Model Inference](raw/papers/2025-02-zhang-spargeattention/zhang2025spargeattn.md)"
+  - "[FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](raw/papers/2022-05-dao-flashattention/dai2022flashattention.md)"
 confidence: high
 ---
 
@@ -17,15 +18,15 @@ confidence: high
 
 A **universal, training-free sparse attention operator** that accelerates inference across language, image, and video generation models without sacrificing end-to-end metrics. Developed by Jintao Zhang, Chendong Xiang, Haofeng Huang et al. (Tsinghua University / UC Berkeley), published at ICML 2025.
 
-Unlike prior sparse attention methods that rely on fixed task-specific patterns (sliding windows, attention sinks), SpargeAttn predicts sparse regions in the attention map on-the-fly, making it universally applicable.
+Unlike prior sparse attention methods that rely on fixed task-specific patterns (sliding windows, attention sinks), SpargeAttn predicts sparse regions in the attention map on-the-fly, making it universally applicable. It builds directly on [[flash-attention|FlashAttention]]'s tiled architecture, adding dynamic sparsity prediction within the fused kernel.
 
 ## Core Techniques
 
 ### Two-Stage Online Filter
 
-**Stage 1 — Selective Token Compression ([Zhang et al., 2025](raw/papers/2025-02-zhang-spargeattention/zhang2025spargeattn.md)):** Each block of Q and K is evaluated for intra-block cosine similarity. Blocks with high similarity ("selective blocks") are compressed to a single mean token. A compressed attention map `P̂` is computed on these reduced sequences, and a `TopCdf` mask identifies which blocks to skip. Blocks with low self-similarity ("fix blocks") are always computed — a critical guard against information loss.
+**Stage 1 — Selective Token Compression ([Zhang et al., 2025](raw/papers/2025-02-zhang-spargeattention/zhang2025spargeattn.md)):** Each block of Q and K is evaluated for intra-block cosine similarity. Blocks with high similarity ("selective blocks") are compressed to a single mean token. A compressed attention map `P̂` is computed on these reduced sequences, and a `TopCdf` mask identifies which blocks to skip during the [[flash-attention|FlashAttention]] tiled loop. Blocks with low self-similarity ("fix blocks") are always computed — a critical guard against information loss.
 
-**Stage 2 — Sparse Warp Online Softmax:** During the FlashAttention inner loop, `Sij` is partitioned across GPU warps. When `max(mlocal[Iw] − mij[Iw]) < λ`, all values in `P̃ij[Iw]Vj` are near zero and the computation is skipped — no extra kernel launch, no I/O overhead.
+**Stage 2 — Sparse Warp Online Softmax:** During the [[flash-attention|FlashAttention]] inner loop, `Sij` is partitioned across GPU warps. When `max(mlocal[Iw] − mij[Iw]) < λ`, all values in `P̃ij[Iw]Vj` are near zero and the computation is skipped — no extra kernel launch, no I/O overhead.
 
 ### HilbertCurve Permutation
 

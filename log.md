@@ -480,3 +480,18 @@
 |- Created entity: openai (organization page with key papers table, key people, known works)
 |- Raw source added: raw/articles/openai-wikipedia.md (Wikipedia summary)
 |- Cross-links: rlhf ↔ transformer, scaling-laws, chain-of-thought, dario-amodei, anthropic, flex-prompting, grace
+
+## [2026-06-16] ingest | FlashAttention (Dao et al., Stanford, NeurIPS 2022)
+
+- Raw source: `raw/papers/2022-05-dao-flashattention/` (2205.14135.pdf + index.md)
+- Source: https://arxiv.org/abs/2205.14135 — "FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness"
+- Authors: Tri Dao, Daniel Y. Fu, Stefano Ermon, Atri Rudra, Christopher Ré (Stanford / University at Buffalo)
+- Venue: NeurIPS 2022
+- Content: IO-aware exact attention algorithm using tiling to reduce GPU HBM↔SRAM reads/writes; online softmax for incremental block computation; O(N²d²/M) IO complexity proven optimal; block-sparse extension; 15% speedup on BERT-large, 3× on GPT-2, 2.4× on LRA; first Transformer to beat chance on Path-X (16K, 61.4%) and Path-256 (64K, 63.1%)
+- Created concept: flash-attention (IO-aware principle, tiling algorithm, online softmax, IO complexity optimality, block-sparse extension, results table, relationship to sparse attention methods, adoption as default attention implementation)
+- Updated concept: spargeattn (added source + 3 wikilinks: intro, Stage 1, Stage 2)
+- Updated concept: transformer (added FlashAttention as practical breakthrough in Limitations)
+- Updated concept: kv-caching (added wikilink entry)
+- Updated concept: sparse-transformer (added wikilink entry in Relationship)
+- Removed from TODO.md (was pending)
+- Cross-links: flash-attention ↔ spargeattn, sparse-transformer, longformer, big-bird, kv-caching, transformer, mamba, chain-of-continuous-thought

@@ -115,6 +115,7 @@ Sparse patterns **converged to lower error than dense attention** while running 
 
 - **[[longformer|Longformer]] and [[big-bird|BigBird]]** — the direct successors that refined sparse attention into practical linear-complexity architectures. Longformer (sliding window + global) and BigBird (random + window + global) both achieve O(n) instead of Sparse Transformer's O(n√n), and introduced pretrained weights for downstream finetuning.
 
+- **[[flash-attention|FlashAttention]]** — addresses the same O(n²) bottleneck but from a different angle: IO-aware tiling that reduces HBM traffic rather than sparsifying compute. FlashAttention's insight (the actual bottleneck is memory, not FLOPs) explains why Sparse Transformer's fixed patterns didn't see wide adoption. The two are complementary: sparse patterns + tiled IO could combine for further gains.
 - **[[transformer|Transformer]]** — the base architecture that Sparse Transformer modifies by introducing sparse attention factorizations
 - **[[spargeattn|SpargeAttn]]** — a training-free dynamic sparse attention operator applied post-hoc to any pretrained model, unlike Sparse Transformer's fixed architectural sparse patterns. SpargeAttn achieves 4.5× speedup on Llama3.1 128K with near-zero metric loss.
 - **[[kv-caching|KV Caching]]** — a complementary inference-time optimisation; sparse attention reduces per-step compute (O(√n) per position), KV caching avoids recomputation across steps. Both can be combined
