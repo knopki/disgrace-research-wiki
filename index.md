@@ -110,6 +110,7 @@
 - [Причины наблюдаемого провала малых SLM против LLM на MoE в AI-агентах](raw/articles/2025-09-14-ivanov-prichiny-nabludaemogo-provala-malyh-slm-protiv-llm-na-moe-v/) (Vladimir Ivanov, 2025-09-14)
 - [Оптимизация управления ИИ агентами на SLM через FLEX](raw/articles/2025-09-18-ivanov-optimizaciya-upravleniya-ii-agentami-na-sml-cherez-metodolog/) (Vladimir Ivanov, 2025-09-18)
 - [Преодоление галлюцинаций в Mamba-моделях](raw/articles/2025-09-21-ivanov-preodolenie-gallucinacii-v-mamba-modelyah-eksperimentalnoe-i/) (Vladimir Ivanov, 2025-09-21)
+- [Семантическая разметка GRACE как нативный интерфейс для Mamba-моделей](raw/articles/2025-09-21-ivanov-semanticheskaya-razmetka-grace-kak-nativnyi-interfeis-dlya-m/) (Vladimir Ivanov, 2025-09-21)
 - [GPT-4.1 Prompting Guide](raw/articles/2025-04-14-openai-gpt41-prompting-guide.md) (OpenAI, 2026)
 
 ### Papers

@@ -10,6 +10,7 @@ tags:
   - technique
 sources:
   - "[GRACE: Фреймворк создания кода LLM в больших контекстах](raw/articles/2025-09-13-ivanov-grace-freimvork-sozdaniya-koda-llm-v-bolshih-kontekstah-s-uc/ivanoc2025grace.md)"
+  - "[Семантическая разметка GRACE как нативный интерфейс для Mamba-моделей](raw/articles/2025-09-21-ivanov-semanticheskaya-razmetka-grace-kak-nativnyi-interfeis-dlya-m/ivanov2025gracemamba.md)"
 confidence: medium
 ---
 
@@ -124,6 +125,22 @@ Two mechanisms for precision work:
 - **Log-to-code navigation:** Structured logs contain exact coordinates (function name, block name), letting the agent jump instantly to the problem source via anchor search — one search, zero ambiguity
 - **Semantic coordinate solution:** GRACE anchors solve the [[positional-encoding|line-number problem]] — they provide stable semantic coordinates (unlike fragile line numbers) for reliable patch application via formats like [[v4a-diff-format|V4A]], making code modification as deterministic as navigation
 
+### Mamba/SSM Synergy: Native Interface
+
+Experimental research on Qwen-3-Next (hybrid Mamba-Transformer, >75K token context) revealed that GRACE's XML-like hierarchical markup functions as a **native interface language** for State Space Models ([Ivanov, 2025](raw/articles/2025-09-21-ivanov-semanticheskaya-razmetka-grace-kak-nativnyi-interfeis-dlya-m/ivanov2025gracemamba.md)).
+
+**Dual role of the graph.** The GRACE graph plays fundamentally different roles depending on architecture:
+- For **Transformers** — a *passive assistant* for sparse attention. Bright, repeating XML tags (START_FUNCTION_A...END_FUNCTION_A) act as beacons that help the attention mechanism establish correlation across long distances, semantically stitching the context.
+- For **Mamba/SSM** — an *active verification shield*. Mamba builds its own emergent graph in its compressed state. The explicit GRACE scaffold becomes a "blueprint" against which the model compares its internal graph — any discrepancy triggers correction, fundamentally reducing structural hallucinations.
+
+**Reconstruction vs citation.** Mamba does not "cite" text via attention like a Transformer. With GRACE markup it *reconstructs* code from its internal knowledge graph — a reconstruction query becomes node serialisation. Without GRACE, reconstruction degrades into imprecise paraphrase from the compressed state, losing precision in string literals, escape sequences, and inline comments.
+
+**Semantic slices.** Mamba can perform *semantic slices* on its internal state — answering queries like "show all imports" or "group classes by role" directly from graph nodes, not raw text. This enables RAG agents to execute complex analytical queries orders of magnitude more efficiently than traditional text-based RAG.
+
+**Risk: structural hallucinations.** Accuracy exceeds 99.9% for whole blocks (classes, functions) but varies by slice type. Leaf-level details (string literals, escape sequences) and meta-pattern generalisation are prone to hallucination. The combination therefore requires a **built-in RAG verification cycle**: after generation, the agent must verify key facts using its attention window.
+
+**Three-part symbiosis.** The research proposes a production architecture: (1) Human architect creates machine-readable blueprints (GRACE); (2) Mamba builds a queryable internal graph, using the explicit scaffold as verification tool; (3) Built-in RAG cycle uses attention to verify facts, compensating for SSM's tendency to generalise. ([Ivanov, 2025](raw/articles/2025-09-21-ivanov-semanticheskaya-razmetka-grace-kak-nativnyi-interfeis-dlya-m/ivanov2025gracemamba.md))
+
 ## Connections to Other Methodologies
 
 GRACE does not exist in isolation. It is the **code-creation counterpart** to [[pcam|PCAM]]'s agent-management paradigm. Together, they form the two pillars of a coherent engineering shift:
@@ -151,4 +168,4 @@ Both reject the old control-based paradigm (deterministic plans for PCAM, free-f
 - [[knowledge-graph|Knowledge Graph]] — the entire project artifact graph is explicitly maintained as a knowledge graph via LINKS references between artifacts, supporting attention-based cross-component reasoning
 - [[retrieval-augmented-generation|RAG]] — the dual-purpose markup specifically addresses RAG agent limitations: hierarchical navigation, context collection, and deterministic patching
 - [[human-sequential-bottleneck|Human Sequential Bottleneck]] — GRACE's governed autonomy mirrors the shift from human-linear to AI-parallel workflows; the non-human programming techniques in Stage 3 are a concrete example of exploiting this advantage
-- [[mamba|Mamba / SSM]] — this work is the next logical step after GRACE: GRACE solved structural context integrity for code generation, Mamba+RAG self-correction addresses factual accuracy for agent knowledge
+- [[mamba|Mamba / SSM]] — two dimensions: (1) Mamba+RAG self-correction addresses factual accuracy, the next step after GRACE's structural context integrity; (2) GRACE markup serves as a native interface for Mamba, enabling reconstruction-from-graph, semantic slices, and active verification (vs passive attention assistance for Transformers)

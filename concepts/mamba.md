@@ -10,9 +10,9 @@ tags:
   - technique
 sources:
   - "[Преодоление галлюцинаций в Mamba-моделях: Экспериментальное исследование RAG-управляемой самокоррекции на примере Qwen 3 Next](raw/articles/2025-09-21-ivanov-preodolenie-gallucinacii-v-mamba-modelyah-eksperimentalnoe-i/ivanov2015hallucinations.md)"
+  - "[Семантическая разметка GRACE как нативный интерфейс для Mamba-моделей](raw/articles/2025-09-21-ivanov-semanticheskaya-razmetka-grace-kak-nativnyi-interfeis-dlya-m/ivanov2025gracemamba.md)"
 confidence: medium
 ---
-
 # Mamba / State Space Models (SSM)
 
 **State Space Models** — a class of sequence architectures that process tokens by iteratively updating a hidden state of fixed size, offering linear-time inference and constant memory relative to sequence length. **Mamba** is the most prominent SSM architecture, designed to rival Transformers on long-context tasks at a fraction of the memory cost.
@@ -76,6 +76,20 @@ Ivanov frames the Mamba+RAG combination as a cognitive complement:
 
 This symbiosis lets Mamba compensate for its architectural weakness (hallucination from over-generalisation) without sacrificing its strengths (speed, efficiency, plasticity) ([Ivanov, 2025](raw/articles/2025-09-21-ivanov-preodolenie-gallucinacii-v-mamba-modelyah-eksperimentalnoe-i/ivanov2015hallucinations.md)).
 
+## GRACE as Native Interface
+
+Experimental research demonstrated that GRACE (Graph-RAG Anchored Code Engineering) semantic markup functions as a **native interface language** for Mamba models ([Ivanov, 2025](raw/articles/2025-09-21-ivanov-semanticheskaya-razmetka-grace-kak-nativnyi-interfeis-dlya-m/ivanov2025gracemamba.md)). Qwen-3-Next (hybrid Mamba-Transformer, >75K token context) achieved >99.9% context reconstruction accuracy with GRACE markup.
+
+**Reconstruction from internal graph.** Mamba does not "cite" text via attention like a Transformer. With GRACE, it *reconstructs* code from its internal knowledge graph — a reconstruction query becomes node serialisation, not paraphrase. Without GRACE, reconstruction degrades into imprecise summarisation from the compressed state, losing precision in string literals, escape sequences, and inline comments.
+
+**Dual graph role.** The GRACE graph serves qualitatively different functions depending on architecture:
+- For **Transformers** — passive attention assistant. XML tags act as beacons for the attention mechanism to correlate distant code sections.
+- For **Mamba** — active verification shield. Mamba builds its own emergent graph in its compressed state; the explicit GRACE scaffold becomes a "ground truth" blueprint that the model can continuously reconcile its internal state against, fundamentally reducing structural hallucinations.
+
+**Semantic slices.** Mamba can perform semantic slices on its internal state — answering analytical queries ("show all imports", "group classes by role", "find functions with database access lacking validation") directly from graph nodes rather than raw text. This enables RAG agents on Mamba to execute complex analytical queries orders of magnitude more efficiently than traditional text-based RAG.
+
+**The symbiotic architecture.** The research proposes a three-component production system: (1) Human architect creates machine-readable code blueprints (GRACE); (2) Mamba builds a queryable internal graph from the blueprint, using the explicit graph as active verification; (3) Built-in RAG cycle uses attention to verify leaf-level facts, compensating for SSM's tendency to generalise. This moves from stochastic generation toward deterministic synthesis. ([Ivanov, 2025](raw/articles/2025-09-21-ivanov-semanticheskaya-razmetka-grace-kak-nativnyi-interfeis-dlya-m/ivanov2025gracemamba.md))
+
 ## Limitations
 
 - The experimental RAG oracle was an idealised "perfect source" (Grok 3). Real RAG systems have variable retrieval quality — the agent would need additional verification skills to handle noisy sources.
@@ -87,7 +101,7 @@ This symbiosis lets Mamba compensate for its architectural weakness (hallucinati
 
 - [[kv-caching|KV Caching]] — Mamba eliminates the KV cache entirely, replacing O(n) memory with O(1) state. The comparison table above quantifies this gap.
 - [[retrieval-augmented-generation|RAG]] — RAG is the "oracle" that compensates for Mamba's hallucination tendency. This article positions RAG not as context augmentation but as an external verifier — a role shift from the standard RAG paradigm.
-- [[grace|GRACE]] — This work is framed as the next logical step after GRACE: GRACE solved structural context integrity, this addresses factual accuracy through Mamba+RAG self-correction.
+- [[grace|GRACE]] — two dimensions: (1) GRACE provides a native interface for Mamba: its XML-like hierarchical markup enables reconstruction-from-graph (vs citation), semantic slice queries, and active verification against the model's emergent state; (2) Mamba+RAG self-correction (hallucination study) is the next logical step after GRACE — structural integrity → factual accuracy
 - [[hallucination-detection-slm|SLM-based Hallucination Detection]] — a complementary approach: SLM ensemble verifies LLM output post-hoc, while the Mamba+RAG approach corrects the model's own beliefs during generation.
 - [[transformer|Transformer]] — the architectural alternative; the comparison is the central framing device of the article.
 - [[sparse-transformer|Sparse Transformer]] — like Mamba, aims to overcome the O(n²) attention bottleneck, but via sparse attention patterns rather than state compression.

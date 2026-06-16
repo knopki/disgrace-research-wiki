@@ -419,3 +419,13 @@
 - Updated concept: grace (added cross-link to mamba as next logical step: structural integrity → factual accuracy)
 - Updated concept: hallucination-detection-slm (added cross-link to mamba as complementary approach: post-hoc verification vs in-generation self-correction)
 - Cross-links: mamba ↔ kv-caching, retrieval-augmented-generation, grace, hallucination-detection-slm, transformer, sparse-transformer, vladimir-ivanov
+
+## [2026-06-16] ingest | GRACE as Native Interface for Mamba (Vladimir Ivanov, 2025-09-21)
+- Raw source: `raw/articles/2025-09-21-ivanov-semanticheskaya-razmetka-grace-kak-nativnyi-interfeis-dlya-m/` (ivanov2025gracemamba.md + 01.jpg)
+- Source: https://vk.com/@turboplanner-semanticheskaya-razmetka-grace-kak-nativnyi-interfeis-dlya-m
+- Author: Vladimir Ivanov (Turboplanner)
+- Content: demonstrates GRACE semantic markup as a native interface for Mamba/SSM models. Qwen-3-Next hybrid Mamba-Transformer achieves >99.9% context reconstruction accuracy with GRACE markup. Key findings: (1) dual graph role — passive attention assistance for Transformers vs active verification shield for Mamba; (2) reconstruction from internal knowledge graph vs citation; (3) semantic slices as unique Mamba capability for RAG agents; (4) risk of structural hallucinations in leaf-level details and meta-pattern generalisation; (5) three-part symbiosis: GRACE blueprint → Mamba internal graph → RAG verification cycle
+- Updated concept: grace (added Mamba/SSM Synergy section about dual graph role, reconstruction vs citation, semantic slices, structural hallucination risks, three-part symbiosis; added source to frontmatter)
+- Updated concept: mamba (added GRACE as Native Interface section about reconstruction mechanism, dual graph role, semantic slices, symbiotic architecture; added source to frontmatter; updated cross-link)
+- Updated entity: vladimir-ivanov (added GRACE-Mamba study to Known Works)
+- Cross-links: grace ↔ mamba (deepened: native interface + verification synergy)
