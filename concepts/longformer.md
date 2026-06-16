@@ -30,7 +30,7 @@ Longformer's attention is a drop-in replacement for standard self-attention with
 - Question tokens for QA
 - No global attention for coreference resolution
 
-Separate linear projections (Q_g, K_g, V_g) for global attention, initialized from sliding-window projections. The ablation study shows removing separate projections drops WikiHop accuracy by 1.6 points; removing both separate projections and global attention drops by 8.3 points — demonstrating both are essential ([Beltagy et al., 2020](raw/papers/2020-04-beltagy-longformer/)).
+Separate linear projections (Q_g, K_g, V_g) for global attention, initialized from sliding-window projections. The ablation study shows removing separate projections drops WikiHop accuracy by 1.6 points; removing both separate projections and global attention drops by 8.3 points — demonstrating both are essential ([Beltagy et al., 2020](raw/papers/2020-04-beltagy-longformer/beltagy2020longformer.md)).
 
 ## Three Implementations
 

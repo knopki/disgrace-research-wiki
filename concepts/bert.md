@@ -28,7 +28,7 @@ BERT is an encoder-only Transformer — it processes input bidirectionally, unli
 Key architectural choices:
 - **GELU activation** — smoother gradient flow than ReLU
 - **Learned positional embeddings** (vs sinusoidal in the original Transformer)
-- **WordPiece tokenization** with 30K vocabulary
+- **WordPiece tokenization** (a [[byte-pair-encoding|BPE variant]]) with 30K vocabulary
 - [[residual-connection|Residual connections]] and layer normalization on every sub-layer
 - **Input representation** is the sum of three embeddings: token embeddings + segment embeddings (sentence A/B) + position embeddings (Devlin et al., 2019, Figure 2)
 

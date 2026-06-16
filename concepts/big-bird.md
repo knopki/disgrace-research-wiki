@@ -80,7 +80,7 @@ Improvements are most significant on longer documents: arXiv +5%, Hyperpartisan 
 
 A novel contribution — BigBird is the first attention-based contextual language model for DNA.
 
-- **DNA tokenization:** Byte-pair encoding with 32K vocab (~8.78 bp/token)
+- **DNA tokenization:** [[byte-pair-encoding|Byte-pair encoding]] with 32K vocab (~8.78 bp/token)
 - **Pretraining:** Human reference genome (GRCh37) with MLM objective
 - **BPC:** 1.12 at seqlen 4096 vs BERT's 1.23 at seqlen 512
 - **Promoter region prediction:** F1=99.9 (+4.3% over DeePromoter's 95.6)
@@ -103,7 +103,7 @@ A novel contribution — BigBird is the first attention-based contextual languag
 
 - **First sparse-attention model with full theoretical guarantees** (universal approximation + Turing completeness) matching quadratic attention
 - **Established the three-component sparse pattern** (random + window + global) that later architectures build on
-- **Introduced attention-based genomics modeling** — cross-domain transfer from NLP to DNA sequence analysis
+- **Introduced attention-based genomics modeling** — cross-domain transfer from NLP to DNA sequence analysis, using [[byte-pair-encoding|BPE]] for nucleotide tokenization
 - The theoretical proof that global tokens (O(1)) are **sufficient** to preserve universal approximation informed subsequent efficient-transformer design
 
 Code: http://goo.gle/bigbird-transformer

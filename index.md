@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-16 | Total pages: 53
+> Last updated: 2026-06-16 | Total pages: 54
 
 ## Entities
 
@@ -65,7 +65,8 @@
 - [[superposition|Superposition]] — phenomenon where neural networks represent more features than dimensions by tolerating interference between non-orthogonal feature directions
 
 - [[backpropagation|Backpropagation]] — fundamental algorithm for training multi-layer neural networks by propagating error gradients backwards through the network
-- [[bert|BERT]] — bidirectional encoder-only Transformer pre-trained via masked language modeling and next sentence prediction; established the dominant pre-train/fine-tune NLP paradigm (Devlin et al., Google, NAACL 2019)
+- [[byte-pair-encoding|Byte Pair Encoding (BPE)]] — subword tokenization algorithm learning a fixed-size vocabulary of variable-length character sequences; introduced BPE to NLP and became the foundation of all modern LLM tokenizers (Sennrich, Haddow & Birch, ACL 2016)
+- [[bert|BERT]] — bidirectional encoder-only Transformer pre-trained via masked language modeling and next sentence prediction
 - [[lstm|LSTM]] — recurrent architecture with gating mechanisms that solved the vanishing gradient problem for sequential data
 - [[residual-connection|Residual Connection]] — skip connections enabling training of very deep networks by creating gradient highways through the network
 - [[scaling-laws|Scaling Laws (Neural Language Models)]] — empirical power-law relationships between language model performance and model size, dataset size, and training compute
@@ -127,12 +128,12 @@
 
 ### Papers
 
-- [Toy Models of Superposition](raw/papers/2022-09-elhage-toy-models-superposition/) (Anthropic Transformer Circuits Thread, 2022)
-- [Training Compute-Optimal Large Language Models](raw/papers/2022-03-hoffmann-chinchilla/) (Jordan Hoffmann et al., DeepMind, arXiv, 2022)
+- [Toy Models of Superposition](raw/papers/2022-09-elhage-toy-models-superposition/anthropic2022toy.md) (Anthropic Transformer Circuits Thread, 2022)
+- [Training Compute-Optimal Large Language Models](raw/papers/2022-03-hoffmann-chinchilla/hoffmann2022chinchilla.md) (Jordan Hoffmann et al., DeepMind, arXiv, 2022)
 - [Training language models to follow instructions with human feedback](raw/papers/2022-03-ouyang-instructgpt/ouyang2022instructgpt.md) — PDF at [2203.02155.pdf](raw/papers/2022-03-ouyang-instructgpt/2203.02155.pdf) (Long Ouyang et al., OpenAI, NeurIPS 2022)
-- [On the ability of standard and brain-constrained DNNs to support cognitive superposition](raw/papers/2024-02-garagnani-cognitive-superposition/) (Max Garagnani, Cognitive Neurodynamics, 2024)
-- [Transformers Represent Belief State Geometry in their Residual Stream](raw/papers/2024-05-shai-belief-state-geometry/) (Adam Shai et al., NeurIPS 2024)
-- [Training Large Language Models to Reason in a Continuous Latent Space](raw/papers/2024-12-hao-coconut/) — abstract, full PDF, and plain-text at [index.md](raw/papers/2024-12-hao-coconut/hao2025coconut.md) (Shibo Hao et al., FAIR at Meta / UC San Diego, arXiv, COLM 2025)
+- [On the ability of standard and brain-constrained DNNs to support cognitive superposition](raw/papers/2024-02-garagnani-cognitive-superposition/garagnani2024superposition.md) (Max Garagnani, Cognitive Neurodynamics, 2024)
+- [Transformers Represent Belief State Geometry in their Residual Stream](raw/papers/2024-05-shai-belief-state-geometry/shai2025belief.md) (Adam Shai et al., NeurIPS 2024)
+- [Training Large Language Models to Reason in a Continuous Latent Space](raw/papers/2024-12-hao-coconut/hao2025coconut.md) — abstract, full PDF, and plain-text at [index.md](raw/papers/2024-12-hao-coconut/hao2025coconut.md) (Shibo Hao et al., FAIR at Meta / UC San Diego, arXiv, COLM 2025)
 - [Generating Long Sequences with Sparse Transformers](raw/papers/2019-04-child-sparse-transformer/1904.10509.pdf) — abstract and details at [child2019sparse](raw/papers/2019-04-child-sparse-transformer/child2019sparse.md) (Rewon Child et al., OpenAI, 2019)
 - [Scaling Laws for Neural Language Models](raw/papers/2020-01-kaplan-scaling-laws/kaplan2020scaling.md) — abstract and PDF at [2001.08361.pdf](raw/papers/2020-01-kaplan-scaling-laws/2001.08361.pdf) (Jared Kaplan et al., OpenAI/arXiv, 2020)
 - [Longformer: The Long-Document Transformer](raw/papers/2020-04-beltagy-longformer/beltagy2020longformer.md) (Iz Beltagy et al., Allen Institute for AI, 2020)
@@ -148,6 +149,7 @@
 - [SpargeAttention: Accurate and Training-free Sparse Attention Accelerating Any Model Inference](raw/papers/2025-02-zhang-spargeattention/2502.18137.pdf) — details at [zhang2025spargeattn](raw/papers/2025-02-zhang-spargeattention/zhang2025spargeattn.md) (Jintao Zhang et al., Tsinghua/UC Berkeley, ICML 2025)
 - [Direct Preference Optimization: Your Language Model is Secretly a Reward Model](raw/papers/2023-05-rafailov-dpo/rafailov2023dpo.md) — PDF at [2305.18290.pdf](raw/papers/2023-05-rafailov-dpo/2305.18290.pdf) (Rafael Rafailov et al., Stanford, NeurIPS 2023)
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](raw/papers/2018-10-devlin-bert/1810.04805.pdf) — details at [index.md](raw/papers/2018-10-devlin-bert/devlin2018bert.md) (Jacob Devlin et al., Google AI Language, NAACL 2019)
+- [Neural Machine Translation of Rare Words with Subword Units](raw/papers/2016-06-sennrich-bpe-subword/1508.07909.pdf) — introduces BPE for subword tokenization; details at [sennrich2016bpe.md](raw/papers/2016-06-sennrich-bpe-subword/sennrich2016bpe.md) (Rico Sennrich, Barry Haddow, Alexandra Birch, ACL 2016)
 
 ## Comparisons
 

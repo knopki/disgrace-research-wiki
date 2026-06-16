@@ -550,3 +550,16 @@
 - Updated concept: rlhf (added wikilink to direct-preference-optimization)
 - Removed from TODO.md (was pending)
 - Cross-links: direct-preference-optimization ↔ rlhf, instructgpt, transformer, flashattention, flex-prompting
+
+## [2026-06-16] ingest | Neural Machine Translation of Rare Words with Subword Units (Sennrich, Haddow, Birch, ACL 2016)
+
+- Raw source: `raw/papers/2016-06-sennrich-bpe-subword/` (1508.07909.pdf + sennrich2016bpe.md)
+- Source: https://arxiv.org/abs/1508.07909 — "Neural Machine Translation of Rare Words with Subword Units"
+- Authors: Rico Sennrich, Barry Haddow, Alexandra Birch (University of Edinburgh)
+- Venue: ACL 2016
+- Content: Introduces Byte Pair Encoding (BPE) for subword tokenization in NMT — adapting Gage (1994) compression algorithm to word segmentation. Demonstrates open-vocabulary NMT without back-off dictionaries. Two variants: independent BPE (separate source/target vocabularies) and joint BPE (union vocabulary). Achieves +1.1 BLEU (EN→DE) and +1.3 BLEU (EN→RU) over dictionary back-off baseline. Shows subword models learn compounding and transliteration.
+- Created concept: byte-pair-encoding (algorithm, key properties, variants table, impact on rare word translation, limitations, relationship to other concepts)
+- Updated concept: bert (added wikilink: WordPiece as BPE variant)
+- Updated concept: big-bird (added wikilinks: BPE for DNA tokenization, BPE in Significance & Legacy)
+- Updated index.md: added concept entry and raw source under Papers
+- Removed from TODO.md (was pending)
