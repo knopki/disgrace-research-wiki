@@ -39,7 +39,7 @@ The debate over whether Small Language Models (SLM, <10B parameters) or large Mi
 | Phi-3 small | 7B | Matches 70B (language understanding, code) |
 | Nemotron-H (hybrid Mamba-Transformer) | 2/4.8/9B | Accuracy comparable to dense 30B LLMs, order-of-magnitude fewer FLOPs |
 | SmolLM2 | 125M–1.7B | Matches 14B contemporaries, 70B models of 2 years prior |
-| Hymba-1.5B | 1.5B | Best instruction accuracy, 3.5× token throughput vs. comparable transformers; outperforms 13B models |
+| Hymba-1.5B | 1.5B | Best instruction accuracy, 3.5× token throughput vs. comparable [[transformer|transformers]]; outperforms 13B models |
 | DeepSeek-R1-Distill | 1.5–8B | 7B outperforms Claude-3.5-Sonnet-1022 and GPT-4o-0513 |
 | RETRO-7.5B | 7.5B | Comparable to GPT-3 (175B) with 25× fewer parameters |
 | xLAM-2-8B | 8B | SOTA tool calling, surpasses GPT-4o and Claude 3.5 |

@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-16 | Total pages: 47
+> Last updated: 2026-06-16 | Total pages: 48
 
 ## Entities
 
@@ -13,6 +13,8 @@
 - [[frank-rosenblatt|Frank Rosenblatt]] — American psychologist, inventor of the Perceptron, foundational contributor to neural networks and deep learning
 
 - [[anthropic|Anthropic]] — AI safety research company; published Toy Models of Superposition foundational interpretability work
+
+- [[dario-amodei|Dario Amodei]] — Co-founder and CEO of Anthropic; AI researcher, proponent of democratic AI leadership, author of *Machines of Loving Grace* and *The Adolescence of Technology*
 
 ## Concepts
 

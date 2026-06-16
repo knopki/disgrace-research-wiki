@@ -14,7 +14,7 @@ confidence: high
 
 # Anthropic
 
-An AI safety research company, founded in 2021, best known for the Claude family of language models and foundational work in mechanistic interpretability. The Transformer Circuits Thread — their interpretability research programme led by Christopher Olah — published the seminal *Toy Models of Superposition* paper in 2022, which systematically demonstrated the [[superposition]] phenomenon.
+An AI safety research company, founded in 2021, best known for the Claude family of language models and foundational work in mechanistic interpretability. Led by co-founder and CEO [[dario-amodei|Dario Amodei]]. The Transformer Circuits Thread — their interpretability research programme led by Christopher Olah — published the seminal *Toy Models of Superposition* paper in 2022, which systematically demonstrated the [[superposition]] phenomenon.
 
 ## Key People (Superposition Paper)
 

@@ -440,3 +440,10 @@
 - Updated concept: positional-encoding (added paper as primary source, provenance marker in body)
 - Updated wiki pages converted plain-text "transformer" → [[wikilinks]]: kv-caching, privileged-basis, semantic-fractal, grace, belief-state-geometry, longformer, big-bird (3 mentions), slm-moe-agentic-ai, README (2 mentions)
 - Cross-links: transformer ↔ raw source (primary provenance); 9 pages updated with transformer wikilinks
+
+## [2026-06-16] ingest | Dario Amodei Wikipedia article
+- Raw source: raw/articles/dario-amodei-wikipedia/index.md
+- Source: Wikipedia (English), page "Dario Amodei"
+- Entity page created: entities/dario-amodei.md
+- Key facts: co-founder/CEO of Anthropic, former VP Research at OpenAI, author of "Machines of Loving Grace" and "The Adolescence of Technology", Pentagon dispute (2026)
+- Cross-links: anthropic, superposition, polysemantic-neurons, vladimir-ivanov
