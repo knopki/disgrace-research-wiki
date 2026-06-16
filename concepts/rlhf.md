@@ -74,7 +74,7 @@ Use-case distribution: generation (45.6%), open QA (12.4%), brainstorming (11.2%
 - **Alignment Tax** — RLHF can degrade performance on standard NLP benchmarks; the PPO-ptx variant mitigates this by mixing pretraining updates
 - **InstructGPT** — the specific model family produced by applying RLHF to GPT-3; demonstrated that alignment via human feedback is more efficient than scaling alone
 - **Constitutional AI** — later approach from [[anthropic|Anthropic]] that replaces human feedback with a written constitution for self-supervision, reducing reliance on human labelers
-- **DPO (Direct Preference Optimization)** — post-InstructGPT technique that eliminates the explicit reward model by directly optimising from preferences
+- **[[direct-preference-optimization|DPO (Direct Preference Optimization)]]** — post-InstructGPT technique that eliminates the explicit reward model by directly optimising from preferences
 - **[[chain-of-thought|Chain-of-Thought]]** — prompting technique that InstructGPT can follow more reliably than base GPT-3 due to improved instruction-following ability
 - **[[flex-prompting|FLEX]]** — later methodology for SLM control using structured XML prompts and logit-based verification, related through shared goal of reliable model steering
 - **[[grace|GRACE]]** — later framework for deterministic code generation, which uses Intent-First Architecture similar to RLHF's goal of alignment with user intent

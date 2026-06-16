@@ -78,7 +78,7 @@ A 4-layer Transformer (d_model=1024) trained on WSJ (40K sentences) achieved 91.
 
 ## Significance
 
-- Foundation of all major modern language models: GPT, BERT, Claude, Gemini, LLaMA
+- Foundation of all major modern language models: GPT, [[bert|BERT]], Claude, Gemini, LLaMA
 - Enabled scaling to unprecedented sizes (hundreds of billions of parameters)
 - Removed the sequential bottleneck of [[lstm|LSTM]], making massively parallel training on GPUs feasible
 - The "Attention Is All You Need" paper is one of the most cited in ML history

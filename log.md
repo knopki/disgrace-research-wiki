@@ -525,3 +525,28 @@
 - Updated comparison: slm-moe-agentic-ai (added raw source, added Switch Transformer as foundational MoE work in Ivanov MoE+MTP section, added cross-link in Related)
 - Removed from TODO.md (was pending)
 - Cross-links: switch-transformer ↔ transformer, scaling-laws, sparse-transformer, kv-caching, flash-attention, slm-moe-agentic-ai
+
+## [2026-06-16] ingest | Direct Preference Optimization (Rafailov et al., Stanford, NeurIPS 2023)
+
+## [2026-06-17] ingest | BERT (Devlin et al., Google, NAACL 2019)
+
+- Raw source: `raw/papers/2018-10-devlin-bert/` (1810.04805.pdf + index.md)
+- Source: https://arxiv.org/abs/1810.04805 — "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding"
+- Authors: Jacob Devlin, Ming-Wei Chang, Kenton Lee, Kristina Toutanova (Google AI Language)
+- Venue: NAACL 2019
+- Content: Introduces BERT — bidirectional encoder-only Transformer pre-trained with Masked Language Model (15% tokens predicted) and Next Sentence Prediction objectives. BERT-Base (110M) and BERT-Large (340M). Achieves SOTA on 11 NLP tasks: GLUE 80.5% (+7.7%), SQuAD v1.1 93.2 F1 (+1.5), SQuAD v2.0 83.1 F1 (+5.1). Established pre-train/fine-tune paradigm; encoder-only architecture (no KV caching, non-generative); 512-token limit drove sparse-attention successors.
+- Created concept: bert (bi-directional pre-training, MLM/NSP objectives, architecture table, training details, results summary, impact/legacy, limitations, related models)
+- Updated concept: transformer (added wikilink to bert)
+- Updated concept: kv-caching (added wikilink to bert)
+- Updated concept: longformer (added wikilink to bert in both 512-limit reference and attention bias context)
+- *Rewritten after full paper read:* raw/index.md expanded with per-task GLUE breakdown, SQuAD 2.0 approach, ablation results (bidirectionality, model size, feature-based), fine-tuning hyperparameters per task, BERT-Base vs OpenAI GPT controlled comparison, corpus choice rationale. Concept page rewritten with exact ablation numbers, GLUE table, SWAG/CoNLL NER results, and key paper claims attributed.
+
+- Raw source: `raw/papers/2023-05-rafailov-dpo/` (2305.18290.pdf + rafailov2023dpo.md)
+- Source: https://arxiv.org/abs/2305.18290 — "Direct Preference Optimization: Your Language Model is Secretly a Reward Model"
+- Authors: Rafael Rafailov, Archit Sharma, Eric Mitchell, Stefano Ermon, Christopher D. Manning, Chelsea Finn (Stanford University / CZ Biohub)
+- Venue: NeurIPS 2023
+- Content: Introduces Direct Preference Optimization (DPO) — reparameterises the RLHF objective to eliminate explicit reward modelling and RL loop. Key theoretical result: all reward equivalence classes under Bradley-Terry can be represented as r(x,y) = β·log(π/π_ref). DPO optimises the same KL-constrained reward maximisation objective as PPO-based RLHF using a simple binary cross-entropy loss. Achieves strictly better reward/KL frontier on IMDb sentiment; ~61% win rate on TL;DR summarisation (vs PPO ~57%); only efficient method to improve over chosen completions on Anthropic-HH dialogue. More robust to sampling temperature. Validated via human study (GPT-4↔human agreement ≈ human↔human agreement).
+- Created concept: direct-preference-optimization (key insight — closed-form reward↔policy mapping, Bradley-Terry reparameterisation, Theorem 1, gradient analysis, results table, comparison with RLHF, known limitations)
+- Updated concept: rlhf (added wikilink to direct-preference-optimization)
+- Removed from TODO.md (was pending)
+- Cross-links: direct-preference-optimization ↔ rlhf, instructgpt, transformer, flashattention, flex-prompting

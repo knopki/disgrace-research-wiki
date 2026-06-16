@@ -15,7 +15,7 @@ confidence: high
 
 # Longformer
 
-A [[transformer|transformer]] architecture introduced by **Iz Beltagy, Matthew E. Peters, and Arman Cohan** (Allen Institute for AI, 2020) that replaces the quadratic self-attention with a **linear-complexity attention pattern** combining local sliding windows and task-specific global attention. Longformer processes documents up to 4,096 tokens (8× BERT's 512 limit) without chunking or task-specific architectural workarounds, and up to 23K tokens for language modeling.
+A [[transformer|transformer]] architecture introduced by **Iz Beltagy, Matthew E. Peters, and Arman Cohan** (Allen Institute for AI, 2020) that replaces the quadratic self-attention with a **linear-complexity attention pattern** combining local sliding windows and task-specific global attention. Longformer processes documents up to 4,096 tokens (8× [[bert|BERT]]'s 512 limit) without chunking or task-specific architectural workarounds, and up to 23K tokens for language modeling.
 
 ## Attention Pattern
 
@@ -46,7 +46,7 @@ The CUDA kernel was built with TVM (Chen et al., 2018), a deep learning compiler
 
 Longformer is **not trained from scratch** — it continues MLM pretraining from the RoBERTa checkpoint. Key adaptation steps:
 
-1. **Position embeddings** extended from 512 to 4,096 by **copying** RoBERTa's 512 embeddings multiple times (not random init). This preserves the strong local-attention bias BERT's heads learn (Clark et al., 2019). Copy init drops BPC from ~10.3 (random) to ~1.96 — the difference is dramatic.
+1. **Position embeddings** extended from 512 to 4,096 by **copying** RoBERTa's 512 embeddings multiple times (not random init). This preserves the strong local-attention bias [[bert|BERT]]'s heads learn (Clark et al., 2019). Copy init drops BPC from ~10.3 (random) to ~1.96 — the difference is dramatic.
 
 2. **Staged training** — 5 phases: start with seqlen 2,048 and small windows, double both each phase, halve the learning rate. This lets the model learn local context first before being asked to use longer-range information.
 

@@ -56,7 +56,7 @@ KV caching yields approximately **4.7× speedup** for 1000-token generation. The
 
 ## Constraints
 
-- **Only applies to decoder or decoder-only models** (GPT, LLaMA, Claude, etc.). Encoder-only models like BERT process the full sequence in one pass and are not generative.
+**Only applies to decoder or decoder-only models** (GPT, LLaMA, Claude, etc.). Encoder-only models like [[bert|BERT]] process the full sequence in one pass and are not generative.
 - **Requires additional GPU/CPU memory** to store the cached states. The cache grows linearly with sequence length.
 - **The causal mask is still applied** — the decoder retains its auto-regressive property, with each token only attending to its predecessors.
 
