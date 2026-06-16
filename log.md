@@ -447,3 +447,14 @@
 - Entity page created: entities/dario-amodei.md
 - Key facts: co-founder/CEO of Anthropic, former VP Research at OpenAI, author of "Machines of Loving Grace" and "The Adolescence of Technology", Pentagon dispute (2026)
 - Cross-links: anthropic, superposition, polysemantic-neurons, vladimir-ivanov
+
+## [2026-06-16] ingest | Scaling Laws for Neural Language Models (Kaplan et al., OpenAI, 2020)
+- Raw source: `raw/papers/2020-01-kaplan-scaling-laws/` (2001.08361.pdf + index.md)
+- Source: https://arxiv.org/abs/2001.08361
+- Authors: Jared Kaplan, Sam McCandlish, Tom Henighan, Tom B. Brown, Benjamin Chess, Rewon Child, Scott Gray, Alec Radford, Jeffrey Wu, Dario Amodei (equal contribution, random order)
+- Venue: arXiv preprint, January 2020
+- Content: Empirical scaling laws for LM performance — power-law relationships with model size (α_N ≈ 0.076), dataset size (α_D ≈ 0.095), and training compute (α_C ≈ 0.050). Larger models are more sample-efficient. Compute-optimal allocation trains large models to ~10% above converged loss. Predicted breakdown at C* ~ 10^4 PF-days, N* ~ 10^12 params.
+- Raw directory created (was referenced by existing concept page but missing)
+- Updated concept: scaling-laws (added raw_ingested: true flag, source now resolves)
+- Updated index.md: added concept entry and raw source under Papers
+- Cross-links: transformer, lstm, kv-caching, sparse-transformer, dario-amodei
