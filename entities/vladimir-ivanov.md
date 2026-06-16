@@ -27,10 +27,11 @@ Author on VK for Turboplanner. Writes on AI in software engineering and project 
 
 - "[Методология PCAM: Превращаем AI-агентов из рабов в партнеров](raw/articles/2025-09-11-ivanov-metodologiya-pcam-prevraschaem-ai-agentov-iz-rabov-v-partner/ivanov2025pcam.md)" (2025-09-11) — introduces Purpose Centric Agent Methodology (PCAM), shifting agent management from deterministic plans to purpose-driven guidance; defines six principles of autonomous goal-oriented agent architecture
 - "[GRACE: Фреймворк создания кода LLM в больших контекстах с учетом sparse attention и особенностей RAG-агентов](raw/articles/2025-09-13-ivanov-grace-freimvork-sozdaniya-koda-llm-v-bolshih-kontekstah-s-uc/ivanoc2025grace.md)" (2025-09-13) — introduces the GRACE (Graph-RAG Anchored Code Engineering) framework: dual-purpose semantic markup for both generative models and RAG agents, ten principles of scaffold-driven code generation, and a five-stage process model for deterministic LLM code synthesis
-- "[Причины наблюдаемого провала малых SLM против LLM на MoE в AI-агентах](raw/articles/2025-09-14-ivanov-prichiny-nabludaemogo-provala-malyh-slm-protiv-llm-na-moe-v/ivanov2025slmvsllm.md)" (2025-09-14) — rebuttal of Belcak et al. (2025, NVIDIA Research) SLM-centric thesis; argues MoE + MTP architecture eliminates SLM cost advantage, OpenRouter data shows no real SLM adoption, and free API tiers commoditize low-intensity use cases
+|- "[Причины наблюдаемого провала малых SLM против LLM на MoE в AI-агентах](raw/articles/2025-09-14-ivanov-prichiny-nabludaemogo-provala-malyh-slm-protiv-llm-na-moe-v/ivanov2025slmvsllm.md)" (2025-09-14) — rebuttal of Belcak et al. (2025, NVIDIA Research) SLM-centric thesis; argues MoE + MTP architecture eliminates SLM cost advantage, OpenRouter data shows no real SLM adoption, and free API tiers commoditize low-intensity use cases
+|- "[Оптимизация управления ИИ агентами на SLM через методологию Few-shot Logit-Enabled XML (FLEX)](raw/articles/2025-09-18-ivanov-optimizaciya-upravleniya-ii-agentami-na-sml-cherez-metodolog/ivanov2025flex.md)" (2025-09-18) — introduces FLEX (Few-shot Logit-Enabled XML Prompting), a methodology for reliable SLM control using structured XML prompts, few-shot learning, and logit-based verification; validated on Qwen3-0.6B for tool selection with 99%+ accuracy; argues CoT for SLMs is post-hoc rationalization
 ## Topics
 
-LLMs, parallel computing, project management automation, Microsoft partnership programs, AI-assisted planning, resource optimization, prompt engineering, word embeddings, distributional semantics, contract programming, semantic annotation architecture, semantic superposition, PCAM, GRACE, agent methodology, SLM vs MoE debate.
+LLMs, parallel computing, project management automation, Microsoft partnership programs, AI-assisted planning, resource optimization, prompt engineering, word embeddings, distributional semantics, contract programming, semantic annotation architecture, semantic superposition, PCAM, GRACE, FLEX, agent methodology, SLM vs MoE debate.
 
 ## Related
 
@@ -40,3 +41,5 @@ LLMs, parallel computing, project management automation, Microsoft partnership p
 - [[pcam|PCAM]] — he authored the Purpose Centric Agent Methodology for autonomous agent architecture
 - [[grace|GRACE]] — he authored the GRACE framework for scaffold-driven code synthesis with dual-purpose semantic markup
 - [[slm-moe-agentic-ai|SLM vs MoE for Agentic AI]] — his rebuttal of the SLM-centric thesis for AI agents
+- [[flex-prompting|FLEX (Few-shot Logit-Enabled XML Prompting)]] — his methodology for reliable SLM control with structured XML prompts and logit verification
+

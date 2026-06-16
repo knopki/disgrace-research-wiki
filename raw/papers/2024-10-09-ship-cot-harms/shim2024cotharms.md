@@ -5,7 +5,7 @@ ingested: 2026-06-15
 
 # CoT Harms Performance of Rather Smaller Language Models
 
-Full text: `shim2024cotharms.pdf` (5 pages, 508).
+Full text: [[shim2024cotharms.pdf]] (5 pages, 508).
 
 ## Abstract (verbatim)
 

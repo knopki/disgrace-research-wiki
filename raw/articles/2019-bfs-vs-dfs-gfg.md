@@ -1,6 +1,8 @@
 ---
 source_url: https://www.geeksforgeeks.org/dsa/difference-between-bfs-and-dfs/
 ingested: 2026-06-15
+title: Difference between BFS and DFS
+date: 2019-01-01
 ---
 [Breadth-First Search (BFS)](https://www.geeksforgeeks.org/dsa/breadth-first-search-or-bfs-for-a-graph/) and [Depth-First Search (DFS)](https://www.geeksforgeeks.org/dsa/depth-first-search-or-dfs-for-a-graph/) are two fundamental algorithms used for traversing or searching graphs and trees. This article covers the basic difference between Breadth-First Search and Depth-First Search.
 

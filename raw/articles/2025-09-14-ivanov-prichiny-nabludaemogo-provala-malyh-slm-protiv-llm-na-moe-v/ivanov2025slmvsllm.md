@@ -1,8 +1,9 @@
 ---
-title: "Причины наблюдаемого провала малых SLM против LLM на MoE в AI-агентах"
+title: Причины наблюдаемого провала малых SLM против LLM на MoE в AI-агентах
 date: 2025-09-14
 source_url: https://vk.com/@turboplanner-prichiny-nabludaemogo-provala-malyh-slm-protiv-llm-na-moe-v
 ingested: 2026-06-15
+author: Vladimir Ivanov
 ---
 
 # Причины наблюдаемого провала малых SLM против LLM на MoE в AI-агентах

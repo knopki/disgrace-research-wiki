@@ -2,7 +2,8 @@
 title: "За кулисами Microsoft: тайные элитные партнерские программы и ИИ-трансформация"
 date: 2025-07-10
 original_url: https://vk.com/@turboplanner-za-kulisami-microsoft-tainye-elitnye-partnerskie-programmy-i
-author: "Vladimir Ivanov"
+author: Vladimir Ivanov
+ingested: 2026-06-15
 ---
 
 # За кулисами Microsoft: тайные элитные партнерские программы и ИИ-трансформация

@@ -43,7 +43,11 @@ don't silently harden into accepted wiki fact.
 
 ### raw/ Frontmatter
 
-Raw sources get a small frontmatter block:
+Raw sources already have their own frontmatter from the author or ingestion tool
+(title, author, date, original_url, description, site, word_count, etc.).
+**NEVER strip or replace these fields** — they encode source freshness and provenance.
+
+Only **add** two wiki-managed fields:
 
 ```yaml
 ---
@@ -51,6 +55,9 @@ source_url: https://example.com/article   # original URL, if applicable
 ingested: YYYY-MM-DD
 ---
 ```
+
+The existing `title`, `author`, `date` (publication date, not ingested), etc. all stay
+as-is. `date` is especially important — it tells you how fresh the fact is.
 
 ### raw/ Structure
 

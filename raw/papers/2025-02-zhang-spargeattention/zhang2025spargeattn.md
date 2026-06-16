@@ -5,7 +5,7 @@ ingested: 2026-06-17
 
 # SpargeAttention: Accurate and Training-free Sparse Attention Accelerating Any Model Inference
 
-Full text: `2502.18137.pdf` (6 pages)
+Full text: [[2502.18137.pdf]] (6 pages)
 
 ## Abstract
 

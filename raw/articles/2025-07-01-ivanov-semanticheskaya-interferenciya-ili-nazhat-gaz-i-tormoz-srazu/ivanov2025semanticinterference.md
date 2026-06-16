@@ -1,8 +1,9 @@
 ---
-title: "Семантическая интерференция. Или нажать «газ и тормоз» сразу в промптах"
+title: Семантическая интерференция. Или нажать «газ и тормоз» сразу в промптах
 date: 2025-07-01
 original_url: https://vk.com/@turboplanner-semanticheskaya-interferenciya-ili-nazhat-gaz-i-tormoz-srazu
-author: "Vladimir Ivanov"
+author: Vladimir Ivanov
+ingested: 2026-06-15
 ---
 
 # Семантическая интерференция. Или нажать «газ и тормоз» сразу в промптах

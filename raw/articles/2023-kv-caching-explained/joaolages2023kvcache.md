@@ -1,6 +1,8 @@
 ---
 source_url: https://medium.com/@joaolages/kv-caching-explained-276520203249
 ingested: 2026-06-17
+title: How caching Key and Value states makes transformers faster
+date: 2023-10-09
 ---
 ## How caching Key and Value states makes transformers faster
 

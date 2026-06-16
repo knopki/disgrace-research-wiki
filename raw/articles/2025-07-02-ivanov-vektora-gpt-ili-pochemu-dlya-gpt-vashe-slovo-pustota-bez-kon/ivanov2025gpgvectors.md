@@ -1,6 +1,9 @@
 ---
 source_url: https://vk.com/@turboplanner-vektora-gpt-ili-pochemu-dlya-gpt-vashe-slovo-pustota-bez-kon
 ingested: 2026-06-16
+date: 2025-07-02
+author: Vladimir Ivanov
+title: Вектора GPT или почему для GPT ваше слово — пустота без контекста
 ---
 
 # Вектора GPT или почему для GPT ваше слово — пустота без контекста

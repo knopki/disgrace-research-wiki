@@ -386,3 +386,13 @@
 - Updated comparison: slm-moe-agentic-ai (added raw source + synthesis table row "Prompting robustness" + additional evidence paragraph)
 - Updated concept: chain-of-continuous-thought (added [[wikilink]] to chain-of-thought in Relationship to Other Concepts)
 - Cross-links: chain-of-thought ↔ chain-of-continuous-thought, slm-moe-agentic-ai
+
+## [2026-06-16] ingest | FLEX: Few-shot Logit-Enabled XML Prompting (Vladimir Ivanov, 2025-09-18)
+- Raw source: `raw/articles/2025-09-18-ivanov-optimizaciya-upravleniya-ii-agentami-na-sml-cherez-metodolog/` (ivanov2025flex.md + 01.jpg)
+- Source: https://vk.com/@turboplanner-optimizaciya-upravleniya-ii-agentami-na-sml-cherez-metodolog
+- Author: Vladimir Ivanov (Turboplanner)
+- Content: introduces FLEX — methodology for reliable SLM control via structured XML prompts, few-shot learning, and logit-based verification. Validated on Qwen3-0.6B for tool selection (99%+ accuracy, 84% in ambiguous cases). Argues CoT for SLMs is post-hoc rationalization, not genuine reasoning. XML preferred over JSON due to lower logit noise. Multi-level tool description (Keywords, Trigger, Description). Confidence parameter correlates with actual logit probability. Compatible with SLM ensembles for hallucination suppression.
+- Created concept: flex-prompting (three pillars: XML > JSON, multi-level tool description, few-shot + logit verification; experimental results table; logit-based diagnostics; ensemble compatibility)
+- Updated entity: vladimir-ivanov (added FLEX work to Known Works + Topics + Related)
+- Updated concept: chain-of-thought (added Criticism: CoT as Post-Hoc Rationalization section with Ivanov's argument)
+- Cross-links: flex-prompting ↔ chain-of-thought, vladimir-ivanov, slm-moe-agentic-ai, semantic-interference, grace, pcam
