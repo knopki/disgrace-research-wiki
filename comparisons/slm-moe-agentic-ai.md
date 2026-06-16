@@ -15,6 +15,7 @@ sources:
   - "[Small Language Models are the Future of Agentic AI](raw/papers/2025-06-belcak-slm-agentic-ai/belcak2025slm.md)"
   - "[Причины наблюдаемого провала малых SLM против LLM на MoE в AI-агентах](raw/articles/2025-09-14-ivanov-prichiny-nabludaemogo-provala-malyh-slm-protiv-llm-na-moe-v/ivanov2025slmvsllm.md)"
   - "[CoT Harms Performance of Rather Smaller Language Models](raw/papers/2024-10-09-ship-cot-harms/shim2024cotharms.md)"
+  - "[Hallucination Detection with Small Language Models](raw/papers/2025-06-24-cheung-hallucination-detection-slm/cheung2025hallucination.md)"
 ---
 
 # SLM vs MoE for Agentic AI
@@ -105,6 +106,7 @@ The two positions overlap more than they conflict.
 | **Edge deployment** | Critical advantage for SLMs | Acknowledged niche, not mainstream |
 | **Key evidence** | Benchmarks showing SLMs match larger models | Market usage data showing no SLM adoption |
 | **Prompting robustness** | Not addressed | CoT prompting — standard for LLMs — degrades SLM accuracy by 15–30%+, with losses of 31–47% on GPT-2 and up to 100% on GPT-Neo 125M (Shim et al., 2024) |
+| **Verification performance** | Not addressed | SLM ensemble (1.5B + 2B) outperforms ChatGPT by ~10% F1 for hallucination detection in RAG context (Cheung, 2025) |
 | **Time horizon** | Forward-looking (SLM capabilities improving) | Present-day (what developers actually use) |
 
 **Key tension:** Both sides agree that agents expose narrow functionality. Belcak concludes "therefore SLM suffices." Ivanov counters "therefore why would I self-host a SLM when a free API gives me a better model?" The unresolved question is whether MoE + MTP can sustain its cost-quality advantage as SLM architectures continue to improve.
@@ -113,10 +115,13 @@ The two positions overlap more than they conflict.
 
 **Additional evidence:** Shim et al. (IEOM, 2024) provide experimental evidence that CoT prompting degrades SLM accuracy by 15–30%+ on GSM8K — with relative losses of 31–47% on GPT-2 (345M–1558M) and up to 100% on GPT-Neo 125M. The loss is multiplicative (proportional to baseline), not additive, and CoT scores converge toward a ceiling, suggesting SLMs lack capacity to benefit from CoT's reasoning decomposition. ([Shim et al., 2024](raw/papers/2024-10-09-ship-cot-harms/shim2024cotharms.md))
 
+**Cheung (2025)** provides a different kind of SLM evidence: rather than measuring SLM weaknesses, they demonstrate a narrow verification task where SLMs *outperform* ChatGPT. Their multi-SLM framework (Qwen2-1.5B + MiniCPM-2B) detects hallucinations in RAG responses with ~10% higher F1 than ChatGPT P(True) and ~6.6% higher than a single SLM P(yes) baseline. This strengthens the heterogeneous-system view: SLMs can be *better* than LLMs for specific well-scoped verification subtasks, not just cheaper. See [[hallucination-detection-slm|SLM-based Hallucination Detection]] for details. ([Cheung, 2025](raw/papers/2025-06-24-cheung-hallucination-detection-slm/cheung2025hallucination.md))
+
 ## Related
 
 - [[vladimir-ivanov|Vladimir Ivanov]] — author of the counter-position
 - [[vibe-coding|Vibe Coding]] — agent-driven development context where model choice matters
+- [[hallucination-detection-slm|SLM-based Hallucination Detection]] — SLMs outperform ChatGPT for RAG verification, supporting heterogeneous systems
 - [[kv-caching|KV Caching]] — inference optimisation; MTP provides orthogonal throughput gains
 - [[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]] — architectural innovation changing cost-quality landscape
 - [[chain-of-thought|Chain-of-Thought Prompting (CoT)]] — CoT harms SLMs, relevant to both sides of the SLM debate

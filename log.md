@@ -396,3 +396,13 @@
 - Updated entity: vladimir-ivanov (added FLEX work to Known Works + Topics + Related)
 - Updated concept: chain-of-thought (added Criticism: CoT as Post-Hoc Rationalization section with Ivanov's argument)
 - Cross-links: flex-prompting ↔ chain-of-thought, vladimir-ivanov, slm-moe-agentic-ai, semantic-interference, grace, pcam
+
+## [2026-06-16] ingest | Hallucination Detection with SLMs (Ming Cheung, IEEE ICDE Workshop 2025)
+- Raw source: raw/papers/2025-06-24-cheung-hallucination-detection-slm/ (2506.22486.pdf + index.md)
+- Source: https://arxiv.org/abs/2506.22486
+- Author: Ming Cheung (dBeta Labs, The Lane Crawford Joyce Group, Hong Kong)
+- Content: proposes a framework integrating multiple SLMs (Qwen2-1.5B + MiniCPM-2B) for post-hoc hallucination verification of LLM responses in RAG context. Pipeline: Splitter (sentence decomposition) → SLM ensemble (P(yes) token probability per sentence) → Checker (z-score normalization per model, harmonic mean across sentences, threshold decision). Validated on real dataset from Lane Crawford employee handbook (100+ QA triples). Proposed approach outperforms ChatGPT by ~11% F1 and single-model P(yes) by ~6.6% F1 for detecting correct vs wrong responses.
+- Created concept: hallucination-detection-slm (framework architecture: Splitter, SLM ensemble, Checker; sentence-level P(yes) scoring; per-model normalization; harmonic mean aggregation; experimental results; connections to RAG, FLEX, GRACE)
+- Updated comparison: slm-moe-agentic-ai (added source, "Verification performance" row to synthesis table, evidence paragraph: SLMs outperforming ChatGPT on verification task supports heterogeneous system view)
+- Updated concept: retrieval-augmented-generation (added cross-link to hallucination-detection-slm)
+- Cross-links: hallucination-detection-slm ↔ retrieval-augmented-generation, slm-moe-agentic-ai, flex-prompting, chain-of-thought, contract-programming, grace
