@@ -14,7 +14,7 @@ confidence: high
 
 # KV Caching
 
-An inference optimization technique for generative transformers that caches the **Key (K)** and **Value (V)** attention states from previous tokens, avoiding redundant recomputation during auto-regressive generation.
+An inference optimization technique for generative [[transformer|Transformers]] that caches the **Key (K)** and **Value (V)** attention states from previous tokens, avoiding redundant recomputation during auto-regressive generation.
 
 ## The Problem
 

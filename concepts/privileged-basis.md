@@ -22,7 +22,7 @@ A privileged basis is created when an activation function is applied to the hidd
 
 | Property | Privileged Basis | Non-Privileged Basis |
 |---|---|---|
-| Example | MLP hidden layers, conv net feature maps | Word embeddings, transformer residual stream |
+| Example | MLP hidden layers, conv net feature maps | Word embeddings, [[transformer|transformer]] residual stream |
 | Symmetry | Broken by activation function | Rotational (any rotation yields equivalent model) |
 | Meaningful unit | Neuron (basis direction) | Any direction in activation space |
 | Superposition manifests as | Polysemantic neurons | Feature directions with interference |

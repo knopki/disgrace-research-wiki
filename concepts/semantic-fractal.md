@@ -26,7 +26,7 @@ The term "fractal" captures the recursive, self-similar structure: at every leve
 
 ## Connection to Transformer Architecture
 
-The metaphor maps naturally onto transformer internals: attention layers compute pairwise relationships between all token representations simultaneously. The residual stream maintains a distributed, high-dimensional representation where no single "current state" dominates — consistent with the idea of parallel semantic branches rather than a sequential program counter.
+The metaphor maps naturally onto [[transformer|transformer]] internals: attention layers compute pairwise relationships between all token representations simultaneously. The residual stream maintains a distributed, high-dimensional representation where no single "current state" dominates — consistent with the idea of parallel semantic branches rather than a sequential program counter.
 
 [[positional-encoding|Positional Encoding]] provides the mechanism that makes the semantic fractal concrete. Sinusoidal PE at multiple frequencies creates a multi-scale coordinate system where each token simultaneously knows its position at the chapter, paragraph, and sentence level — exactly the self-similar nested structure the fractal metaphor describes. When PE vectors are added directly to semantic embeddings, the resulting representation fuses *what* a token means with *where* it sits in every level of the hierarchy simultaneously. ([Ivanov, 2025](raw/articles/2025-07-04-ivanov-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/ivanoc2025encodings.md))
 

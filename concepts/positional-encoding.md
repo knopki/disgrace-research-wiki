@@ -1,13 +1,14 @@
 ---
 title: Positional Encoding
 created: 2026-06-17
-updated: 2026-06-15
+updated: 2026-06-16
 type: concept
 tags:
   - architecture
   - model
   - training
 sources:
+  - "[Attention Is All You Need](raw/papers/2017-06-vaswani-attention-is-all-you-need/vaswani2017attention.md)"
   - "[Позиционные кодировки: «объемное зрение» GPT и секреты AI-агентов](raw/articles/2025-07-04-ivanov-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/ivanoc2025encodings.md)"
 confidence: high
 ---
@@ -22,7 +23,7 @@ The Transformer processes all tokens in a single parallel pass via self-attentio
 
 ## Sinusoidal Geometry
 
-The original "Attention Is All You Need" paper (Vaswani et al., 2017) proposed sine and cosine functions at varying frequencies:
+The original "Attention Is All You Need" paper proposed sine and cosine functions at varying frequencies: ([Vaswani et al., 2017](raw/papers/2017-06-vaswani-attention-is-all-you-need/vaswani2017attention.md))
 
 - **Position through phase.** Each dimension `i` of the encoding vector uses a wave with a unique frequency. The sin/cos value at position `pos` is the token's **phase** on that wave, encoding where it falls in a structure of that wavelength.
 - **Proximity through angle.** Two tokens at a fixed distance `k` have the same angle between their PE vectors regardless of absolute position, letting the model learn relational patterns like "the word three positions after this one."

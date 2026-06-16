@@ -15,7 +15,7 @@ confidence: high
 
 # BigBird
 
-A sparse-attention transformer architecture introduced by **Manzil Zaheer et al.** (Google Research, NeurIPS 2020) that reduces quadratic self-attention to **linear complexity** by combining three complementary attention patterns: random, window, and global. BigBird is the first sparse-attention model with **proven universal approximation and Turing completeness**, matching the theoretical expressiveness of full-attention transformers.
+A sparse-attention [[transformer|transformer]] architecture introduced by **Manzil Zaheer et al.** (Google Research, NeurIPS 2020) that reduces quadratic self-attention to **linear complexity** by combining three complementary attention patterns: random, window, and global. BigBird is the first sparse-attention model with **proven universal approximation and Turing completeness**, matching the theoretical expressiveness of full-attention transformers.
 
 ## Attention Mechanism
 
@@ -35,9 +35,9 @@ The ablation (Table 1) shows that **none of the three components alone is suffic
 
 BigBird is the first sparse-attention model with rigorous theoretical guarantees matching full attention:
 
-- **Universal Approximation (Theorem 1):** Any continuous sequence-to-sequence function can be approximated by a transformer whose attention graph contains a star graph (a global token connected to all others). Proved via a sparse shift operator that builds a unique contextual mapping using multiple layers and the global token.
+- **Universal Approximation (Theorem 1):** Any continuous sequence-to-sequence function can be approximated by a [[transformer|transformer]] whose attention graph contains a star graph (a global token connected to all others). Proved via a sparse shift operator that builds a unique contextual mapping using multiple layers and the global token.
 
-- **Turing Completeness (Theorem 3):** An encoder-decoder transformer with sparse attention can simulate any Turing machine. The key challenge — symbol retrieval from tape history — is solved incrementally over multiple decoder steps using associativity of min/argmin, in contrast to full attention's direct lookup.
+- **Turing Completeness (Theorem 3):** An encoder-decoder [[transformer|transformer]] with sparse attention can simulate any Turing machine. The key challenge — symbol retrieval from tape history — is solved incrementally over multiple decoder steps using associativity of min/argmin, in contrast to full attention's direct lookup.
 
 - **Lower Bound (Proposition 1):** For the task of finding the furthest vector for each input vector, full attention solves it in O(1) layers, but any sparse attention with Õ(n) edges requires Ω̃(n^{1-o(1)}) layers (assuming Orthogonal Vector Conjecture). This demonstrates sparsity has a fundamental cost — more layers are needed for global comparison tasks.
 

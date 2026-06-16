@@ -429,3 +429,14 @@
 - Updated concept: mamba (added GRACE as Native Interface section about reconstruction mechanism, dual graph role, semantic slices, symbiotic architecture; added source to frontmatter; updated cross-link)
 - Updated entity: vladimir-ivanov (added GRACE-Mamba study to Known Works)
 - Cross-links: grace ↔ mamba (deepened: native interface + verification synergy)
+
+## [2026-06-16] ingest | Attention Is All You Need (Vaswani et al., Google/NIPS, 2017)
+- Raw source: `raw/papers/2017-06-vaswani-attention-is-all-you-need/` (1706.03762.pdf + vaswani2017attention.md)
+- Source: https://arxiv.org/abs/1706.03762 (v7, Aug 2023)
+- Authors: Ashish Vaswani, Noam Shazeer, Niki Parmar, Jakob Uszkoreit, Llion Jones, Aidan N. Gomez, Łukasz Kaiser, Illia Polosukhin (equal contribution, random listing order)
+- Venue: NIPS 2017 (31st Conference on Neural Information Processing Systems)
+- Content: Proposes the Transformer — first sequence transduction model based entirely on self-attention, dispensing with recurrence and convolutions. Introduces Scaled Dot-Product Attention, Multi-Head Attention (h=8, d_k=d_v=d_model/h=64), sinusoidal Positional Encoding, N=6 encoder/decoder stacks with d_model=512, d_ff=2048. Achieves SOTA on WMT 2014 EN-DE (28.4 BLEU) and EN-FR (41.8 BLEU) translation. Generalizes to English constituency parsing (WSJ 91.3 F1, semi-supervised 92.7 F1).
+- Updated concept: transformer (added primary source, architecture details — N=6, d_model=512, d_ff=2048, h=8; training regime — 100K steps base/300K steps big, 8×P100 GPUs, Adam lr schedule; results tables — EN-DE 27.3/28.4, EN-FR 38.1/41.8 BLEU; English constituency parsing results)
+- Updated concept: positional-encoding (added paper as primary source, provenance marker in body)
+- Updated wiki pages converted plain-text "transformer" → [[wikilinks]]: kv-caching, privileged-basis, semantic-fractal, grace, belief-state-geometry, longformer, big-bird (3 mentions), slm-moe-agentic-ai, README (2 mentions)
+- Cross-links: transformer ↔ raw source (primary provenance); 9 pages updated with transformer wikilinks

@@ -100,7 +100,7 @@ The semantic markup is not just comments — it is a structured language that se
 
 ### Overcoming Sparse Attention Limitations
 
-In large contexts (>100K tokens), the transformer's attention mechanism degrades non-linearly — attention becomes sparse and long-range dependencies are lost. XML-like paired tags act as high-signal "vector beacons" — the model easily establishes correlation between identical tag tokens even at large distances, semantically "stitching" logically related but physically separated code sections. ([Ivanov, 2025](raw/articles/2025-09-13-ivanov-grace-freimvork-sozdaniya-koda-llm-v-bolshih-kontekstah-s-uc/ivanoc2025grace.md))
+In large contexts (>100K tokens), the [[transformer|transformer]]'s attention mechanism degrades non-linearly — attention becomes sparse and long-range dependencies are lost. XML-like paired tags act as high-signal "vector beacons" — the model easily establishes correlation between identical tag tokens even at large distances, semantically "stitching" logically related but physically separated code sections. ([Ivanov, 2025](raw/articles/2025-09-13-ivanov-grace-freimvork-sozdaniya-koda-llm-v-bolshih-kontekstah-s-uc/ivanoc2025grace.md))
 
 ### Materialising the Internal Generation Plan
 

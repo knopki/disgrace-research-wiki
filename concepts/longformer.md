@@ -15,7 +15,7 @@ confidence: high
 
 # Longformer
 
-A transformer architecture introduced by **Iz Beltagy, Matthew E. Peters, and Arman Cohan** (Allen Institute for AI, 2020) that replaces the quadratic self-attention with a **linear-complexity attention pattern** combining local sliding windows and task-specific global attention. Longformer processes documents up to 4,096 tokens (8× BERT's 512 limit) without chunking or task-specific architectural workarounds, and up to 23K tokens for language modeling.
+A [[transformer|transformer]] architecture introduced by **Iz Beltagy, Matthew E. Peters, and Arman Cohan** (Allen Institute for AI, 2020) that replaces the quadratic self-attention with a **linear-complexity attention pattern** combining local sliding windows and task-specific global attention. Longformer processes documents up to 4,096 tokens (8× BERT's 512 limit) without chunking or task-specific architectural workarounds, and up to 23K tokens for language modeling.
 
 ## Attention Pattern
 
