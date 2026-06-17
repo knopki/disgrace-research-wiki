@@ -680,3 +680,14 @@
 - Updated concept: gelu (added cross-link to glu-variants in Cross-Links)
 - Cross-links: glu-variants ↔ transformer, gelu, multi-query-attention, switch-transformer, mixture-of-experts
 - Updated index.md: added concept entry + entity entry + raw paper source, bumped total pages to 64
+
+## [2026-06-17] ingest | Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks (Lewis et al., FAIR, NeurIPS 2020)
+
+- Raw source: `raw/papers/2020-05-lewis-rag/` (2005.11401.pdf + index.md)
+- Source: https://arxiv.org/abs/2005.11401
+- Authors: Patrick Lewis, Ethan Perez, Aleksandra Piktus, Fabio Petroni, Vladimir Karpukhin, Naman Goyal, Heinrich Küttler, Mike Lewis, Wen-tau Yih, Tim Rocktäschel, Sebastian Riedel, Douwe Kiela (Facebook AI Research / UCL / NYU)
+- Venue: NeurIPS 2020
+- Content: Introduces Retrieval-Augmented Generation (RAG) — combining pre-trained parametric memory (BART-large seq2seq) with non-parametric memory (DPR dense vector index of 21M Wikipedia chunks). Two formulations: RAG-Sequence (same document for whole output) and RAG-Token (different document per token). SOTA on Natural Questions (44.5 EM), WebQuestions (45.5/45.2 EM), CuratedTrec (52.2/50.0 EM). RAG generates more factual, specific, diverse text than parametric-only BART baseline. Non-parametric memory hot-swappable without retraining. Retrieval collapse observed on knowledge-light tasks (story generation). Open-sourced via HuggingFace Transformers.
+- Updated concept: retrieval-augmented-generation (added Original Paper section with architecture, two formulations, results, retrieval collapse, legacy; added paper as second source to frontmatter)
+- Cross-links: retrieval-augmented-generation ↔ bm25, bert, word-embeddings, distributional-semantics, grace, hallucination-detection-slm, mamba (existing cross-links deepened; DPR + BART as plain-text references)
+- Updated index.md: updated concept entry description, added raw paper source under Papers
