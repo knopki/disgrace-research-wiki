@@ -16,7 +16,7 @@ confidence: high
 
 ## Definition
 
-The **Transformer** is a neural network architecture introduced in the 2017 paper **"Attention Is All You Need"** by **Ashish Vaswani**, **Noam Shazeer**, and six other Google researchers. It replaces sequential recurrence (as in [[lstm|LSTM]]) with a parallelisable **self-attention mechanism**, processing all tokens simultaneously rather than one at a time.
+The **Transformer** is a neural network architecture introduced in the 2017 paper **"Attention Is All You Need"** by **Ashish Vaswani**, **[[noam-shazeer|Noam Shazeer]]**, and six other Google researchers. It replaces sequential recurrence (as in [[lstm|LSTM]]) with a parallelisable **self-attention mechanism**, processing all tokens simultaneously rather than one at a time.
 
 ## Architecture
 

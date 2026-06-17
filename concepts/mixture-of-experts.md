@@ -66,9 +66,9 @@ On the 1 Billion Word Language Modeling benchmark: **MoE-143M achieved perplexit
 
 ## Evolution After Shazeer et al. (2017)
 
-### Switch Transformer (Fedus et al., 2021)
+### Switch Transformer [(Fedus et al., 2021)](raw/papers/2021-01-fedus-switch-transformers/fedus2022switch.md)
 
-Simplified MoE to **k=1 routing** — each token goes to exactly one expert. This cuts router computation in half, halves expert capacity requirements, and reduces communication by 50%. Introduced **expert capacity** as an explicit hyperparameter (tokens_per_batch / num_experts × capacity_factor) with token dropping for overflow. Achieved 7× pre-training speedups over dense T5 models and demonstrated **trillion-parameter models**. ([switch-transformer](concepts/switch-transformer.md))
+Simplified MoE to **k=1 routing** — each token goes to exactly one expert. This cuts router computation in half, halves expert capacity requirements, and reduces communication by 50%. Introduced **expert capacity** as an explicit hyperparameter (tokens_per_batch / num_experts × capacity_factor) with token dropping for overflow. Achieved 7× pre-training speedups over dense T5 models and demonstrated **trillion-parameter models**. ([Switch Transformer](concepts/switch-transformer.md))
 
 Key differences from Shazeer et al.:
 - k=1 vs k≥2

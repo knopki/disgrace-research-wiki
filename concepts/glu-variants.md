@@ -13,7 +13,7 @@ confidence: high
 
 ## Definition
 
-**GLU (Gated Linear Unit)** is a neural network layer introduced by Dauphin et al. (2016) that computes the component-wise product of two linear projections, one of which is passed through a sigmoid: GLU(x) = σ(xW + b) ⊗ (xV + c). Variants replace the sigmoid with other activation functions. **Noam Shazeer** (Google, 2020) proposed applying these variants to the [[transformer|Transformer]] feed-forward sublayer, demonstrating consistent quality improvements over the standard ReLU or GELU activations. The variants are:
+**GLU (Gated Linear Unit)** is a neural network layer introduced by Dauphin et al. (2016) that computes the component-wise product of two linear projections, one of which is passed through a sigmoid: GLU(x) = σ(xW + b) ⊗ (xV + c). Variants replace the sigmoid with other activation functions. **[[noam-shazeer|Noam Shazeer]]** (Google, 2020) proposed applying these variants to the [[transformer|Transformer]] feed-forward sublayer, demonstrating consistent quality improvements over the standard ReLU or GELU activations. The variants are:
 
 | Variant | Gate activation | Formula |
 |---------|----------------|---------|
@@ -68,12 +68,12 @@ GEGLU appears in **T5 v1.1** (Google) and early variants. The widespread adoptio
 
 ## Limitations
 
-Shazeer explicitly offers no theoretical explanation for why gated variants outperform ReLU/GELU, attributing the success "as all else, to divine benevolence." The three-matrix design increases memory for the FFN weights (by 50% vs 2-matrix at matched d_ff), though the overall parameter count is matched by reducing d_ff.
+[[noam-shazeer|Shazeer]] explicitly offers no theoretical explanation for why gated variants outperform ReLU/GELU, attributing the success "as all else, to divine benevolence." The three-matrix design increases memory for the FFN weights (by 50% vs 2-matrix at matched d_ff), though the overall parameter count is matched by reducing d_ff.
 
 ## Cross-Links
 
 - [[transformer|Transformer]] — the architecture whose FFN sub-layer these variants improve
 - [[gelu|GELU]] — the activation used in GEGLU
-- [[multi-query-attention|Multi-Query Attention (MQA)]] — another Shazeer contribution to Transformer efficiency
+- [[multi-query-attention|Multi-Query Attention (MQA)]] — another [[noam-shazeer|Shazeer]] contribution to Transformer efficiency
 - [[switch-transformer|Switch Transformer]] — Google architecture building on the same T5 codebase
 - [[mixture-of-experts|Mixture-of-Experts (MoE)]] — the other major FFN replacement paradigm
