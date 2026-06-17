@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-17 | Total pages: 61
+> Last updated: 2026-06-17 | Total pages: 62
 
 ## Entities
 
@@ -81,8 +81,9 @@
 - [[residual-connection|Residual Connection]] — skip connections enabling training of very deep networks by creating gradient highways through the network
 - [[scaling-laws|Scaling Laws (Neural Language Models)]] — empirical power-law relationships between language model performance and model size, dataset size, and training compute
 - [[transformer|Transformer]] — architecture using self-attention and positional encodings that superseded RNNs and became the foundation of modern LLMs
-- [[kv-caching|KV Caching]] — inference optimisation caching Key/Value states in auto-regressive transformers to avoid redundant recomputation
-- [[knowledge-distillation|Knowledge Distillation]] — model compression via soft target transfer from a large teacher model to a smaller student; introduces temperature-parameterised softmax for "dark knowledge" transfer (Hinton, Vinyals & Dean, 2015)
+|- [[kv-caching|KV Caching]] — inference optimisation caching Key/Value states in auto-regressive transformers to avoid redundant recomputation
+|- [[multi-query-attention|Multi-Query Attention (MQA)]] — attention variant sharing keys and values across all heads to reduce KV cache size and memory bandwidth; Shazeer (2019) achieves 12× decoder speedup
+|- [[mixture-of-experts|Mixture-of-Experts (MoE)]] — neural architecture scaling capacity via sparse expert activation
 - [[mixture-of-experts|Mixture-of-Experts (MoE)]] — neural architecture scaling capacity via sparse expert activation; decouples parameter count from computational cost; foundational formulation by Shazeer et al. (2017) with noisy top-k gating, 137B parameter models; evolved into Switch Transformer and modern MoE LLMs
 - [[mamba|Mamba / SSM]]
 
@@ -167,6 +168,7 @@
 - [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](raw/papers/2017-01-shazeer-sparsely-gated-moe/shazeer2017moe.md) — PDF at [1701.06538.pdf](raw/papers/2017-01-shazeer-sparsely-gated-moe/1701.06538.pdf) — introduces the Sparsely-Gated MoE layer with noisy top-k gating, importance/load losses, and 137B parameter models; foundational paper for all modern MoE architectures (Noam Shazeer et al., Google Brain, ICLR 2017)
 - [Okapi at TREC-3](raw/papers/1995-01-robertson-okapi-trec3/okapi_trec3.pdf)
 - [SentencePiece: A simple and language independent subword tokenizer and detokenizer for Neural Text Processing](raw/papers/2018-08-kudo-sentencepiece/kudo2018sentencepiece.md) (Taku Kudo, John Richardson, Google, EMNLP 2018)
+- [Fast Transformer Decoding: One Write-Head is All You Need](raw/papers/2019-11-shazeer-multi-query-attention/shazeer2019multiquery.md) — PDF at [1911.02150.pdf](raw/papers/2019-11-shazeer-multi-query-attention/1911.02150.pdf) — introduces Multi-Query Attention (MQA), sharing keys and values across attention heads to reduce KV cache memory bandwidth by factor h; 12× decoder speedup with minimal quality loss (Noam Shazeer, Google, arXiv:1911.02150, November 2019)
 
 ## Comparisons
 

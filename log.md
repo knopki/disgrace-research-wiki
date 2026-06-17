@@ -653,3 +653,16 @@
 - Updated concept: transformer (added wikilink to attention-head-pruning in Cross-Links section)
 - Cross-links: attention-head-pruning ↔ transformer, kv-caching, sparse-transformer, knowledge-distillation
 - Updated index.md: added concept entry + raw paper source + fixed accumulated pipe contamination; bumped total pages to 60
+|
+|## [2026-06-17] ingest | Multi-Query Attention (Shazeer, 2019)
+|
+|- Raw source: `raw/papers/2019-11-shazeer-multi-query-attention/` (shazeer2019multiquery.md + 1911.02150.pdf)
+|- Source: https://arxiv.org/abs/1911.02150
+|- Authors: Noam Shazeer (Google)
+|- Venue: arXiv preprint (cs.NE), November 2019
+|- Content: Proposes Multi-Query Attention (MQA), a Transformer attention variant where keys and values are shared across all attention heads, while queries retain per-head projections. Identifies that incremental autoregressive decoding is memory-bandwidth bound (ratio Θ(n/d + 1/b)) due to repeatedly loading large per-head K/V tensors. MQA eliminates the heads dimension from K/V, reducing the memory ratio to Θ(1/d + d/(hn) + 1/b) — a factor of h improvement. Evaluation on WMT14 EN-DE: BLEU 27.5/28.5 (greedy/beam-4) vs baseline 27.7/28.4. Decoder speedup: 12× greedy (46→3.8 µs/tok), 6.3× beam search (203→32 µs/tok) on TPUv2. Training speed unchanged. Multi-query attention orthogonal to local (sliding-window) attention. Simply reducing h or d_k/d_v hurts quality far more than MQA. Laid foundation for Grouped-Query Attention (GQA) used in LLaMA 2/3, Mistral, and modern LLMs.
+|- Created concept: multi-query-attention (memory-bandwidth analysis, shared K/V projections, performance table and speedup results, comparison with h/d_k/d_v reduction, relationship to GQA)
+|- Updated concept: kv-caching (added MQA as architectural origin of KV cache memory-bandwidth bottleneck analysis and as a solution reducing KV cache size by factor h)
+|- Updated concept: transformer (added cross-link to multi-query-attention in Cross-Links)
+|- Cross-links: multi-query-attention ↔ kv-caching, transformer, attention-head-pruning, flash-attention, sparse-transformer
+|- Updated index.md: added concept entry + raw paper source, bumped total pages to 62
