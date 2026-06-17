@@ -563,3 +563,15 @@
 - Updated concept: big-bird (added wikilinks: BPE for DNA tokenization, BPE in Significance & Legacy)
 - Updated index.md: added concept entry and raw source under Papers
 - Removed from TODO.md (was pending)
+
+## [2026-06-17] ingest | Okapi at TREC-3 — Robertson et al. (City University, TREC-3 1995)
+
+- Raw source: `raw/papers/1995-01-robertson-okapi-trec3/` (okapi_trec3.pdf + robertson1995okapi.md)
+- Source: https://www.microsoft.com/en-us/research/publication/okapi-at-trec-3/ — "Okapi at TREC-3"
+- Authors: Stephen E. Robertson, S. Walker, S. Jones, M. M. Hancock-Beaulieu, M. Gatford (City University, London)
+- Venue: Proceedings of the Third Text REtrieval Conference (TREC-3), NIST 1995
+- Content: Describes the Okapi IR system participation in TREC-3. Introduces BM25 — unified term-weighting function combining BM11 and BM15 with tunable document length normalization b (optimal ~0.75). Demonstrates query expansion without relevance information (pseudo-relevance feedback from top R documents), run-time passage retrieval (best-matching paragraph sequences), and stepwise term selection for routing (incremental select-or-reject based on average precision improvement). Interactive search interface with phrase operators (ADJ) and term-set manipulation.
+- Created concepts: bm25 (BM25 formulation, history from TREC-1→2→3, saturation property, length normalization, impact on search engines and RAG, limitations)
+- Created entities: stephen-robertson (RSJ weight, BM25, Okapi, probabilistic IR, PRP), karen-sparck-jones (IDF, RSJ weight, probabilistic IR, academic legacy)
+- Cross-links: bm25 ↔ stephen-robertson, karen-sparck-jones, retrieval-augmented-generation, knowledge-graph, byte-pair-encoding
+- Updated index.md: added entities, concept, raw paper source

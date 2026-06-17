@@ -12,6 +12,9 @@
 
 - [[frank-rosenblatt|Frank Rosenblatt]] — American psychologist, inventor of the Perceptron, foundational contributor to neural networks and deep learning
 
+- [[stephen-robertson|Stephen Robertson]] — British IR researcher; architect of the probabilistic model of IR and lead developer of BM25 ranking function and Okapi system
+- [[karen-sparck-jones|Karen Sparck Jones]] — British computer scientist, introduced IDF (inverse document frequency) and co-developed the Robertson-Sparck Jones relevance weight with Stephen Robertson
+
 - [[anthropic|Anthropic]] — AI safety research company; published Toy Models of Superposition foundational interpretability work
 - [[openai|OpenAI]] — American AI research organization; developer of GPT models, ChatGPT, and InstructGPT/RLHF
 - [[dario-amodei|Dario Amodei]] — Co-founder and CEO of Anthropic; AI researcher, proponent of democratic AI leadership, author of *Machines of Loving Grace* and *The Adolescence of Technology*
@@ -80,6 +83,8 @@
 
 - [[big-bird|BigBird]] — linear-complexity attention combining random, window, and global tokens; first sparse-attention model with proven universal approximation and Turing completeness (Google Research, NeurIPS 2020); extends to DNA sequence analysis
 
+- [[bm25|BM25]] — family of term-weighting functions for probabilistic IR; unified BM11/BM15 with tunable document length normalization; became the standard ranking function in Lucene, Elasticsearch, and Solr; introduced by Robertson et al. at TREC-3 (1995)
+
 - [[spargeattn|SpargeAttn]] — universal training-free sparse attention operator accelerating any model inference via two-stage online filter, self-similarity judge, and HilbertCurve permutation; integrates with SageAttention quantization (Zhang et al., Tsinghua/UC Berkeley, ICML 2025)
 
 - [[flash-attention|FlashAttention]] — IO-aware exact attention algorithm using tiling to reduce GPU HBM↔SRAM reads/writes; first Transformer to beat chance on Path-X (16K) and Path-256 (64K) (Dao et al., Stanford, NeurIPS 2022)
@@ -145,6 +150,7 @@
 - [Direct Preference Optimization: Your Language Model is Secretly a Reward Model](raw/papers/2023-05-rafailov-dpo/rafailov2023dpo.md) — PDF at [2305.18290.pdf](raw/papers/2023-05-rafailov-dpo/2305.18290.pdf) (Rafael Rafailov et al., Stanford, NeurIPS 2023)
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](raw/papers/2018-10-devlin-bert/1810.04805.pdf) — details at [index.md](raw/papers/2018-10-devlin-bert/devlin2018bert.md) (Jacob Devlin et al., Google AI Language, NAACL 2019)
 - [Neural Machine Translation of Rare Words with Subword Units](raw/papers/2016-06-sennrich-bpe-subword/1508.07909.pdf) — introduces BPE for subword tokenization; details at [sennrich2016bpe.md](raw/papers/2016-06-sennrich-bpe-subword/sennrich2016bpe.md) (Rico Sennrich, Barry Haddow, Alexandra Birch, ACL 2016)
+- [Okapi at TREC-3](raw/papers/1995-01-robertson-okapi-trec3/okapi_trec3.pdf) — details at [robertson1995okapi.md](raw/papers/1995-01-robertson-okapi-trec3/robertson1995okapi.md) — introduces BM25, passage retrieval, and query expansion without relevance information; (Stephen E. Robertson et al., City University, TREC-3 1995)
 
 ## Comparisons
 
