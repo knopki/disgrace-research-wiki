@@ -628,3 +628,15 @@
 - Converted wikilink `[[...pdf]]` references to proper `[...](...)` markdown links
 - Stripped all extra sections (h2/h3) after Abstract — no conspectus, no summaries
 - Exception: anthropic2022toy (HTML article, no PDF)
+
+## [2026-06-17] ingest | Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned (Voita et al., ACL 2019)
+
+- Raw source: `raw/papers/2019-05-voita-attention-heads/` (voita2019attention.md + 1905.09418.pdf)
+- Source: https://arxiv.org/abs/1905.09418
+- Authors: Elena Voita, David Talbot, Fedor Moiseev, Rico Sennrich, Ivan Titov (Yandex / UvA / Edinburgh)
+- Venue: ACL 2019
+- Content: Evaluates contribution of individual encoder self-attention heads to Transformer NMT performance. Uses LRP for head importance ranking. Identifies three interpretable head functions: positional (adjacent token), syntactic (dependency relations nsubj/dobj/amod/advmod), and rare words (first-layer head pointing to least frequent tokens). Introduces pruning method based on Hard Concrete L0 relaxation — stochastic gates per head with differentiable regularization. Key results: 38/48 encoder heads pruned on EN-RU WMT with only 0.15 BLEU drop; 44/48 on OpenSubtitles with 0.25 BLEU drop. Specialized heads are last to be pruned. Encoder self-attention is most redundant; decoder-encoder attention most critical. Pruned architectures cannot be trained from scratch to same quality.
+- Created concept: attention-head-pruning (head functions, L0-relaxation pruning method, results, function drift under pruning)
+- Updated concept: transformer (added wikilink to attention-head-pruning in Cross-Links section)
+- Cross-links: attention-head-pruning ↔ transformer, kv-caching, sparse-transformer, knowledge-distillation
+- Updated index.md: added concept entry + raw paper source + fixed accumulated pipe contamination; bumped total pages to 60

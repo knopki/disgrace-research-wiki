@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-17 | Total pages: 59
+> Last updated: 2026-06-17 | Total pages: 60
 
 ## Entities
 
@@ -21,6 +21,8 @@
 - [[geoffrey-hinton|Geoffrey Hinton]] — British-Canadian cognitive psychologist and computer scientist; one of the "godfathers of deep learning"; co-popularised backpropagation (1986), introduced knowledge distillation (2015), inventor of dropout; Turing Award (2018), Nobel Prize in Physics (2024)
 
 ## Concepts
+
+- [[attention-head-pruning|Attention Head Pruning]] — Voita et al. (2019) show most Transformer encoder self-attention heads can be pruned; the surviving heads play specialized interpretable roles (positional, syntactic, rare words)
 
 - [[bfs|Breadth-First Search (BFS)]] — graph traversal algorithm exploring level by level; mechanics, complexity, disconnected graphs, applications, and relevance to LLM reasoning analogies
 
@@ -78,10 +80,10 @@
 - [[residual-connection|Residual Connection]] — skip connections enabling training of very deep networks by creating gradient highways through the network
 - [[scaling-laws|Scaling Laws (Neural Language Models)]] — empirical power-law relationships between language model performance and model size, dataset size, and training compute
 - [[transformer|Transformer]] — architecture using self-attention and positional encodings that superseded RNNs and became the foundation of modern LLMs
-|- [[kv-caching|KV Caching]] — inference optimisation caching Key/Value states in auto-regressive transformers to avoid redundant recomputation
-|- [[knowledge-distillation|Knowledge Distillation]] — model compression via soft target transfer from a large teacher model to a smaller student; introduces temperature-parameterised softmax for "dark knowledge" transfer (Hinton, Vinyals & Dean, 2015)
-|- [[mixture-of-experts|Mixture-of-Experts (MoE)]] — neural architecture scaling capacity via sparse expert activation; decouples parameter count from computational cost; foundational formulation by Shazeer et al. (2017) with noisy top-k gating, 137B parameter models; evolved into Switch Transformer and modern MoE LLMs
-|- [[mamba|Mamba / SSM]]
+- [[kv-caching|KV Caching]] — inference optimisation caching Key/Value states in auto-regressive transformers to avoid redundant recomputation
+- [[knowledge-distillation|Knowledge Distillation]] — model compression via soft target transfer from a large teacher model to a smaller student; introduces temperature-parameterised softmax for "dark knowledge" transfer (Hinton, Vinyals & Dean, 2015)
+- [[mixture-of-experts|Mixture-of-Experts (MoE)]] — neural architecture scaling capacity via sparse expert activation; decouples parameter count from computational cost; foundational formulation by Shazeer et al. (2017) with noisy top-k gating, 137B parameter models; evolved into Switch Transformer and modern MoE LLMs
+- [[mamba|Mamba / SSM]]
 
 - [[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]] — training paradigm replacing language CoT with reasoning directly in the continuous latent space of an LLM; enables emergent BFS-like reasoning
 - [[sparse-transformer|Sparse Transformer]] — OpenAI architecture replacing quadratic attention with O(n√n) sparse factorized patterns; first to demonstrate self-attention on 1M+ token sequences
@@ -142,12 +144,13 @@
 - [Transformers Represent Belief State Geometry in their Residual Stream](raw/papers/2024-05-shai-belief-state-geometry/shai2025belief.md) (Adam Shai et al., NeurIPS 2024)
 - [Training Large Language Models to Reason in a Continuous Latent Space](raw/papers/2024-12-hao-coconut/hao2025coconut.md) — abstract, full PDF, and plain-text at [hao2025coconut.md](raw/papers/2024-12-hao-coconut/hao2025coconut.md) (Shibo Hao et al., FAIR at Meta / UC San Diego, arXiv, COLM 2025)
 - [Generating Long Sequences with Sparse Transformers](raw/papers/2019-04-child-sparse-transformer/1904.10509.pdf) — abstract and details at [child2019sparse](raw/papers/2019-04-child-sparse-transformer/child2019sparse.md) (Rewon Child et al., OpenAI, 2019)
+- [Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned](raw/papers/2019-05-voita-attention-heads/voita2019attention.md) — PDF at [1905.09418.pdf](raw/papers/2019-05-voita-attention-heads/1905.09418.pdf) (Elena Voita et al., Yandex / UvA / Edinburgh, ACL 2019)
 - [Scaling Laws for Neural Language Models](raw/papers/2020-01-kaplan-scaling-laws/kaplan2020scaling.md) — abstract and PDF at [2001.08361.pdf](raw/papers/2020-01-kaplan-scaling-laws/2001.08361.pdf) (Jared Kaplan et al., OpenAI/arXiv, 2020)
 - [Longformer: The Long-Document Transformer](raw/papers/2020-04-beltagy-longformer/beltagy2020longformer.md) (Iz Beltagy et al., Allen Institute for AI, 2020)
 - [Big Bird: Transformers for Longer Sequences](raw/papers/2020-07-zaheer-big-bird/zaheer2020bigbird.md) (Manzil Zaheer et al., Google Research, NeurIPS 2020)
 - [SpargeAttention: Accurate and Training-free Sparse Attention Accelerating Any Model Inference](raw/papers/2025-02-zhang-spargeattention/2502.18137.pdf) — details at [zhang2025spargeattn](raw/papers/2025-02-zhang-spargeattention/zhang2025spargeattn.md) (Jintao Zhang et al., Tsinghua/UC Berkeley, ICML 2025)
 - [Small Language Models are the Future of Agentic AI](raw/papers/2025-06-belcak-slm-agentic-ai/belcak2025slm.md) — PDF at [2506.02153.pdf](raw/papers/2025-06-belcak-slm-agentic-ai/2506.02153.pdf) (Peter Belcak et al., NVIDIA Research, arXiv June 2025)
-- [CoT Harms Performance of Rather Smaller Language Models](raw/papers/2024-10-09-ship-cot-harms/shim2024cotharms.md) — PDF at [shim2024cotharms.pdf](raw/papers/2024-10-09-ship-cot-harms/shim2024cotharms.pdf) (Jihoo Shim, Shin Dong Ho, Jeongwon Kim, IEOM 1st World Congress 2024)
+- [CoT Harms Performance of Rather Smaller Language Models](raw/papers/2024-10-09-ship-cot-harms/shim2024cotharms.md) — PDF at [shim2024cotharms.pdf](raw/papers/2024-10-09-ship-cot-harms/shim2024cotharms.md) (Jihoo Shim, Shin Dong Ho, Jeongwon Kim, IEOM 1st World Congress 2024)
 - [Hallucination Detection with Small Language Models](raw/papers/2025-06-24-cheung-hallucination-detection-slm/2506.22486.pdf) — details at [cheung2025hallucination.md](raw/papers/2025-06-24-cheung-hallucination-detection-slm/cheung2025hallucination.md) (Ming Cheung, dBeta Labs, IEEE ICDE Workshop 2025)
 - [Attention Is All You Need](raw/papers/2017-06-vaswani-attention-is-all-you-need/1706.03762.pdf) — details at [vaswani2017attention](raw/papers/2017-06-vaswani-attention-is-all-you-need/vaswani2017attention.md) (Ashish Vaswani et al., Google Research/NIPS, 2017)
 - [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](raw/papers/2022-05-dao-flashattention/2205.14135.pdf) — details at [dai2022flashattention.md](raw/papers/2022-05-dao-flashattention/dai2022flashattention.md) (Tri Dao et al., Stanford, NeurIPS 2022)
@@ -158,10 +161,10 @@
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](raw/papers/2018-10-devlin-bert/1810.04805.pdf) — details at [devlin2018bert.md](raw/papers/2018-10-devlin-bert/devlin2018bert.md) (Jacob Devlin et al., Google AI Language, NAACL 2019)
 - [Neural Machine Translation of Rare Words with Subword Units](raw/papers/2016-06-sennrich-bpe-subword/1508.07909.pdf) — introduces BPE for subword tokenization; details at [sennrich2016bpe.md](raw/papers/2016-06-sennrich-bpe-subword/sennrich2016bpe.md) (Rico Sennrich, Barry Haddow, Alexandra Birch, ACL 2016)
 - [Distilling the Knowledge in a Neural Network](raw/papers/2015-03-hinton-distillation/hinton2015distill.md) — PDF at [1503.02531.pdf](raw/papers/2015-03-hinton-distillation/1503.02531.pdf) — introduces knowledge distillation via temperature-parameterised softmax, soft target regularisation, and specialist models (Geoffrey Hinton, Oriol Vinyals, Jeff Dean, Google, NIPS 2014 Workshop, 2015)
-|- [Gaussian Error Linear Units (GELUs)](raw/papers/2016-06-hendrycks-gelu/hendrycks2016gelu.md) — PDF at [1606.08415.pdf](raw/papers/2016-06-hendrycks-gelu/1606.08415.pdf) — introduces GELU activation function xΦ(x) with probabilistic motivation from stochastic regularizer expectation; default activation in BERT and GPT; also introduces SiLU (Dan Hendrycks, Kevin Gimpel, arXiv 2016)
-|- [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](raw/papers/2017-01-shazeer-sparsely-gated-moe/shazeer2017moe.md) — PDF at [1701.06538.pdf](raw/papers/2017-01-shazeer-sparsely-gated-moe/1701.06538.pdf) — introduces the Sparsely-Gated MoE layer with noisy top-k gating, importance/load losses, and 137B parameter models; foundational paper for all modern MoE architectures (Noam Shazeer et al., Google Brain, ICLR 2017)
-|- [Okapi at TREC-3](raw/papers/1995-01-robertson-okapi-trec3/okapi_trec3.pdf)
-|- [SentencePiece: A simple and language independent subword tokenizer and detokenizer for Neural Text Processing](raw/papers/2018-08-kudo-sentencepiece/kudo2018sentencepiece.md) (Taku Kudo, John Richardson, Google, EMNLP 2018)
+- [Gaussian Error Linear Units (GELUs)](raw/papers/2016-06-hendrycks-gelu/hendrycks2016gelu.md) — PDF at [1606.08415.pdf](raw/papers/2016-06-hendrycks-gelu/1606.08415.pdf) — introduces GELU activation function xΦ(x) with probabilistic motivation from stochastic regularizer expectation; default activation in BERT and GPT; also introduces SiLU (Dan Hendrycks, Kevin Gimpel, arXiv 2016)
+- [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](raw/papers/2017-01-shazeer-sparsely-gated-moe/shazeer2017moe.md) — PDF at [1701.06538.pdf](raw/papers/2017-01-shazeer-sparsely-gated-moe/1701.06538.pdf) — introduces the Sparsely-Gated MoE layer with noisy top-k gating, importance/load losses, and 137B parameter models; foundational paper for all modern MoE architectures (Noam Shazeer et al., Google Brain, ICLR 2017)
+- [Okapi at TREC-3](raw/papers/1995-01-robertson-okapi-trec3/okapi_trec3.pdf)
+- [SentencePiece: A simple and language independent subword tokenizer and detokenizer for Neural Text Processing](raw/papers/2018-08-kudo-sentencepiece/kudo2018sentencepiece.md) (Taku Kudo, John Richardson, Google, EMNLP 2018)
 
 ## Comparisons
 
