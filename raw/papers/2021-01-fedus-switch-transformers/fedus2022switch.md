@@ -8,22 +8,10 @@ authors:
 source_url: https://arxiv.org/abs/2101.03961
 ingested: 2026-06-16
 ---
-
 # Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity
 
-**Authors:** William Fedus, Barret Zoph, Noam Shazeer
-**Affiliation:** Google, Mountain View, CA
-**Venue:** Journal of Machine Learning Research 23 (2022) 1-40
-**Submitted:** August 2021; Revised March 2022; Published April 2022
-**Equal contribution**
+**PDF:** [2101.03961.pdf](2101.03961.pdf)
 
 ## Abstract
 
 In deep learning, models typically reuse the same parameters for all inputs. Mixture of Experts (MoE) models defy this and instead select different parameters for each incoming example. The result is a sparsely-activated model—with an outrageous number of parameters—but a constant computational cost. However, despite several notable successes of MoE, widespread adoption has been hindered by complexity, communication costs, and training instability. We address these with the introduction of the Switch Transformer. We simplify the MoE routing algorithm and design intuitive improved models with reduced communication and computational costs. Our proposed training techniques mitigate the instabilities, and we show large sparse models may be trained, for the first time, with lower precision (bfloat16) formats. We design models based off T5-Base and T5-Large (Raffel et al., 2019) to obtain up to 7x increases in pre-training speed with the same computational resources. These improvements extend into multilingual settings where we measure gains over the mT5-Base version across all 101 languages. Finally, we advance the current scale of language models by pre-training up to trillion parameter models on the "Colossal Clean Crawled Corpus", and achieve a 4x speedup over the T5-XXL model.
-
-## Links
-
-- [PDF](2101.03961.pdf)
-- [arXiv](https://arxiv.org/abs/2101.03961)
-- [JMLR](https://jmlr.org/papers/v23/21-0998.html)
-- Code: [t5x](https://github.com/google-research/t5x), [mesh-tensorflow](https://github.com/tensorflow/mesh/blob/master/mesh_tensorflow/transformer/moe.py)

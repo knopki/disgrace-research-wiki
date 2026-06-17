@@ -21,13 +21,9 @@ authors:
   - Christopher Olah
 date: 2022-01-01
 ---
-
 # Toy Models of Superposition
 
-Note: Original HTML in [anthropic2022toy.html](raw/papers/2022-09-elhage-toy-models-superposition/anthropic2022toy.html).
-
-Published Sept 14, 2022 by Anthropic's Transformer Circuits Thread.
-Authors: Nelson Elhage, Tristan Hume, Catherine Olsson, Nicholas Schiefer, Tom Henighan, Shauna Kravec, Zac Hatfield-Dodds, Robert Lasenby, Dawn Drain, Carol Chen, Roger Grosse, Sam McCandlish, Jared Kaplan, Dario Amodei, Martin Wattenberg, Christopher Olah.
+**Full text**: [anthropic2022toy.html](raw/papers/2022-09-elhage-toy-models-superposition/anthropic2022toy.html)
 
 ## Abstract
 
@@ -40,13 +36,3 @@ Not only can models store additional features in superposition by tolerating som
 For interpretability researchers, our main contribution is providing a direct demonstration that superposition occurs in artificial neural networks given a relatively natural setup, suggesting this may also occur in practice. That is, we show a case where interpreting neural networks as having sparse structure in superposition isn't just a useful post-hoc interpretation, but actually the "ground truth" of a model. We offer a theory of when and why this occurs, revealing a phase diagram for superposition. This explains why neurons are sometimes "monosemantic" responding to a single feature, and sometimes "polysemantic" responding to many unrelated features. We also discover that, at least in our toy model, superposition exhibits complex geometric structure.
 
 But our results may also be of broader interest. We find preliminary evidence that superposition may be linked to adversarial examples and grokking, and might also suggest a theory for the performance of mixture of experts models. More broadly, the toy model we investigate has unexpectedly rich structure, exhibiting phase changes, a geometric structure based on uniform polytopes, "energy level"-like jumps during training, and a phenomenon which is qualitatively similar to the fractional quantum Hall effect in physics, among other striking phenomena.
-
-### Key Results
-
-From our toy models, we are able to demonstrate that:
-
-1. **Superposition is a real, observed phenomenon.**
-2. **Both monosemantic and polysemantic neurons can form.**
-3. **At least some kinds of computation can be performed in superposition.**
-4. **Whether features are stored in superposition is governed by a phase change.**
-5. **Superposition organizes features into geometric structures** such as digons, triangles, pentagons, and tetrahedrons.

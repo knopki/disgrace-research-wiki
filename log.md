@@ -619,3 +619,12 @@
 - Updated concept: byte-pair-encoding (added wikilinks to sentencepiece in intro, Variants table rows for Unigram LM and SentencePiece, bumped updated date)
 - Cross-links: sentencepiece ↔ byte-pair-encoding, transformer, bert, distributional-semantics
 - Updated index.md: added concept entry and raw paper source, bumped total pages to 59
+
+## [2026-06-17] update | paper raw sources unified format
+- Rewrote all 26 raw/papers/*.md to a single uniform template:
+  `frontmatter → blank → # Title → blank → **PDF:** link → blank → ## Abstract → blank → abstract text`
+- Added missing h1 title headings from frontmatter `title:` field where absent
+- Added missing **PDF:** links where PDF file existed in directory
+- Converted wikilink `[[...pdf]]` references to proper `[...](...)` markdown links
+- Stripped all extra sections (h2/h3) after Abstract — no conspectus, no summaries
+- Exception: anthropic2022toy (HTML article, no PDF)

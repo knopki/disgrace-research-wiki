@@ -9,6 +9,7 @@ venue: EMNLP 2018 (demo paper)
 description: SentencePiece is a language-independent subword tokenizer and detokenizer for neural text processing. It trains subword models directly from raw sentences without pre-tokenization, supporting both byte-pair-encoding (BPE) and unigram language model segmentation. Provides open-source C++ and Python implementations under Apache 2.0 license.
 ingested: 2026-06-17
 ---
+# SentencePiece — A simple and language independent subword tokenizer and detokenizer for Neural Text Processing
 
 **PDF:** [1808.06226.pdf](1808.06226.pdf)
 

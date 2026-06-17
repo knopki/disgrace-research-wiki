@@ -27,8 +27,9 @@ date: 2022-03-04
 venue: arXiv preprint; NeurIPS 2022
 ingested: 2026-06-16
 ---
+# Training language models to follow instructions with human feedback
 
-*Primary authors: Long Ouyang, Jeff Wu, Xu Jiang, Diogo Almeida, Pamela Mishkin, Carroll L. Wainwright, Jan Leike, Ryan Lowe, Paul Christiano. Joint project of the OpenAI Alignment team. †Work done while at OpenAI. Current affiliations: Amanda Askell — Anthropic; Paul Christiano — Alignment Research Center.*
+**PDF:** [2203.02155.pdf](2203.02155.pdf)
 
 ## Abstract
 
