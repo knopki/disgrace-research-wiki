@@ -79,6 +79,7 @@ As heads are removed, surviving heads can take on multiple functions: positional
 ## Cross-Links
 
 - [[transformer|Transformer]] — the architecture being analysed; multi-head attention is its key component
+- [[bert-attention-analysis|BERT Attention Analysis]] — Clark et al. (2019), contemporaneous work showing BERT's attention heads also specialize to syntactic relations, confirming Voita et al.'s pattern in a pre-trained LM setting
 - [[kv-caching|KV Caching]] — another inference optimisation that exploits Transformer structure, orthogonal to head pruning
 - [[sparse-transformer|Sparse Transformer]] — reduces per-step attention complexity; head pruning removes entire heads, sparse attention sparsifies within a head
 - [[knowledge-distillation|Knowledge Distillation]] — an alternative model compression approach; pruning complements distillation but the paper notes pruned architectures cannot be retrained from scratch to the same quality

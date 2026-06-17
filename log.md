@@ -629,7 +629,20 @@
 - Stripped all extra sections (h2/h3) after Abstract — no conspectus, no summaries
 - Exception: anthropic2022toy (HTML article, no PDF)
 
-## [2026-06-17] ingest | Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned (Voita et al., ACL 2019)
+## [2026-06-17] ingest | What Does BERT Look At? An Analysis of BERT's Attention (Clark et al., 2019)
+
+- Raw source: `raw/papers/2019-06-clark-bert-attention/` (clark2019bertattention.md + 1906.04341.pdf)
+- Source: https://arxiv.org/abs/1906.04341
+- Authors: Kevin Clark, Urvashi Khandelwal, Omer Levy, Christopher D. Manning (Stanford / Facebook AI Research)
+- Venue: BlackBoxNLP 2019
+- Content: Systematic analysis of BERT-base's 144 attention heads. Identifies three surface patterns (positional, delimiter-attending, broad-attending). Shows [SEP] attention as learned no-op via gradient analysis. Maps individual heads to specific dependency relations with high accuracy (det 94%, dobj 87%, pobj 76%, poss 81%, auxpass 83%). Head 5-4 achieves 65% coreference antecedent selection. Proposes attention-based probing classifiers: Attn+GloVe achieves 77 UAS on dependency parsing. Heads cluster by layer (same-layer heads have similar attention distributions).
+- Created concept: bert-attention-analysis (surface patterns, syntactic head specialization table, coreference results, probing classifiers, head clustering, relationship to Voita et al. attention-head-pruning)
+- Updated concept: bert (added Attention Analysis section with wikilink to bert-attention-analysis)
+- Updated concept: attention-head-pruning (added cross-link to bert-attention-analysis in Cross-Links)
+- Cross-links: bert-attention-analysis ↔ bert, attention-head-pruning, transformer, positional-encoding
+- Updated index.md: added concept entry + raw paper source, bumped total pages to 61
+
+
 
 - Raw source: `raw/papers/2019-05-voita-attention-heads/` (voita2019attention.md + 1905.09418.pdf)
 - Source: https://arxiv.org/abs/1905.09418

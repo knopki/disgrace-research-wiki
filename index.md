@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-17 | Total pages: 60
+> Last updated: 2026-06-17 | Total pages: 61
 
 ## Entities
 
@@ -24,6 +24,7 @@
 
 - [[attention-head-pruning|Attention Head Pruning]] — Voita et al. (2019) show most Transformer encoder self-attention heads can be pruned; the surviving heads play specialized interpretable roles (positional, syntactic, rare words)
 
+- [[bert-attention-analysis|BERT Attention Analysis]] — Clark et al. (2019) systematic analysis of BERT's 144 attention heads: syntactic specialization (dobj 87%, det 94%, pobj 76%), [SEP] as learned no-op, coreference in head 5-4 (65%), attention probing achieves 77 UAS; heads cluster by layer
 - [[bfs|Breadth-First Search (BFS)]] — graph traversal algorithm exploring level by level; mechanics, complexity, disconnected graphs, applications, and relevance to LLM reasoning analogies
 
 - [[perceptron|Perceptron]] — first neural network architecture; linear binary classifier invented by Rosenblatt that learns through trial and error
@@ -145,6 +146,7 @@
 - [Training Large Language Models to Reason in a Continuous Latent Space](raw/papers/2024-12-hao-coconut/hao2025coconut.md) — abstract, full PDF, and plain-text at [hao2025coconut.md](raw/papers/2024-12-hao-coconut/hao2025coconut.md) (Shibo Hao et al., FAIR at Meta / UC San Diego, arXiv, COLM 2025)
 - [Generating Long Sequences with Sparse Transformers](raw/papers/2019-04-child-sparse-transformer/1904.10509.pdf) — abstract and details at [child2019sparse](raw/papers/2019-04-child-sparse-transformer/child2019sparse.md) (Rewon Child et al., OpenAI, 2019)
 - [Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned](raw/papers/2019-05-voita-attention-heads/voita2019attention.md) — PDF at [1905.09418.pdf](raw/papers/2019-05-voita-attention-heads/1905.09418.pdf) (Elena Voita et al., Yandex / UvA / Edinburgh, ACL 2019)
+- [What Does BERT Look At? An Analysis of BERT's Attention](raw/papers/2019-06-clark-bert-attention/clark2019bertattention.md) — PDF at [1906.04341.pdf](raw/papers/2019-06-clark-bert-attention/1906.04341.pdf) (Kevin Clark et al., Stanford / Facebook AI, BlackBoxNLP 2019)
 - [Scaling Laws for Neural Language Models](raw/papers/2020-01-kaplan-scaling-laws/kaplan2020scaling.md) — abstract and PDF at [2001.08361.pdf](raw/papers/2020-01-kaplan-scaling-laws/2001.08361.pdf) (Jared Kaplan et al., OpenAI/arXiv, 2020)
 - [Longformer: The Long-Document Transformer](raw/papers/2020-04-beltagy-longformer/beltagy2020longformer.md) (Iz Beltagy et al., Allen Institute for AI, 2020)
 - [Big Bird: Transformers for Longer Sequences](raw/papers/2020-07-zaheer-big-bird/zaheer2020bigbird.md) (Manzil Zaheer et al., Google Research, NeurIPS 2020)

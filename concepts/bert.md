@@ -156,6 +156,10 @@ Full strategy (80% [MASK], 10% random, 10% unchanged) beats:
 - MLM pre-training was adapted by RoBERTa, ALBERT, DistilBERT, ELECTRA, and encoder-decoder models (T5, BART)
 - The pre-train/fine-tune paradigm showed that "pre-trained representations reduce the need for many heavily-engineered task-specific architectures" — one of the paper's stated contributions
 
+## Attention Analysis (Clark et al., 2019)
+
+Clark, Khandelwal, Levy & Manning systematically analysed BERT-base's 144 attention heads, identifying that certain heads specialize to specific syntactic relations without any explicit supervision. Key findings include heads that track direct objects of verbs (86.8%), determiners of nouns (94.3%), and objects of prepositions (76.3%). Head 5-4 correctly links coreferent mentions to their antecedents at 65.1% accuracy. An attention-based probing classifier achieves 77 UAS on dependency parsing — rivaling probing classifiers trained on BERT's hidden states, demonstrating that syntactic information is present in the attention maps, not just in the vector representations. See [[bert-attention-analysis|BERT Attention Analysis]] for the full treatment.
+
 ## Limitations
 
 - **Pre-train/fine-tune gap:** The `[MASK]` token appears during pre-training but never during fine-tuning (partially mitigated by 80/10/10 strategy)
