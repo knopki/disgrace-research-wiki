@@ -575,3 +575,14 @@
 - Created entities: stephen-robertson (RSJ weight, BM25, Okapi, probabilistic IR, PRP), karen-sparck-jones (IDF, RSJ weight, probabilistic IR, academic legacy)
 - Cross-links: bm25 ↔ stephen-robertson, karen-sparck-jones, retrieval-augmented-generation, knowledge-graph, byte-pair-encoding
 - Updated index.md: added entities, concept, raw paper source
+
+## [2026-06-17] ingest | Distilling the Knowledge in a Neural Network (Hinton, Vinyals & Dean, 2015)
+
+- Raw source: raw/papers/2015-03-hinton-distillation/ (hinton2015distill.md + PDF)
+- Source: https://arxiv.org/abs/1503.02531
+- Authors: Geoffrey Hinton, Oriol Vinyals, Jeff Dean (Google Inc.)
+- Created entity: geoffrey-hinton (backpropagation co-popularizer, knowledge distillation inventor, dropout co-author, Turing Award 2018, Nobel Prize in Physics 2024)
+- Created concept: knowledge-distillation (temperature-based softmax, dark knowledge, soft targets as regularizers, specialist models, ensemble compression)
+- Cross-links: knowledge-distillation ↔ geoffrey-hinton, backpropagation, switch-transformer, rlhf
+- Updated TODO.md: removed both duplicate entries for this paper
+- Updated index.md: added entity, concept, raw paper source, bumped total pages to 56
