@@ -666,3 +666,17 @@
 |- Updated concept: transformer (added cross-link to multi-query-attention in Cross-Links)
 |- Cross-links: multi-query-attention ↔ kv-caching, transformer, attention-head-pruning, flash-attention, sparse-transformer
 |- Updated index.md: added concept entry + raw paper source, bumped total pages to 62
+
+## [2026-06-17] ingest | GLU Variants Improve Transformer (Shazeer, 2020)
+
+- Raw source: `raw/papers/2020-02-shazeer-glu-variants/` (shazeer2020gluvariants.md + 2002.05202.pdf)
+- Source: https://arxiv.org/abs/2002.05202
+- Author: Noam Shazeer (Google)
+- Venue: arXiv preprint (cs.LG), February 2020
+- Content: Proposes applying Gated Linear Unit variants (GLU, Bilinear, ReGLU, GEGLU, SwiGLU) to the Transformer feed-forward sublayer. GLU variants use 3 weight matrices (vs 2 for standard FFN), with hidden size reduced by 2/3 to match parameters. GEGLU and SwiGLU achieve best pre-training perplexity (1.633 and 1.636 vs ReLU baseline 1.677 at 524K steps). GLU variants dominate downstream GLUE/SuperGLUE/SQuAD. SwiGLU became the default FFN activation in virtually all post-2022 LLMs (LLaMA, PaLM, Gemma, Mistral, Qwen).
+- Created concept: glu-variants (GLU definitions, architectural difference, parameter-matched setup, perplexity/results tables, impact section, limitations)
+- Created entity: noam-shazeer (Google researcher; co-inventor of Transformer, MoE, MQA, GLU variants, Switch Transformer, Adafactor)
+- Updated concept: transformer (added cross-link to glu-variants in Cross-Links)
+- Updated concept: gelu (added cross-link to glu-variants in Cross-Links)
+- Cross-links: glu-variants ↔ transformer, gelu, multi-query-attention, switch-transformer, mixture-of-experts
+- Updated index.md: added concept entry + entity entry + raw paper source, bumped total pages to 64

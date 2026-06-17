@@ -82,3 +82,4 @@ The GELU activation's smooth gradient flow was instrumental in enabling stable t
 - [[transformer|Transformer]] — the architecture whose feed-forward networks GELU was adopted into
 - [[residual-connection|Residual Connection]] — complementary architectural component for stable training of deep models
 - [[backpropagation|Backpropagation]] — the training algorithm whose gradient flow benefits from GELU's smooth curvature
+- [[glu-variants|GLU Variants (GEGLU, SwiGLU, ReGLU)]] — GEGLU uses GELU as the gate activation in a gated FFN variant
