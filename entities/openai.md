@@ -22,6 +22,7 @@ American AI research organization. Founded in 2015 as a nonprofit, converted to 
 | [Scaling Laws for Neural Language Models](raw/papers/2020-01-kaplan-scaling-laws/kaplan2020scaling.md) | 2020 | First comprehensive scaling laws for LMs (Kaplan et al.) |
 | [Training language models to follow instructions with human feedback](raw/papers/2022-03-ouyang-instructgpt/ouyang2022instructgpt.md) | 2022 | InstructGPT — first large-scale [[rlhf|RLHF]] application for instruction-following |
 | [Generating Long Sequences with Sparse Transformers](raw/papers/2019-04-child-sparse-transformer/child2019sparse.md) | 2019 | Sparse attention reducing O(n²) to O(n√n) |
+| [Language Models are Few-Shot Learners](raw/papers/2020-05-brown-gpt3/brown2020gpt3.md) | 2020 | GPT-3 — 175B parameter model demonstrating [[in-context-learning|in-context learning]] at scale |
 | [Attention Is All You Need](raw/papers/2017-06-vaswani-attention-is-all-you-need/vaswani2017attention.md) | 2017 | Transformer architecture (Google Research/NIPS, several co-authors later joined OpenAI) |
 
 ## Key People in This Wiki
@@ -39,6 +40,7 @@ American AI research organization. Founded in 2015 as a nonprofit, converted to 
 
 ## Related
 
+- [[gpt-3|GPT-3]] — the 175B model that demonstrated in-context learning at scale
 - [[microsoft|Microsoft]] — major investor (27% stake), cloud infrastructure partner
 - [[anthropic|Anthropic]] — competitor founded by former OpenAI researchers
 - [[rlhf|RLHF]] — technique pioneered at scale by OpenAI for aligning LMs with human intent

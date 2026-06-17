@@ -32,7 +32,7 @@ AI researcher and entrepreneur. Born 1983 in San Francisco. Co-founder and CEO o
 
 Left OpenAI in 2021 over directional differences. Co-founded Anthropic with sister Daniela Amodei and other former senior OpenAI staff.
 
-As VP of Research at [[openai|OpenAI]] (2016–2021), Amodei oversaw the period during which the InstructGPT project (the first large-scale application of [[rlhf|RLHF]] to language model alignment by Ouyang et al., 2022) was conducted.
+As VP of Research at [[openai|OpenAI]] (2016–2021), Amodei oversaw the period during which GPT-3 [(Brown et al., 2020)](raw/papers/2020-05-brown-gpt3/brown2020gpt3.md) — the 175B parameter language model that demonstrated [[in-context-learning|in-context learning]] at scale — and the InstructGPT project (the first large-scale application of [[rlhf|RLHF]] to language model alignment by Ouyang et al., 2022) were conducted.
 
 In November 2023, the OpenAI board approached Amodei to replace Sam Altman as CEO and potentially merge Anthropic with OpenAI — he declined.
 

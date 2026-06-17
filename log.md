@@ -691,3 +691,18 @@
 - Updated concept: retrieval-augmented-generation (added Original Paper section with architecture, two formulations, results, retrieval collapse, legacy; added paper as second source to frontmatter)
 - Cross-links: retrieval-augmented-generation ↔ bm25, bert, word-embeddings, distributional-semantics, grace, hallucination-detection-slm, mamba (existing cross-links deepened; DPR + BART as plain-text references)
 - Updated index.md: updated concept entry description, added raw paper source under Papers
+
+## [2026-06-17] ingest | Language Models are Few-Shot Learners (GPT-3, Brown et al., OpenAI, 2020)
+- Raw source: `raw/papers/2020-05-brown-gpt3/` (2005.14165.pdf + index.md)
+- Source: arXiv:2005.14165 — "Language Models are Few-Shot Learners"
+- Authors: Tom B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya Ramesh, Daniel M. Ziegler, Jeffrey Wu, Clemens Winter, Christopher Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, Dario Amodei (OpenAI)
+- Venue: arXiv preprint v4, July 2020
+- Content: Introduces GPT-3 (175B parameters, 10x larger than any previous non-sparse LM). Systematically defines and evaluates in-context learning across zero-shot, one-shot, and few-shot settings. Demonstrates scaling LMs dramatically improves task-agnostic few-shot performance — GPT-3 achieves SOTA on LAMBADA (86.4%), TriviaQA closed-book (71.2%), matches fine-tuned models on SuperGLUE (71.8 avg). Shows humans struggle to distinguish GPT-3 news articles (52% accuracy). Comprehensive data contamination analysis and broader impacts discussion.
+- Created concept: gpt-3 (architecture with 8 model sizes table, training data mix, in-context learning paradigm, key results, weaknesses, contamination analysis, limitations, broader impacts)
+- Created concept: in-context-learning (zero/one/few-shot spectrum, meta-learning framing, scaling trends, key empirical findings, relationship to CoT/Coconut/RLHF/FLEX/GRACE)
+- Updated entity: openai (added GPT-3 paper to Key Papers table, added cross-link to gpt-3)
+- Updated concept: scaling-laws (added GPT-3 Validation section — confirmed Kaplan power-law extends 2 more orders of magnitude)
+- Updated concept: transformer (added cross-link to gpt-3)
+- Updated entity: dario-amodei (added GPT-3 co-authorship to Career description)
+- Cross-links: gpt-3 ↔ in-context-learning, openai, scaling-laws, transformer, rlhf, chain-of-thought, sparse-transformer, dario-amodei, gelu; in-context-learning ↔ gpt-3, scaling-laws, chain-of-thought, chain-of-continuous-thought, rlhf, flex-prompting, grace, v4a-diff-format
+- Updated index.md: added gpt-3 and in-context-learning concepts, added raw paper source under Papers, bumped total pages to 66

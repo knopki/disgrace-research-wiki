@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-17 | Total pages: 64
+> Last updated: 2026-06-17 | Total pages: 66
 
 ## Entities
 
@@ -34,13 +34,14 @@
 - [[innate-parallelism|Innate Parallelism]] — LLMs structurally generate parallel code by architectural design
 - [[semantic-fractal|Semantic Fractal]] — how LLMs represent code as branching semantic vectors, not linear instructions
 - [[human-sequential-bottleneck|Human Sequential Bottleneck]] — human cognition is linear, making parallel programming disproportionately hard
+- [[in-context-learning|In-Context Learning]] — paradigm where language models adapt to tasks purely through conditioning context without gradient updates; systematically defined and studied at scale by GPT-3 across zero-shot, one-shot, and few-shot settings; meta-learning framing where pre-training is the outer loop and in-context conditioning is the inner loop
 - [[vibe-coding|Vibe Coding]] — programmer shifts from implementation to directing intent, delegating parallel logic to AI
 - [[ai-resource-leveling|AI Resource Leveling]] — AI performs resource leveling with understanding of project technology, not just load balancing
 - [[skill-scheduling|Skill Scheduling]] — AI-driven flexible qualification management for project staffing
 - [[semantic-interference|Semantic Interference]] — contradictory prompt instructions cause LLMs to produce incoherent "semantic mush"
 - [[distributional-semantics|Distributional Semantics]] — Firth's principle that word meaning is entirely determined by context; validated by LLM embeddings
 - [[word-embeddings|Word Embeddings]] — how LLMs represent concepts as vectors in high-dimensional space, superposition catastrophe
-|- [[retrieval-augmented-generation|Retrieval-Augmented Generation (RAG)]] — architectural pattern grounding LLM responses in externally retrieved knowledge; introduced by Lewis et al. (FAIR, NeurIPS 2020) as a hybrid parametric (BART) + non-parametric (DPR index) memory architecture with two marginalisation formulations (RAG-Sequence, RAG-Token)
+- [[retrieval-augmented-generation|Retrieval-Augmented Generation (RAG)]] — architectural pattern grounding LLM responses in externally retrieved knowledge; introduced by Lewis et al. (FAIR, NeurIPS 2020) as a hybrid parametric (BART) + non-parametric (DPR index) memory architecture with two marginalisation formulations (RAG-Sequence, RAG-Token)
 - [[rlhf|RLHF (Reinforcement Learning from Human Feedback)]] — technique for fine-tuning language models with human preferences as reward signal; InstructGPT demonstrated 1.3B model outperforming 175B GPT-3
 - [[knowledge-graph|Knowledge Graph]] — structured entity-relationship knowledge base for grounding AI answers
 - [[corpus-linguistics|Corpus Linguistics]] — branch of linguistics building annotated text corpora; foundational to NLP training data and RAG knowledge bases
@@ -50,8 +51,8 @@
 - [[grace|GRACE (Graph-RAG Anchored Code Engineering)]] — framework for deterministic LLM code generation in large contexts; dual-purpose semantic markup serving both generative models (top-down synthesis template) and RAG agents (indexed navigation map); ten principles including Intent-First Architecture, Observable AI Belief State, and Governed Autonomy
 
 - [[flex-prompting|FLEX (Few-shot Logit-Enabled XML Prompting)]] — methodology for reliable SLM control using structured XML prompts, few-shot examples, and logit-based verification; validated on Qwen3-0.6B for agentic tool selection
+- [[gpt-3|GPT-3]] — 175B parameter autoregressive language model; demonstrated that scaling up LMs dramatically improves task-agnostic [[in-context-learning|in-context learning]] performance; systematic evaluation across zero/one/few-shot settings on dozens of NLP benchmarks; first systematic data contamination analysis for large-scale LMs
 - [[glu-variants|GLU Variants (GEGLU, SwiGLU, ReGLU)]] — gated feed-forward variants replacing the Transformer FFN activation; GEGLU and SwiGLU achieve best perplexity; SwiGLU became the default FFN activation in post-2022 LLMs (LLaMA, PaLM, Gemma, Mistral, Qwen)
-
 
 
 
@@ -86,9 +87,9 @@
 - [[residual-connection|Residual Connection]] — skip connections enabling training of very deep networks by creating gradient highways through the network
 - [[scaling-laws|Scaling Laws (Neural Language Models)]] — empirical power-law relationships between language model performance and model size, dataset size, and training compute
 - [[transformer|Transformer]] — architecture using self-attention and positional encodings that superseded RNNs and became the foundation of modern LLMs
-|- [[kv-caching|KV Caching]] — inference optimisation caching Key/Value states in auto-regressive transformers to avoid redundant recomputation
-|- [[multi-query-attention|Multi-Query Attention (MQA)]] — attention variant sharing keys and values across all heads to reduce KV cache size and memory bandwidth; Shazeer (2019) achieves 12× decoder speedup
-|- [[mixture-of-experts|Mixture-of-Experts (MoE)]] — neural architecture scaling capacity via sparse expert activation
+- [[kv-caching|KV Caching]] — inference optimisation caching Key/Value states in auto-regressive transformers to avoid redundant recomputation
+- [[multi-query-attention|Multi-Query Attention (MQA)]] — attention variant sharing keys and values across all heads to reduce KV cache size and memory bandwidth; Shazeer (2019) achieves 12× decoder speedup
+- [[mixture-of-experts|Mixture-of-Experts (MoE)]] — neural architecture scaling capacity via sparse expert activation
 - [[mixture-of-experts|Mixture-of-Experts (MoE)]] — neural architecture scaling capacity via sparse expert activation; decouples parameter count from computational cost; foundational formulation by Shazeer et al. (2017) with noisy top-k gating, 137B parameter models; evolved into Switch Transformer and modern MoE LLMs
 - [[mamba|Mamba / SSM]]
 
@@ -157,6 +158,7 @@
 - [GLU Variants Improve Transformer](raw/papers/2020-02-shazeer-glu-variants/shazeer2020gluvariants.md) — PDF at [2002.05202.pdf](raw/papers/2020-02-shazeer-glu-variants/2002.05202.pdf) — introduces GLU variants (GEGLU, SwiGLU, ReGLU) for Transformer FFN layers; GEGLU and SwiGLU achieve best perplexity; SwiGLU became the default activation in post-2022 LLMs (Noam Shazeer, Google, arXiv:2002.05202, February 2020)
 
 - [Longformer: The Long-Document Transformer](raw/papers/2020-04-beltagy-longformer/beltagy2020longformer.md) (Iz Beltagy et al., Allen Institute for AI, 2020)
+- [Language Models are Few-Shot Learners](raw/papers/2020-05-brown-gpt3/brown2020gpt3.md) — PDF at [2005.14165.pdf](raw/papers/2020-05-brown-gpt3/2005.14165.pdf) — introduces GPT-3 (175B) and the systematic study of [[in-context-learning|in-context learning]] across zero/one/few-shot settings; demonstrates scaling LMs improves task-agnostic performance; includes data contamination analysis and broader impacts discussion (Brown et al., OpenAI, NeurIPS 2020)
 - [Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks](raw/papers/2020-05-lewis-rag/lewis2020rag.md) — PDF at [2005.11401.pdf](raw/papers/2020-05-lewis-rag/2005.11401.pdf) — introduces RAG combining BART-large (parametric) with DPR Wikipedia index (non-parametric); two formulations (RAG-Sequence, RAG-Token); SOTA on three open-domain QA benchmarks (Lewis et al., FAIR / UCL / NYU, NeurIPS 2020)
 - [Big Bird: Transformers for Longer Sequences](raw/papers/2020-07-zaheer-big-bird/zaheer2020bigbird.md) (Manzil Zaheer et al., Google Research, NeurIPS 2020)
 - [SpargeAttention: Accurate and Training-free Sparse Attention Accelerating Any Model Inference](raw/papers/2025-02-zhang-spargeattention/2502.18137.pdf) — details at [zhang2025spargeattn](raw/papers/2025-02-zhang-spargeattention/zhang2025spargeattn.md) (Jintao Zhang et al., Tsinghua/UC Berkeley, ICML 2025)

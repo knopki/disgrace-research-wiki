@@ -47,6 +47,12 @@ The cross-entropy loss L follows smooth power laws spanning 7+ orders of magnitu
 
 - B_crit(L) = B_*/L^(1/α_B), where α_B ≈ 0.21, B_* ≈ 2 × 10^8 tokens
 
+## GPT-3 Validation
+
+GPT-3 (175B) confirmed the Kaplan scaling trends extend smoothly for two more orders of magnitude. Training curves for 8 model sizes (125M to 175B) showed validation loss following a power-law with only slight departure from the predicted curve ([Brown et al., 2020](raw/papers/2020-05-brown-gpt3/brown2020gpt3.md)).
+
+**Fig 3.1 of the GPT-3 paper** shows cross-entropy validation loss vs training compute following the power-law trend from Kaplan et al. across the full range from 100K to 175B parameters. The GPT-3 175B point aligns closely with the extrapolated curve, confirming the scaling law holds at unprecedented model sizes. This was the largest empirical validation of the Kaplan scaling laws before Chinchilla's refinement.
+
 ## Chinchilla Scaling Laws
 
 Refined by Hoffmann et al. at DeepMind (2022) — the "Chinchilla scaling laws" — which found that most existing LLMs (including GPT-3) were undertrained, and that model size and training data should scale in equal proportion ([Hoffmann et al., 2022](raw/papers/2022-03-hoffmann-chinchilla/hoffmann2022chinchilla.md)).
