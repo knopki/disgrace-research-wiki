@@ -586,3 +586,13 @@
 - Cross-links: knowledge-distillation ↔ geoffrey-hinton, backpropagation, switch-transformer, rlhf
 - Updated TODO.md: removed both duplicate entries for this paper
 - Updated index.md: added entity, concept, raw paper source, bumped total pages to 56
+
+## [2026-06-17] ingest | Gaussian Error Linear Units (GELUs) (Hendrycks & Gimpel, 2016)
+
+- Raw source: raw/papers/2016-06-hendrycks-gelu/ (hendrycks2016gelu.md + PDF 1606.08415.pdf)
+- Source: https://arxiv.org/abs/1606.08415
+- Authors: Dan Hendrycks, Kevin Gimpel
+- Created concept: gelu (activation function xΦ(x), probabilistic interpretation as stochastic regularizer expectation, smooth curvature, empirical gains over ReLU/ELU across vision, NLP, speech; SiLU/swish origin)
+- Updated concept: bert (added GELU paper as source, wikilinked GELU activation in architecture section)
+- Cross-links: gelu ↔ bert, transformer, residual-connection, backpropagation
+- Updated index.md: added concept, raw paper source, bumped total pages to 57

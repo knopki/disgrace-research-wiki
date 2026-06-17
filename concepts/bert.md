@@ -10,6 +10,7 @@ tags:
   - fine-tuning
 sources:
   - "[BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](raw/papers/2018-10-devlin-bert/devlin2018bert.md)"
+  - "[Gaussian Error Linear Units (GELUs)](raw/papers/2016-06-hendrycks-gelu/hendrycks2016gelu.md)"
 ---
 
 # BERT
@@ -26,7 +27,7 @@ BERT is an encoder-only Transformer — it processes input bidirectionally, unli
 | BERT-Large | 24 | 1024 | 16 | 4096 | 340M |
 
 Key architectural choices:
-- **GELU activation** — smoother gradient flow than ReLU
+- **[[gelu|GELU]] activation** — smoother gradient flow than ReLU
 - **Learned positional embeddings** (vs sinusoidal in the original Transformer)
 - **WordPiece tokenization** (a [[byte-pair-encoding|BPE variant]]) with 30K vocabulary
 - [[residual-connection|Residual connections]] and layer normalization on every sub-layer

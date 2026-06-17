@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-17 | Total pages: 56
+> Last updated: 2026-06-17 | Total pages: 57
 
 ## Entities
 
@@ -45,6 +45,9 @@
 - [[grace|GRACE (Graph-RAG Anchored Code Engineering)]] — framework for deterministic LLM code generation in large contexts; dual-purpose semantic markup serving both generative models (top-down synthesis template) and RAG agents (indexed navigation map); ten principles including Intent-First Architecture, Observable AI Belief State, and Governed Autonomy
 
 - [[flex-prompting|FLEX (Few-shot Logit-Enabled XML Prompting)]] — methodology for reliable SLM control using structured XML prompts, few-shot examples, and logit-based verification; validated on Qwen3-0.6B for agentic tool selection
+
+
+- [[gelu|Gaussian Error Linear Unit (GELU)]] — activation function introduced by Hendrycks & Gimpel (2016); probabilistically motivated xΦ(x) with smooth curvature; default activation in BERT and GPT due to improved gradient flow and empirical gains over ReLU/ELU
 
 
 - [[hallucination-detection-slm|SLM-based Hallucination Detection]] — framework using multiple SLMs (Qwen2 + MiniCPM) for post-hoc hallucination verification of LLM responses in RAG context; sentence-level decomposition, P(yes) token probability, per-model normalization, harmonic mean aggregation
@@ -153,6 +156,7 @@
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](raw/papers/2018-10-devlin-bert/1810.04805.pdf) — details at [devlin2018bert.md](raw/papers/2018-10-devlin-bert/devlin2018bert.md) (Jacob Devlin et al., Google AI Language, NAACL 2019)
 - [Neural Machine Translation of Rare Words with Subword Units](raw/papers/2016-06-sennrich-bpe-subword/1508.07909.pdf) — introduces BPE for subword tokenization; details at [sennrich2016bpe.md](raw/papers/2016-06-sennrich-bpe-subword/sennrich2016bpe.md) (Rico Sennrich, Barry Haddow, Alexandra Birch, ACL 2016)
 - [Distilling the Knowledge in a Neural Network](raw/papers/2015-03-hinton-distillation/hinton2015distill.md) — PDF at [1503.02531.pdf](raw/papers/2015-03-hinton-distillation/1503.02531.pdf) — introduces knowledge distillation via temperature-parameterised softmax, soft target regularisation, and specialist models (Geoffrey Hinton, Oriol Vinyals, Jeff Dean, Google, NIPS 2014 Workshop, 2015)
+- [Gaussian Error Linear Units (GELUs)](raw/papers/2016-06-hendrycks-gelu/hendrycks2016gelu.md) — PDF at [1606.08415.pdf](raw/papers/2016-06-hendrycks-gelu/1606.08415.pdf) — introduces GELU activation function xΦ(x) with probabilistic motivation from stochastic regularizer expectation; default activation in BERT and GPT; also introduces SiLU (Dan Hendrycks, Kevin Gimpel, arXiv 2016)
 - [Okapi at TREC-3](raw/papers/1995-01-robertson-okapi-trec3/okapi_trec3.pdf)
 
 ## Comparisons
