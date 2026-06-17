@@ -1,7 +1,7 @@
 ---
 title: Byte Pair Encoding (BPE)
 created: 2026-06-16
-updated: 2026-06-16
+updated: 2026-06-17
 type: concept
 tags: [technique, model, architecture]
 sources:
@@ -10,7 +10,7 @@ sources:
 
 Byte Pair Encoding (BPE) is a subword tokenization algorithm that learns a fixed-size vocabulary of variable-length character sequences from data. Introduced to neural machine translation by ([Sennrich, Haddow & Birch, ACL 2016](raw/papers/2016-06-sennrich-bpe-subword/sennrich2016bpe.md)), BPE adapts a data compression technique from Gage (1994): iteratively merging the most frequent pair of adjacent symbols, building a vocabulary from characters up through frequent character n-grams to whole words.
 
-BPE became the dominant tokenization method for virtually all post-2018 neural language models — including GPT, [[bert|BERT]], RoBERTa, T5, and LLaMA — and remains the foundation of most modern LLM tokenizers, despite later refinements like WordPiece, Unigram, and SentencePiece.
+BPE became the dominant tokenization method for virtually all post-2018 neural language models — including GPT, [[bert|BERT]], RoBERTa, T5, and LLaMA — and remains the foundation of most modern LLM tokenizers, despite later refinements like WordPiece, Unigram, and [[sentencepiece|SentencePiece]].
 
 ## Algorithm
 
@@ -39,8 +39,8 @@ The final vocabulary size = initial character vocabulary + number of merge opera
 | **Independent BPE** | Separate vocabularies learned for source and target languages                                                      | Standard in NMT research                           |
 | **Joint BPE**       | Single vocabulary learned on the union of source and target text, improving cross-lingual segmentation consistency | Sennrich et al. (2016), best results in paper      |
 | **WordPiece**       | Similar merge principle but merges based on likelihood gain under a language model, not raw frequency              | [[bert\|BERT]], RoBERTa                            |
-| **Unigram LM**      | Probabilistic subword model trained via EM, selects vocabulary by removing low-probability units                   | SentencePiece (Kudo & Richardson, 2018), T5, LLaMA |
-| **SentencePiece**   | Framework supporting both BPE and Unigram; operates on raw text without pre-tokenization                           | ByT5, Gemma                                        |
+| **Unigram LM**      | Probabilistic subword model trained via EM, selects vocabulary by removing low-probability units                   | [[sentencepiece|SentencePiece]] (Kudo & Richardson, 2018), T5, LLaMA |
+| **[[sentencepiece|SentencePiece]]**   | Framework supporting both BPE and Unigram; operates on raw text without pre-tokenization                           | ByT5, Gemma                                        |
 
 ## Impact on Translation of Rare Words
 

@@ -607,4 +607,15 @@
 - Created concept: mixture-of-experts (sparsely-gated architecture with noisy top-k gating, importance/load losses, hierarchical MoE, performance engineering; scaling properties, training/inference considerations, relationship to other concepts)
 - Updated concept: switch-transformer (added Shazeer et al. as source, wikilinked to mixture-of-experts in intro and Significance & Legacy)
 - Cross-links: mixture-of-experts ↔ switch-transformer, transformer, scaling-laws, knowledge-distillation, mamba, kv-caching, slm-moe-agentic-ai
-- Updated index.md: added concept, raw paper source, bumped total pages to 58
+
+## [2026-06-17] ingest | SentencePiece (Kudo & Richardson, 2018)
+
+- Raw source: `raw/papers/2018-08-kudo-sentencepiece/` (kudo2018sentencepiece.md + 1808.06226.pdf)
+- Source: https://arxiv.org/abs/1808.06226
+- Authors: Taku Kudo, John Richardson (Google)
+- Venue: EMNLP 2018 (demo paper)
+- Content: Language-independent subword tokenizer training directly on raw Unicode without pre-tokenization. Implements BPE (O(N log N) via binary heap) and Unigram LM (probabilistic segmentation via EM, subword regularization). Lossless tokenization via whitespace-as-character (U+2581). Self-contained Protocol Buffer models with frozen Unicode normalizer.
+- Created concept: sentencepiece (raw-text training, two-algorithm design, subword regularization, lossless encoding/decoding, adoption in T5/XLNet/ALBERT/Gemma)
+- Updated concept: byte-pair-encoding (added wikilinks to sentencepiece in intro, Variants table rows for Unigram LM and SentencePiece, bumped updated date)
+- Cross-links: sentencepiece ↔ byte-pair-encoding, transformer, bert, distributional-semantics
+- Updated index.md: added concept entry and raw paper source, bumped total pages to 59

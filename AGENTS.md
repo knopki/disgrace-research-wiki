@@ -30,8 +30,8 @@ Skipping orientation causes duplicates, missed cross-references, and contradicte
 ## Conventions
 
 - **Wikilinks:** always use `[[kebab-name|Page Title]]` format — readable at a glance, whether in body text, index.md, or comparison pages.
-- **`sources:` frontmatter:** use markdown links — `"[Article Title](raw/path/to/index.md)"` — not bare paths or YAML inline array syntax. Makes the source clickable in rendered views.
-- **index.md Raw Sources:** each raw article listed as `[Title](raw/articles/dir-name/)` — clickable directory-level link.
+- **`sources:` frontmatter:** use markdown links — `"[Article Title](raw/path/to/article.md)"` — not bare paths or YAML inline array syntax. Makes the source clickable in rendered views.
+- **index.md Raw Sources:** each raw article listed as `[Title](raw/articles/dir-name/article.md)`.
 - **Entity Known Works:** each work links to its raw source index.md, matching the title and path used in `sources:` frontmatter.
 
 ## Workflow

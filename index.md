@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-17 | Total pages: 58
+> Last updated: 2026-06-17 | Total pages: 59
 
 ## Entities
 
@@ -99,6 +99,7 @@
 - [[v4a-diff-format|V4A Diff Format]] — context-based, line-number-free diff format designed for LLM agent patch application; used by OpenAI GPT-4.1 for SWE-bench Verified (55% SOTA for non-reasoning models)
 - [[chain-of-thought|Chain-of-Thought Prompting (CoT)]] — prompting technique that instructs LLMs to articulate intermediate reasoning steps; improves math/logic performance for large models but harms SLM accuracy by 15–30%+
 - [[direct-preference-optimization|Direct Preference Optimization (DPO)]] — RL-free alignment algorithm that eliminates explicit reward modelling by reparameterising the RLHF objective as a binary cross-entropy loss; achieves better reward/KL frontier than PPO and scales to 6B models (Rafailov et al., Stanford, NeurIPS 2023)
+- [[sentencepiece|SentencePiece]] — language-independent subword tokenizer training directly on raw text without pre-tokenization; implements both BPE and Unigram LM segmentation with subword regularization (Kudo & Richardson, Google, EMNLP 2018)
 
 ## Raw Sources
 
@@ -160,6 +161,7 @@
 |- [Gaussian Error Linear Units (GELUs)](raw/papers/2016-06-hendrycks-gelu/hendrycks2016gelu.md) — PDF at [1606.08415.pdf](raw/papers/2016-06-hendrycks-gelu/1606.08415.pdf) — introduces GELU activation function xΦ(x) with probabilistic motivation from stochastic regularizer expectation; default activation in BERT and GPT; also introduces SiLU (Dan Hendrycks, Kevin Gimpel, arXiv 2016)
 |- [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](raw/papers/2017-01-shazeer-sparsely-gated-moe/shazeer2017moe.md) — PDF at [1701.06538.pdf](raw/papers/2017-01-shazeer-sparsely-gated-moe/1701.06538.pdf) — introduces the Sparsely-Gated MoE layer with noisy top-k gating, importance/load losses, and 137B parameter models; foundational paper for all modern MoE architectures (Noam Shazeer et al., Google Brain, ICLR 2017)
 |- [Okapi at TREC-3](raw/papers/1995-01-robertson-okapi-trec3/okapi_trec3.pdf)
+|- [SentencePiece: A simple and language independent subword tokenizer and detokenizer for Neural Text Processing](raw/papers/2018-08-kudo-sentencepiece/kudo2018sentencepiece.md) (Taku Kudo, John Richardson, Google, EMNLP 2018)
 
 ## Comparisons
 
