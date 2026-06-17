@@ -589,10 +589,22 @@
 
 ## [2026-06-17] ingest | Gaussian Error Linear Units (GELUs) (Hendrycks & Gimpel, 2016)
 
-- Raw source: raw/papers/2016-06-hendrycks-gelu/ (hendrycks2016gelu.md + PDF 1606.08415.pdf)
+- Raw source: `raw/papers/2016-06-hendrycks-gelu/` (hendrycks2016gelu.md + PDF 1606.08415.pdf)
 - Source: https://arxiv.org/abs/1606.08415
 - Authors: Dan Hendrycks, Kevin Gimpel
 - Created concept: gelu (activation function xΦ(x), probabilistic interpretation as stochastic regularizer expectation, smooth curvature, empirical gains over ReLU/ELU across vision, NLP, speech; SiLU/swish origin)
 - Updated concept: bert (added GELU paper as source, wikilinked GELU activation in architecture section)
 - Cross-links: gelu ↔ bert, transformer, residual-connection, backpropagation
 - Updated index.md: added concept, raw paper source, bumped total pages to 57
+
+## [2026-06-17] ingest | Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer (Shazeer et al., 2017)
+
+- Raw source: `raw/papers/2017-01-shazeer-sparsely-gated-moe/` (shazeer2017moe.md + 1701.06538.pdf)
+- Source: https://arxiv.org/abs/1701.06538
+- Authors: Noam Shazeer, Azalia Mirhoseini, Krzysztof Maziarz, Andy Davis, Quoc Le, Geoffrey Hinton, Jeff Dean (Google Brain)
+- Venue: ICLR 2017
+- Content: Introduces the Sparsely-Gated Mixture-of-Experts (MoE) layer with up to thousands of feed-forward experts and a trainable gating network. Proposes Noisy Top-K Gating (gaussian noise + top-k sparsity), mixes data+model parallelism to solve the shrinking batch problem, uses importance and load losses for expert balancing. Achieves up to 137B parameters, SOTA on 1B Word Language Modeling (perplexity 28.0) and WMT'14 En→Fr translation (BLEU 40.42). Demonstrates expert specialization by syntax/semantics. Foundational paper for all subsequent MoE architectures (Switch Transformer, Mixtral, DeepSeek MoE, GPT-4).
+- Created concept: mixture-of-experts (sparsely-gated architecture with noisy top-k gating, importance/load losses, hierarchical MoE, performance engineering; scaling properties, training/inference considerations, relationship to other concepts)
+- Updated concept: switch-transformer (added Shazeer et al. as source, wikilinked to mixture-of-experts in intro and Significance & Legacy)
+- Cross-links: mixture-of-experts ↔ switch-transformer, transformer, scaling-laws, knowledge-distillation, mamba, kv-caching, slm-moe-agentic-ai
+- Updated index.md: added concept, raw paper source, bumped total pages to 58

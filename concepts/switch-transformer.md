@@ -10,12 +10,13 @@ tags:
   - training
 sources:
   - "[Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](raw/papers/2021-01-fedus-switch-transformers/fedus2022switch.md)"
+  - "[Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](raw/papers/2017-01-shazeer-sparsely-gated-moe/shazeer2017moe.md)"
 confidence: high
 ---
 
 # Switch Transformer
 
-A Mixture-of-Experts (MoE) [[transformer|Transformer]] architecture introduced by **William Fedus, Barret Zoph, and Noam Shazeer** (Google, 2021, published JMLR 2022) that simplifies MoE routing to a **single expert per token** (k=1), enabling sparsely-activated models with constant computational cost but vastly more parameters. Switch Transformer achieved up to **7× pre-training speedups** over dense T5 models and demonstrated training of **trillion-parameter models**.
+A [[mixture-of-experts|Mixture-of-Experts (MoE)]] [[transformer|Transformer]] architecture introduced by **William Fedus, Barret Zoph, and Noam Shazeer** (Google, 2021, published JMLR 2022) that simplifies MoE routing to a **single expert per token** (k=1), enabling sparsely-activated models with constant computational cost but vastly more parameters. Switch Transformer achieved up to **7× pre-training speedups** over dense T5 models and demonstrated training of **trillion-parameter models**.
 
 ## Core Innovations
 
@@ -122,7 +123,7 @@ Key models trained:
 
 ## Significance & Legacy
 
-- **Simplified MoE to the point of practical adoption** — prior MoE approaches (top-k routing, complex balancing losses) were too fragile for production use. Switch Transformer's k=1 routing, selective precision, and load balancing loss became the template for subsequent MoE architectures.
+- **Simplified MoE to the point of practical adoption** — prior [[mixture-of-experts|MoE approaches]] (top-k routing, complex balancing losses, Shazeer et al., 2017) were too fragile for production use. Switch Transformer's k=1 routing, selective precision, and load balancing loss became the template for subsequent MoE architectures.
 - **First demonstration of bfloat16 training for sparse models** — removed the requirement for float32-only training that had limited MoE scalability.
 - **Empirical foundation for the modern MoE renaissance** — Switch Transformer directly enabled architectures like Mixtral 8x7B, Qwen MoE, DeepSeek MoE, and GPT-4's reported MoE structure. The sparse expert pattern became the dominant scaling strategy after the Chinchilla era.
 - **Distillation findings** showed MoE quality is partially but not fully compressible — important for deployment decisions.
@@ -139,5 +140,6 @@ Key models trained:
 
 ## References
 
+- ([Shazeer et al., 2017](raw/papers/2017-01-shazeer-sparsely-gated-moe/shazeer2017moe.md)) — Foundational MoE paper: noisy top-k gating, importance/load losses, 137B parameter models
 - ([Fedus et al., 2022](raw/papers/2021-01-fedus-switch-transformers/fedus2022switch.md)) — Original paper, JMLR 2022
 - Mixtral 8x7B, Qwen MoE, DeepSeek MoE — direct architectural descendants
