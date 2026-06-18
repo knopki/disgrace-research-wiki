@@ -1,7 +1,7 @@
 ---
 title: Microsoft
 created: 2026-06-17
-updated: 2026-06-17
+updated: 2026-06-18
 type: entity
 tags:
   - organization
@@ -52,8 +52,10 @@ The article also notes that Microsoft uses large-scale semantic markup for AI co
 ## Known Works (in this wiki)
 
 - "[За кулисами Microsoft: тайные элитные партнерские программы и ИИ-трансформация](raw/articles/2025-07-10-ivanov-za-kulisami-microsoft-tainye-elitnye-partnerskie-programmy-i/ivanoc2025microsoft.md)" by Vladimir Ivanov (2025-07-10) — insider perspective on Microsoft MVP, TAP, Partner Engagement Board, and how AI is transforming each.
+- "[LoRA: Low-Rank Adaptation of Large Language Models](raw/papers/2021-06-hu-lora/hu2021lora.md)" by Edward Hu et al. (Microsoft Research, ICLR 2022) — introduces Low-Rank Adaptation (LoRA), a parameter-efficient fine-tuning method that reduces trainable parameters by 10,000× on GPT-3 175B with zero inference latency.
 
 ## Related
 
 - [[vladimir-ivanov|Vladimir Ivanov]] — author of the source article, former MVP and Board member
 - [[vibe-coding|Vibe Coding]] — the dual-programming-to-AI-operator transition is a large-scale case study of this paradigm
+- [[lora|LoRA (Low-Rank Adaptation)]] — Microsoft Research's parameter-efficient fine-tuning method, widely adopted across the ML ecosystem

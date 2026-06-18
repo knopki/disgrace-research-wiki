@@ -1,7 +1,7 @@
 ---
 title: SLM vs MoE for Agentic AI
 created: 2026-06-15
-updated: 2026-06-15
+updated: 2026-06-18
 type: comparison
 tags:
   - model
@@ -48,7 +48,7 @@ The debate over whether Small Language Models (SLM, <10B parameters) or large Mi
 Capability — not parameter count — is the binding constraint, they argue.
 
 ### A2–A7: Supporting Arguments
-- **A2 — More economical:** 10–30× cheaper serving cost, fine-tuning agility (LoRA/DoRA), edge deployment (ChatRTX), modular "Lego-like" composition of specialized SLMs
+- **A2 — More economical:** 10–30× cheaper serving cost, fine-tuning agility ([[lora|LoRA]]/DoRA), edge deployment (ChatRTX), modular "Lego-like" composition of specialized SLMs
 - **A3 — More flexible:** Rapid iteration for evolving user needs, democratizes AI agent development
 - **A4 — Narrow LM functionality exposed by agents:** Agents restrict a generalist LLM to a small subset of its skills — a SLM fine-tuned for specific prompts suffices
 - **A5 — Behavioral alignment:** Strict formatting (JSON/XML/Python) is required for tool calls; SLMs trained with a single formatting decision are less prone to hallucinatory format drift

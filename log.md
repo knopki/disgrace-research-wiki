@@ -746,3 +746,16 @@
 - Updated entity: [[openai|OpenAI]] (added Codex to Key Papers, Known Works, Related)
 - Updated concept: [[gpt-3|GPT-3]] (added Codex to Related)
 - Updated index.md: added entity, concept, raw source entries; bumped total pages to 72
+
+## [2026-06-18] ingest | LoRA: Low-Rank Adaptation of Large Language Models (Hu et al., ICLR 2022)
+- Raw source: `raw/papers/2021-06-hu-lora/` (2106.09685.pdf + hu2021lora.md)
+- Source: arXiv:2106.09685 — "LoRA: Low-Rank Adaptation of Large Language Models"
+- Authors: Edward J. Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean Wang, Lu Wang, Weizhu Chen (Microsoft Research)
+- Venue: ICLR 2022
+- Content: Introduces LoRA, a parameter-efficient fine-tuning method that freezes pre-trained weights and injects trainable low-rank decomposition matrices (B ∈ ℝ^{d×r}, A ∈ ℝ^{r×k}). Key results: GPT-3 175B trainable params reduced by 10,000× (from 175B to 4.7M), GPU memory from 1.2TB to 350GB, checkpoint from 350GB to 35MB, +25% training throughput. Matches or exceeds full fine-tuning on RoBERTa, DeBERTa, GPT-2, GPT-3 across GLUE, E2E, WikiSQL, MNLI, SAMSum. Empirical analysis shows ΔW has very low intrinsic rank (r=1-4 suffices) and amplifies features present but not emphasized in pre-trained W. No inference latency by construction (merge weights at deployment).
+- Created concept: lora (formulation, key results on GPT-3/DeBERTa/GPT-2/RoBERTa, optimal rank/weight selection, subspace similarity analysis, ΔW vs W correlation, comparison to adapters/prefix-tuning, limitations)
+- Updated entity: microsoft (added LoRA to Known Works and Related, added cross-link to lora)
+- Updated concept: transformer (added LoRA to Limitations section, added source to frontmatter, added cross-link to lora)
+- Updated comparison: slm-moe-agentic-ai (added wikilink to lora, bumped updated date)
+- Updated index.md (page 72→73, added concept entry, added raw paper source, fixed pipe contamination on 3 list items)
+- Cross-links: lora ↔ transformer, kv-caching, multi-query-attention, rlhf, scaling-laws, ffn-key-value-memories, switch-transformer

@@ -12,6 +12,7 @@ sources:
   - "[История ИИ: бунтари, гении и научные войны](raw/articles/2025-07-03-ivanov-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/ivanoc2025istoriya.md)"
   - "[Позиционные кодировки: «объемное зрение» GPT и секреты AI-агентов](raw/articles/2025-07-04-ivanov-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/ivanoc2025encodings.md)"
   - "[Transformer Feed-Forward Layers Are Key-Value Memories](raw/papers/2020-12-geva-ffn-key-value/geva2021ffnkeyvalue.md)"
+  - "[LoRA: Low-Rank Adaptation of Large Language Models](raw/papers/2021-06-hu-lora/hu2021lora.md)"
 confidence: high
 ---
 
@@ -90,6 +91,7 @@ A 4-layer Transformer (d_model=1024) trained on WSJ (40K sentences) achieved 91.
 - Feed-forward networks dominate parameter count and compute — MoE architectures like [[switch-transformer|Switch Transformer]] address this by replacing dense FFNs with sparsely-activated expert modules, enabling constant compute cost with vastly more total parameters
 - No inherent notion of order (positional encoding is added externally)
 - Requires enormous amounts of training data and compute
+- Full fine-tuning of large Transformers is prohibitively expensive — [[lora|LoRA (Low-Rank Adaptation)]] addresses this by freezing pre-trained weights and training only low-rank adapters, reducing GPT-3 175B trainable parameters by 10,000× ([Hu et al., 2021](raw/papers/2021-06-hu-lora/hu2021lora.md))
 
 ## Cross-Links
 
