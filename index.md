@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-18 | Total pages: 68
+> Last updated: 2026-06-18 | Total pages: 69
 
 ## Entities
 
@@ -101,7 +101,7 @@
 
 - [[bm25|BM25]] — family of term-weighting functions for probabilistic IR; unified BM11/BM15 with tunable document length normalization; became the standard ranking function in Lucene, Elasticsearch, and Solr; introduced by Robertson et al. at TREC-3 (1995)
 
-- [[spargeattn|SpargeAttn]] — universal training-free sparse attention operator accelerating any model inference via two-stage online filter, self-similarity judge, and HilbertCurve permutation; integrates with SageAttention quantization (Zhang et al., Tsinghua/UC Berkeley, ICML 2025)
+- [[s4-structured-state-spaces|S4 (Structured State Space Sequence Model)]] — first computationally practical deep SSM; NPLR parameterization reducing SSM computation from O(N²L) to Õ(N+L); SotA on LRA (86.09% avg, first to solve Path-X), raw speech (98.32%), and competitive with Transformers on WikiText-103 while 60× faster at generation; foundational to Mamba (Gu, Goel & Ré, Stanford, ICLR 2022 Outstanding Paper HM)
 
 - [[flash-attention|FlashAttention]] — IO-aware exact attention algorithm using tiling to reduce GPU HBM↔SRAM reads/writes; first Transformer to beat chance on Path-X (16K) and Path-256 (64K) (Dao et al., Stanford, NeurIPS 2022)
 - [[rotary-position-embedding|Rotary Position Embedding (RoPE)]] — position encoding via rotation matrices that encodes absolute position while naturally incorporating relative position dependency; dominant PE in post-2023 LLMs (LLaMA, Mistral, Qwen, Gemma) (Su et al., Zhuiyi Technology, arXiv 2021)
@@ -169,7 +169,8 @@
 - [Attention Is All You Need](raw/papers/2017-06-vaswani-attention-is-all-you-need/1706.03762.pdf) — details at [vaswani2017attention](raw/papers/2017-06-vaswani-attention-is-all-you-need/vaswani2017attention.md) (Ashish Vaswani et al., Google Research/NIPS, 2017)
 - [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](raw/papers/2022-05-dao-flashattention/2205.14135.pdf) — details at [dai2022flashattention.md](raw/papers/2022-05-dao-flashattention/dai2022flashattention.md) (Tri Dao et al., Stanford, NeurIPS 2022)
 - [RoFormer: Enhanced Transformer with Rotary Position Embedding](raw/papers/2021-04-su-roformer/2104.09864.pdf) — details at [su2021rope.md](raw/papers/2021-04-su-roformer/su2021rope.md) (Jianlin Su et al., Zhuiyi Technology, arXiv 2021)
-- [Transformer Feed-Forward Layers Are Key-Value Memories](raw/papers/2020-12-geva-ffn-key-value/2012.14913.pdf) — details at [geva2021ffnkeyvalue.md](raw/papers/2020-12-geva-ffn-key-value/geva2021ffnkeyvalue.md) (Mor Geva et al., Tel-Aviv Univ / AI2 / Cornell Tech, EMNLP 2021)
+- [Transformer Feed-Forward Layers Are Key-Value Memories](raw/papers/2020-12-geva-ffn-key-value/geva2021ffnkeyvalue.md) — PDF at [2012.14913.pdf](raw/papers/2020-12-geva-ffn-key-value/2012.14913.pdf) (Mor Geva et al., Tel-Aviv Univ / AI2 / Cornell Tech, EMNLP 2021)
+- [Efficiently Modeling Long Sequences with Structured State Spaces](raw/papers/2021-11-gu-s4/gu2021s4.md) — PDF at [2111.00396.pdf](raw/papers/2021-11-gu-s4/2111.00396.pdf) — introduces S4, the first computationally practical deep SSM; NPLR parameterization + Cauchy kernel reduction; SotA on LRA, raw speech, matches Transformers on WikiText-103; ICLR 2022 Outstanding Paper HM (Albert Gu, Karan Goel, Christopher Ré, Stanford, arXiv:2111.00396, November 2021)
 - [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](raw/papers/2021-01-fedus-switch-transformers/2101.03961.pdf) — details at [fedus2022switch.md](raw/papers/2021-01-fedus-switch-transformers/fedus2022switch.md) (William Fedus et al., Google, JMLR 2022)
 - [SpargeAttention: Accurate and Training-free Sparse Attention Accelerating Any Model Inference](raw/papers/2025-02-zhang-spargeattention/2502.18137.pdf) — details at [zhang2025spargeattn](raw/papers/2025-02-zhang-spargeattention/zhang2025spargeattn.md) (Jintao Zhang et al., Tsinghua/UC Berkeley, ICML 2025)
 - [Direct Preference Optimization: Your Language Model is Secretly a Reward Model](raw/papers/2023-05-rafailov-dpo/rafailov2023dpo.md) — PDF at [2305.18290.pdf](raw/papers/2023-05-rafailov-dpo/2305.18290.pdf) (Rafael Rafailov et al., Stanford, NeurIPS 2023)

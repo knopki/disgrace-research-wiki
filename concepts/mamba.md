@@ -1,7 +1,7 @@
 ---
 title: Mamba / State Space Models (SSM)
 created: 2026-06-16
-updated: 2026-06-16
+updated: 2026-06-18
 type: concept
 tags:
   - model
@@ -11,11 +11,18 @@ tags:
 sources:
   - "[Преодоление галлюцинаций в Mamba-моделях: Экспериментальное исследование RAG-управляемой самокоррекции на примере Qwen 3 Next](raw/articles/2025-09-21-ivanov-preodolenie-gallucinacii-v-mamba-modelyah-eksperimentalnoe-i/ivanov2015hallucinations.md)"
   - "[Семантическая разметка GRACE как нативный интерфейс для Mamba-моделей](raw/articles/2025-09-21-ivanov-semanticheskaya-razmetka-grace-kak-nativnyi-interfeis-dlya-m/ivanov2025gracemamba.md)"
+  - "[Efficiently Modeling Long Sequences with Structured State Spaces](raw/papers/2021-11-gu-s4/gu2021s4.md)"
 confidence: medium
 ---
 # Mamba / State Space Models (SSM)
 
 **State Space Models** — a class of sequence architectures that process tokens by iteratively updating a hidden state of fixed size, offering linear-time inference and constant memory relative to sequence length. **Mamba** is the most prominent SSM architecture, designed to rival Transformers on long-context tasks at a fraction of the memory cost.
+
+## Origin: S4
+
+Mamba's lineage begins with [[s4-structured-state-spaces|S4]] (Gu, Goel & Ré, Stanford, ICLR 2022 Outstanding Paper HM), the first computationally practical deep SSM. S4 introduced the **Normal Plus Low-Rank (NPLR)** parameterization that reduced SSM computation from O(N²L) to Õ(N+L) by decomposing the HiPPO state matrix into normal + low-rank components and reducing the core operation to a Cauchy kernel. This made deep SSMs feasible for the first time.
+
+S4 achieved SotA on the Long Range Arena (86.09% avg, first to solve Path-X), raw speech classification (98.32%), and matched Transformers on WikiText-103 (20.95 ppl) while being 60× faster at generation. Follow-up work (S4D, Gu et al., 2022) showed diagonal SSMs could match S4's performance with further simplification, laying the groundwork for Mamba's selective state space mechanism ([Gu et al., 2021](raw/papers/2021-11-gu-s4/gu2021s4.md)).
 
 The core architectural bet: instead of the Transformer's attention over all previous tokens (requiring O(n) growing KV cache per step), Mamba compresses the entire sequence history into a compact, fixed-dimensional state vector at each layer.
 
@@ -99,6 +106,7 @@ Experimental research demonstrated that GRACE (Graph-RAG Anchored Code Engineeri
 
 ## Relationship to Other Concepts
 
+- [[s4-structured-state-spaces|S4]] — direct predecessor; S4's NPLR parameterization and Cauchy kernel made deep SSMs computationally feasible, enabling the Mamba line of architectures.
 - [[kv-caching|KV Caching]] — Mamba eliminates the KV cache entirely, replacing O(n) memory with O(1) state. The comparison table above quantifies this gap.
 - [[retrieval-augmented-generation|RAG]] — RAG is the "oracle" that compensates for Mamba's hallucination tendency. This article positions RAG not as context augmentation but as an external verifier — a role shift from the standard RAG paradigm.
 - [[grace|GRACE]] — two dimensions: (1) GRACE provides a native interface for Mamba: its XML-like hierarchical markup enables reconstruction-from-graph (vs citation), semantic slice queries, and active verification against the model's emergent state; (2) Mamba+RAG self-correction (hallucination study) is the next logical step after GRACE — structural integrity → factual accuracy

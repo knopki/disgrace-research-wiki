@@ -723,6 +723,17 @@
 ## [2026-06-18] update | GLU variants — key-value memory connection
 - Updated concept: glu-variants (added "Relation to Key-Value Memory Interpretation" section — gated key modulation, parameter trade-off; added source: Geva et al. 2021 to frontmatter; added cross-link to ffn-key-value-memories)
 
+## [2026-06-18] ingest | S4: Efficiently Modeling Long Sequences with Structured State Spaces
+- Raw source: `raw/papers/2021-11-gu-s4/` (2111.00396.pdf + full-text.txt + gu2021s4.md)
+- Source: https://arxiv.org/abs/2111.00396 — "Efficiently Modeling Long Sequences with Structured State Spaces"
+- Authors: Albert Gu, Karan Goel, Christopher Ré (Stanford University)
+- Venue: ICLR 2022 (Outstanding Paper Honorable Mention)
+- Content: Introduces S4 — the first computationally practical deep SSM. Core contribution is the Normal Plus Low-Rank (NPLR) parameterization of the HiPPO state matrix, enabling stable diagonalisation via Woodbury identity + Cauchy kernel reduction from O(N²L) to Õ(N+L). Key results: SotA on LRA (86.09% avg, first to solve Path-X at 96.35%), raw speech SC10 (98.32%), competitive with Transformers on WikiText-103 (20.95 ppl) while 60× faster at generation, beats Informer on 40/50 forecasting settings. Ablations show HiPPO initialization is critical (15%+ gap over random). Foundational to Mamba and all subsequent SSM architectures.
+- Created concept: s4-structured-state-spaces (NPLR parameterization, three-stage algorithm: SSM generating function → Woodbury correction → Cauchy kernel, LRA results, raw speech, generative modeling, forecasting, ablation studies)
+- Updated concept: mamba (added Origin: S4 section, S4 source to frontmatter, S4 wikilink to Relationship)
+- Updated index.md: added concept entry, raw paper source under Papers, bumped total pages to 69
+- Cross-links: s4-structured-state-spaces ↔ mamba, transformer, flash-attention, sparse-transformer, longformer, big-bird, kv-caching, chain-of-continuous-thought
+
 ## [2026-06-18] create | FFN memory vs MoE comparison
 - Created comparison: ffn-memory-vs-moe (side-by-side table: 18 dimensions including core claim, sparsity type, memory cell structure, interpretability, scaling; synthesis: complementary levels — Geva explains, MoE scales; intersection: natural vs engineered sparsity)
 - Cross-links: ffn-memory-vs-moe ↔ ffn-key-value-memories, mixture-of-experts, switch-transformer, transformer, glu-variants, scaling-laws, slm-moe-agentic-ai, kv-caching
