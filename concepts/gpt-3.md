@@ -106,6 +106,7 @@ The paper includes an extensive broader impacts section covering:
 
 ## Related
 
+- [[codex|Codex]] — GPT-3 fine-tuned on GitHub code; powers GitHub Copilot
 - [[in-context-learning|In-Context Learning]] — the paradigm GPT-3 systematically studied
 - [[openai|OpenAI]] — the organization that developed GPT-3
 - [[scaling-laws|Scaling Laws]] — GPT-3 confirmed power-law scaling extends 2 orders of magnitude

@@ -737,4 +737,12 @@
 ## [2026-06-18] create | FFN memory vs MoE comparison
 - Created comparison: ffn-memory-vs-moe (side-by-side table: 18 dimensions including core claim, sparsity type, memory cell structure, interpretability, scaling; synthesis: complementary levels — Geva explains, MoE scales; intersection: natural vs engineered sparsity)
 - Cross-links: ffn-memory-vs-moe ↔ ffn-key-value-memories, mixture-of-experts, switch-transformer, transformer, glu-variants, scaling-laws, slm-moe-agentic-ai, kv-caching
-- Updated index.md: added comparison entry under Comparisons, bumped total pages to 68
+
+## [2026-06-18] ingest | Evaluating Large Language Models Trained on Code (Codex)
+- Raw source: raw/papers/2021-07-chen-codex/ (chen2021codex.md + PDF)
+- Authors: Mark Chen, Jerry Tworek, Heewoo Jun, Qiming Yuan et al. (OpenAI, 2021-07-07)
+- Entity page created: [[codex|Codex]] (OpenAI's GPT model fine-tuned on GitHub code; introduces HumanEval; powers GitHub Copilot)
+- Concept page created: [[humaneval|HumanEval]] (164 hand-written problems, pass@k metric for functional correctness)
+- Updated entity: [[openai|OpenAI]] (added Codex to Key Papers, Known Works, Related)
+- Updated concept: [[gpt-3|GPT-3]] (added Codex to Related)
+- Updated index.md: added entity, concept, raw source entries; bumped total pages to 72

@@ -9,13 +9,12 @@ tags:
   - methodology
 sources:
   - "[Language Models are Few-Shot Learners](raw/papers/2020-05-brown-gpt3/brown2020gpt3.md)"
-  - "[Language Models are Unsupervised Multitask Learners](raw/papers/2019-02-radford-gpt2/index.md)"
 confidence: high
 ---
 
 # In-Context Learning
 
-A paradigm in which a language model adapts to a task purely through conditioning context at inference time, without any gradient updates or fine-tuning. The model is given a natural language instruction and/or task demonstrations as part of its input sequence, and generates completions for new instances. Systematically defined and studied at scale in the [[gpt-3|GPT-3]] paper ([Brown et al., 2020](raw/papers/2020-05-brown-gpt3/brown2020gpt3.md)), building on earlier observations in GPT-2 ([Radford et al., 2019](raw/papers/2019-02-radford-gpt2/index.md)) and meta-learning literature.
+A paradigm in which a language model adapts to a task purely through conditioning context at inference time, without any gradient updates or fine-tuning. The model is given a natural language instruction and/or task demonstrations as part of its input sequence, and generates completions for new instances. Systematically defined and studied at scale in the [[gpt-3|GPT-3]] paper ([Brown et al., 2020](raw/papers/2020-05-brown-gpt3/brown2020gpt3.md)), building on earlier observations in GPT-2 and meta-learning literature.
 
 ## Spectrum of Settings
 

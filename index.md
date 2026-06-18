@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-18 | Total pages: 69
+> Last updated: 2026-06-18 | Total pages: 72
 
 ## Entities
 
@@ -16,7 +16,8 @@
 - [[karen-sparck-jones|Karen Sparck Jones]] — British computer scientist, introduced IDF (inverse document frequency) and co-developed the Robertson-Sparck Jones relevance weight with Stephen Robertson
 
 - [[anthropic|Anthropic]] — AI safety research company; published Toy Models of Superposition foundational interpretability work
-- [[openai|OpenAI]] — American AI research organization; developer of GPT models, ChatGPT, and InstructGPT/RLHF
+- [[openai|OpenAI]] — American AI research organization; developer of GPT models, ChatGPT, DALL-E, Sora, and OpenAI Codex
+- [[codex|Codex]] — OpenAI's GPT model fine-tuned on GitHub code; introduces HumanEval benchmark and pass@k metric for functional correctness; powers GitHub Copilot
 - [[dario-amodei|Dario Amodei]] — Co-founder and CEO of Anthropic; AI researcher, proponent of democratic AI leadership, author of *Machines of Loving Grace* and *The Adolescence of Technology*
 - [[geoffrey-hinton|Geoffrey Hinton]] — British-Canadian cognitive psychologist and computer scientist; one of the "godfathers of deep learning"; co-popularised backpropagation (1986), introduced knowledge distillation (2015), inventor of dropout; Turing Award (2018), Nobel Prize in Physics (2024)
 
@@ -60,6 +61,8 @@
 
 
 - [[hallucination-detection-slm|SLM-based Hallucination Detection]] — framework using multiple SLMs (Qwen2 + MiniCPM) for post-hoc hallucination verification of LLM responses in RAG context; sentence-level decomposition, P(yes) token probability, per-model normalization, harmonic mean aggregation
+
+- [[humaneval|HumanEval]] — benchmark of 164 hand-written programming problems for measuring functional correctness of code synthesis from docstrings; introduced by OpenAI with [[codex|Codex]]; uses pass@k unbiased estimator; created to avoid data contamination by not scraping existing sources
 
 
 - [[polysemantic-neurons|Polysemantic Neurons]] — neurons that respond to multiple unrelated features; explained by the superposition hypothesis
@@ -170,6 +173,7 @@
 - [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](raw/papers/2022-05-dao-flashattention/2205.14135.pdf) — details at [dai2022flashattention.md](raw/papers/2022-05-dao-flashattention/dai2022flashattention.md) (Tri Dao et al., Stanford, NeurIPS 2022)
 - [RoFormer: Enhanced Transformer with Rotary Position Embedding](raw/papers/2021-04-su-roformer/2104.09864.pdf) — details at [su2021rope.md](raw/papers/2021-04-su-roformer/su2021rope.md) (Jianlin Su et al., Zhuiyi Technology, arXiv 2021)
 - [Transformer Feed-Forward Layers Are Key-Value Memories](raw/papers/2020-12-geva-ffn-key-value/geva2021ffnkeyvalue.md) — PDF at [2012.14913.pdf](raw/papers/2020-12-geva-ffn-key-value/2012.14913.pdf) (Mor Geva et al., Tel-Aviv Univ / AI2 / Cornell Tech, EMNLP 2021)
+- [Evaluating Large Language Models Trained on Code](raw/papers/2021-07-chen-codex/chen2021codex.md) — PDF at [2107.03374.pdf](raw/papers/2021-07-chen-codex/2107.03374.pdf) — introduces Codex, GPT fine-tuned on GitHub code; HumanEval benchmark; pass@k metric; powers GitHub Copilot (Mark Chen et al., OpenAI, arXiv 2021)
 - [Efficiently Modeling Long Sequences with Structured State Spaces](raw/papers/2021-11-gu-s4/gu2021s4.md) — PDF at [2111.00396.pdf](raw/papers/2021-11-gu-s4/2111.00396.pdf) — introduces S4, the first computationally practical deep SSM; NPLR parameterization + Cauchy kernel reduction; SotA on LRA, raw speech, matches Transformers on WikiText-103; ICLR 2022 Outstanding Paper HM (Albert Gu, Karan Goel, Christopher Ré, Stanford, arXiv:2111.00396, November 2021)
 - [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](raw/papers/2021-01-fedus-switch-transformers/2101.03961.pdf) — details at [fedus2022switch.md](raw/papers/2021-01-fedus-switch-transformers/fedus2022switch.md) (William Fedus et al., Google, JMLR 2022)
 - [SpargeAttention: Accurate and Training-free Sparse Attention Accelerating Any Model Inference](raw/papers/2025-02-zhang-spargeattention/2502.18137.pdf) — details at [zhang2025spargeattn](raw/papers/2025-02-zhang-spargeattention/zhang2025spargeattn.md) (Jintao Zhang et al., Tsinghua/UC Berkeley, ICML 2025)
