@@ -719,3 +719,11 @@
 - Updated concept: residual-connection (added Inter-Layer Prediction Refinement subsection under Usage in Transformers, added source to frontmatter, added cross-link to ffn-key-value-memories)
 - Cross-links: ffn-key-value-memories ↔ transformer, residual-connection, glu-variants, attention-head-pruning, bert-attention-analysis, superposition, polysemantic-neurons, kv-caching
 - Updated index.md: added concept entry, added raw paper source under Papers, bumped total pages to 67, updated last-updated date
+
+## [2026-06-18] update | GLU variants — key-value memory connection
+- Updated concept: glu-variants (added "Relation to Key-Value Memory Interpretation" section — gated key modulation, parameter trade-off; added source: Geva et al. 2021 to frontmatter; added cross-link to ffn-key-value-memories)
+
+## [2026-06-18] create | FFN memory vs MoE comparison
+- Created comparison: ffn-memory-vs-moe (side-by-side table: 18 dimensions including core claim, sparsity type, memory cell structure, interpretability, scaling; synthesis: complementary levels — Geva explains, MoE scales; intersection: natural vs engineered sparsity)
+- Cross-links: ffn-memory-vs-moe ↔ ffn-key-value-memories, mixture-of-experts, switch-transformer, transformer, glu-variants, scaling-laws, slm-moe-agentic-ai, kv-caching
+- Updated index.md: added comparison entry under Comparisons, bumped total pages to 68

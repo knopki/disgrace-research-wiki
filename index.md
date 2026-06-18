@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-18 | Total pages: 67
+> Last updated: 2026-06-18 | Total pages: 68
 
 ## Entities
 
@@ -186,5 +186,6 @@
 
 - [[bfs-vs-dfs|BFS vs DFS]] — Standard comparison of graph traversal algorithms BFS and DFS; reference anchor for LLM reasoning analogies
 - [[slm-moe-agentic-ai|SLM vs MoE for Agentic AI]] — side-by-side comparison of Belcak et al. (NVIDIA, pro-SLM+heterogeneous) and Ivanov (pro-MoE/cost-field-flattening) positions; benchmarks, market data, and synthesis
+- [[ffn-memory-vs-moe|FFN as Key-Value Memories vs Mixture-of-Experts]] — comparison of two perspectives on the transformer FFN layer: Geva et al.'s interpretability lens (FFN = key-value memory) vs MoE's architectural scaling strategy (sparse expert networks); dimensions include level of analysis, sparsity type, interpretability, and parameter scaling
 
 ## Queries
