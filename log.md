@@ -706,3 +706,16 @@
 - Updated entity: dario-amodei (added GPT-3 co-authorship to Career description)
 - Cross-links: gpt-3 ↔ in-context-learning, openai, scaling-laws, transformer, rlhf, chain-of-thought, sparse-transformer, dario-amodei, gelu; in-context-learning ↔ gpt-3, scaling-laws, chain-of-thought, chain-of-continuous-thought, rlhf, flex-prompting, grace, v4a-diff-format
 - Updated index.md: added gpt-3 and in-context-learning concepts, added raw paper source under Papers, bumped total pages to 66
+
+## [2026-06-18] ingest | Transformer Feed-Forward Layers Are Key-Value Memories (Geva et al., EMNLP 2021)
+- Raw source: `raw/papers/2020-12-geva-ffn-key-value/` (2012.14913.pdf + geva2021ffnkeyvalue.md)
+- Source: arXiv:2012.14913 — "Transformer Feed-Forward Layers Are Key-Value Memories"
+- Authors: Mor Geva, Roei Schuster, Jonathan Berant, Omer Levy (Tel-Aviv University, Allen Institute for AI, Cornell Tech)
+- Venue: EMNLP 2021
+- Content: Shows feed-forward layers (two-thirds of transformer parameters) operate as key-value memories. Keys detect human-interpretable input patterns — lower layers shallow (n-grams), upper layers semantic (topics). Values induce vocabulary distributions that predict the next token after each key's pattern, especially in upper layers. Layer output is a composition of hundreds of memories (≥68% of examples). Residual connections refine predictions across layers: >80% of final predictions determined by layer 16.
+- Created concept: ffn-key-value-memories (mathematical equivalence to neural memory, keys as pattern detectors, values as next-token predictors, intra-layer composition, inter-layer refinement via residuals)
+- Added tag: interpretability (Research category in SCHEMA.md)
+- Updated concept: transformer (added FFN-as-memory description to Architecture → Encoder, added source to frontmatter, added cross-link to ffn-key-value-memories)
+- Updated concept: residual-connection (added Inter-Layer Prediction Refinement subsection under Usage in Transformers, added source to frontmatter, added cross-link to ffn-key-value-memories)
+- Cross-links: ffn-key-value-memories ↔ transformer, residual-connection, glu-variants, attention-head-pruning, bert-attention-analysis, superposition, polysemantic-neurons, kv-caching
+- Updated index.md: added concept entry, added raw paper source under Papers, bumped total pages to 67, updated last-updated date

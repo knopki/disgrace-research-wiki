@@ -1,7 +1,7 @@
 ---
 title: Transformer
 created: 2026-06-17
-updated: 2026-06-17
+updated: 2026-06-18
 type: concept
 tags:
   - model
@@ -11,6 +11,7 @@ sources:
   - "[Attention Is All You Need](raw/papers/2017-06-vaswani-attention-is-all-you-need/vaswani2017attention.md)"
   - "[История ИИ: бунтари, гении и научные войны](raw/articles/2025-07-03-ivanov-istoriya-ii-buntari-genii-i-nauchnye-voiny-kotorye-sformirov/ivanoc2025istoriya.md)"
   - "[Позиционные кодировки: «объемное зрение» GPT и секреты AI-агентов](raw/articles/2025-07-04-ivanov-pozicionnye-kodirovki-obemnoe-zrenie-gpt-i-sekrety-ai-agento/ivanoc2025encodings.md)"
+  - "[Transformer Feed-Forward Layers Are Key-Value Memories](raw/papers/2020-12-geva-ffn-key-value/geva2021ffnkeyvalue.md)"
 confidence: high
 ---
 
@@ -26,7 +27,7 @@ The Transformer follows an encoder-decoder structure with N=6 identical layers o
 
 Each of the 6 encoder layers has two sub-layers:
 1. **Multi-head self-attention** — h=8 parallel heads, each with d_k=d_v=d_model/h=64
-2. **Position-wise feed-forward network** — two linear transformations with ReLU: FFN(x) = max(0, xW_1 + b_1)W_2 + b_2, with inner dimension d_ff=2048 and outer d_model=512
+2. **Position-wise feed-forward network** — two linear transformations with ReLU: FFN(x) = max(0, xW_1 + b_1)W_2 + b_2, with inner dimension d_ff=2048 and outer d_model=512. Geva et al. (2021) showed these layers operate as **[[ffn-key-value-memories|unnormalized key-value memories]]**: the first weight matrix acts as keys detecting input patterns, the second as values inducing output distributions. Lower layers capture shallow n-gram patterns; upper layers capture semantic topics. ([Geva et al., 2021](raw/papers/2020-12-geva-ffn-key-value/geva2021ffnkeyvalue.md))
 
 Each sub-layer employs a **residual connection** followed by **layer normalization**: LayerNorm(x + Sublayer(x)). All sub-layers and embedding layers produce outputs of dimension d_model=512.
 
@@ -105,4 +106,5 @@ A 4-layer Transformer (d_model=1024) trained on WSJ (40K sentences) achieved 91.
 - [[multi-query-attention|Multi-Query Attention (MQA)]] — architectural variant that shares keys and values across attention heads, reducing KV cache memory footprint by factor h and dramatically accelerating incremental decoding
 - [[glu-variants|GLU Variants (GEGLU, SwiGLU, ReGLU)]] — gated FFN variants that replaced ReLU/GELU as the default Transformer feed-forward activation in post-2022 LLMs
 - [[rotary-position-embedding|Rotary Position Embedding (RoPE)]] — the dominant modern position encoding, using rotation matrices instead of additive sinusoidal functions; used by virtually all post-2023 LLMs
+- [[ffn-key-value-memories|FFN as Key-Value Memories]] — mechanistic analysis showing FFN layers function as pattern-detecting key-value memories
 - [[gpt-3|GPT-3]] — the largest decoder-only Transformer at its time (175B params); uses GPT-2 architecture with alternating dense/banded sparse attention, validating scaling laws at unprecedented model size
