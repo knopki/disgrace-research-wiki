@@ -11,7 +11,6 @@ sources:
   - "[Language Models are Few-Shot Learners](raw/papers/2020-05-brown-gpt3/brown2020gpt3.md)"
 confidence: high
 ---
-
 # Codex
 
 A family of GPT-based language models developed by [[openai|OpenAI]], fine-tuned on publicly available code from GitHub. Codex demonstrated that fine-tuning large language models on code produces non-trivial program synthesis capabilities from natural language docstrings. A production version of Codex powers GitHub Copilot.
@@ -65,7 +64,7 @@ The paper identifies risks including over-reliance (novice programmers), misalig
 
 ## Relationships
 
-- Built on [[gpt-3|GPT-3]] — the base architecture and model family
+- Built on [[entities/gpt-3|GPT-3]] — the base architecture and model family
 - Developed by [[openai|OpenAI]]
 - Powers GitHub Copilot (via [[microsoft|Microsoft]])
 - Evaluated on [[humaneval|HumanEval]] — the 164-problem benchmark introduced in the same paper

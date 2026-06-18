@@ -11,7 +11,6 @@ sources:
   - "[OpenAI](raw/articles/openai-wikipedia.md)"
 confidence: high
 ---
-
 # HumanEval
 
 A benchmark dataset for measuring functional correctness of program synthesis from docstrings. Introduced by [[openai|OpenAI]] in the [[codex|Codex]] paper ([Chen et al., 2021](raw/papers/2021-07-chen-codex/chen2021codex.md)). Consists of 164 hand-written programming problems, each with a function signature, docstring, a reference solution, and unit tests (average 7.7 tests per problem).
@@ -72,6 +71,6 @@ Necessary because GitHub contains malicious programs that alter their environmen
 
 ## Related Benchmarks
 
-- [[gpt-3|GPT-3]] evaluation — HumanEval tests demonstrate the gap between GPT (near 0%) and code-fine-tuned models
+- [[entities/gpt-3|GPT-3]] evaluation — HumanEval tests demonstrate the gap between GPT (near 0%) and code-fine-tuned models
 - Used alongside APPS ([Hendrycks et al., 2021]) for measuring coding challenge competence
 - Part of the broader shift from match-based metrics (BLEU) to functional correctness in code generation evaluation

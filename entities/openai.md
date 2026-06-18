@@ -10,7 +10,6 @@ sources:
   - "[Training language models to follow instructions with human feedback](raw/papers/2022-03-ouyang-instructgpt/ouyang2022instructgpt.md)"
 confidence: high
 ---
-
 # OpenAI
 
 American AI research organization. Founded in 2015 as a nonprofit, converted to a capped-profit structure in 2019, and further restructured into a Public Benefit Corporation (OpenAI Group PBC) in 2025. Developer of the GPT family of large language models, ChatGPT, DALL-E, Sora, and OpenAI Codex.
@@ -43,7 +42,7 @@ American AI research organization. Founded in 2015 as a nonprofit, converted to 
 ## Related
 
 - [[codex|Codex]] — GPT fine-tuned on GitHub code; introduced HumanEval benchmark
-- [[gpt-3|GPT-3]] — the 175B model that demonstrated in-context learning at scale
+- [[entities/gpt-3|GPT-3]] — the 175B model that demonstrated in-context learning at scale
 - [[microsoft|Microsoft]] — major investor (27% stake), cloud infrastructure partner
 - [[anthropic|Anthropic]] — competitor founded by former OpenAI researchers
 - [[rlhf|RLHF]] — technique pioneered at scale by OpenAI for aligning LMs with human intent

@@ -15,7 +15,6 @@ sources:
   - "[LoRA: Low-Rank Adaptation of Large Language Models](raw/papers/2021-06-hu-lora/hu2021lora.md)"
 confidence: high
 ---
-
 ## Definition
 
 The **Transformer** is a neural network architecture introduced in the 2017 paper **"Attention Is All You Need"** by **Ashish Vaswani**, **[[noam-shazeer|Noam Shazeer]]**, and six other Google researchers. It replaces sequential recurrence (as in [[lstm|LSTM]]) with a parallelisable **self-attention mechanism**, processing all tokens simultaneously rather than one at a time.
@@ -109,4 +108,4 @@ A 4-layer Transformer (d_model=1024) trained on WSJ (40K sentences) achieved 91.
 - [[glu-variants|GLU Variants (GEGLU, SwiGLU, ReGLU)]] — gated FFN variants that replaced ReLU/GELU as the default Transformer feed-forward activation in post-2022 LLMs
 - [[rotary-position-embedding|Rotary Position Embedding (RoPE)]] — the dominant modern position encoding, using rotation matrices instead of additive sinusoidal functions; used by virtually all post-2023 LLMs
 - [[ffn-key-value-memories|FFN as Key-Value Memories]] — mechanistic analysis showing FFN layers function as pattern-detecting key-value memories
-- [[gpt-3|GPT-3]] — the largest decoder-only Transformer at its time (175B params); uses GPT-2 architecture with alternating dense/banded sparse attention, validating scaling laws at unprecedented model size
+- [[entities/gpt-3|GPT-3]] — the largest decoder-only Transformer at its time (175B params); uses GPT-2 architecture with alternating dense/banded sparse attention, validating scaling laws at unprecedented model size

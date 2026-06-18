@@ -54,7 +54,7 @@
 - [[grace|GRACE (Graph-RAG Anchored Code Engineering)]] — framework for deterministic LLM code generation in large contexts; dual-purpose semantic markup serving both generative models (top-down synthesis template) and RAG agents (indexed navigation map); ten principles including Intent-First Architecture, Observable AI Belief State, and Governed Autonomy
 
 - [[flex-prompting|FLEX (Few-shot Logit-Enabled XML Prompting)]] — methodology for reliable SLM control using structured XML prompts, few-shot examples, and logit-based verification; validated on Qwen3-0.6B for agentic tool selection
-- [[gpt-3|GPT-3]] — 175B parameter autoregressive language model; demonstrated that scaling up LMs dramatically improves task-agnostic [[in-context-learning|in-context learning]] performance; systematic evaluation across zero/one/few-shot settings on dozens of NLP benchmarks; first systematic data contamination analysis for large-scale LMs
+- [[entities/gpt-3|GPT-3]] — 175B parameter autoregressive language model; demonstrated that scaling up LMs dramatically improves task-agnostic [[in-context-learning|in-context learning]] performance; systematic evaluation across zero/one/few-shot settings on dozens of NLP benchmarks; first systematic data contamination analysis for large-scale LMs
 - [[glu-variants|GLU Variants (GEGLU, SwiGLU, ReGLU)]] — gated feed-forward variants replacing the Transformer FFN activation; GEGLU and SwiGLU achieve best perplexity; SwiGLU became the default FFN activation in post-2022 LLMs (LLaMA, PaLM, Gemma, Mistral, Qwen)
 
 

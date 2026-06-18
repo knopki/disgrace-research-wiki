@@ -744,7 +744,7 @@
 - Entity page created: [[codex|Codex]] (OpenAI's GPT model fine-tuned on GitHub code; introduces HumanEval; powers GitHub Copilot)
 - Concept page created: [[humaneval|HumanEval]] (164 hand-written problems, pass@k metric for functional correctness)
 - Updated entity: [[openai|OpenAI]] (added Codex to Key Papers, Known Works, Related)
-- Updated concept: [[gpt-3|GPT-3]] (added Codex to Related)
+- Updated concept: [[entities/gpt-3|GPT-3]] (added Codex to Related)
 - Updated index.md: added entity, concept, raw source entries; bumped total pages to 72
 
 ## [2026-06-18] ingest | LoRA: Low-Rank Adaptation of Large Language Models (Hu et al., ICLR 2022)
@@ -770,7 +770,7 @@
 - Created concept: [[instruction-tuning|Instruction Tuning]] (technique page with method, scaling threshold, relationship to RLHF/ICL/CoT/FLEX)
 - Updated concept: [[in-context-learning|In-Context Learning]] (added wikilink to instruction-tuning as complementary paradigm)
 - Updated concept: [[rlhf|RLHF]] (added wikilink to instruction-tuning as simpler sibling technique)
-- Updated concept: [[gpt-3|GPT-3]] (added wikilinks to FLAN and instruction-tuning in Related)
+- Updated concept: [[entities/gpt-3|GPT-3]] (added wikilinks to FLAN and instruction-tuning in Related)
 - Updated concept: [[chain-of-thought|Chain-of-Thought]] (added wikilink to instruction-tuning — same lead author, complementary methods)
 - Updated concept: [[scaling-laws|Scaling Laws]] (added wikilink — instruction tuning benefits gated by scale, confirming scaling-law framework)
 - Cross-links: flan ↔ instruction-tuning, gpt-3, in-context-learning, rlhf, chain-of-thought, flex-prompting, grace, scaling-laws, transformer, openai; instruction-tuning ↔ flan, scaling-laws, gpt-3, transformer, rlhf, chain-of-thought, flex-prompting, in-context-learning

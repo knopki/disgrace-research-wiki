@@ -10,7 +10,6 @@ sources:
   - "[Finetuned Language Models Are Zero-Shot Learners](raw/papers/2021-09-wei-flan/wei2021flan.md)"
 confidence: high
 ---
-
 # FLAN (Finetuned Language Net)
 
 FLAN (Finetuned Language Net) is a 137B-parameter instruction-tuned language model developed by Google Research. It demonstrates that fine-tuning a pretrained language model on a diverse collection of NLP tasks verbalized as natural language instructions — a procedure called **instruction tuning** — substantially improves zero-shot generalization to unseen task types ([Wei et al., 2022](raw/papers/2021-09-wei-flan/wei2021flan.md)).
@@ -92,7 +91,7 @@ FLAN is complementary to:
 
 ## Significance
 
-FLAN was among the first works to systematically demonstrate that **supervised data can improve generalist model performance** on unseen tasks, bridging the [[gpt-3|pretrain–finetune]] and [[in-context-learning|prompting]] paradigms. It laid the groundwork for subsequent instruction-tuned models: InstructGPT/Ouyang et al. (2022), T0/Sanh et al. (2021), and all later instruction-tuned LLMs.
+FLAN was among the first works to systematically demonstrate that **supervised data can improve generalist model performance** on unseen tasks, bridging the [[entities/gpt-3|pretrain–finetune]] and [[in-context-learning|prompting]] paradigms. It laid the groundwork for subsequent instruction-tuned models: InstructGPT/Ouyang et al. (2022), T0/Sanh et al. (2021), and all later instruction-tuned LLMs.
 
 Key insight: cross-task generalization via instructions at scale works because the model learns the meta-skill of following instructions, which transfers to tasks it has never seen.
 
@@ -106,7 +105,7 @@ Key insight: cross-task generalization via instructions at scale works because t
 ## Related
 
 - [[instruction-tuning|Instruction Tuning]] — the core technique introduced by this paper
-- [[gpt-3|GPT-3]] — key baseline; FLAN outperforms GPT-3 zero-shot on most tasks despite 38B fewer parameters
+- [[entities/gpt-3|GPT-3]] — key baseline; FLAN outperforms GPT-3 zero-shot on most tasks despite 38B fewer parameters
 - [[in-context-learning|In-Context Learning]] — the paradigm instruction tuning complements; both teach models to follow task descriptions but via different mechanisms
 - [[rlhf|RLHF (InstructGPT)]] — contemporaneous approach to instruction following using human feedback + RL, published shortly after FLAN
 - [[chain-of-thought|Chain-of-Thought]] — by the same lead author (Jason Wei); complementary prompting method

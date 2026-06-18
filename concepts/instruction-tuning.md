@@ -11,10 +11,9 @@ sources:
   - "[Finetuned Language Models Are Zero-Shot Learners](raw/papers/2021-09-wei-flan/wei2021flan.md)"
 confidence: high
 ---
-
 # Instruction Tuning
 
-Instruction tuning is a technique for improving the zero-shot learning abilities of language models by fine-tuning a pretrained model on a diverse collection of NLP tasks verbalized as natural language instructions. Introduced and systematically studied in the FLAN paper ([Wei et al., 2022](raw/papers/2021-09-wei-flan/wei2021flan.md)), it bridges the [[gpt-3|pretrain–finetune]] and [[in-context-learning|prompting]] paradigms.
+Instruction tuning is a technique for improving the zero-shot learning abilities of language models by fine-tuning a pretrained model on a diverse collection of NLP tasks verbalized as natural language instructions. Introduced and systematically studied in the FLAN paper ([Wei et al., 2022](raw/papers/2021-09-wei-flan/wei2021flan.md)), it bridges the [[entities/gpt-3|pretrain–finetune]] and [[in-context-learning|prompting]] paradigms.
 
 The core idea: by using supervision to teach an LM to perform many tasks described via instructions, the LM learns the **meta-skill of following instructions**, which transfers to tasks it has never seen during training.
 
@@ -95,7 +94,7 @@ Subsequent work expanded instruction tuning to more tasks, larger models, and mu
 
 - [[flan|FLAN]] — the model that introduced instruction tuning
 - [[scaling-laws|Scaling Laws]] — instruction tuning benefits emerge only at sufficient scale
-- [[gpt-3|GPT-3]] — the baseline FLAN compared against; prior state of zero-shot learning
+- [[entities/gpt-3|GPT-3]] — the baseline FLAN compared against; prior state of zero-shot learning
 - [[transformer|Transformer]] — the underlying architecture
 - [[rlhf|RLHF]] — alternative approach to instruction-following via human feedback
 - [[chain-of-thought|Chain-of-Thought Prompting]] — complementary method by same lead author

@@ -2,7 +2,7 @@
 title: GPT-3
 created: 2026-06-17
 updated: 2026-06-17
-type: concept
+type: entity
 tags:
   - model
   - architecture
