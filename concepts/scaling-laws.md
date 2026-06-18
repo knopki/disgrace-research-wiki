@@ -178,4 +178,5 @@ These scaling laws were the first comprehensive empirical framework for predicti
 - [[kv-caching|KV Caching]] — inference optimization whose relevance grows with model scale
 - [[sparse-transformer|Sparse Transformer]] — cited by Kaplan et al. as enabling large model parallelism
 - [[switch-transformer|Switch Transformer]] — demonstrates a distinct scaling dimension (number of experts) orthogonal to N-D-C; expert count provides quality gains beyond model depth/width scaling
+- [[instruction-tuning|Instruction Tuning]] — technique whose benefits emerge only at sufficient scale (≥68B parameters), confirming and extending the scaling-law framework; models below 8B are harmed by instruction tuning
 - [[dario-amodei|Dario Amodei]] — senior author of the paper; provided guidance throughout the project

@@ -58,5 +58,6 @@ The GPT-4.1 Prompting Guide recommends:
 ## Related
 
 - [[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]] — latent-space alternative
+- [[instruction-tuning|Instruction Tuning]] — related technique by the same lead author (Jason Wei); CoT improves reasoning at inference time, instruction tuning improves general instruction-following via fine-tuning
 - [[slm-moe-agentic-ai|SLM vs MoE for Agentic AI]] — CoT harming SLMs is evidence in this debate
 - [[flex-prompting|FLEX (Few-shot Logit-Enabled XML Prompting)]] — alternative methodology for SLMs that replaces CoT with XML structure + logit verification

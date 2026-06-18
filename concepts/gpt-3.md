@@ -13,7 +13,6 @@ sources:
   - "[Language Models are Few-Shot Learners](raw/papers/2020-05-brown-gpt3/brown2020gpt3.md)"
 confidence: high
 ---
-
 # GPT-3
 
 Generative Pre-trained Transformer 3 — a 175 billion parameter autoregressive language model developed by [[openai|OpenAI]], introduced in the paper "Language Models are Few-Shot Learners" ([Brown et al., 2020](raw/papers/2020-05-brown-gpt3/brown2020gpt3.md)). At the time of release it was the largest non-sparse language model ever trained, with 10× more parameters than any predecessor. The paper's central finding is that scaling up language models dramatically improves task-agnostic [[in-context-learning|in-context learning]] performance, sometimes reaching competitiveness with prior state-of-the-art fine-tuned models.
@@ -113,6 +112,8 @@ The paper includes an extensive broader impacts section covering:
 - [[transformer|Transformer]] — underlying architecture
 - [[rlhf|RLHF]] — InstructGPT built on GPT-3 to align with human preferences via RLHF; 1.3B InstructGPT preferred over 175B GPT-3
 - [[chain-of-thought|Chain-of-Thought]] — prompting technique that later improved GPT-3's reasoning
+- [[flan|FLAN]] — instruction-tuned 137B model (Google, 2022) that outperformed zero-shot GPT-3 on 20/25 datasets despite 38B fewer parameters
+- [[instruction-tuning|Instruction Tuning]] — the technique FLAN introduced; demonstrated that supervised data at scale can bridge the gap from zero-shot to few-shot performance
 - [[sparse-transformer|Sparse Transformer]] — sparse attention patterns adopted in GPT-3
 - [[dario-amodei|Dario Amodei]] — co-author, VP of Research at OpenAI during GPT-3 development
 - [[gelu|GELU]] — activation function used across all GPT models

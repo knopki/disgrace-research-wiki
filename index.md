@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-18 | Total pages: 73
+> Last updated: 2026-06-18 | Total pages: 75
 
 ## Entities
 
@@ -19,6 +19,7 @@
 - [[openai|OpenAI]] — American AI research organization; developer of GPT models, ChatGPT, DALL-E, Sora, and OpenAI Codex
 - [[codex|Codex]] — OpenAI's GPT model fine-tuned on GitHub code; introduces HumanEval benchmark and pass@k metric for functional correctness; powers GitHub Copilot
 - [[dario-amodei|Dario Amodei]] — Co-founder and CEO of Anthropic; AI researcher, proponent of democratic AI leadership, author of *Machines of Loving Grace* and *The Adolescence of Technology*
+- [[flan|FLAN (Finetuned Language Net)]] — 137B instruction-tuned language model by Google Research; demonstrates that instruction tuning on 62 NLP datasets enables zero-shot generalization to unseen tasks, outperforming zero-shot GPT-3 on 20/25 datasets
 - [[geoffrey-hinton|Geoffrey Hinton]] — British-Canadian cognitive psychologist and computer scientist; one of the "godfathers of deep learning"; co-popularised backpropagation (1986), introduced knowledge distillation (2015), inventor of dropout; Turing Award (2018), Nobel Prize in Physics (2024)
 
 - [[noam-shazeer|Noam Shazeer]] — Google researcher; co-inventor of the Transformer, foundational formulations of Sparsely-Gated MoE and Multi-Query Attention, and proposed GLU variants (SwiGLU, GEGLU, ReGLU) that became the default Transformer FFN activation
@@ -36,6 +37,7 @@
 - [[semantic-fractal|Semantic Fractal]] — how LLMs represent code as branching semantic vectors, not linear instructions
 - [[human-sequential-bottleneck|Human Sequential Bottleneck]] — human cognition is linear, making parallel programming disproportionately hard
 - [[in-context-learning|In-Context Learning]] — paradigm where language models adapt to tasks purely through conditioning context without gradient updates; systematically defined and studied at scale by GPT-3 across zero-shot, one-shot, and few-shot settings; meta-learning framing where pre-training is the outer loop and in-context conditioning is the inner loop
+- [[instruction-tuning|Instruction Tuning]] — technique improving zero-shot learning by fine-tuning LMs on diverse NLP tasks verbalized as natural language instructions; introduced by FLAN (Wei et al., Google, ICLR 2022); bridges pretrain-finetune and prompting paradigms; benefits emerge only at sufficient scale (≥68B)
 - [[vibe-coding|Vibe Coding]] — programmer shifts from implementation to directing intent, delegating parallel logic to AI
 - [[ai-resource-leveling|AI Resource Leveling]] — AI performs resource leveling with understanding of project technology, not just load balancing
 - [[skill-scheduling|Skill Scheduling]] — AI-driven flexible qualification management for project staffing
@@ -177,6 +179,7 @@
 - [RoFormer: Enhanced Transformer with Rotary Position Embedding](raw/papers/2021-04-su-roformer/2104.09864.pdf) — details at [su2021rope.md](raw/papers/2021-04-su-roformer/su2021rope.md) (Jianlin Su et al., Zhuiyi Technology, arXiv 2021)
 - [Transformer Feed-Forward Layers Are Key-Value Memories](raw/papers/2020-12-geva-ffn-key-value/geva2021ffnkeyvalue.md) — PDF at [2012.14913.pdf](raw/papers/2020-12-geva-ffn-key-value/2012.14913.pdf) (Mor Geva et al., Tel-Aviv Univ / AI2 / Cornell Tech, EMNLP 2021)
 - [Evaluating Large Language Models Trained on Code](raw/papers/2021-07-chen-codex/chen2021codex.md) — PDF at [2107.03374.pdf](raw/papers/2021-07-chen-codex/2107.03374.pdf) — introduces Codex, GPT fine-tuned on GitHub code; HumanEval benchmark; pass@k metric; powers GitHub Copilot (Mark Chen et al., OpenAI, arXiv 2021)
+- [Finetuned Language Models Are Zero-Shot Learners](raw/papers/2021-09-wei-flan/wei2021flan.md) — PDF at [2109.01652.pdf](raw/papers/2021-09-wei-flan/2109.01652.pdf) — introduces instruction tuning and FLAN (137B); demonstrates zero-shot FLAN outperforms zero-shot GPT-3 on 20/25 datasets; ICLR 2022 (Jason Wei et al., Google Research, arXiv:2109.01652, September 2021)
 - [Efficiently Modeling Long Sequences with Structured State Spaces](raw/papers/2021-11-gu-s4/gu2021s4.md) — PDF at [2111.00396.pdf](raw/papers/2021-11-gu-s4/2111.00396.pdf) — introduces S4, the first computationally practical deep SSM; NPLR parameterization + Cauchy kernel reduction; SotA on LRA, raw speech, matches Transformers on WikiText-103; ICLR 2022 Outstanding Paper HM (Albert Gu, Karan Goel, Christopher Ré, Stanford, arXiv:2111.00396, November 2021)
 - [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](raw/papers/2021-01-fedus-switch-transformers/2101.03961.pdf) — details at [fedus2022switch.md](raw/papers/2021-01-fedus-switch-transformers/fedus2022switch.md) (William Fedus et al., Google, JMLR 2022)
 - [SpargeAttention: Accurate and Training-free Sparse Attention Accelerating Any Model Inference](raw/papers/2025-02-zhang-spargeattention/2502.18137.pdf) — details at [zhang2025spargeattn](raw/papers/2025-02-zhang-spargeattention/zhang2025spargeattn.md) (Jintao Zhang et al., Tsinghua/UC Berkeley, ICML 2025)

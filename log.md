@@ -759,3 +759,18 @@
 - Updated comparison: slm-moe-agentic-ai (added wikilink to lora, bumped updated date)
 - Updated index.md (page 72→73, added concept entry, added raw paper source, fixed pipe contamination on 3 list items)
 - Cross-links: lora ↔ transformer, kv-caching, multi-query-attention, rlhf, scaling-laws, ffn-key-value-memories, switch-transformer
+
+## [2026-06-18] ingest | Finetuned Language Models Are Zero-Shot Learners (FLAN)
+- Raw source: `raw/papers/2021-09-wei-flan/` (2109.01652.pdf + wei2021flan.md)
+- Source: https://arxiv.org/abs/2109.01652 — "Finetuned Language Models Are Zero-Shot Learners"
+- Authors: Jason Wei, Maarten Bosma, Vincent Y. Zhao, Kelvin Guu, Adams Wei Yu, Brian Lester, Nan Du, Andrew M. Dai, Quoc V. Le (Google Research)
+- Venue: ICLR 2022
+- Content: Introduces instruction tuning — fine-tuning a 137B LM (LaMDA-PT) on 62 NLP datasets verbalized as natural language instructions. FLAN outperforms zero-shot GPT-3 175B on 20/25 datasets. Key ablations: more task clusters → better performance (no saturation), scale threshold (~68B+), natural language instructions critical (55.2 vs 37.3 for no template). Complements few-shot and prompt tuning.
+- Created entity: [[flan|FLAN (Finetuned Language Net)]] (model page with architecture, results, ablations, limitations)
+- Created concept: [[instruction-tuning|Instruction Tuning]] (technique page with method, scaling threshold, relationship to RLHF/ICL/CoT/FLEX)
+- Updated concept: [[in-context-learning|In-Context Learning]] (added wikilink to instruction-tuning as complementary paradigm)
+- Updated concept: [[rlhf|RLHF]] (added wikilink to instruction-tuning as simpler sibling technique)
+- Updated concept: [[gpt-3|GPT-3]] (added wikilinks to FLAN and instruction-tuning in Related)
+- Updated concept: [[chain-of-thought|Chain-of-Thought]] (added wikilink to instruction-tuning — same lead author, complementary methods)
+- Updated concept: [[scaling-laws|Scaling Laws]] (added wikilink — instruction tuning benefits gated by scale, confirming scaling-law framework)
+- Cross-links: flan ↔ instruction-tuning, gpt-3, in-context-learning, rlhf, chain-of-thought, flex-prompting, grace, scaling-laws, transformer, openai; instruction-tuning ↔ flan, scaling-laws, gpt-3, transformer, rlhf, chain-of-thought, flex-prompting, in-context-learning

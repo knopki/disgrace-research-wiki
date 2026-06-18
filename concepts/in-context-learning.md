@@ -67,6 +67,7 @@ Performance as a function of K (number of demonstrations) shows:
 - **[[rlhf|RLHF]]** — fine-tuning technique that aligns models post-hoc; orthogonal to in-context learning but both can be applied to the same base model
 - **[[flex-prompting|FLEX]]** — structured prompting methodology using XML + logit verification, operating within the in-context learning paradigm
 - **[[grace|GRACE]]** — semantic markup framework providing navigable in-context structure for large-context tasks
+- **[[instruction-tuning|Instruction Tuning]]** — complementary paradigm that achieves task generalization via supervised fine-tuning on instructions rather than inference-time conditioning; instruction tuning works at large scale (≥68B) while ICL works at all scales
 - **[[v4a-diff-format|V4A Diff Format]]** — a format specifically designed for in-context code editing tasks
 
 ## Open Questions
