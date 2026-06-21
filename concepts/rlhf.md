@@ -43,7 +43,7 @@ The headline result: **1.3B InstructGPT (PPO-ptx) outputs are preferred to 175B 
 
 ### Truthfulness
 
-- **TruthfulQA:** InstructGPT generates truthful and informative answers ~2x more often than GPT-3
+- **[[truthfulqa|TruthfulQA]]:** InstructGPT generates truthful and informative answers ~2x more often than GPT-3
 - **Hallucination rate on closed-domain tasks:** 21% (InstructGPT) vs 41% (GPT-3) — roughly halved
 
 ### Toxicity and Bias

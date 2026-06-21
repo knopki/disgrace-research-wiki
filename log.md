@@ -787,3 +787,15 @@
 - Cross-links: knowledge-neurons ↔ ffn-key-value-memories, transformer, backpropagation, superposition, bert-attention-analysis
 - Updated index.md: added concept entry under Concepts, added raw paper source under Papers; bumped total pages to 74
 
+
+## [2026-06-21] ingest | TruthfulQA benchmark (Lin, Hilton and Evans, Oxford/OpenAI, ACL 2022)
+
+- Raw source: raw/papers/2021-09-lin-truthfulqa/ (2109.07958.pdf + lin2021truthfulqa.md)
+- Source: https://arxiv.org/abs/2109.07958 - TruthfulQA: Measuring How Models Mimic Human Falsehoods
+- Authors: Stephanie Lin, Jacob Hilton, Owain Evans (University of Oxford / OpenAI)
+- Venue: ACL 2022
+- Content: Benchmark of 817 questions across 38 categories measuring LLM truthfulness in zero-shot generation. Introduces concept of **imitative falsehoods** — false answers incentivized by the LM training objective because humans commonly express them. Key finding: **inverse scaling** — larger models are less truthful (GPT-3-175B 58% vs human 94%). Introduces **GPT-judge** automated metric (GPT-3-6.7B finetuned, 90-96% accuracy). Demonstrates that scaling alone doesn't solve truthfulness — alternative training objectives (RLHF, instruction tuning) are necessary.
+- Created concept: [[truthfulqa|TruthfulQA]] (definition, inverse scaling finding, truthfulness vs informativeness distinction, GPT-judge methodology, relationship to RLHF/alignment)
+- Updated concept: [[rlhf|RLHF]] (added wikilink to TruthfulQA — InstructGPT's 2× truthfulness improvement is now linked)
+- Cross-links: truthfulqa ↔ rlhf, instruction-tuning, humaneval, scaling-laws, openai
+- Updated index.md: added concept entry under Concepts, added raw paper source under Papers; bumped total pages to 76

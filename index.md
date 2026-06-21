@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-18 | Total pages: 75
+> Last updated: 2026-06-21 | Total pages: 76
 
 ## Entities
 
@@ -120,6 +120,7 @@
 - [[direct-preference-optimization|Direct Preference Optimization (DPO)]] — RL-free alignment algorithm that eliminates explicit reward modelling by reparameterising the RLHF objective as a binary cross-entropy loss; achieves better reward/KL frontier than PPO and scales to 6B models (Rafailov et al., Stanford, NeurIPS 2023)
 - [[ffn-key-value-memories|Transformer FFN as Key-Value Memories]] — transformer feed-forward layers operate as unnormalized key-value memories where keys detect input patterns and values induce output distributions; lower layers capture shallow patterns, upper layers semantic ones (Geva et al., EMNLP 2021)
 - [[sentencepiece|SentencePiece]] — language-independent subword tokenizer training directly on raw text without pre-tokenization; implements both BPE and Unigram LM segmentation with subword regularization (Kudo & Richardson, Google, EMNLP 2018)
+- [[truthfulqa|TruthfulQA]] — benchmark of 817 questions measuring LLM truthfulness; largest models show inverse scaling (less truthful as they grow); introduces imitative falsehoods concept and GPT-judge automated metric (Lin, Hilton & Evans, ACL 2022)
 
 ## Raw Sources
 
@@ -182,7 +183,8 @@
 - [Transformer Feed-Forward Layers Are Key-Value Memories](raw/papers/2020-12-geva-ffn-key-value/geva2021ffnkeyvalue.md) — PDF at [2012.14913.pdf](raw/papers/2020-12-geva-ffn-key-value/2012.14913.pdf) (Mor Geva et al., Tel-Aviv Univ / AI2 / Cornell Tech, EMNLP 2021)
 - [Evaluating Large Language Models Trained on Code](raw/papers/2021-07-chen-codex/chen2021codex.md) — PDF at [2107.03374.pdf](raw/papers/2021-07-chen-codex/2107.03374.pdf) — introduces Codex, GPT fine-tuned on GitHub code; HumanEval benchmark; pass@k metric; powers GitHub Copilot (Mark Chen et al., OpenAI, arXiv 2021)
 - [Finetuned Language Models Are Zero-Shot Learners](raw/papers/2021-09-wei-flan/wei2021flan.md) — PDF at [2109.01652.pdf](raw/papers/2021-09-wei-flan/2109.01652.pdf) — introduces instruction tuning and FLAN (137B); demonstrates zero-shot FLAN outperforms zero-shot GPT-3 on 20/25 datasets; ICLR 2022 (Jason Wei et al., Google Research, arXiv:2109.01652, September 2021)
-- [Efficiently Modeling Long Sequences with Structured State Spaces](raw/papers/2021-11-gu-s4/gu2021s4.md) — PDF at [2111.00396.pdf](raw/papers/2021-11-gu-s4/2111.00396.pdf) — introduces S4, the first computationally practical deep SSM; NPLR parameterization + Cauchy kernel reduction; SotA on LRA, raw speech, matches Transformers on WikiText-103; ICLR 2022 Outstanding Paper HM (Albert Gu, Karan Goel, Christopher Ré, Stanford, arXiv:2111.00396, November 2021)
+- [TruthfulQA: Measuring How Models Mimic Human Falsehoods](raw/papers/2021-09-lin-truthfulqa/lin2021truthfulqa.md) — PDF at [2109.07958.pdf](raw/papers/2021-09-lin-truthfulqa/2109.07958.pdf) — benchmark of 817 questions measuring truthfulness; inversely scales with model size (larger models less truthful); introduces imitative falsehoods and GPT-judge; best model 58% vs human 94% (Stephanie Lin, Jacob Hilton, Owain Evans, Oxford/OpenAI, ACL 2022)
+- [Efficiently Modeling Long Sequences
 - [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](raw/papers/2021-01-fedus-switch-transformers/2101.03961.pdf) — details at [fedus2022switch.md](raw/papers/2021-01-fedus-switch-transformers/fedus2022switch.md) (William Fedus et al., Google, JMLR 2022)
 - [SpargeAttention: Accurate and Training-free Sparse Attention Accelerating Any Model Inference](raw/papers/2025-02-zhang-spargeattention/2502.18137.pdf) — details at [zhang2025spargeattn](raw/papers/2025-02-zhang-spargeattention/zhang2025spargeattn.md) (Jintao Zhang et al., Tsinghua/UC Berkeley, ICML 2025)
 - [Direct Preference Optimization: Your Language Model is Secretly a Reward Model](raw/papers/2023-05-rafailov-dpo/rafailov2023dpo.md) — PDF at [2305.18290.pdf](raw/papers/2023-05-rafailov-dpo/2305.18290.pdf) (Rafael Rafailov et al., Stanford, NeurIPS 2023)
