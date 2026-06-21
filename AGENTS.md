@@ -38,9 +38,9 @@ Skipping orientation causes duplicates, missed cross-references, and contradicte
 
 ### Ingest a source
 1. Save to `raw/` with frontmatter (source_url, ingested)
-2. Compare body (after `---`) of new content vs old index.md. Same → skip, no `ingested` update.
+2. Compare body (after `---`) of new content vs old md. Same → skip, no `ingested` update.
 3. Discuss takeaways with user (skip in automated/cron contexts)
-4. Check existing pages — search index.md and grep for entities/concepts
+4. Check existing pages — search .md and grep for entities/concepts
 5. Create or update wiki pages following schema rules
 6. Update index.md and log.md
 7. Report all files created/updated

@@ -799,3 +799,17 @@
 - Updated concept: [[rlhf|RLHF]] (added wikilink to TruthfulQA — InstructGPT's 2× truthfulness improvement is now linked)
 - Cross-links: truthfulqa ↔ rlhf, instruction-tuning, humaneval, scaling-laws, openai
 - Updated index.md: added concept entry under Concepts, added raw paper source under Papers; bumped total pages to 76
+
+## [2026-06-21] ingest | Chain-of-Thought Prompting Elicits Reasoning (Wei et al., Google, NeurIPS 2022)
+
+- Raw source: `raw/papers/2022-01-wei-chain-of-thought/` (2201.11903.pdf + index.md)
+- Source: https://arxiv.org/abs/2201.11903 — "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models"
+- Authors: Jason Wei, Xuezhi Wang, Dale Schuurmans, Maarten Bosma, Brian Ichter, Fei Xia, Ed H. Chi, Quoc V. Le, Denny Zhou (Google Research, Brain Team)
+- Venue: NeurIPS 2022
+- Content: Introduces chain-of-thought prompting — providing intermediate reasoning steps as exemplars for few-shot prompting. Key findings: (1) CoT is an emergent ability of model scale (~100B+ threshold); (2) PaLM 540B with 8 CoT exemplars achieves SOTA on GSM8K (58% vs 18% standard), surpassing finetuned GPT-3 with verifier; (3) ablations show natural language reasoning is essential — equation-only and variable-compute-only variants do not improve; (4) robust to different annotators, exemplar sets, and styles; (5) enables OOD length generalization on symbolic reasoning tasks; (6) error analysis: 46% of incorrect CoT chains have minor errors, 54% major failures; scaling fixes most semantic errors.
+- Added tag: prompting (added to SCHEMA.md Research taxonomy)
+- Created raw source: raw/papers/2022-01-wei-chain-of-thought/
+- Updated concept: chain-of-thought (added original paper as primary source; restructured with Original Paper, Ablation Studies, Robustness, Error Analysis sections; preserved SLM harms and criticism content; added open questions; expanded cross-links)
+- Updated concept: scaling-laws (added wikilink to chain-of-thought as emergent ability of scale)
+- Cross-links: chain-of-thought ↔ instruction-tuning, in-context-learning, scaling-laws, gpt-3, flan, chain-of-continuous-thought, slm-moe-agentic-ai, flex-prompting
+- Updated index.md: added raw paper source under Papers, updated concept description, bumped total pages to 77

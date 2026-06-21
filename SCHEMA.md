@@ -71,7 +71,7 @@ as-is. `date` is especially important — it tells you how fresh the fact is.
 - Agents: agent, framework, tool-use, planning, orchestration, multi-agent
 - Techniques: optimization, fine-tuning, alignment, rlhf, distillation, quantization, data, technique
 - Infrastructure: serving, deployment, hardware, gpu, distributed
-- Research: methodology, evaluation, reproducibility, scaling-law, paper, interpretability
+- Research: methodology, evaluation, reproducibility, scaling-law, paper, interpretability, prompting
 - Meta: comparison, timeline, controversy, prediction, survey, organization
 - Knowledge: knowledge-graph, search, information-retrieval
 
