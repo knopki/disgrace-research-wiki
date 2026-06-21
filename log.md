@@ -774,3 +774,16 @@
 - Updated concept: [[chain-of-thought|Chain-of-Thought]] (added wikilink to instruction-tuning — same lead author, complementary methods)
 - Updated concept: [[scaling-laws|Scaling Laws]] (added wikilink — instruction tuning benefits gated by scale, confirming scaling-law framework)
 - Cross-links: flan ↔ instruction-tuning, gpt-3, in-context-learning, rlhf, chain-of-thought, flex-prompting, grace, scaling-laws, transformer, openai; instruction-tuning ↔ flan, scaling-laws, gpt-3, transformer, rlhf, chain-of-thought, flex-prompting, in-context-learning
+
+## [2026-06-21] ingest | Knowledge Neurons in Pretrained Transformers (Dai et al., Microsoft/PKU, ACL 2022)
+
+- Raw source: `raw/papers/2021-04-dai-knowledge-neurons/` (2104.08696.pdf + dai2021knowledgeneurons.md)
+- Source: https://arxiv.org/abs/2104.08696 — "Knowledge Neurons in Pretrained Transformers"
+- Authors: Damai Dai, Li Dong, Yaru Hao, Zhifang Sui, Baobao Chang, Furu Wei (Peking University / Microsoft Research)
+- Venue: ACL 2022
+- Content: Introduces the concept of knowledge neurons — specific FFN intermediate neurons that causally encode factual knowledge. Proposes knowledge attribution via integrated gradients (building on Geva et al.'s FFN-as-key-value-memories). Key results: ~4.13 knowledge neurons per fact, concentrated in top layers; suppressing them drops correct probability by 29.03%, amplifying raises by 31.17%; knowledge neurons selectively activated by knowledge-expressing prompts vs random text with same entities. Case studies: fact updating (34.4% success rate with ~4 neuron edits) and relation erasing (+106.6 to +141.2% perplexity for erased relation, +1.1-10.1% collateral on others).
+- Created concept: [[knowledge-neurons|Knowledge Neurons]] (definition, knowledge attribution method via integrated gradients, key findings: layer distribution, exclusivity, causal effect on expression, prompt activation; applications: fact updating, relation erasing; limitations)
+- Updated concept: [[ffn-key-value-memories|FFN as Key-Value Memories]] (added cross-link to knowledge-neurons)
+- Cross-links: knowledge-neurons ↔ ffn-key-value-memories, transformer, backpropagation, superposition, bert-attention-analysis
+- Updated index.md: added concept entry under Concepts, added raw paper source under Papers; bumped total pages to 74
+

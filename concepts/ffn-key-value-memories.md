@@ -89,4 +89,5 @@ Example predictive values: v15_222 predicts "each" (68% precision@50), v16_752 p
 - [[bert-attention-analysis|BERT Attention Analysis]] — another lens into transformer internals
 - [[superposition|Superposition]] — the feature-representation phenomenon that emerges alongside the key-value memory structure
 - [[polysemantic-neurons|Polysemantic Neurons]] — individual neurons responding to multiple features, contextualised by the composition mechanism
+- [[knowledge-neurons|Knowledge Neurons]] — Dai et al. build on this framework using integrated gradients to identify specific FFN neurons responsible for particular facts
 - [[kv-caching|KV Caching]] — inference optimisation also dealing with key-value storage in transformers
