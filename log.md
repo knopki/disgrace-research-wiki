@@ -823,3 +823,15 @@
 - Content: Introduces Zero-shot-CoT — eliciting chain of thought reasoning without few-shot exemplars using the single prompt "Let's think step by step". Two-stage prompting pipeline (reasoning extraction + answer extraction). Evaluated on 12 datasets across arithmetic, commonsense, symbolic, logical reasoning with 17 model variants. Key results: MultiArith 17.7%→78.7%, GSM8K 10.4%→40.7%. Template robustness study across 16 prompts. Zero-shot-CoT is an emergent ability of model scale (100B+), same scaling pattern as few-shot CoT.
 - Updated concept: chain-of-thought (added Zero-shot-CoT section with method, key results table, scaling/emergence, template robustness, impact; updated frontmatter with new source; updated Usage section to attribute "Let's think step by step" to Kojima et al.)
 - Cross-links: chain-of-thought ↔ raw source (provenance)
+
+## [2026-06-25] ingest | Locating and Editing Factual Associations in GPT (Meng et al., NeurIPS 2022)
+
+- Raw source: `raw/papers/2022-02-meng-rome/` (2202.05262.pdf + meng2022rome.md)
+- Source: https://arxiv.org/abs/2202.05262 — "Locating and Editing Factual Associations in GPT"
+- Authors: Kevin Meng, David Bau, Alex Andonian, Yonatan Belinkov (MIT CSAIL / Northeastern University / Technion – IIT)
+- Venue: NeurIPS 2022
+- Content: Introduces Causal Tracing — a causal intervention method that measures the Average Indirect Effect of each hidden state on factual predictions — revealing that mid-layer MLP modules processing the subject's last token are decisive for factual recall (AIE=8.7% at layer 15 in GPT-2 XL). Develops ROME (Rank-One Model Editing): treats W_proj as a linear associative memory, computes a rank-one update to insert new key-value associations with closed-form constrained least-squares. Three-step mechanism: key selection (k∗ from subject last token), value optimization (v∗ via gradient descent maximizing target probability + KL penalty), rank-one insertion (Ŵ = W + Λ(C⁻¹k∗)ᵀ). Introduces COUNTERFACT dataset (21,919 records, WikiData-derived counterfactuals with paraphrase/neighbourhood/generation probes). Key results: ROME achieves S=89.2 on GPT-2 XL (vs FT+L 66.9, KE 52.2, MEND 57.9, KN 35.6) and S=91.5 on GPT-J (vs FT+L 68.7, MEND 63.2). Demonstrates that ROME simultaneously maintains both generalization and specificity, whereas other methods (FT, FT+L, KE, MEND, KN) sacrifice one or the other. Human evaluation: ROME 1.8× more consistent than FT+L, but 1.3× less fluent.
+- Created concept: [[rome-model-editing|ROME (Rank-One Model Editing)]] (definition, three-step mechanism, Causal Tracing method, COUNTERFACT dataset, key results tables, comparison to FT/FT+L/KE/MEND/KN, limitations, significance)
+- Updated concept: [[knowledge-neurons|Knowledge Neurons]] (added cross-link to ROME — direct comparison baseline)
+- Cross-links: rome-model-editing ↔ knowledge-neurons, ffn-key-value-memories, transformer, gpt-3, scaling-laws
+- Updated index.md: added concept entry under Concepts, added raw paper source under Papers; bumped total pages to 78

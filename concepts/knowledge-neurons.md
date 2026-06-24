@@ -93,3 +93,4 @@ Knowledge neurons provide the first direct causal link between specific FFN neur
 - [[backpropagation|Backpropagation]] — the training algorithm that embeds knowledge into FFN parameters
 - [[superposition|Superposition]] — the broader phenomenon of how neural networks represent more features than dimensions, related to the composition of knowledge neuron activations
 - [[bert-attention-analysis|BERT Attention Analysis]] — concurrent interpretability work on BERT's attention heads
+- [[rome-model-editing|ROME]] — model editing method that directly manipulates MLP weights via rank-one updates; compared against and outperforms Knowledge Neurons on COUNTERFACT

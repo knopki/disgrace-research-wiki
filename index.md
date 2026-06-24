@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-24 | Total pages: 77
+> Last updated: 2026-06-25 | Total pages: 78
 
 ## Entities
 
@@ -46,6 +46,7 @@
 - [[word-embeddings|Word Embeddings]] — how LLMs represent concepts as vectors in high-dimensional space, superposition catastrophe
 - [[retrieval-augmented-generation|Retrieval-Augmented Generation (RAG)]] — architectural pattern grounding LLM responses in externally retrieved knowledge; introduced by Lewis et al. (FAIR, NeurIPS 2020) as a hybrid parametric (BART) + non-parametric (DPR index) memory architecture with two marginalisation formulations (RAG-Sequence, RAG-Token)
 - [[rlhf|RLHF (Reinforcement Learning from Human Feedback)]] — technique for fine-tuning language models with human preferences as reward signal; InstructGPT demonstrated 1.3B model outperforming 175B GPT-3
+- [[rome-model-editing|ROME (Rank-One Model Editing)]] — method for editing factual associations in GPT via rank-one MLP weight updates; locates decisive mid-layer MLP computations via Causal Tracing and inserts new facts with both generalization and specificity (Meng et al., MIT / Northeastern / Technion, NeurIPS 2022)
 - [[knowledge-graph|Knowledge Graph]] — structured entity-relationship knowledge base for grounding AI answers
 - [[knowledge-neurons|Knowledge Neurons]] — specific FFN neurons causally responsible for expressing particular factual knowledge in pretrained Transformers; identified via integrated gradients attribution (Dai et al., Microsoft, ACL 2022)
 - [[corpus-linguistics|Corpus Linguistics]] — branch of linguistics building annotated text corpora; foundational to NLP training data and RAG knowledge bases
@@ -199,6 +200,7 @@
 
 - [LoRA: Low-Rank Adaptation of Large Language Models](raw/papers/2021-06-hu-lora/hu2021lora.md) — PDF at [2106.09685.pdf](raw/papers/2021-06-hu-lora/2106.09685.pdf) — freezes pre-trained weights and injects trainable low-rank decomposition matrices, reducing GPT-3 175B params by 10,000× with zero inference latency (Edward Hu et al., Microsoft, ICLR 2022)
 - [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](raw/papers/2022-01-wei-chain-of-thought/wei2022cot.md) — PDF at [2201.11903.pdf](raw/papers/2022-01-wei-chain-of-thought/2201.11903.pdf) — introduces chain-of-thought prompting with intermediate reasoning steps; demonstrates CoT as emergent ability of model scale; PaLM 540B achieves SOTA on GSM8K surpassing finetuned GPT-3 (Jason Wei et al., Google Research, NeurIPS 2022)
+- [Locating and Editing Factual Associations in GPT](raw/papers/2022-02-meng-rome/meng2022rome.md) — PDF at [2202.05262.pdf](raw/papers/2022-02-meng-rome/2202.05262.pdf) — introduces Causal Tracing to localise factual associations to mid-layer MLP modules processing the subject's last token; develops ROME (Rank-One Model Editing) for inserting new facts via rank-one MLP weight updates; introduces the COUNTERFACT dataset; ROME achieves S=89.2 on GPT-2 XL, simultaneously maintaining generalization (PS=96.4) and specificity (NS=75.4) where other methods sacrifice one or the other (Kevin Meng et al., MIT / Northeastern / Technion, NeurIPS 2022)
 - [Large Language Models are Zero-Shot Reasoners](raw/papers/2022-05-kojima-zero-shot-cot/kojima2022zeroshot.md) — PDF at [2205.11916.pdf](raw/papers/2022-05-kojima-zero-shot-cot/2205.11916.pdf) — introduces Zero-shot-CoT; demonstrates that "Let's think step by step" elicits chain of thought reasoning without few-shot examples; evaluated on 12 reasoning datasets with 17 model variants (Takeshi Kojima et al., University of Tokyo / Google Research, NeurIPS 2022)
 
 ## Comparisons
