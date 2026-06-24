@@ -1,7 +1,7 @@
 ---
 title: Chain-of-Thought Prompting (CoT)
 created: 2026-06-15
-updated: 2026-06-21
+updated: 2026-06-24
 type: concept
 tags:
   - technique
@@ -12,6 +12,7 @@ sources:
   - "[GPT-4.1 Prompting Guide](raw/articles/2025-04-14-openai-gpt41-prompting-guide.md)"
   - "[Оптимизация управления ИИ агентами на SLM через методологию Few-shot Logit-Enabled XML (FLEX)](raw/articles/2025-09-18-ivanov-optimizaciya-upravleniya-ii-agentami-na-sml-cherez-metodolog/ivanov2025flex.md)"
   - "[Training Large Language Models to Reason in a Continuous Latent Space](raw/papers/2024-12-hao-coconut/hao2025coconut.md)"
+  - "[Large Language Models are Zero-Shot Reasoners](raw/papers/2022-05-kojima-zero-shot-cot/kojima2022zeroshot.md)"
 ---
 
 # Chain-of-Thought Prompting (CoT)
@@ -74,7 +75,53 @@ Manual analysis of model-generated chains of thought for LaMDA 137B on GSM8K ([W
 - **Incorrect answers:** 46% had minor errors (calculator mistake, symbol mapping, single missing step); 54% had major semantic understanding failures
 - **Scale helps:** Scaling PaLM from 62B to 540B fixed most one-step-missing and semantic understanding errors
 
-## Effect by Model Size
+## Zero-shot-CoT
+
+A companion paper by Kojima et al. (The University of Tokyo / Google Research, NeurIPS 2022) introduced **Zero-shot-CoT** — eliciting chain of thought reasoning without any few-shot examples, using a single task-agnostic prompt ([Kojima et al., 2022](raw/papers/2022-05-kojima-zero-shot-cot/kojima2022zeroshot.md)).
+
+### Method
+
+Zero-shot-CoT uses a two-stage prompting pipeline:
+
+1. **Reasoning extraction** — append `"Let's think step by step"` to the question, generating a free-form reasoning chain
+2. **Answer extraction** — concatenate the original question, the generated reasoning, and a format-specific answer trigger (e.g. `"Therefore, the answer (arabic numerals) is"` for arithmetic) to extract a final answer
+
+This contrasts with Few-shot-CoT (Wei et al.) which provides hand-crafted step-by-step exemplars. Zero-shot-CoT trades per-task prompt engineering for a second LLM call.
+
+### Key Results
+
+Zero-shot-CoT evaluated on 12 datasets across arithmetic, commonsense, symbolic, and logical reasoning with 17 model variants (GPT-3, InstructGPT, PaLM) ranging from 0.3B to 540B parameters ([Kojima et al., 2022](raw/papers/2022-05-kojima-zero-shot-cot/kojima2022zeroshot.md)):
+
+| Task | Zero-shot | Zero-shot-CoT | Gain |
+|------|:--------:|:------------:|:----:|
+| MultiArith | 17.7% | **78.7%** | +61.0 |
+| GSM8K | 10.4% | **40.7%** | +30.3 |
+| AQUA-RAT | 22.4% | **33.5%** | +11.1 |
+| SVAMP | 58.8% | 62.1% | +3.3 |
+| Last Letter (4 words) | 0.2% | **57.6%** | +57.4 |
+| Coin Flip (4 times) | 12.8% | **91.4%** | +78.6 |
+| Date Understanding | 49.3% | **67.5%** | +18.2 |
+| Tracking Shuffled Objects | 31.3% | **52.4%** | +21.1 |
+
+Zero-shot-CoT underperforms Few-shot-CoT (e.g., GSM8K 40.7% vs 48.7%) but requires no task-specific exemplars. With self-consistency, PaLM 540B Zero-shot-CoT reached 89.0% on MultiArith and 70.1% on GSM8K.
+
+### Scaling and Emergence
+
+Like Few-shot-CoT, Zero-shot-CoT is an **emergent ability of model scale** ([Kojima et al., 2022](raw/papers/2022-05-kojima-zero-shot-cot/kojima2022zeroshot.md)). Small models show flat or negative curves; the benefit emerges at 100B+ parameters. This confirms the same scaling pattern across both few-shot and zero-shot CoT variants.
+
+### Template Robustness
+
+The paper systematically evaluated 16 prompt templates across three categories ([Kojima et al., 2022](raw/papers/2022-05-kojima-zero-shot-cot/kojima2022zeroshot.md)):
+
+- **Instructive** (encourage reasoning): `"Let's think step by step"` achieved best (78.7%), followed by `"First,"` (77.3%), `"Let's think about this logically"` (74.5%)
+- **Misleading** (discourage or misdirect): all ≤18.8% (near zero-shot baseline)
+- **Irrelevant** (no reasoning relation): all ≤17.5% (near zero-shot baseline)
+
+Only instructive templates improved performance. The choice of trigger significantly impacts accuracy even within the instructive category.
+
+### Impact
+
+Zero-shot-CoT established that LLMs' reasoning ability is not contingent on task-specific exemplars — the capacity for structured step-by-step reasoning exists as a zero-shot capability that can be elicited by a single generic prompt. The paper served as the strongest zero-shot baseline for reasoning benchmarks and highlighted the value of probing zero-shot abilities before investing in few-shot crafting or fine-tuning.
 
 CoT benefit scales with model size. The original paper established that CoT is an **emergent property** — small models produce fluent but illogical chains of thought, leading to lower performance than standard prompting. Shim et al. (2024) later confirmed and quantified this threshold on GPT-2 and GPT-Neo ([Shim et al., 2024](raw/papers/2024-10-09-ship-cot-harms/shim2024cotharms.md)):
 
@@ -108,7 +155,7 @@ Notably, the original CoT paper already acknowledged this limitation: "although 
 
 ## Usage in Practice
 
-The GPT-4.1 Prompting Guide recommends ([OpenAI, 2026](raw/articles/2025-04-14-openai-gpt41-prompting-guide.md)):
+The GPT-4.1 Prompting Guide recommends ([OpenAI, 2026](raw/articles/2025-04-14-openai-gpt41-prompting-guide.md); originating from [Kojima et al., 2022](raw/papers/2022-05-kojima-zero-shot-cot/kojima2022zeroshot.md)):
 - Start with basic CoT: `"Let's think step by step"`
 - Iteratively improve by auditing failures and codifying successful strategies
 - Structured CoT with explicit sub-goals and verification steps

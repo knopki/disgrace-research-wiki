@@ -813,3 +813,13 @@
 - Updated concept: scaling-laws (added wikilink to chain-of-thought as emergent ability of scale)
 - Cross-links: chain-of-thought ↔ instruction-tuning, in-context-learning, scaling-laws, gpt-3, flan, chain-of-continuous-thought, slm-moe-agentic-ai, flex-prompting
 - Updated index.md: added raw paper source under Papers, updated concept description, bumped total pages to 77
+
+## [2026-06-24] ingest | Large Language Models are Zero-Shot Reasoners (Kojima et al., NeurIPS 2022)
+
+- Raw source: `raw/papers/2022-05-kojima-zero-shot-cot/` (2205.11916.pdf + kojima2022zeroshot.md)
+- Source: https://arxiv.org/abs/2205.11916
+- Authors: Takeshi Kojima, Shixiang Shane Gu, Machel Reid, Yutaka Matsuo, Yusuke Iwasawa (University of Tokyo / Google Research)
+- Venue: NeurIPS 2022
+- Content: Introduces Zero-shot-CoT — eliciting chain of thought reasoning without few-shot exemplars using the single prompt "Let's think step by step". Two-stage prompting pipeline (reasoning extraction + answer extraction). Evaluated on 12 datasets across arithmetic, commonsense, symbolic, logical reasoning with 17 model variants. Key results: MultiArith 17.7%→78.7%, GSM8K 10.4%→40.7%. Template robustness study across 16 prompts. Zero-shot-CoT is an emergent ability of model scale (100B+), same scaling pattern as few-shot CoT.
+- Updated concept: chain-of-thought (added Zero-shot-CoT section with method, key results table, scaling/emergence, template robustness, impact; updated frontmatter with new source; updated Usage section to attribute "Let's think step by step" to Kojima et al.)
+- Cross-links: chain-of-thought ↔ raw source (provenance)

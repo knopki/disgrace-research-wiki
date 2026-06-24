@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-21 | Total pages: 77
+> Last updated: 2026-06-24 | Total pages: 77
 
 ## Entities
 
@@ -199,6 +199,7 @@
 
 - [LoRA: Low-Rank Adaptation of Large Language Models](raw/papers/2021-06-hu-lora/hu2021lora.md) — PDF at [2106.09685.pdf](raw/papers/2021-06-hu-lora/2106.09685.pdf) — freezes pre-trained weights and injects trainable low-rank decomposition matrices, reducing GPT-3 175B params by 10,000× with zero inference latency (Edward Hu et al., Microsoft, ICLR 2022)
 - [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](raw/papers/2022-01-wei-chain-of-thought/wei2022cot.md) — PDF at [2201.11903.pdf](raw/papers/2022-01-wei-chain-of-thought/2201.11903.pdf) — introduces chain-of-thought prompting with intermediate reasoning steps; demonstrates CoT as emergent ability of model scale; PaLM 540B achieves SOTA on GSM8K surpassing finetuned GPT-3 (Jason Wei et al., Google Research, NeurIPS 2022)
+- [Large Language Models are Zero-Shot Reasoners](raw/papers/2022-05-kojima-zero-shot-cot/kojima2022zeroshot.md) — PDF at [2205.11916.pdf](raw/papers/2022-05-kojima-zero-shot-cot/2205.11916.pdf) — introduces Zero-shot-CoT; demonstrates that "Let's think step by step" elicits chain of thought reasoning without few-shot examples; evaluated on 12 reasoning datasets with 17 model variants (Takeshi Kojima et al., University of Tokyo / Google Research, NeurIPS 2022)
 
 ## Comparisons
 
