@@ -1,7 +1,7 @@
 ---
 title: Positional Encoding
 created: 2026-06-17
-updated: 2026-06-16
+updated: 2026-06-25
 type: concept
 tags:
   - architecture
@@ -76,3 +76,4 @@ This is why tools like Cursor generate patches as semantic descriptions ("find t
 - [[grace|GRACE]] — the GRACE framework's semantic anchors address the line-number problem that PE creates; XML-like paired tags leverage PE's ability to correlate identical tokens across large distances to overcome sparse attention degradation
 - [[sparse-transformer|Sparse Transformer]] — contrasts with sinusoidal PE: Sparse Transformer uses learned position embeddings (data-dim for images, attention-dim for text) instead of fixed sinusoidal encodings
 - [[rotary-position-embedding|Rotary Position Embedding (RoPE)]] — the dominant modern position encoding, using rotation matrices instead of additive sinusoidal functions
+- [[alibi|ALiBi (Attention with Linear Biases)]] — position method that eliminates embeddings entirely, biasing attention scores with a distance-proportional penalty; enables training on short sequences and extrapolating to long ones with zero additional parameters

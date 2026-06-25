@@ -863,3 +863,15 @@
 - Content: Introduces Matryoshka Representation Learning (MRL) — training technique for multi-granularity embeddings via O(log(d)) nested losses at logarithmically-spaced dimension sizes (8–2048). Two variants: MRL (separate classifiers) and MRL-E (weight-tied). Key results: up to 14× smaller embedding for ImageNet-1K classification at same accuracy (MRL-AC: ~37 expected dims for 76.3%); up to 128× theoretical / 14× real-world retrieval speedup via adaptive shortlisting+reranking; up to 2% improvement on long-tail novel classes; extends to ViT, ResNet, ALIGN, BERT. Limitations: manual Ds/Dr choice (partially addressed by Funnel Retrieval), optimal loss weighting left as future work.
 - Created concept: [[matryoshka-representation-learning|Matryoshka Representation Learning (MRL)]] (method, adaptive classification, adaptive retrieval, funnel retrieval, cross-modal results, robustness, long-tail findings, oracle analysis, ablations, limitations)
 - Cross-links: matryoshka-representation-learning ↔ word-embeddings, retrieval-augmented-generation, superposition, kv-caching, flash-attention
+
+## [2026-06-25] ingest | Train Short, Test Long: Attention with Linear Biases (Press et al., ICLR 2022)
+
+- Raw source: `raw/papers/2021-08-press-alibi/` (2108.12409.pdf + press2022alibi.md)
+- Source: https://arxiv.org/abs/2108.12409 — "Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation"
+- Authors: Ofir Press, Noah A. Smith, Mike Lewis (University of Washington / Facebook AI Research / Allen Institute for AI)
+- Venue: ICLR 2022
+- Content: Introduces ALiBi (Attention with Linear Biases) — a position method that replaces positional embeddings with scalar biases on attention scores proportional to query-key distance. Key results: 1.3B parameter model trained on L=1024 extrapolates to L=2048, matching sinusoidal model trained on L=2048 but 11% faster and 11% less memory. ALiBi trained on L=512 maintains performance up to 10,000+ tokens. Sliding window analysis reveals gains when L_valid > L are primarily from reducing the early token curse, not from attending to longer context.
+- Created concept: [[alibi|ALiBi (Attention with Linear Biases)]] (mechanism, geometric slope schedule, zero-parameter property, extrapolation results on WikiText-103/CC100+RoBERTa/Toronto BookCorpus, early token curse analysis, comparison to sinusoidal/RoPE/T5 bias, adoption)
+- Updated concept: [[positional-encoding|Positional Encoding]] (added ALiBi to Cross-Links section + updated date)
+- Cross-links: alibi ↔ positional-encoding, rotary-position-embedding, transformer, kv-caching
+- Updated index.md: added concept entry under Concepts, added raw paper source under Papers; bumped total pages to 81

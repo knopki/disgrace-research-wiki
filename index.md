@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-25 | Total pages: 80
+> Last updated: 2026-06-25 | Total pages: 81
 
 ## Entities
 
@@ -25,6 +25,8 @@
 - [[noam-shazeer|Noam Shazeer]] — Google researcher; co-inventor of the Transformer, foundational formulations of Sparsely-Gated MoE and Multi-Query Attention, and proposed GLU variants (SwiGLU, GEGLU, ReGLU) that became the default Transformer FFN activation
 
 ## Concepts
+
+- [[alibi|ALiBi (Attention with Linear Biases)]] — position method eliminating positional embeddings; biases query-key attention scores with a linearly decreasing distance penalty; enables training on short sequences (L=512/1024) with extrapolation to 10,000+ tokens; 11% faster and 11% less memory than sinusoidal at same perplexity (Press et al., UW / FAIR / AI2, ICLR 2022)
 
 - [[attention-head-pruning|Attention Head Pruning]] — Voita et al. (2019) show most Transformer encoder self-attention heads can be pruned; the surviving heads play specialized interpretable roles (positional, syntactic, rare words)
 
@@ -187,6 +189,7 @@
 - [Knowledge Neurons in Pretrained Transformers](raw/papers/2021-04-dai-knowledge-neurons/dai2021knowledgeneurons.md) — PDF at [2104.08696.pdf](raw/papers/2021-04-dai-knowledge-neurons/2104.08696.pdf) — introduces knowledge neurons via integrated gradients attribution; demonstrates that FFN intermediate neurons causally encode specific factual knowledge; achieves 34.4% fact-update success rate with ~4 neuron edits (Damai Dai et al., Microsoft / Peking University, ACL 2022)
 - [Transformer Feed-Forward Layers Are Key-Value Memories](raw/papers/2020-12-geva-ffn-key-value/geva2021ffnkeyvalue.md) — PDF at [2012.14913.pdf](raw/papers/2020-12-geva-ffn-key-value/2012.14913.pdf) (Mor Geva et al., Tel-Aviv Univ / AI2 / Cornell Tech, EMNLP 2021)
 - [Evaluating Large Language Models Trained on Code](raw/papers/2021-07-chen-codex/chen2021codex.md) — PDF at [2107.03374.pdf](raw/papers/2021-07-chen-codex/2107.03374.pdf) — introduces Codex, GPT fine-tuned on GitHub code; HumanEval benchmark; pass@k metric; powers GitHub Copilot (Mark Chen et al., OpenAI, arXiv 2021)
+- [Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation](raw/papers/2021-08-press-alibi/press2022alibi.md) — PDF at [2108.12409.pdf](raw/papers/2021-08-press-alibi/2108.12409.pdf) — introduces ALiBi, a position method that biases attention scores with a distance-proportional penalty instead of using positional embeddings; enables training on short sequences and extrapolating to long ones; 11% faster and 11% less memory than sinusoidal at same perplexity; ICLR 2022 (Ofir Press, Noah A. Smith, Mike Lewis, UW / FAIR / AI2)
 - [Finetuned Language Models Are Zero-Shot Learners](raw/papers/2021-09-wei-flan/wei2021flan.md) — PDF at [2109.01652.pdf](raw/papers/2021-09-wei-flan/2109.01652.pdf) — introduces instruction tuning and FLAN (137B); demonstrates zero-shot FLAN outperforms zero-shot GPT-3 on 20/25 datasets; ICLR 2022 (Jason Wei et al., Google Research, arXiv:2109.01652, September 2021)
 - [TruthfulQA: Measuring How Models Mimic Human Falsehoods](raw/papers/2021-09-lin-truthfulqa/lin2021truthfulqa.md) — PDF at [2109.07958.pdf](raw/papers/2021-09-lin-truthfulqa/2109.07958.pdf) — benchmark of 817 questions measuring truthfulness; inversely scales with model size (larger models less truthful); introduces imitative falsehoods and GPT-judge; best model 58% vs human 94% (Stephanie Lin, Jacob Hilton, Owain Evans, Oxford/OpenAI, ACL 2022)
 - [Efficiently Modeling Long Sequences
