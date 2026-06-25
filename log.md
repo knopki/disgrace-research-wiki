@@ -885,3 +885,14 @@
 - Created entity: entities/deepmind (DeepMind — needed as paper source organization; 2+ papers threshold met)
 - Updated index.md: added concept + entity + raw source; bumped total to 83
 - Cross-links: red-teaming ↔ rlhf, constitutional-ai, instruction-tuning, hallucination-detection-slm, flex-prompting, grace
+
+## [2026-06-25] update | rlhf.md — full-text audit of InstructGPT paper (Ouyang et al., 2022)
+- Read full paper PDF (5,307-line extract). Existing ingest was accurate — no hallucinations found.
+- Added PPO-ptx combined objective function with equation
+- Added FLAN/T0 comparison winrates (78±4%, 79±4%)
+- Added compute cost comparison table (SFT 4.9 PF/s-days, PPO-ptx 60 PF/s-days vs GPT-3 3,640 PF/s-days)
+- Added Section 5.2 "Whom the Model Is Aligned To" — four caveats (labeler, researcher, customer, sampling bias)
+- Added qualitative failure mode taxonomy (false premises, excessive hedging, multi-constraint degradation)
+- Added broader impacts / dual-use concern
+- Bumped updated date to 2026-06-25
+- Cross-links preserved; no new pages created

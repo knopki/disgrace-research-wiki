@@ -1,7 +1,7 @@
 ---
 title: RLHF (Reinforcement Learning from Human Feedback)
 created: 2026-06-16
-updated: 2026-06-16
+updated: 2026-06-25
 type: concept
 tags:
   - rlhf
@@ -34,7 +34,15 @@ InstructGPT used a 6B RM (175B RM was unstable during training and less suitable
 
 ### Step 3: PPO Fine-Tuning
 
-The SFT policy is fine-tuned with Proximal Policy Optimization (PPO) to maximize the reward predicted by the RM. The KL divergence from the SFT model is added as a penalty to prevent the policy from diverging too far (reward hacking). InstructGPT also introduced a **PPO-ptx** variant that mixes PPO updates with pretraining distribution updates (maximising log-likelihood on the pretraining data), which reduces the "alignment tax" — performance regressions on public NLP benchmarks.
+The SFT policy is fine-tuned with Proximal Policy Optimization (PPO) to maximize the reward predicted by the RM. The environment is a bandit: it presents a random prompt, receives a response, and returns the RM reward. The KL divergence from the SFT model is added as a per-token penalty to prevent reward hacking. The value function is initialized from the RM.
+
+InstructGPT also introduced a **PPO-ptx** variant that mixes PPO updates with pretraining distribution updates, reducing the "alignment tax". The combined objective:
+
+```
+objective(φ) = E_{(x,y)~D_RL}[ r_θ(x,y) − β·log(π_φ_RL(y|x) / π_SFT(y|x)) ] + γ·E_{x~D_pretrain}[ log(π_φ_RL(x)) ]
+```
+
+where π_φ_RL is the learned RL policy, π_SFT is the supervised model, D_pretrain is the pretraining distribution, β controls KL penalty strength, and γ controls pretraining mix. For standard PPO, γ=0. The value function is initialized from the RM. Unless specified, "InstructGPT" refers to PPO-ptx models.
 
 ## Key Results
 
@@ -56,7 +64,21 @@ The headline result: **1.3B InstructGPT (PPO-ptx) outputs are preferred to 175B 
 
 RLHF fine-tuning caused regressions on SQuAD, DROP, HellaSwag, and WMT'15 En-Fr translation. The **PPO-ptx** variant (mixing pretraining updates) largely eliminated these regressions without reducing labeler preference scores.
 
-### Generalization
+### FLAN/T0 Comparison
+
+InstructGPT significantly outperforms models fine-tuned on public NLP instruction datasets. On the API prompt distribution, 175B InstructGPT outputs are preferred over FLAN (Wei et al., 2021) 78±4% of the time and over T0 (Sanh et al., 2021) 79±4% of the time ([Ouyang et al., 2022](raw/papers/2022-03-ouyang-instructgpt/ouyang2022instructgpt.md)). The paper attributes this to two factors: (1) public NLP datasets are dominated by classification and QA (~18% of API usage), while open-ended generation and brainstorming make up ~57% of real-world usage; (2) public datasets lack the diversity of real user prompts.
+
+### Compute Cost of Alignment
+
+RLHF is far more cost-effective than scaling alone. Training the 175B InstructGPT model requires ([Ouyang et al., 2022](raw/papers/2022-03-ouyang-instructgpt/ouyang2022instructgpt.md)):
+
+| Stage | Compute (PF/s-days) | vs GPT-3 Pretrain |
+|-------|--------------------|-------------------|
+| SFT (175B) | 4.9 | 0.1% |
+| PPO-ptx (175B) | 60 | 1.6% |
+| GPT-3 pretraining (reference) | 3,640 | 100% |
+
+The cost of data collection and training runs is a fraction of GPT-3 pretraining, yet delivers models preferred 85% of the time over the 100× larger base model. This suggests that, for instruction-following capability, investing in alignment is currently more cost-effective than training larger models ([Ouyang et al., 2022](raw/papers/2022-03-ouyang-instructgpt/ouyang2022instructgpt.md)).
 
 InstructGPT generalizes to held-out labelers (same preference rate) and to out-of-distribution instructions — code summarisation, code QA, and non-English instructions — despite these being rare in the fine-tuning data.
 
@@ -83,11 +105,30 @@ Use-case distribution: generation (45.6%), open QA (12.4%), brainstorming (11.2%
 
 ## Limitations
 
+### Model Limitations
+
 - **Helping vs harmless conflict:** During training, helpfulness to the user was prioritised; the evaluation separately evaluated truthfulness and harmlessness
-- **Labeler demographic bias:** The model is aligned to the preferences of ~40 contractors (sourced through Upwork and ScaleAI), not a universal "human values"
-- **Still makes simple mistakes:** Fails to follow instructions, makes up facts, gives hedging answers, fails at false-premise detection
+- **Still makes simple mistakes:** The paper identifies three failure mode categories ([Ouyang et al., 2022](raw/papers/2022-03-ouyang-instructgpt/ouyang2022instructgpt.md)):
+  1. **False premises:** When given an instruction with a false premise, the model often assumes it is true rather than rejecting it (e.g., "Why is it important to eat socks after meditating?" produces a plausible-sounding but absurd answer)
+  2. **Excessive hedging:** The model tends to give long, qualified answers to simple questions, saying "there is no clear answer" even when one exists — partly because labelers were instructed to reward epistemic humility, and the RM picks this up
+  3. **Multi-constraint degradation:** Performance degrades when instructions contain multiple explicit constraints (e.g., "list 10 movies made in the 1930's set in France") or constraints that are hard for LMs (e.g., writing a summary in a specified number of sentences)
+- **Sycophancy:** The model follows user instructions even when those instructions could lead to harm; when prompted to be maximally biased, InstructGPT generates *more* toxic outputs than GPT-3
 - **No bias improvement:** RLHF did not significantly reduce social bias as measured by Winogender and CrowS-Pairs
-- **RLHF is expensive:** Collecting human preferences at scale requires significant annotation effort
+
+### Whom the Model Is Aligned To
+
+The paper explicitly discusses four caveats about the alignment target ([Ouyang et al., 2022](raw/papers/2022-03-ouyang-instructgpt/ouyang2022instructgpt.md)):
+
+1. **Labeler demographics:** The model is aligned to ~40 contractors (Upwork/ScaleAI, mostly English-speaking, US/Southeast Asia) — not a universal "human values". Inter-labeler agreement is ~73%.
+2. **Researcher bias:** The research team writes labeling instructions and answers edge-case questions, injecting their own preferences into the data collection process.
+3. **Customer bias:** Training prompts come from OpenAI API Playground users, who are self-selected and not representative of all present or future users.
+4. **Sampling bias:** Initial waitlist seeds were OpenAI employees, biasing the user base toward the researchers' own networks.
+
+The paper notes that it is "impossible that one can train a system that is aligned to everyone's preferences at once" and suggests conditioning models on different preference groups as a path forward.
+
+### Broader Impacts
+
+Better instruction-following is a dual-use concern ([Ouyang et al., 2022](raw/papers/2022-03-ouyang-instructgpt/ouyang2022instructgpt.md)): the same capability that makes models more helpful also makes them easier to misuse for generating convincing misinformation, hateful content, or abusive text. Alignment techniques are not a panacea — they should be one tool in a broader safety ecosystem including use-case restriction, monitoring, and rate-limiting in API deployments.
 
 ## Related
 
