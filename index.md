@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-25 | Total pages: 81
+> Last updated: 2026-06-25 | Total pages: 83
 
 ## Entities
 
@@ -19,6 +19,7 @@
 - [[openai|OpenAI]] — American AI research organization; developer of GPT models, ChatGPT, DALL-E, Sora, and OpenAI Codex
 - [[codex|Codex]] — OpenAI's GPT model fine-tuned on GitHub code; introduces HumanEval benchmark and pass@k metric for functional correctness; powers GitHub Copilot
 - [[dario-amodei|Dario Amodei]] — Co-founder and CEO of Anthropic; AI researcher, proponent of democratic AI leadership, author of *Machines of Loving Grace* and *The Adolescence of Technology*
+- [[deepmind|DeepMind]] — British AI research lab (acquired by Google, 2014); contributor to scaling laws (Chinchilla) and automated LM safety evaluation (red teaming)
 - [[flan|FLAN (Finetuned Language Net)]] — 137B instruction-tuned language model by Google Research; demonstrates that instruction tuning on 62 NLP datasets enables zero-shot generalization to unseen tasks, outperforming zero-shot GPT-3 on 20/25 datasets
 - [[geoffrey-hinton|Geoffrey Hinton]] — British-Canadian cognitive psychologist and computer scientist; one of the "godfathers of deep learning"; co-popularised backpropagation (1986), introduced knowledge distillation (2015), inventor of dropout; Turing Award (2018), Nobel Prize in Physics (2024)
 
@@ -76,6 +77,7 @@
 - [[privileged-basis|Privileged Basis]] — architectural property where activation functions make basis directions special, encouraging feature-neuron alignment
 
 - [[concepts/rational-unified-process|Rational Unified Process (RUP)]] — iterative software development process framework by Rational/IBM; use-case driven, architecture-centric, with four life-cycle phases and six best practices
+- [[red-teaming|Automated Red Teaming of Language Models]] — using one LM to automatically generate adversarial test cases and detect harmful behaviors in another LM; introduced by Perez et al. (DeepMind, 2022); uncovered tens of thousands of offensive replies, data leakage, and distributional bias in a 280B Gopher chatbot
 
 - [[cognitive-superposition|Cognitive Superposition]] — ability of a cognitive system to co-activate multiple independently acquired representations; backprop-trained DNNs fail at it, brain-constrained networks succeed via cell assemblies
 
@@ -198,6 +200,7 @@
 - [Direct Preference Optimization: Your Language Model is Secretly a Reward Model](raw/papers/2023-05-rafailov-dpo/rafailov2023dpo.md) — PDF at [2305.18290.pdf](raw/papers/2023-05-rafailov-dpo/2305.18290.pdf) (Rafael Rafailov et al., Stanford, NeurIPS 2023)
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](raw/papers/2018-10-devlin-bert/1810.04805.pdf) — details at [devlin2018bert.md](raw/papers/2018-10-devlin-bert/devlin2018bert.md) (Jacob Devlin et al., Google AI Language, NAACL 2019)
 - [Neural Machine Translation of Rare Words with Subword Units](raw/papers/2016-06-sennrich-bpe-subword/1508.07909.pdf) — introduces BPE for subword tokenization; details at [sennrich2016bpe.md](raw/papers/2016-06-sennrich-bpe-subword/sennrich2016bpe.md) (Rico Sennrich, Barry Haddow, Alexandra Birch, ACL 2016)
+- [Red Teaming Language Models with Language Models](raw/papers/2022-02-perez-red-teaming/perez2022redteaming.md) — PDF at [2202.03286.pdf](raw/papers/2022-02-perez-red-teaming/2202.03286.pdf) — introduces automated LM-based red teaming; generates adversarial test cases to discover harmful behaviors (offensive content, data leakage, contact info exposure, distributional bias) in a 280B Gopher chatbot; compares zero-shot through RL methods against human adversaries (Ethan Perez et al., DeepMind / NYU, arXiv 2022)
 - [Distilling the Knowledge in a Neural Network](raw/papers/2015-03-hinton-distillation/hinton2015distill.md) — PDF at [1503.02531.pdf](raw/papers/2015-03-hinton-distillation/1503.02531.pdf) — introduces knowledge distillation via temperature-parameterised softmax, soft target regularisation, and specialist models (Geoffrey Hinton, Oriol Vinyals, Jeff Dean, Google, NIPS 2014 Workshop, 2015)
 - [Gaussian Error Linear Units (GELUs)](raw/papers/2016-06-hendrycks-gelu/hendrycks2016gelu.md) — PDF at [1606.08415.pdf](raw/papers/2016-06-hendrycks-gelu/1606.08415.pdf) — introduces GELU activation function xΦ(x) with probabilistic motivation from stochastic regularizer expectation; default activation in BERT and GPT; also introduces SiLU (Dan Hendrycks, Kevin Gimpel, arXiv 2016)
 - [Outrageously Large Neural Networks: The Sparsely-Gated Mixture-of-Experts Layer](raw/papers/2017-01-shazeer-sparsely-gated-moe/shazeer2017moe.md) — PDF at [1701.06538.pdf](raw/papers/2017-01-shazeer-sparsely-gated-moe/1701.06538.pdf) — introduces the Sparsely-Gated MoE layer with noisy top-k gating, importance/load losses, and 137B parameter models; foundational paper for all modern MoE architectures (Noam Shazeer et al., Google Brain, ICLR 2017)

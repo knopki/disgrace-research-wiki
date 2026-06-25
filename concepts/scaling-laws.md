@@ -55,7 +55,7 @@ GPT-3 (175B) confirmed the Kaplan scaling trends extend smoothly for two more or
 
 ## Chinchilla Scaling Laws
 
-Refined by Hoffmann et al. at DeepMind (2022) — the "Chinchilla scaling laws" — which found that most existing LLMs (including GPT-3) were undertrained, and that model size and training data should scale in equal proportion ([Hoffmann et al., 2022](raw/papers/2022-03-hoffmann-chinchilla/hoffmann2022chinchilla.md)).
+Refined by [[deepmind|Hoffmann et al. at DeepMind]] (2022) — the "Chinchilla scaling laws" — which found that most existing LLMs (including GPT-3) were undertrained, and that model size and training data should scale in equal proportion ([Hoffmann et al., 2022](raw/papers/2022-03-hoffmann-chinchilla/hoffmann2022chinchilla.md)).
 
 ### Core Result: N ∝ D
 

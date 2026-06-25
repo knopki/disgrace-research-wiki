@@ -875,3 +875,13 @@
 - Updated concept: [[positional-encoding|Positional Encoding]] (added ALiBi to Cross-Links section + updated date)
 - Cross-links: alibi ↔ positional-encoding, rotary-position-embedding, transformer, kv-caching
 - Updated index.md: added concept entry under Concepts, added raw paper source under Papers; bumped total pages to 81
+
+## [2026-06-25] ingest | Red Teaming Language Models with Language Models (Perez et al., DeepMind/NYU, 2022)
+- Raw source: raw/papers/2022-02-perez-red-teaming/ (2202.03286.pdf + perez2022redteaming.md)
+- Source: https://arxiv.org/abs/2202.03286 — "Red Teaming Language Models with Language Models"
+- Authors: Ethan Perez, Saffron Huang, Francis Song, Trevor Cai, Roman Ring, John Aslanides, Amelia Glaese, Nat McAleese, Geoffrey Irving (DeepMind / NYU)
+- Content: introduces automated LM-based red teaming — three-stage pipeline (red LM generates test cases → target LM replies → classifier detects harmful outputs). Evaluated on 280B Dialogue-Prompted Gopher chatbot. Four generation methods compared (zero-shot, stochastic few-shot, supervised learning, RL with A2C). RL elicits >40% offensive replies vs 3.7% zero-shot. Discovers 18,444 offensive replies, 1,709 data leakage cases, 3,206 phone numbers, 11,683 email addresses, and distributional bias against majority groups. Multi-turn dialogue red teaming shows offensive replies beget offensive replies.
+- Created concept: concepts/red-teaming (Automated Red Teaming of Language Models)
+- Created entity: entities/deepmind (DeepMind — needed as paper source organization; 2+ papers threshold met)
+- Updated index.md: added concept + entity + raw source; bumped total to 83
+- Cross-links: red-teaming ↔ rlhf, constitutional-ai, instruction-tuning, hallucination-detection-slm, flex-prompting, grace
