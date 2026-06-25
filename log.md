@@ -896,3 +896,15 @@
 - Added broader impacts / dual-use concern
 - Bumped updated date to 2026-06-25
 - Cross-links preserved; no new pages created
+
+## [2026-06-25] ingest | Self-Instruct: Aligning Language Models with Self-Generated Instructions (Wang et al., UW/AI2, ACL 2023)
+
+- Raw source: `raw/papers/2022-12-wang-self-instruct/` (2212.10560.pdf + wang2022selfinstruct.md)
+- Source: https://arxiv.org/abs/2212.10560 — "Self-Instruct: Aligning Language Models with Self-Generated Instructions"
+- Authors: Yizhong Wang, Yeganeh Kordi, Swaroop Mishra, Alisa Liu, Noah A. Smith, Daniel Khashabi, Hannaneh Hajishirzi (University of Washington / Allen Institute for AI)
+- Venue: ACL 2023
+- Content: Introduces SELF-INSTRUCT — a framework bootstrapping instruction-following capabilities from a pretrained LM's own generations. Four-step pipeline: instruction generation (175 seed tasks, 8-shot in-context), classification task identification, instance generation (input-first / output-first for classification), and filtering (ROUGE-L ≥ 0.7 dedup, keyword exclusion). Applied to vanilla GPT-3 (davinci): 52k instructions, 82k instances. Key results: +33.1% absolute ROUGE-L improvement on SuperNI over vanilla GPT-3, matching InstructGPT_001 (39.9 vs 40.8); outperforms T0 and SuperNI baselines on 252 novel user-oriented tasks in human evaluation; only 5% gap behind InstructGPT_001. Data quality: 92% valid instructions, 54% fully valid instances. Cost: ~$600 generation + ~$338 fine-tuning. Foundational work for automatic instruction data generation (Stanford Alpaca, etc.).
+- Created concept: [[self-instruct|Self-Instruct]] (pipeline, data characteristics, results, limitations, impact, cross-links)
+- Updated concept: [[instruction-tuning|Instruction Tuning]] (added Self-Instruct cross-link in Relationship section)
+- Cross-links: self-instruct ↔ instruction-tuning, rlhf, constitutional-ai, red-teaming, flan, gpt-3, flex-prompting
+- Updated index.md: added concept entry under Concepts + raw paper source under Papers; bumped total pages to 84

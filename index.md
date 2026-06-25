@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-25 | Total pages: 83
+|> Last updated: 2026-06-25 | Total pages: 84
 
 ## Entities
 
@@ -40,7 +40,8 @@
 - [[semantic-fractal|Semantic Fractal]] — how LLMs represent code as branching semantic vectors, not linear instructions
 - [[human-sequential-bottleneck|Human Sequential Bottleneck]] — human cognition is linear, making parallel programming disproportionately hard
 - [[in-context-learning|In-Context Learning]] — paradigm where language models adapt to tasks purely through conditioning context without gradient updates; systematically defined and studied at scale by GPT-3 across zero-shot, one-shot, and few-shot settings; meta-learning framing where pre-training is the outer loop and in-context conditioning is the inner loop
-- [[instruction-tuning|Instruction Tuning]] — technique improving zero-shot learning by fine-tuning LMs on diverse NLP tasks verbalized as natural language instructions; introduced by FLAN (Wei et al., Google, ICLR 2022); bridges pretrain-finetune and prompting paradigms; benefits emerge only at sufficient scale (≥68B)
+|- [[instruction-tuning|Instruction Tuning]] — technique improving zero-shot learning by fine-tuning LMs on diverse NLP tasks verbalized as natural language instructions; introduced by FLAN (Wei et al., Google, ICLR 2022); bridges pretrain-finetune and prompting paradigms; benefits emerge only at sufficient scale (≥68B)
+|- [[self-instruct|Self-Instruct]] — framework for bootstrapping instruction-following from a model's own generations; generates 52k diverse instructions from 175 seed tasks, achieving 33% absolute improvement on SuperNI and nearly matching InstructGPT_001 without human annotations (Wang et al., UW/AI2, ACL 2023)
 - [[vibe-coding|Vibe Coding]] — programmer shifts from implementation to directing intent, delegating parallel logic to AI
 - [[ai-resource-leveling|AI Resource Leveling]] — AI performs resource leveling with understanding of project technology, not just load balancing
 - [[skill-scheduling|Skill Scheduling]] — AI-driven flexible qualification management for project staffing
@@ -165,6 +166,7 @@
 
 - [Toy Models of Superposition](raw/papers/2022-09-elhage-toy-models-superposition/anthropic2022toy.md) (Anthropic Transformer Circuits Thread, 2022)
 - [Constitutional AI: Harmlessness from AI Feedback](raw/papers/2022-12-bai-constitutional-ai/bai2022constitutional.md) — PDF at [2212.08073.pdf](raw/papers/2022-12-bai-constitutional-ai/2212.08073.pdf) (Yuntao Bai et al., Anthropic, arXiv 2022)
+- [Self-Instruct: Aligning Language Models with Self-Generated Instructions](raw/papers/2022-12-wang-self-instruct/wang2022selfinstruct.md) — PDF at [2212.10560.pdf](raw/papers/2022-12-wang-self-instruct/2212.10560.pdf) — bootstraps instruction-following via model's own generations; 33% absolute gain on SuperNI, near InstructGPT_001 without human annotations (Yizhong Wang et al., UW/AI2, ACL 2023)
 - [Training Compute-Optimal Large Language Models]
 - [Training language models to follow instructions with human feedback](raw/papers/2022-03-ouyang-instructgpt/ouyang2022instructgpt.md) — PDF at [2203.02155.pdf](raw/papers/2022-03-ouyang-instructgpt/2203.02155.pdf) (Long Ouyang et al., OpenAI, NeurIPS 2022)
 - [On the ability of standard and brain-constrained DNNs to support cognitive superposition](raw/papers/2024-02-garagnani-cognitive-superposition/garagnani2024superposition.md) (Max Garagnani, Cognitive Neurodynamics, 2024)
