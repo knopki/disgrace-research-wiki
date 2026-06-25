@@ -853,3 +853,13 @@
 ## [2026-06-25] update | Toy Models of Superposition — added arxiv link to metadata
 - Raw source: raw/papers/2022-09-elhage-toy-models-superposition/anthropic2022toy.md
 - Added `arxiv: https://arxiv.org/abs/2209.10652` to frontmatter
+
+## [2026-06-25] ingest | Matryoshka Representation Learning (Kusupati et al., NeurIPS 2022)
+
+- Raw source: `raw/papers/2022-05-kusupati-matryoshka-representation-learning/` (2205.13147.pdf + kusupati2022mrl.md)
+- Source: https://arxiv.org/abs/2205.13147
+- Authors: Aditya Kusupati, Gantavya Bhatt, Aniket Rege, Matthew Wallingford, Aditya Sinha, Vivek Ramanujan, William Howard-Snyder, Kaifeng Chen, Sham Kakade, Prateek Jain, Ali Farhadi (University of Washington / Google Research / Harvard)
+- Venue: NeurIPS 2022
+- Content: Introduces Matryoshka Representation Learning (MRL) — training technique for multi-granularity embeddings via O(log(d)) nested losses at logarithmically-spaced dimension sizes (8–2048). Two variants: MRL (separate classifiers) and MRL-E (weight-tied). Key results: up to 14× smaller embedding for ImageNet-1K classification at same accuracy (MRL-AC: ~37 expected dims for 76.3%); up to 128× theoretical / 14× real-world retrieval speedup via adaptive shortlisting+reranking; up to 2% improvement on long-tail novel classes; extends to ViT, ResNet, ALIGN, BERT. Limitations: manual Ds/Dr choice (partially addressed by Funnel Retrieval), optimal loss weighting left as future work.
+- Created concept: [[matryoshka-representation-learning|Matryoshka Representation Learning (MRL)]] (method, adaptive classification, adaptive retrieval, funnel retrieval, cross-modal results, robustness, long-tail findings, oracle analysis, ablations, limitations)
+- Cross-links: matryoshka-representation-learning ↔ word-embeddings, retrieval-augmented-generation, superposition, kv-caching, flash-attention

@@ -151,6 +151,7 @@ Key finding from RGB benchmarks: at 80%+ noise ratio, accuracy drops significant
 - [[hallucination-detection-slm|SLM-based Hallucination Detection]] — uses RAG context as the basis for SLM-based answer verification; describes a concrete post-hoc verification pipeline for RAG responses
 - [[mamba|Mamba / SSM]] — Mamba's constant-memory state (~24 MB vs GB-scale KV cache) makes it the ideal companion for iterative RAG loops; the article reframes RAG from context augmentation to external "oracle" that compensates for Mamba's hallucination tendency via belief state overwriting
 - **Dense Passage Retrieval (DPR)** — the retriever component used in the original RAG paper (Karpukhin et al., 2020)
+- [[matryoshka-representation-learning|Matryoshka Representation Learning (MRL)]] — training technique for multi-granularity embeddings enabling adaptive retrieval with up to 14× speedup via low-dim shortlisting + high-dim reranking; directly applicable to improving RAG retrieval efficiency
 - **BART** — the seq2seq generator component used in the original RAG paper (Lewis et al., 2019)
 - [[bm25|BM25]] — lexical retrieval baseline compared against DPR in the RAG experiments
 - [[bert|BERT]] — the encoder architecture underlying DPR's bi-encoder retriever

@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-25 | Total pages: 79
+> Last updated: 2026-06-25 | Total pages: 80
 
 ## Entities
 
@@ -95,6 +95,7 @@
 - [[scaling-laws|Scaling Laws (Neural Language Models)]] — empirical power-law relationships between language model performance and model size, dataset size, and training compute
 - [[transformer|Transformer]] — architecture using self-attention and positional encodings that superseded RNNs and became the foundation of modern LLMs
 - [[kv-caching|KV Caching]] — inference optimisation caching Key/Value states in auto-regressive transformers to avoid redundant recomputation
+- [[matryoshka-representation-learning|Matryoshka Representation Learning (MRL)]] — training technique producing a single embedding whose first m dimensions form a standalone effective representation for any m ∈ [d]; enables up to 14× compute savings in classification and retrieval via coarse-to-fine nesting (Kusupati et al., UW/Google, NeurIPS 2022)
 - [[multi-query-attention|Multi-Query Attention (MQA)]] — attention variant sharing keys and values across all heads to reduce KV cache size and memory bandwidth; Shazeer (2019) achieves 12× decoder speedup
 - [[mixture-of-experts|Mixture-of-Experts (MoE)]] — neural architecture scaling capacity via sparse expert activation
 - [[mixture-of-experts|Mixture-of-Experts (MoE)]] — neural architecture scaling capacity via sparse expert activation; decouples parameter count from computational cost; foundational formulation by Shazeer et al. (2017) with noisy top-k gating, 137B parameter models; evolved into Switch Transformer and modern MoE LLMs
@@ -181,6 +182,7 @@
 - [Hallucination Detection with Small Language Models](raw/papers/2025-06-24-cheung-hallucination-detection-slm/2506.22486.pdf) — details at [cheung2025hallucination.md](raw/papers/2025-06-24-cheung-hallucination-detection-slm/cheung2025hallucination.md) (Ming Cheung, dBeta Labs, IEEE ICDE Workshop 2025)
 - [Attention Is All You Need](raw/papers/2017-06-vaswani-attention-is-all-you-need/1706.03762.pdf) — details at [vaswani2017attention](raw/papers/2017-06-vaswani-attention-is-all-you-need/vaswani2017attention.md) (Ashish Vaswani et al., Google Research/NIPS, 2017)
 - [FlashAttention: Fast and Memory-Efficient Exact Attention with IO-Awareness](raw/papers/2022-05-dao-flashattention/2205.14135.pdf) — details at [dai2022flashattention.md](raw/papers/2022-05-dao-flashattention/dai2022flashattention.md) (Tri Dao et al., Stanford, NeurIPS 2022)
+- [Matryoshka Representation Learning](raw/papers/2022-05-kusupati-matryoshka-representation-learning/kusupati2022mrl.md) — PDF at [2205.13147.pdf](raw/papers/2022-05-kusupati-matryoshka-representation-learning/2205.13147.pdf) — introduces MRL: multi-granularity embedding via O(log(d)) nested losses; up to 14× smaller embedding for same accuracy and 128× theoretical speedup for adaptive retrieval (Aditya Kusupati et al., UW / Google Research / Harvard, NeurIPS 2022)
 - [RoFormer: Enhanced Transformer with Rotary Position Embedding](raw/papers/2021-04-su-roformer/2104.09864.pdf) — details at [su2021rope.md](raw/papers/2021-04-su-roformer/su2021rope.md) (Jianlin Su et al., Zhuiyi Technology, arXiv 2021)
 - [Knowledge Neurons in Pretrained Transformers](raw/papers/2021-04-dai-knowledge-neurons/dai2021knowledgeneurons.md) — PDF at [2104.08696.pdf](raw/papers/2021-04-dai-knowledge-neurons/2104.08696.pdf) — introduces knowledge neurons via integrated gradients attribution; demonstrates that FFN intermediate neurons causally encode specific factual knowledge; achieves 34.4% fact-update success rate with ~4 neuron edits (Damai Dai et al., Microsoft / Peking University, ACL 2022)
 - [Transformer Feed-Forward Layers Are Key-Value Memories](raw/papers/2020-12-geva-ffn-key-value/geva2021ffnkeyvalue.md) — PDF at [2012.14913.pdf](raw/papers/2020-12-geva-ffn-key-value/2012.14913.pdf) (Mor Geva et al., Tel-Aviv Univ / AI2 / Cornell Tech, EMNLP 2021)
