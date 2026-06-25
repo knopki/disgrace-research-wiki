@@ -11,7 +11,6 @@ authors:
 date: 2022-05-24
 venue: NeurIPS 2022
 ---
-
 # Large Language Models are Zero-Shot Reasoners
 
 **PDF:** [2205.11916.pdf](2205.11916.pdf)

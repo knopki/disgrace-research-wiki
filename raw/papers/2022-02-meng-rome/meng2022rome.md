@@ -10,7 +10,6 @@ authors:
 date: 2022-02-10
 venue: NeurIPS 2022
 ---
-
 # Locating and Editing Factual Associations in GPT
 
 **PDF:** [2202.05262.pdf](2202.05262.pdf)

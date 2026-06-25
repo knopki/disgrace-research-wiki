@@ -9,6 +9,7 @@ tags:
   - organization
 sources:
   - "[Toy Models of Superposition](raw/papers/2022-09-elhage-toy-models-superposition/anthropic2022toy.md)"
+  - "[Constitutional AI: Harmlessness from AI Feedback](raw/papers/2022-12-bai-constitutional-ai/bai2022constitutional.md)"
 confidence: high
 ---
 
@@ -25,6 +26,7 @@ Core research contributors: Nelson Elhage, Tristan Hume, Catherine Olsson, Nicho
 ## Key Publications
 
 - **Toy Models of Superposition** (Sept 2022) — demonstrated superposition in small ReLU networks, establishing [[superposition]], [[polysemantic-neurons|polysemantic neurons]], and the [[privileged-basis|privileged basis]] framework. Published under Transformer Circuits Thread.
+- **[[constitutional-ai|Constitutional AI: Harmlessness from AI Feedback]]** (Dec 2022) — introduced CAI, a method for training harmless AI assistants via self-critique, revision, and RLAIF using only a short list of written principles; the foundation of Claude's safety training; significantly reduces reliance on human harmlessness labels.
 - The Circuits Thread includes earlier work on interpretability of InceptionV1 neurons, feature visualisation, and universality.
 
 ## Research Programme

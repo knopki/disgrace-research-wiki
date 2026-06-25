@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-25 | Total pages: 78
+> Last updated: 2026-06-25 | Total pages: 79
 
 ## Entities
 
@@ -118,7 +118,8 @@
 - [[switch-transformer|Switch Transformer]] — Mixture-of-Experts architecture simplifying MoE to single-expert routing; enables trillion-parameter sparsely-activated models with constant compute cost; foundational to modern MoE LLMs (Fedus et al., Google, JMLR 2022)
 - [[v4a-diff-format|V4A Diff Format]] — context-based, line-number-free diff format designed for LLM agent patch application; used by OpenAI GPT-4.1 for SWE-bench Verified (55% SOTA for non-reasoning models)
 - [[chain-of-thought|Chain-of-Thought Prompting (CoT)]] — prompting technique that instructs LLMs to articulate intermediate reasoning steps; introduced by Wei et al. (Google, NeurIPS 2022) demonstrating CoT as an emergent ability of model scale; improves math/logic performance for large models (100B+) but harms SLM accuracy by 15–30%+
-- [[direct-preference-optimization|Direct Preference Optimization (DPO)]] — RL-free alignment algorithm that eliminates explicit reward modelling by reparameterising the RLHF objective as a binary cross-entropy loss; achieves better reward/KL frontier than PPO and scales to 6B models (Rafailov et al., Stanford, NeurIPS 2023)
+- [[constitutional-ai|Constitutional AI (CAI)]] — method for training harmless AI assistants via self-critique, revision, and RLAIF using a written constitution; replaces human harmlessness labels with AI feedback guided by ~10-15 principles; achieves Pareto improvement in helpfulness-harmlessness tradeoff (Bai et al., Anthropic, arXiv 2022)
+- [[direct-preference-optimization|Direct Preference Optimization (DPO)]]
 - [[ffn-key-value-memories|Transformer FFN as Key-Value Memories]] — transformer feed-forward layers operate as unnormalized key-value memories where keys detect input patterns and values induce output distributions; lower layers capture shallow patterns, upper layers semantic ones (Geva et al., EMNLP 2021)
 - [[sentencepiece|SentencePiece]] — language-independent subword tokenizer training directly on raw text without pre-tokenization; implements both BPE and Unigram LM segmentation with subword regularization (Kudo & Richardson, Google, EMNLP 2018)
 - [[truthfulqa|TruthfulQA]] — benchmark of 817 questions measuring LLM truthfulness; largest models show inverse scaling (less truthful as they grow); introduces imitative falsehoods concept and GPT-judge automated metric (Lin, Hilton & Evans, ACL 2022)
@@ -158,7 +159,8 @@
 ### Papers
 
 - [Toy Models of Superposition](raw/papers/2022-09-elhage-toy-models-superposition/anthropic2022toy.md) (Anthropic Transformer Circuits Thread, 2022)
-- [Training Compute-Optimal Large Language Models](raw/papers/2022-03-hoffmann-chinchilla/hoffmann2022chinchilla.md) (Jordan Hoffmann et al., DeepMind, arXiv, 2022)
+- [Constitutional AI: Harmlessness from AI Feedback](raw/papers/2022-12-bai-constitutional-ai/bai2022constitutional.md) — PDF at [2212.08073.pdf](raw/papers/2022-12-bai-constitutional-ai/2212.08073.pdf) (Yuntao Bai et al., Anthropic, arXiv 2022)
+- [Training Compute-Optimal Large Language Models]
 - [Training language models to follow instructions with human feedback](raw/papers/2022-03-ouyang-instructgpt/ouyang2022instructgpt.md) — PDF at [2203.02155.pdf](raw/papers/2022-03-ouyang-instructgpt/2203.02155.pdf) (Long Ouyang et al., OpenAI, NeurIPS 2022)
 - [On the ability of standard and brain-constrained DNNs to support cognitive superposition](raw/papers/2024-02-garagnani-cognitive-superposition/garagnani2024superposition.md) (Max Garagnani, Cognitive Neurodynamics, 2024)
 - [Transformers Represent Belief State Geometry in their Residual Stream](raw/papers/2024-05-shai-belief-state-geometry/shai2025belief.md) (Adam Shai et al., NeurIPS 2024)

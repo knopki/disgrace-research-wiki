@@ -835,3 +835,21 @@
 - Updated concept: [[knowledge-neurons|Knowledge Neurons]] (added cross-link to ROME — direct comparison baseline)
 - Cross-links: rome-model-editing ↔ knowledge-neurons, ffn-key-value-memories, transformer, gpt-3, scaling-laws
 - Updated index.md: added concept entry under Concepts, added raw paper source under Papers; bumped total pages to 78
+
+## [2026-06-25] ingest | Constitutional AI: Harmlessness from AI Feedback (Bai et al., Anthropic, arXiv 2022)
+
+- Raw source: `raw/papers/2022-12-bai-constitutional-ai/` (2212.08073.pdf + bai2022constitutional.md)
+- Source: https://arxiv.org/abs/2212.08073 — "Constitutional AI: Harmlessness from AI Feedback"
+- Authors: Yuntao Bai, Saurav Kadavath, Sandipan Kundu, Amanda Askell, Jackson Kernion, Andy Jones, Anna Chen, Anna Goldie, Azalia Mirhoseini, Cameron McKinnon, Carol Chen, Catherine Olsson, Christopher Olah, Danny Hernandez, Dawn Drain, Deep Ganguli, Dustin Li, Eli Tran-Johnson, Ethan Perez, Jamie Kerr, Jared Mueller, Jeffrey Ladish, Joshua Landau, Kamal Ndousse, Kamile Lukosuite, Liane Lovitt, Michael Sellitto, Nelson Elhage, Nicholas Schiefer, Noemi Mercado, Nova DasSarma, Robert Lasenby, Robin Larson, Sam Ringer, Scott Johnston, Shauna Kravec, Sheer El Showk, Stanislav Fort, Tamera Lanham, Timothy Telleen-Lawton, Tom Conerly, Tom Henighan, Tristan Hume, Samuel R. Bowman, Zac Hatfield-Dodds, Ben Mann, Dario Amodei, Nicholas Joseph, Sam McCandlish, Tom Brown, Jared Kaplan (Anthropic)
+## [2026-06-25] ingest | Constitutional AI: Harmlessness from AI Feedback (Bai et al., Anthropic, arXiv 2022)
+- Raw source: raw/papers/2022-12-bai-constitutional-ai/ (bai2022constitutional.md + PDF)
+- Created concept: constitutional-ai.md
+- Updated concept: [[rlhf|RLHF]] (added CAI as source, expanded relationship bullet with RLAIF mention, converted plain-text to wikilink)
+- Updated entity: [[anthropic|Anthropic]] (added CAI to Key Publications and sources)
+- Updated entity: [[dario-amodei|Dario Amodei]] (added CAI co-authorship note)
+- Cross-links: constitutional-ai ↔ rlhf, anthropic, dario-amodei, chain-of-thought, direct-preference-optimization, instruction-tuning
+- Updated index.md: added concept entry under Concepts, added raw paper source under Papers; bumped total pages to 79
+
+## [2026-06-25] update | Toy Models of Superposition — added arxiv link to metadata
+- Raw source: raw/papers/2022-09-elhage-toy-models-superposition/anthropic2022toy.md
+- Added `arxiv: https://arxiv.org/abs/2209.10652` to frontmatter

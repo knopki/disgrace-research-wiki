@@ -1,5 +1,6 @@
 ---
 source_url: https://transformer-circuits.pub/2022/toy_model/index.html
+arxiv: https://arxiv.org/abs/2209.10652
 ingested: 2026-06-16
 title: Toy Models of Superposition
 authors:

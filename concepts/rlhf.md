@@ -10,6 +10,7 @@ tags:
   - technique
 sources:
   - "[Training language models to follow instructions with human feedback](raw/papers/2022-03-ouyang-instructgpt/ouyang2022instructgpt.md)"
+  - "[Constitutional AI: Harmlessness from AI Feedback](raw/papers/2022-12-bai-constitutional-ai/bai2022constitutional.md)"
 confidence: high
 ---
 
@@ -73,7 +74,7 @@ Use-case distribution: generation (45.6%), open QA (12.4%), brainstorming (11.2%
 
 - **Alignment Tax** — RLHF can degrade performance on standard NLP benchmarks; the PPO-ptx variant mitigates this by mixing pretraining updates
 - **InstructGPT** — the specific model family produced by applying RLHF to GPT-3; demonstrated that alignment via human feedback is more efficient than scaling alone
-- **Constitutional AI** — later approach from [[anthropic|Anthropic]] that replaces human feedback with a written constitution for self-supervision, reducing reliance on human labelers
+- **[[constitutional-ai|Constitutional AI]]** — later approach from [[anthropic|Anthropic]] that replaces human feedback with a written constitution for self-supervision, reducing reliance on human labelers; introduces RLAIF (RL from AI Feedback)
 - **[[instruction-tuning|Instruction Tuning]]** — simpler sibling technique achieving instruction-following via supervised fine-tuning on instruction-formatted data rather than RL from human feedback; contemporaneous with InstructGPT (FLAN, ICLR 2022)
 - **[[direct-preference-optimization|DPO (Direct Preference Optimization)]]** — post-InstructGPT technique that eliminates the explicit reward model by directly optimising from preferences
 - **[[chain-of-thought|Chain-of-Thought]]** — prompting technique that InstructGPT can follow more reliably than base GPT-3 due to improved instruction-following ability
