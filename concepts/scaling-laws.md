@@ -1,7 +1,7 @@
 ---
 title: Scaling Laws (Neural Language Models)
 created: 2026-06-16
-updated: 2026-06-16
+updated: 2026-06-25
 raw_ingested: true
 type: concept
 tags:
@@ -12,6 +12,7 @@ tags:
 sources:
   - "[Scaling Laws for Neural Language Models](raw/papers/2020-01-kaplan-scaling-laws/kaplan2020scaling.md)"
   - "[Training Compute-Optimal Large Language Models](raw/papers/2022-03-hoffmann-chinchilla/hoffmann2022chinchilla.md)"
+  - "[Scaling Laws for Reward Model Overoptimization](raw/papers/2022-10-gao-reward-model-overoptimization/gao2022rewardmodeloveropt.md)"
 confidence: high
 ---
 
@@ -103,6 +104,35 @@ Chinchilla outperformed Gopher on every evaluated task despite 4x fewer paramete
 
 The Chinchilla scaling laws shifted the industry consensus from "bigger models with moderate data" (Kaplan) to "balanced scaling of model and data." Following Chinchilla, subsequent models (LLaMA, GPT-4, DeepSeek) adopted data-rich training regimes, often training smaller models on 2T+ tokens.
 
+## Reward Model Overoptimization Scaling
+
+A distinct class of scaling laws was established by Gao, Schulman & Hilton (OpenAI, 2022) for [[rlhf|RLHF]], characterising how the gold reward model score degrades as a function of optimisation pressure against a proxy RM ([Gao et al., 2022](raw/papers/2022-10-gao-reward-model-overoptimization/gao2022rewardmodeloveropt.md)).
+
+Unlike the Kaplan/Chinchilla laws (loss as a function of N, D, C), these laws model **R(d)** — the gold RM score as a function of the KL divergence d = √D_KL(π ‖ π_init):
+
+| Method | Functional Form | Variables |
+|--------|----------------|-----------|
+| Best-of-n (BoN) | R(d) = d(α_bon − β_bon·d) | α_bon, β_bon depend on RM size |
+| PPO (RL) | R(d) = d(α_RL − β_RL·log d) | α_RL ≈ constant, β_RL depends on RM size |
+
+Both forms are concave: the gold score initially rises, peaks, then declines — the overoptimisation point.
+
+### Smooth Coefficient Scaling
+
+α and β vary smoothly with RM parameter count following approximate logarithmic trends. This enables prediction of the peak gold RM score for any RM size. The data threshold effect mirrors the Kaplan laws in spirit: RMs below ~2,000 comparisons achieve near-chance accuracy regardless of model size.
+
+### Relationship to the Kaplan/Chinchilla Laws
+
+| Dimension | Kaplan / Chinchilla | Reward Model Overoptimization |
+|-----------|--------------------|-------------------------------|
+| Predicts | L(N, D, C) — cross-entropy loss | R(d) — gold RM score decay |
+| Scaling factor | Model size, data, compute | RM parameters, RM data, KL budget |
+| Shape | Monotonic power-law decrease | Concave: increase then decrease |
+| Mechanism | Model capacity / data efficiency | Goodhart's law / proxy misspecification |
+| Domain | Language modeling | RLHF alignment |
+
+See [[reward-model-overoptimization|Reward Model Overoptimization Scaling Laws]] for the full treatment.
+
 ## Key Findings
 
 ### Performance depends on scale, not shape
@@ -179,5 +209,6 @@ These scaling laws were the first comprehensive empirical framework for predicti
 - [[sparse-transformer|Sparse Transformer]] — cited by Kaplan et al. as enabling large model parallelism
 - [[switch-transformer|Switch Transformer]] — demonstrates a distinct scaling dimension (number of experts) orthogonal to N-D-C; expert count provides quality gains beyond model depth/width scaling
 - [[instruction-tuning|Instruction Tuning]] — technique whose benefits emerge only at sufficient scale (≥68B parameters), confirming and extending the scaling-law framework; models below 8B are harmed by instruction tuning
-- [[chain-of-thought|Chain-of-Thought Prompting]] — another emergent ability of model scale; improves multi-step reasoning only at ~100B+ parameters, with flat or negative impact below the threshold
-- [[dario-amodei|Dario Amodei]] — senior author of the paper; provided guidance throughout the project
+|- [[chain-of-thought|Chain-of-Thought Prompting]] — another emergent ability of model scale; improves multi-step reasoning only at ~100B+ parameters, with flat or negative impact below the threshold
+|- [[dario-amodei|Dario Amodei]] — senior author of the paper; provided guidance throughout the project
+|- [[reward-model-overoptimization|Reward Model Overoptimization Scaling Laws]] — a distinct class of scaling laws for RLHF, modelling gold RM score decay as a function of KL divergence and RM size

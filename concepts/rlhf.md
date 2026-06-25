@@ -11,6 +11,7 @@ tags:
 sources:
   - "[Training language models to follow instructions with human feedback](raw/papers/2022-03-ouyang-instructgpt/ouyang2022instructgpt.md)"
   - "[Constitutional AI: Harmlessness from AI Feedback](raw/papers/2022-12-bai-constitutional-ai/bai2022constitutional.md)"
+  - "[Scaling Laws for Reward Model Overoptimization](raw/papers/2022-10-gao-reward-model-overoptimization/gao2022rewardmodeloveropt.md)"
 confidence: high
 ---
 
@@ -78,9 +79,26 @@ RLHF is far more cost-effective than scaling alone. Training the 175B InstructGP
 | PPO-ptx (175B) | 60 | 1.6% |
 | GPT-3 pretraining (reference) | 3,640 | 100% |
 
-The cost of data collection and training runs is a fraction of GPT-3 pretraining, yet delivers models preferred 85% of the time over the 100× larger base model. This suggests that, for instruction-following capability, investing in alignment is currently more cost-effective than training larger models ([Ouyang et al., 2022](raw/papers/2022-03-ouyang-instructgpt/ouyang2022instructgpt.md)).
+The cost of data collection and training runs is a fraction of GPT-3 pretraining, yet delivers models preferred 85% of the time over the 100x larger base model. This suggests that, for instruction-following capability, investing in alignment is currently more cost-effective than training larger models ([Ouyang et al., 2022](raw/papers/2022-03-ouyang-instructgpt/ouyang2022instructgpt.md)).
 
 InstructGPT generalizes to held-out labelers (same preference rate) and to out-of-distribution instructions — code summarisation, code QA, and non-English instructions — despite these being rare in the fine-tuning data.
+
+## Overoptimization
+
+A fundamental limitation of RLHF is that the reward model is an imperfect proxy for human judgment. Optimising against it too aggressively eventually degrades ground-truth performance — a phenomenon known as **reward model overoptimization**, systematically characterised by Gao, Schulman & Hilton (OpenAI, 2022) ([Gao et al., 2022](raw/papers/2022-10-gao-reward-model-overoptimization/gao2022rewardmodeloveropt.md)).
+
+The paper establishes two functional forms linking the gold reward model score R to the KL divergence d from the initial policy. For BoN sampling: R_bon(d) = d(α_bon − β_bon·d). For PPO: R_RL(d) = d(α_RL − β_RL·log d). Both predict that reward increases initially then declines — the overoptimization peak.
+
+Key results directly relevant to RLHF practitioners:
+
+- **Smooth scaling with RM size:** α and β coefficients scale smoothly with RM parameter count, enabling peak gold-score prediction for any RM size
+- **KL penalty ≈ early stopping:** In the RL setting, KL penalty does not shift the KL-gold reward frontier — it merely truncates training early, making it equivalent to early stopping
+- **Policy size independence:** Larger SFT policies benefit less from RM optimization but do not overoptimize faster — overoptimization is primarily an RM property
+- **Data threshold effect:** RMs below ~2,000 comparisons achieve near-chance accuracy regardless of model size
+
+The paper also analyses iterated RLHF: under simplifying assumptions, running k iterations (retraining the RM on fresh human data) increases the final gold score by β_RL·d·log(k), but does not affect regressional Goodhart captured by the α term.
+
+See [[reward-model-overoptimization|Reward Model Overoptimization Scaling Laws]] for full details.
 
 ## Dataset
 
@@ -102,6 +120,7 @@ Use-case distribution: generation (45.6%), open QA (12.4%), brainstorming (11.2%
 - **[[chain-of-thought|Chain-of-Thought]]** — prompting technique that InstructGPT can follow more reliably than base GPT-3 due to improved instruction-following ability
 - **[[flex-prompting|FLEX]]** — later methodology for SLM control using structured XML prompts and logit-based verification, related through shared goal of reliable model steering
 - **[[grace|GRACE]]** — later framework for deterministic code generation, which uses Intent-First Architecture similar to RLHF's goal of alignment with user intent
+- **[[reward-model-overoptimization|Reward Model Overoptimization Scaling Laws]]** — systematic characterisation of overoptimization in RLHF; establishes functional forms for gold RM score degradation under PPO and BoN optimization
 
 ## Limitations
 
@@ -136,3 +155,4 @@ Better instruction-following is a dual-use concern ([Ouyang et al., 2022](raw/pa
 - [[anthropic|Anthropic]] — successor alignment research organisation employing Amanda Askell, co-author of this paper
 - [[transformer|Transformer]] — the underlying architecture for GPT-3 and InstructGPT
 - [[scaling-laws|Scaling Laws]] — contextualises the claim that scaling alone is insufficient for alignment
+- [[reward-model-overoptimization|Reward Model Overoptimization Scaling Laws]] — empirical scaling laws for the overoptimization failure mode in RLHF

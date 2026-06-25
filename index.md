@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-|> Last updated: 2026-06-25 | Total pages: 84
+|> Last updated: 2026-06-25 | Total pages: 85
 
 ## Entities
 
@@ -50,6 +50,7 @@
 - [[word-embeddings|Word Embeddings]] — how LLMs represent concepts as vectors in high-dimensional space, superposition catastrophe
 - [[retrieval-augmented-generation|Retrieval-Augmented Generation (RAG)]] — architectural pattern grounding LLM responses in externally retrieved knowledge; introduced by Lewis et al. (FAIR, NeurIPS 2020) as a hybrid parametric (BART) + non-parametric (DPR index) memory architecture with two marginalisation formulations (RAG-Sequence, RAG-Token)
 - [[rlhf|RLHF (Reinforcement Learning from Human Feedback)]] — technique for fine-tuning language models with human preferences as reward signal; InstructGPT demonstrated 1.3B model outperforming 175B GPT-3
+- [[reward-model-overoptimization|Reward Model Overoptimization Scaling Laws]] — empirical scaling laws characterizing how proxy reward model optimization degrades ground-truth performance via Goodhart's law; functional forms for BoN and RL, smooth coefficient scaling with RM parameters (Gao, Schulman & Hilton, OpenAI, 2022)
 - [[rome-model-editing|ROME (Rank-One Model Editing)]] — method for editing factual associations in GPT via rank-one MLP weight updates; locates decisive mid-layer MLP computations via Causal Tracing and inserts new facts with both generalization and specificity (Meng et al., MIT / Northeastern / Technion, NeurIPS 2022)
 - [[knowledge-graph|Knowledge Graph]] — structured entity-relationship knowledge base for grounding AI answers
 - [[knowledge-neurons|Knowledge Neurons]] — specific FFN neurons causally responsible for expressing particular factual knowledge in pretrained Transformers; identified via integrated gradients attribution (Dai et al., Microsoft, ACL 2022)
@@ -167,6 +168,7 @@
 - [Toy Models of Superposition](raw/papers/2022-09-elhage-toy-models-superposition/anthropic2022toy.md) (Anthropic Transformer Circuits Thread, 2022)
 - [Constitutional AI: Harmlessness from AI Feedback](raw/papers/2022-12-bai-constitutional-ai/bai2022constitutional.md) — PDF at [2212.08073.pdf](raw/papers/2022-12-bai-constitutional-ai/2212.08073.pdf) (Yuntao Bai et al., Anthropic, arXiv 2022)
 - [Self-Instruct: Aligning Language Models with Self-Generated Instructions](raw/papers/2022-12-wang-self-instruct/wang2022selfinstruct.md) — PDF at [2212.10560.pdf](raw/papers/2022-12-wang-self-instruct/2212.10560.pdf) — bootstraps instruction-following via model's own generations; 33% absolute gain on SuperNI, near InstructGPT_001 without human annotations (Yizhong Wang et al., UW/AI2, ACL 2023)
+- [Scaling Laws for Reward Model Overoptimization](raw/papers/2022-10-gao-reward-model-overoptimization/gao2022rewardmodeloveropt.md) — PDF at [2210.10760.pdf](raw/papers/2022-10-gao-reward-model-overoptimization/2210.10760.pdf) — establishes scaling laws for reward model overoptimization in RLHF; functional forms for BoN and RL, smooth coefficient scaling with RM parameter count; synthetic gold-RM setup (Leo Gao, John Schulman, Jacob Hilton, OpenAI, 2022)
 - [Training Compute-Optimal Large Language Models]
 - [Training language models to follow instructions with human feedback](raw/papers/2022-03-ouyang-instructgpt/ouyang2022instructgpt.md) — PDF at [2203.02155.pdf](raw/papers/2022-03-ouyang-instructgpt/2203.02155.pdf) (Long Ouyang et al., OpenAI, NeurIPS 2022)
 - [On the ability of standard and brain-constrained DNNs to support cognitive superposition](raw/papers/2024-02-garagnani-cognitive-superposition/garagnani2024superposition.md) (Max Garagnani, Cognitive Neurodynamics, 2024)

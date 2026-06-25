@@ -908,3 +908,15 @@
 - Updated concept: [[instruction-tuning|Instruction Tuning]] (added Self-Instruct cross-link in Relationship section)
 - Cross-links: self-instruct ↔ instruction-tuning, rlhf, constitutional-ai, red-teaming, flan, gpt-3, flex-prompting
 - Updated index.md: added concept entry under Concepts + raw paper source under Papers; bumped total pages to 84
+
+## [2026-06-25] ingest | Scaling Laws for Reward Model Overoptimization (Gao et al., OpenAI, 2022)
+
+- Raw source: `raw/papers/2022-10-gao-reward-model-overoptimization/` (2210.10760.pdf + gao2022rewardmodeloveropt.md)
+- Source: https://arxiv.org/abs/2210.10760 — "Scaling Laws for Reward Model Overoptimization"
+- Authors: Leo Gao, John Schulman, Jacob Hilton (OpenAI)
+- Content: Empirically validated functional forms for gold RM score under PPO (R=d(α_RL−β_RL·log d)) and BoN (R=d(α_bon−β_bon·d)); synthetic gold-RM setup (6B RM labels for proxy RMs 3M–3B); smooth α/β coefficient scaling with RM parameter count; weak policy size dependence; KL penalty ≈ early stopping; RM data threshold at ~2,000 comparisons; connection to Manheim & Garrabrant Goodhart taxonomy (regressional, extremal, causal, adversarial); iterated RLHF analysis showing β_RL·d·log(k) benefit
+- Created concept: [[reward-model-overoptimization|Reward Model Overoptimization Scaling Laws]] (scaling laws for RM overoptimization in RLHF, functional forms, Goodhart taxonomy mapping, iterated RLHF implications)
+- Updated concept: [[rlhf|RLHF]] (added Overoptimization section with key findings, source to frontmatter, cross-link to reward-model-overoptimization)
+- Updated concept: [[scaling-laws|Scaling Laws]] (added Reward Model Overoptimization Scaling section with comparison table to Kaplan/Chinchilla laws, source to frontmatter)
+- Updated index.md: added concept entry under Concepts + raw paper source under Papers; bumped total pages to 85
+- Cross-links: reward-model-overoptimization ↔ rlhf, scaling-laws, truthfulqa, constitutional-ai, direct-preference-optimization
