@@ -104,6 +104,7 @@ A 4-layer Transformer (d_model=1024) trained on WSJ (40K sentences) achieved 91.
 - [[attention-head-pruning|Attention Head Pruning]] — Voita et al. (2019) showed most encoder self-attention heads are redundant and can be pruned, with surviving heads performing specialised interpretable roles
 - [[kv-caching|KV Caching]] — inference optimisation that caches Key and Value states during auto-regressive generation, avoiding redundant recomputation
 - [[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]] — a training paradigm that exploits the transformer's ability to process any vector as input, not just token embeddings
+- [[speculative-decoding|Speculative Decoding]] — inference acceleration that verifies multiple candidate tokens in parallel, reducing serial decoding steps without changing model architecture or output distribution. Applicable to any autoregressive Transformer.
 - [[multi-query-attention|Multi-Query Attention (MQA)]] — architectural variant that shares keys and values across attention heads, reducing KV cache memory footprint by factor h and dramatically accelerating incremental decoding
 - [[glu-variants|GLU Variants (GEGLU, SwiGLU, ReGLU)]] — gated FFN variants that replaced ReLU/GELU as the default Transformer feed-forward activation in post-2022 LLMs
 - [[rotary-position-embedding|Rotary Position Embedding (RoPE)]] — the dominant modern position encoding, using rotation matrices instead of additive sinusoidal functions; used by virtually all post-2023 LLMs

@@ -218,11 +218,11 @@
 - Cross-links: bfs ↔ bfs-vs-dfs, semantic-superposition, chain-of-continuous-thought, kv-caching
 
 ||## [2026-06-15] schema | schema audit and fixes
-|- SCHEMA.md: added `technique` to tag taxonomy under Techniques (was in use on 8 pages but missing from schema)
-|- SCHEMA.md: updated `sources:` frontmatter example to YAML block list with markdown links (was inline array with bare paths)
-|- SCHEMA.md: fixed provenance marker convention to `^[raw/*/dir-name/index.md]` (was `source.md`; actual raw sources are directories)
-|- entities/vladimir-ivanov.md: removed 9 duplicate article sources (duplicated Known Works); replaced with LinkedIn profile as biographical source
-|- entities/vladimir-ivanov.md: added wikilinks to vibe-coding and contract-programming (was 1 wikilink, below min 2 rule)
+- SCHEMA.md: added `technique` to tag taxonomy under Techniques (was in use on 8 pages but missing from schema)
+- SCHEMA.md: updated `sources:` frontmatter example to YAML block list with markdown links (was inline array with bare paths)
+- SCHEMA.md: fixed provenance marker convention to `^[raw/*/dir-name/index.md]` (was `source.md`; actual raw sources are directories)
+- entities/vladimir-ivanov.md: removed 9 duplicate article sources (duplicated Known Works); replaced with LinkedIn profile as biographical source
+- entities/vladimir-ivanov.md: added wikilinks to vibe-coding and contract-programming (was 1 wikilink, below min 2 rule)
 
 ## [2026-06-15] ingest | PCAM methodology article (Vladimir Ivanov, 2025-09-11)
 
@@ -319,7 +319,7 @@
 - raw/index.md rewritten: now contains the paper's original abstract (verbatim from HTML) instead of a summary
 - Full source read (1023-line extraction from index.html); all 4 wiki pages cross-checked against source — no hallucinations found
 - All 6 wiki page references updated (superposition, polysemantic-neurons, privileged-basis, anthropic, index.md, log.md)
-|- index.md paper entry link updated
+- index.md paper entry link updated
 
 ## [2026-06-15] ingest | SLM vs MoE for Agentic AI article (Vladimir Ivanov, 2025-09-14)
 - Raw source: raw/articles/2025-09-14-ivanov-prichiny-nabludaemogo-provala-malyh-slm-protiv-llm-na-moe-v/ (ivanov2025slmvsllm.md + 2 images)
@@ -449,37 +449,37 @@
 - Cross-links: anthropic, superposition, polysemantic-neurons, vladimir-ivanov
 
 |## [2026-06-16] ingest | Scaling Laws for Neural Language Models (Kaplan et al., OpenAI, 2020)
-|- Raw source: `raw/papers/2020-01-kaplan-scaling-laws/` (2001.08361.pdf + index.md)
-|- Source: https://arxiv.org/abs/2001.08361
-|- Authors: Jared Kaplan, Sam McCandlish, Tom Henighan, Tom B. Brown, Benjamin Chess, Rewon Child, Scott Gray, Alec Radford, Jeffrey Wu, Dario Amodei (equal contribution, random order)
-|- Venue: arXiv preprint, January 2020
-|- Content: Empirical scaling laws for LM performance — power-law relationships with model size (α_N ≈ 0.076), dataset size (α_D ≈ 0.095), and training compute (α_C ≈ 0.050). Larger models are more sample-efficient. Compute-optimal allocation trains large models to ~10% above converged loss. Predicted breakdown at C* ~ 10^4 PF-days, N* ~ 10^12 params.
-|- Raw directory created (was referenced by existing concept page but missing)
-|- Updated concept: scaling-laws (added raw_ingested: true flag, source now resolves)
-|- Updated index.md: added concept entry and raw source under Papers
-|- Cross-links: transformer, lstm, kv-caching, sparse-transformer, dario-amodei
-|
+- Raw source: `raw/papers/2020-01-kaplan-scaling-laws/` (2001.08361.pdf + index.md)
+- Source: https://arxiv.org/abs/2001.08361
+- Authors: Jared Kaplan, Sam McCandlish, Tom Henighan, Tom B. Brown, Benjamin Chess, Rewon Child, Scott Gray, Alec Radford, Jeffrey Wu, Dario Amodei (equal contribution, random order)
+- Venue: arXiv preprint, January 2020
+- Content: Empirical scaling laws for LM performance — power-law relationships with model size (α_N ≈ 0.076), dataset size (α_D ≈ 0.095), and training compute (α_C ≈ 0.050). Larger models are more sample-efficient. Compute-optimal allocation trains large models to ~10% above converged loss. Predicted breakdown at C* ~ 10^4 PF-days, N* ~ 10^12 params.
+- Raw directory created (was referenced by existing concept page but missing)
+- Updated concept: scaling-laws (added raw_ingested: true flag, source now resolves)
+- Updated index.md: added concept entry and raw source under Papers
+- Cross-links: transformer, lstm, kv-caching, sparse-transformer, dario-amodei
+
 |## [2026-06-16] ingest | Training Compute-Optimal Large Language Models (Hoffmann et al., DeepMind, 2022)
-|- Raw source: `raw/papers/2022-03-hoffmann-chinchilla/` (2203.15556.pdf + hoffmann2022chinchilla.md)
-|- Source: https://arxiv.org/abs/2203.15556
-|- Authors: Jordan Hoffmann, Sebastian Borgeaud, Arthur Mensch, Elena Buchatskaya, Trevor Cai, Eliza Rutherford, Diego de Las Casas, Lisa Anne Hendricks, Johannes Welbl, Aidan Clark, Tom Hennigan, Eric Noland, Katie Millican, George van den Driessche, Bogdan Damoc, Aurelia Guy, Simon Osindero, Karen Simonyan, Erich Elsen, Jack W. Rae, Oriol Vinyals, Laurent Sifre (22 authors, DeepMind)
-|- Venue: arXiv preprint, March 2022
-|- Content: Landmark study establishing that current LLMs are undertrained. For compute-optimal training, model size and training tokens should scale equally (N ∝ D), contradicting Kaplan et al.'s earlier finding (N ∝ C^0.73). Validated by training Chinchilla (70B, 1.4T tokens) which outperforms Gopher (280B), GPT-3 (175B), Jurassic-1 (178B), and MT-NLG (530B) across all evaluated tasks. Chinchilla achieves 67.5% on MMLU (+7% over Gopher).
-|- Updated concept: scaling-laws (added Chinchilla section with equations, model comparison table, and implication paragraph; updated Historical Impact to note contradiction rather than refinement)
-|- Updated index.md: added raw source under Papers
+- Raw source: `raw/papers/2022-03-hoffmann-chinchilla/` (2203.15556.pdf + hoffmann2022chinchilla.md)
+- Source: https://arxiv.org/abs/2203.15556
+- Authors: Jordan Hoffmann, Sebastian Borgeaud, Arthur Mensch, Elena Buchatskaya, Trevor Cai, Eliza Rutherford, Diego de Las Casas, Lisa Anne Hendricks, Johannes Welbl, Aidan Clark, Tom Hennigan, Eric Noland, Katie Millican, George van den Driessche, Bogdan Damoc, Aurelia Guy, Simon Osindero, Karen Simonyan, Erich Elsen, Jack W. Rae, Oriol Vinyals, Laurent Sifre (22 authors, DeepMind)
+- Venue: arXiv preprint, March 2022
+- Content: Landmark study establishing that current LLMs are undertrained. For compute-optimal training, model size and training tokens should scale equally (N ∝ D), contradicting Kaplan et al.'s earlier finding (N ∝ C^0.73). Validated by training Chinchilla (70B, 1.4T tokens) which outperforms Gopher (280B), GPT-3 (175B), Jurassic-1 (178B), and MT-NLG (530B) across all evaluated tasks. Chinchilla achieves 67.5% on MMLU (+7% over Gopher).
+- Updated concept: scaling-laws (added Chinchilla section with equations, model comparison table, and implication paragraph; updated Historical Impact to note contradiction rather than refinement)
+- Updated index.md: added raw source under Papers
 ||- Cross-links: scaling-laws, transformer
-|
+
 |## [2026-06-16] ingest | Training language models to follow instructions with human feedback (InstructGPT)
-|
-|- Raw source: `raw/papers/2022-03-ouyang-instructgpt/` (2203.02155.pdf + index.md)
-|- Source: https://arxiv.org/abs/2203.02155 — Long Ouyang et al., OpenAI, NeurIPS 2022
-|- Content: RLHF fine-tuning applied to GPT-3 for instruction-following; three-step procedure (SFT → RM → PPO); 1.3B InstructGPT preferred to 175B GPT-3; truthfulness improvements, toxicity reduction, alignment tax mitigation via PPO-ptx
-|- New tag: `rlhf` (already in SCHEMA.md taxonomy)
-|- Created concept: rlhf (RLHF technique, three-step procedure, InstructGPT model family, alignment tax, PPO-ptx, key results)
-|- Updated entity: dario-amodei (added InstructGPT to context: was VP of Research at OpenAI during this project)
-|- Created entity: openai (organization page with key papers table, key people, known works)
-|- Raw source added: raw/articles/openai-wikipedia.md (Wikipedia summary)
-|- Cross-links: rlhf ↔ transformer, scaling-laws, chain-of-thought, dario-amodei, anthropic, flex-prompting, grace
+
+- Raw source: `raw/papers/2022-03-ouyang-instructgpt/` (2203.02155.pdf + index.md)
+- Source: https://arxiv.org/abs/2203.02155 — Long Ouyang et al., OpenAI, NeurIPS 2022
+- Content: RLHF fine-tuning applied to GPT-3 for instruction-following; three-step procedure (SFT → RM → PPO); 1.3B InstructGPT preferred to 175B GPT-3; truthfulness improvements, toxicity reduction, alignment tax mitigation via PPO-ptx
+- New tag: `rlhf` (already in SCHEMA.md taxonomy)
+- Created concept: rlhf (RLHF technique, three-step procedure, InstructGPT model family, alignment tax, PPO-ptx, key results)
+- Updated entity: dario-amodei (added InstructGPT to context: was VP of Research at OpenAI during this project)
+- Created entity: openai (organization page with key papers table, key people, known works)
+- Raw source added: raw/articles/openai-wikipedia.md (Wikipedia summary)
+- Cross-links: rlhf ↔ transformer, scaling-laws, chain-of-thought, dario-amodei, anthropic, flex-prompting, grace
 
 ## [2026-06-16] ingest | FlashAttention (Dao et al., Stanford, NeurIPS 2022)
 
@@ -653,19 +653,19 @@
 - Updated concept: transformer (added wikilink to attention-head-pruning in Cross-Links section)
 - Cross-links: attention-head-pruning ↔ transformer, kv-caching, sparse-transformer, knowledge-distillation
 - Updated index.md: added concept entry + raw paper source + fixed accumulated pipe contamination; bumped total pages to 60
-|
+
 |## [2026-06-17] ingest | Multi-Query Attention (Shazeer, 2019)
-|
-|- Raw source: `raw/papers/2019-11-shazeer-multi-query-attention/` (shazeer2019multiquery.md + 1911.02150.pdf)
-|- Source: https://arxiv.org/abs/1911.02150
-|- Authors: Noam Shazeer (Google)
-|- Venue: arXiv preprint (cs.NE), November 2019
-|- Content: Proposes Multi-Query Attention (MQA), a Transformer attention variant where keys and values are shared across all attention heads, while queries retain per-head projections. Identifies that incremental autoregressive decoding is memory-bandwidth bound (ratio Θ(n/d + 1/b)) due to repeatedly loading large per-head K/V tensors. MQA eliminates the heads dimension from K/V, reducing the memory ratio to Θ(1/d + d/(hn) + 1/b) — a factor of h improvement. Evaluation on WMT14 EN-DE: BLEU 27.5/28.5 (greedy/beam-4) vs baseline 27.7/28.4. Decoder speedup: 12× greedy (46→3.8 µs/tok), 6.3× beam search (203→32 µs/tok) on TPUv2. Training speed unchanged. Multi-query attention orthogonal to local (sliding-window) attention. Simply reducing h or d_k/d_v hurts quality far more than MQA. Laid foundation for Grouped-Query Attention (GQA) used in LLaMA 2/3, Mistral, and modern LLMs.
-|- Created concept: multi-query-attention (memory-bandwidth analysis, shared K/V projections, performance table and speedup results, comparison with h/d_k/d_v reduction, relationship to GQA)
-|- Updated concept: kv-caching (added MQA as architectural origin of KV cache memory-bandwidth bottleneck analysis and as a solution reducing KV cache size by factor h)
-|- Updated concept: transformer (added cross-link to multi-query-attention in Cross-Links)
-|- Cross-links: multi-query-attention ↔ kv-caching, transformer, attention-head-pruning, flash-attention, sparse-transformer
-|- Updated index.md: added concept entry + raw paper source, bumped total pages to 62
+
+- Raw source: `raw/papers/2019-11-shazeer-multi-query-attention/` (shazeer2019multiquery.md + 1911.02150.pdf)
+- Source: https://arxiv.org/abs/1911.02150
+- Authors: Noam Shazeer (Google)
+- Venue: arXiv preprint (cs.NE), November 2019
+- Content: Proposes Multi-Query Attention (MQA), a Transformer attention variant where keys and values are shared across all attention heads, while queries retain per-head projections. Identifies that incremental autoregressive decoding is memory-bandwidth bound (ratio Θ(n/d + 1/b)) due to repeatedly loading large per-head K/V tensors. MQA eliminates the heads dimension from K/V, reducing the memory ratio to Θ(1/d + d/(hn) + 1/b) — a factor of h improvement. Evaluation on WMT14 EN-DE: BLEU 27.5/28.5 (greedy/beam-4) vs baseline 27.7/28.4. Decoder speedup: 12× greedy (46→3.8 µs/tok), 6.3× beam search (203→32 µs/tok) on TPUv2. Training speed unchanged. Multi-query attention orthogonal to local (sliding-window) attention. Simply reducing h or d_k/d_v hurts quality far more than MQA. Laid foundation for Grouped-Query Attention (GQA) used in LLaMA 2/3, Mistral, and modern LLMs.
+- Created concept: multi-query-attention (memory-bandwidth analysis, shared K/V projections, performance table and speedup results, comparison with h/d_k/d_v reduction, relationship to GQA)
+- Updated concept: kv-caching (added MQA as architectural origin of KV cache memory-bandwidth bottleneck analysis and as a solution reducing KV cache size by factor h)
+- Updated concept: transformer (added cross-link to multi-query-attention in Cross-Links)
+- Cross-links: multi-query-attention ↔ kv-caching, transformer, attention-head-pruning, flash-attention, sparse-transformer
+- Updated index.md: added concept entry + raw paper source, bumped total pages to 62
 
 ## [2026-06-17] ingest | GLU Variants Improve Transformer (Shazeer, 2020)
 
@@ -920,3 +920,27 @@
 - Updated concept: [[scaling-laws|Scaling Laws]] (added Reward Model Overoptimization Scaling section with comparison table to Kaplan/Chinchilla laws, source to frontmatter)
 - Updated index.md: added concept entry under Concepts + raw paper source under Papers; bumped total pages to 85
 - Cross-links: reward-model-overoptimization ↔ rlhf, scaling-laws, truthfulqa, constitutional-ai, direct-preference-optimization
+
+## [2026-06-25] ingest | Fast Inference from Transformers via Speculative Decoding (Leviathan, Kalman & Matias, Google, ICML 2023)
+
+- Raw source: `raw/papers/2022-11-leviathan-speculative-decoding/` (2211.17192.pdf + index.md)
+- Source: https://arxiv.org/abs/2211.17192
+- Authors: Yaniv Leviathan, Matan Kalman, Yossi Matias (Google Research)
+- Venue: ICML 2023
+- Content: Introduces speculative decoding -- algorithm sampling from autoregressive models faster without output distribution changes. Core idea: draft tokens with a fast approximation model Mq, verify them in parallel with the target model Mp, accept/reject via speculative sampling. Theoretical analysis: acceptance rate alpha = E[min(p,q)], DLK divergence, walltime improvement factor. Empirical: 2-3x walltime speedup on T5-XXL (11B) with T5-small (77M) as approximation. Key properties: lossless, no retraining, no architecture changes.
+- Created concept: speculative-decoding (mechanism, analysis, empirical results, limitations, relationships)
+- Updated concept: kv-caching (added cross-link)
+- Updated concept: flash-attention (added cross-link)
+- Updated concept: transformer (added cross-link)
+- Updated index.md: added concept + raw source entries; bumped total to 86
+
+## [2026-06-25] ingest | Self-Consistency Improves Chain of Thought Reasoning (Wang et al., Google, ICLR 2023)
+
+- Raw source: `raw/papers/2022-03-wang-self-consistency/` (2203.11171.pdf + wang2022selfconsistency.md)
+- Source: https://arxiv.org/abs/2203.11171 — "Self-Consistency Improves Chain of Thought Reasoning in Language Models"
+- Authors: Xuezhi Wang, Jason Wei, Dale Schuurmans, Quoc Le, Sharan Narang, Aakanksha Chowdhery, Denny Zhou, Ed H. Chi (Google Research, Brain Team)
+- Venue: ICLR 2023
+- Content: proposes self-consistency — decoding strategy replacing greedy decoding in CoT with sample-and-marginalise over diverse reasoning paths (40 paths, temperature/top-k sampling). Evaluated on UL2-20B, LaMDA-137B, PaLM-540B, GPT-3 across arithmetic (GSM8K, SVAMP, AQuA, MultiArith, ASDiv), commonsense (CSQA, StrategyQA, ARC), and symbolic reasoning. Striking gains: GSM8K +17.9%, SVAMP +11.0%, AQuA +12.2%, StrategyQA +6.4%, ARC-c +3.9% on PaLM-540B. Outperforms sample-and-rank, beam search, and prompt-order ensembles. Robust to sampling strategies, imperfect prompts, and zero-shot CoT. Consistency correlates with accuracy (uncertainty calibration). Limitations: computational cost, fixed-answer tasks only.
+- Created concept: concepts/self-consistency (mechanism: diverse sampling → majority vote aggregation; comparison table to existing approaches; key results per task/model/scale)
+- Updated concept: chain-of-thought (added Self-Consistency section with key results table and properties; added source to frontmatter; added wikilink to self-consistency)
+- Updated index.md: added concept + raw source entries; bumped total to 87

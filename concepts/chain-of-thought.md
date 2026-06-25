@@ -1,7 +1,7 @@
 ---
 title: Chain-of-Thought Prompting (CoT)
 created: 2026-06-15
-updated: 2026-06-24
+updated: 2026-06-25
 type: concept
 tags:
   - technique
@@ -13,6 +13,7 @@ sources:
   - "[Оптимизация управления ИИ агентами на SLM через методологию Few-shot Logit-Enabled XML (FLEX)](raw/articles/2025-09-18-ivanov-optimizaciya-upravleniya-ii-agentami-na-sml-cherez-metodolog/ivanov2025flex.md)"
   - "[Training Large Language Models to Reason in a Continuous Latent Space](raw/papers/2024-12-hao-coconut/hao2025coconut.md)"
   - "[Large Language Models are Zero-Shot Reasoners](raw/papers/2022-05-kojima-zero-shot-cot/kojima2022zeroshot.md)"
+  - "[Self-Consistency Improves Chain of Thought Reasoning in Language Models](raw/papers/2022-03-wang-self-consistency/wang2022selfconsistency.md)"
 ---
 
 # Chain-of-Thought Prompting (CoT)
@@ -123,6 +124,33 @@ Only instructive templates improved performance. The choice of trigger significa
 
 Zero-shot-CoT established that LLMs' reasoning ability is not contingent on task-specific exemplars — the capacity for structured step-by-step reasoning exists as a zero-shot capability that can be elicited by a single generic prompt. The paper served as the strongest zero-shot baseline for reasoning benchmarks and highlighted the value of probing zero-shot abilities before investing in few-shot crafting or fine-tuning.
 
+## Self-Consistency
+
+A natural extension to chain-of-thought prompting is **[[self-consistency|Self-Consistency]]** — replacing greedy decoding with a sample-and-marginalise strategy ([Wang et al., ICLR 2023](raw/papers/2022-03-wang-self-consistency/wang2022selfconsistency.md)). Instead of decoding a single reasoning path greedily, the model samples K diverse reasoning paths (typically 40) using temperature/top-k sampling, then selects the most consistent answer by majority vote.
+
+### Key Results (PaLM-540B)
+
+Self-consistency yields striking gains on top of CoT prompting ([Wang et al., 2022](raw/papers/2022-03-wang-self-consistency/wang2022selfconsistency.md)):
+
+| Task | CoT greedy | +Self-consistency | Δ |
+|------|:---------:|:-----------------:|:-:|
+| GSM8K | 56.5 | 74.4 | **+17.9** |
+| SVAMP | 75.8 | 86.8 | **+11.0** |
+| AQuA | 39.8 | 52.0 | **+12.2** |
+| StrategyQA | 73.4 | 79.8 | **+6.4** |
+| ARC-challenge | 83.6 | 87.5 | **+3.9** |
+
+The gain increases with model scale (+3–6% for UL2-20B, +9–23% for GPT-3/LaMDA-137B). Self-consistency works robustly across sampling strategies, with imperfect prompts, and with zero-shot CoT (PaLM 540B zero-shot-CoT + self-consistency: 89.0% MultiArith, 70.1% GSM8K). It significantly outperforms beam search, sample-and-rank, and prompt-order ensemble methods, while requiring no training or human annotation ([Wang et al., 2022](raw/papers/2022-03-wang-self-consistency/wang2022selfconsistency.md)).
+
+### Properties
+
+- **Unsupervised** — no training, fine-tuning, or human annotation; off-the-shelf with any pre-trained model
+- **Fixed-answer tasks only** — requires a parseable answer set (numbers, multiple choice, yes/no)
+- **Cost-performance tradeoff** — 5–10 paths capture most gains; 40 paths near-maximal
+- **Calibration signal** — consistency score (% of decodes agreeing with the final answer) correlates strongly with accuracy, providing built-in uncertainty estimation
+
+The self-consistency result is referenced in context of zero-shot CoT above: With self-consistency, PaLM 540B Zero-shot-CoT reached 89.0% on MultiArith and 70.1% on GSM8K.
+
 CoT benefit scales with model size. The original paper established that CoT is an **emergent property** — small models produce fluent but illogical chains of thought, leading to lower performance than standard prompting. Shim et al. (2024) later confirmed and quantified this threshold on GPT-2 and GPT-Neo ([Shim et al., 2024](raw/papers/2024-10-09-ship-cot-harms/shim2024cotharms.md)):
 
 | Model | Standard → CoT | Relative Δ |
@@ -169,6 +197,7 @@ The GPT-4.1 Prompting Guide recommends ([OpenAI, 2026](raw/articles/2025-04-14-o
 
 ## Related
 
+- [[self-consistency|Self-Consistency]] — decoding strategy replacing greedy decoding with sample-and-marginalise for CoT; yields large gains on arithmetic and commonsense reasoning
 - [[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]] — latent-space alternative that excels where CoT fails
 - [[instruction-tuning|Instruction Tuning]] — related technique by the same lead author (Jason Wei); CoT improves reasoning at inference time, instruction tuning improves general instruction-following via training
 - [[in-context-learning|In-Context Learning]] — CoT extends ICL by providing reasoning steps as intermediate context

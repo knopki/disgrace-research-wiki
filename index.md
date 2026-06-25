@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-|> Last updated: 2026-06-25 | Total pages: 85
+> Last updated: 2026-06-25 | Total pages: 87
 
 ## Entities
 
@@ -40,8 +40,8 @@
 - [[semantic-fractal|Semantic Fractal]] — how LLMs represent code as branching semantic vectors, not linear instructions
 - [[human-sequential-bottleneck|Human Sequential Bottleneck]] — human cognition is linear, making parallel programming disproportionately hard
 - [[in-context-learning|In-Context Learning]] — paradigm where language models adapt to tasks purely through conditioning context without gradient updates; systematically defined and studied at scale by GPT-3 across zero-shot, one-shot, and few-shot settings; meta-learning framing where pre-training is the outer loop and in-context conditioning is the inner loop
-|- [[instruction-tuning|Instruction Tuning]] — technique improving zero-shot learning by fine-tuning LMs on diverse NLP tasks verbalized as natural language instructions; introduced by FLAN (Wei et al., Google, ICLR 2022); bridges pretrain-finetune and prompting paradigms; benefits emerge only at sufficient scale (≥68B)
-|- [[self-instruct|Self-Instruct]] — framework for bootstrapping instruction-following from a model's own generations; generates 52k diverse instructions from 175 seed tasks, achieving 33% absolute improvement on SuperNI and nearly matching InstructGPT_001 without human annotations (Wang et al., UW/AI2, ACL 2023)
+- [[instruction-tuning|Instruction Tuning]] — technique improving zero-shot learning by fine-tuning LMs on diverse NLP tasks verbalized as natural language instructions; introduced by FLAN (Wei et al., Google, ICLR 2022); bridges pretrain-finetune and prompting paradigms; benefits emerge only at sufficient scale (≥68B)
+- [[self-instruct|Self-Instruct]] — framework for bootstrapping instruction-following from a model's own generations; generates 52k diverse instructions from 175 seed tasks, achieving 33% absolute improvement on SuperNI and nearly matching InstructGPT_001 without human annotations (Wang et al., UW/AI2, ACL 2023)
 - [[vibe-coding|Vibe Coding]] — programmer shifts from implementation to directing intent, delegating parallel logic to AI
 - [[ai-resource-leveling|AI Resource Leveling]] — AI performs resource leveling with understanding of project technology, not just load balancing
 - [[skill-scheduling|Skill Scheduling]] — AI-driven flexible qualification management for project staffing
@@ -109,6 +109,7 @@
 
 - [[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]] — training paradigm replacing language CoT with reasoning directly in the continuous latent space of an LLM; enables emergent BFS-like reasoning
 - [[sparse-transformer|Sparse Transformer]] — OpenAI architecture replacing quadratic attention with O(n√n) sparse factorized patterns; first to demonstrate self-attention on 1M+ token sequences
+- [[speculative-decoding|Speculative Decoding]] — inference acceleration algorithm generating multiple tokens per serial model invocation by drafting candidates with a fast approximation model and verifying them with the target model in parallel; guarantees identical output distribution; 2–3× walltime speedup on T5-XXL without retraining or architecture changes (Leviathan, Kalman & Matias, Google, ICML 2023)
 - [[longformer|Longformer]]
 - [[lora|LoRA (Low-Rank Adaptation)]] — parameter-efficient fine-tuning method freezing pre-trained weights and injecting trainable low-rank matrices into Transformer layers; reduces GPT-3 175B trainable parameters by 10,000× with zero inference latency (Hu et al., Microsoft, ICLR 2022)
 
@@ -125,6 +126,7 @@
 - [[switch-transformer|Switch Transformer]] — Mixture-of-Experts architecture simplifying MoE to single-expert routing; enables trillion-parameter sparsely-activated models with constant compute cost; foundational to modern MoE LLMs (Fedus et al., Google, JMLR 2022)
 - [[v4a-diff-format|V4A Diff Format]] — context-based, line-number-free diff format designed for LLM agent patch application; used by OpenAI GPT-4.1 for SWE-bench Verified (55% SOTA for non-reasoning models)
 - [[chain-of-thought|Chain-of-Thought Prompting (CoT)]] — prompting technique that instructs LLMs to articulate intermediate reasoning steps; introduced by Wei et al. (Google, NeurIPS 2022) demonstrating CoT as an emergent ability of model scale; improves math/logic performance for large models (100B+) but harms SLM accuracy by 15–30%+
+- [[self-consistency|Self-Consistency]] — decoding strategy replacing greedy decoding in CoT with sample-and-marginalise over diverse reasoning paths; GSM8K +17.9%, SVAMP +11.0%, AQuA +12.2% on PaLM-540B; unsupervised, no training required (Wang et al., Google, ICLR 2023)
 - [[constitutional-ai|Constitutional AI (CAI)]] — method for training harmless AI assistants via self-critique, revision, and RLAIF using a written constitution; replaces human harmlessness labels with AI feedback guided by ~10-15 principles; achieves Pareto improvement in helpfulness-harmlessness tradeoff (Bai et al., Anthropic, arXiv 2022)
 - [[direct-preference-optimization|Direct Preference Optimization (DPO)]]
 - [[ffn-key-value-memories|Transformer FFN as Key-Value Memories]] — transformer feed-forward layers operate as unnormalized key-value memories where keys detect input patterns and values induce output distributions; lower layers capture shallow patterns, upper layers semantic ones (Geva et al., EMNLP 2021)
@@ -169,6 +171,7 @@
 - [Constitutional AI: Harmlessness from AI Feedback](raw/papers/2022-12-bai-constitutional-ai/bai2022constitutional.md) — PDF at [2212.08073.pdf](raw/papers/2022-12-bai-constitutional-ai/2212.08073.pdf) (Yuntao Bai et al., Anthropic, arXiv 2022)
 - [Self-Instruct: Aligning Language Models with Self-Generated Instructions](raw/papers/2022-12-wang-self-instruct/wang2022selfinstruct.md) — PDF at [2212.10560.pdf](raw/papers/2022-12-wang-self-instruct/2212.10560.pdf) — bootstraps instruction-following via model's own generations; 33% absolute gain on SuperNI, near InstructGPT_001 without human annotations (Yizhong Wang et al., UW/AI2, ACL 2023)
 - [Scaling Laws for Reward Model Overoptimization](raw/papers/2022-10-gao-reward-model-overoptimization/gao2022rewardmodeloveropt.md) — PDF at [2210.10760.pdf](raw/papers/2022-10-gao-reward-model-overoptimization/2210.10760.pdf) — establishes scaling laws for reward model overoptimization in RLHF; functional forms for BoN and RL, smooth coefficient scaling with RM parameter count; synthetic gold-RM setup (Leo Gao, John Schulman, Jacob Hilton, OpenAI, 2022)
+- [Fast Inference from Transformers via Speculative Decoding](raw/papers/2022-11-leviathan-speculative-decoding/laviathan2022speculativedecoding.md) — PDF at [2211.17192.pdf](raw/papers/2022-11-leviathan-speculative-decoding/2211.17192.pdf) — introduces speculative decoding: accelerates autoregressive model inference by generating multiple tokens per serial invocation via draft-verify with a fast approximation model; 2–3× walltime speedup on T5-XXL without retraining or output distribution changes (Leviathan, Kalman & Matias, Google, ICML 2023)
 - [Training Compute-Optimal Large Language Models]
 - [Training language models to follow instructions with human feedback](raw/papers/2022-03-ouyang-instructgpt/ouyang2022instructgpt.md) — PDF at [2203.02155.pdf](raw/papers/2022-03-ouyang-instructgpt/2203.02155.pdf) (Long Ouyang et al., OpenAI, NeurIPS 2022)
 - [On the ability of standard and brain-constrained DNNs to support cognitive superposition](raw/papers/2024-02-garagnani-cognitive-superposition/garagnani2024superposition.md) (Max Garagnani, Cognitive Neurodynamics, 2024)
@@ -216,6 +219,7 @@
 - [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](raw/papers/2022-01-wei-chain-of-thought/wei2022cot.md) — PDF at [2201.11903.pdf](raw/papers/2022-01-wei-chain-of-thought/2201.11903.pdf) — introduces chain-of-thought prompting with intermediate reasoning steps; demonstrates CoT as emergent ability of model scale; PaLM 540B achieves SOTA on GSM8K surpassing finetuned GPT-3 (Jason Wei et al., Google Research, NeurIPS 2022)
 - [Locating and Editing Factual Associations in GPT](raw/papers/2022-02-meng-rome/meng2022rome.md) — PDF at [2202.05262.pdf](raw/papers/2022-02-meng-rome/2202.05262.pdf) — introduces Causal Tracing to localise factual associations to mid-layer MLP modules processing the subject's last token; develops ROME (Rank-One Model Editing) for inserting new facts via rank-one MLP weight updates; introduces the COUNTERFACT dataset; ROME achieves S=89.2 on GPT-2 XL, simultaneously maintaining generalization (PS=96.4) and specificity (NS=75.4) where other methods sacrifice one or the other (Kevin Meng et al., MIT / Northeastern / Technion, NeurIPS 2022)
 - [Large Language Models are Zero-Shot Reasoners](raw/papers/2022-05-kojima-zero-shot-cot/kojima2022zeroshot.md) — PDF at [2205.11916.pdf](raw/papers/2022-05-kojima-zero-shot-cot/2205.11916.pdf) — introduces Zero-shot-CoT; demonstrates that "Let's think step by step" elicits chain of thought reasoning without few-shot examples; evaluated on 12 reasoning datasets with 17 model variants (Takeshi Kojima et al., University of Tokyo / Google Research, NeurIPS 2022)
+- [Self-Consistency Improves Chain of Thought Reasoning in Language Models](raw/papers/2022-03-wang-self-consistency/wang2022selfconsistency.md) — PDF at [2203.11171.pdf](raw/papers/2022-03-wang-self-consistency/2203.11171.pdf) — replaces greedy decoding in CoT with sample-and-marginalise over diverse reasoning paths; GSM8K +17.9%, SVAMP +11.0%, AQuA +12.2%, StrategyQA +6.4% on PaLM-540B; unsupervised, no training required (Xuezhi Wang et al., Google, ICLR 2023)
 
 ## Comparisons
 
