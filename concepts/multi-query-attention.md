@@ -10,6 +10,7 @@ tags:
 sources:
   - "[Fast Transformer Decoding: One Write-Head is All You Need](raw/papers/2019-11-shazeer-multi-query-attention/shazeer2019multiquery.md)"
   - "[KV Caching Explained](raw/articles/2023-kv-caching-explained/joaolages2023kvcache.md)"
+  - "[GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](raw/papers/2023-05-ainslie-grouped-query-attention/ainslie2023gqa.md)"
 confidence: high
 ---
 
@@ -90,7 +91,7 @@ The paper demonstrates that multi-query attention is orthogonal to **local (slid
 
 ## Legacy and Impact
 
-MQA directly inspired **Grouped-Query Attention (GQA)** ([Ainslie et al., 2023](https://arxiv.org/abs/2305.13245)), which generalises the idea by partitioning heads into groups, each sharing one K/V head. GQA is used in LLaMA 2/3, Mistral, and many modern open LLMs as a middle ground between full multi-head (maximum quality) and MQA (maximum efficiency).
+MQA directly inspired **[[grouped-query-attention|Grouped-Query Attention (GQA)]]** ([Ainslie et al., 2023](raw/papers/2023-05-ainslie-grouped-query-attention/ainslie2023gqa.md)), which generalises the idea by partitioning heads into groups, each sharing one K/V head. GQA is used in LLaMA 2/3, Mistral, and many modern open LLMs as a middle ground between full multi-head (maximum quality) and MQA (maximum efficiency).
 
 MQA also provides the theoretical foundation for understanding why [[kv-caching|KV caching]] is memory-bound in the first place — the paper's performance analysis is the canonical explanation of the memory-bandwidth bottleneck in incremental transformer decoding.
 
@@ -106,3 +107,4 @@ The relationship between query heads and key/value heads forms a spectrum:
 - [[attention-head-pruning|Attention Head Pruning]] — another approach to reducing attention overhead, focused on encoder heads
 - [[flash-attention|FlashAttention]] — complementary IO-aware attention that also addresses memory-bandwidth but at the per-step level rather than across decoding steps
 - [[sparse-transformer|Sparse Transformer]] — orthogonal efficiency technique addressing the `n` term via sparse attention patterns
+- [[grouped-query-attention|Grouped-Query Attention]] — the GQA-1 endpoint of the same spectrum; generalizes MQA by grouping query heads into shared K/V heads

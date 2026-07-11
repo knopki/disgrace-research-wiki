@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-06-25 | Total pages: 87
+> Last updated: 2026-07-11 | Total pages: 88
 
 ## Entities
 
@@ -103,8 +103,9 @@
 - [[kv-caching|KV Caching]] — inference optimisation caching Key/Value states in auto-regressive transformers to avoid redundant recomputation
 - [[matryoshka-representation-learning|Matryoshka Representation Learning (MRL)]] — training technique producing a single embedding whose first m dimensions form a standalone effective representation for any m ∈ [d]; enables up to 14× compute savings in classification and retrieval via coarse-to-fine nesting (Kusupati et al., UW/Google, NeurIPS 2022)
 - [[multi-query-attention|Multi-Query Attention (MQA)]] — attention variant sharing keys and values across all heads to reduce KV cache size and memory bandwidth; Shazeer (2019) achieves 12× decoder speedup
-- [[mixture-of-experts|Mixture-of-Experts (MoE)]] — neural architecture scaling capacity via sparse expert activation
+- [[grouped-query-attention|Grouped-Query Attention (GQA)]] — interpolation between MHA and MQA; partitions query heads into G groups each sharing one K/V head; uptrained from MHA checkpoints at 5% compute; quality ≈ MHA at ~5× MQA speed; used in LLaMA 2/3, Mistral (Ainslie et al., Google, EMNLP 2023)
 - [[mixture-of-experts|Mixture-of-Experts (MoE)]] — neural architecture scaling capacity via sparse expert activation; decouples parameter count from computational cost; foundational formulation by Shazeer et al. (2017) with noisy top-k gating, 137B parameter models; evolved into Switch Transformer and modern MoE LLMs
+- [[switch-transformer|Switch Transformer]] — MoE Transformer substituting dense FFN with k=1 single-expert routing; 7× pretraining speedup over T5, trillion-parameter models; introduced selective bfloat16 precision and expert capacity (Fedus, Zoph & Shazeer, Google, JMLR 2022)
 - [[mamba|Mamba / SSM]]
 
 - [[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]] — training paradigm replacing language CoT with reasoning directly in the continuous latent space of an LLM; enables emergent BFS-like reasoning
@@ -201,10 +202,10 @@
 - [Train Short, Test Long: Attention with Linear Biases Enables Input Length Extrapolation](raw/papers/2021-08-press-alibi/press2022alibi.md) — PDF at [2108.12409.pdf](raw/papers/2021-08-press-alibi/2108.12409.pdf) — introduces ALiBi, a position method that biases attention scores with a distance-proportional penalty instead of using positional embeddings; enables training on short sequences and extrapolating to long ones; 11% faster and 11% less memory than sinusoidal at same perplexity; ICLR 2022 (Ofir Press, Noah A. Smith, Mike Lewis, UW / FAIR / AI2)
 - [Finetuned Language Models Are Zero-Shot Learners](raw/papers/2021-09-wei-flan/wei2021flan.md) — PDF at [2109.01652.pdf](raw/papers/2021-09-wei-flan/2109.01652.pdf) — introduces instruction tuning and FLAN (137B); demonstrates zero-shot FLAN outperforms zero-shot GPT-3 on 20/25 datasets; ICLR 2022 (Jason Wei et al., Google Research, arXiv:2109.01652, September 2021)
 - [TruthfulQA: Measuring How Models Mimic Human Falsehoods](raw/papers/2021-09-lin-truthfulqa/lin2021truthfulqa.md) — PDF at [2109.07958.pdf](raw/papers/2021-09-lin-truthfulqa/2109.07958.pdf) — benchmark of 817 questions measuring truthfulness; inversely scales with model size (larger models less truthful); introduces imitative falsehoods and GPT-judge; best model 58% vs human 94% (Stephanie Lin, Jacob Hilton, Owain Evans, Oxford/OpenAI, ACL 2022)
-- [Efficiently Modeling Long Sequences
 - [Switch Transformers: Scaling to Trillion Parameter Models with Simple and Efficient Sparsity](raw/papers/2021-01-fedus-switch-transformers/2101.03961.pdf) — details at [fedus2022switch.md](raw/papers/2021-01-fedus-switch-transformers/fedus2022switch.md) (William Fedus et al., Google, JMLR 2022)
 - [SpargeAttention: Accurate and Training-free Sparse Attention Accelerating Any Model Inference](raw/papers/2025-02-zhang-spargeattention/2502.18137.pdf) — details at [zhang2025spargeattn](raw/papers/2025-02-zhang-spargeattention/zhang2025spargeattn.md) (Jintao Zhang et al., Tsinghua/UC Berkeley, ICML 2025)
 - [Direct Preference Optimization: Your Language Model is Secretly a Reward Model](raw/papers/2023-05-rafailov-dpo/rafailov2023dpo.md) — PDF at [2305.18290.pdf](raw/papers/2023-05-rafailov-dpo/2305.18290.pdf) (Rafael Rafailov et al., Stanford, NeurIPS 2023)
+- [GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints](raw/papers/2023-05-ainslie-grouped-query-attention/ainslie2023gqa.md) — PDF at [2305.13245.pdf](raw/papers/2023-05-ainslie-grouped-query-attention/2305.13245.pdf) — introduces grouped-query attention (GQA): groups of query heads share K/V heads, interpolating MHA↔MQA; uptraining recipe converts MHA checkpoints at 5% compute; quality ≈ MHA at ~5× MQA speed; adopted by LLaMA 2/3, Mistral (Ainslie et al., Google Research, EMNLP 2023)
 - [BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding](raw/papers/2018-10-devlin-bert/1810.04805.pdf) — details at [devlin2018bert.md](raw/papers/2018-10-devlin-bert/devlin2018bert.md) (Jacob Devlin et al., Google AI Language, NAACL 2019)
 - [Neural Machine Translation of Rare Words with Subword Units](raw/papers/2016-06-sennrich-bpe-subword/1508.07909.pdf) — introduces BPE for subword tokenization; details at [sennrich2016bpe.md](raw/papers/2016-06-sennrich-bpe-subword/sennrich2016bpe.md) (Rico Sennrich, Barry Haddow, Alexandra Birch, ACL 2016)
 - [Red Teaming Language Models with Language Models](raw/papers/2022-02-perez-red-teaming/perez2022redteaming.md) — PDF at [2202.03286.pdf](raw/papers/2022-02-perez-red-teaming/2202.03286.pdf) — introduces automated LM-based red teaming; generates adversarial test cases to discover harmful behaviors (offensive content, data leakage, contact info exposure, distributional bias) in a 280B Gopher chatbot; compares zero-shot through RL methods against human adversaries (Ethan Perez et al., DeepMind / NYU, arXiv 2022)

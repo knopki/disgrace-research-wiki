@@ -944,3 +944,35 @@
 - Created concept: concepts/self-consistency (mechanism: diverse sampling → majority vote aggregation; comparison table to existing approaches; key results per task/model/scale)
 - Updated concept: chain-of-thought (added Self-Consistency section with key results table and properties; added source to frontmatter; added wikilink to self-consistency)
 - Updated index.md: added concept + raw source entries; bumped total to 87
+
+## [2026-07-11] ingest-complete | Switch Transformers: Scaling to Trillion Parameter Models (Fedus, Zoph & Shazeer, Google, JMLR 2022)
+- Underlying ingest performed 2026-06-16 (raw + concept page); completing registration now.
+- Raw source: raw/papers/2021-01-fedus-switch-transformers/ (2101.03961.pdf + fedus2022switch.md)
+- Source: https://arxiv.org/abs/2101.03961
+- Concept page confirmed: concepts/switch-transformer.md (k=1 routing, differentiable load-balancing loss, expert capacity, selective bfloat16, trillion-parameter scaling via data/model/expert parallelism, distillation, multilingual)
+- Registered concept in index.md Concepts section; bumped total pages to 88
+- Fixed broken orphan index line (stray "- [Efficiently Modeling Long Sequences")
+- Cross-links: switch-transformer ↔ mixture-of-experts, transformer, scaling-laws, sparse-transformer, kv-caching, flash-attention, slm-moe-agentic-ai
+
+## [2026-07-11] ingest | GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints (Ainslie et al., Google Research, EMNLP 2023)
+- Raw source: raw/papers/2023-05-ainslie-grouped-query-attention/ (2305.13245.pdf + ainslie2023gqa.md)
+- Source: https://arxiv.org/abs/2305.13245 — "GQA: Training Generalized Multi-Query Transformer Models from Multi-Head Checkpoints"
+- Authors: Joshua Ainslie, James Lee-Thorp, Michiel de Jong, Yury Zemlyanskiy, Federico Lebrón, Sumit Sanghai (Google Research)
+- Venue: EMNLP 2023 (arXiv:2305.13245v3, 23 Dec 2023)
+- Content: introduces grouped-query attention (GQA) — interpolation between MHA and MQA where query heads are partitioned into G groups each sharing one K/V head; and an uptraining recipe converting existing MHA checkpoints to MQA/GQA with 5% of original pre-training compute (mean-pool K/V heads, then continue pre-training). On T5-XXL: GQA-8 matches MHA-XXL quality (47.1 vs 47.2 avg) at 0.28 vs 1.51 s/sample inference (~5.4× faster), only marginally slower than MQA (0.24) with clearly better quality (47.1 vs 46.6). GQA adopted by LLaMA 2/3, Mistral. Not applied to encoder self-attention.
+- Created concept: concepts/grouped-query-attention.md (method, uptraining, results table, ablations, head-count spectrum, legacy, limitations)
+- Updated concept: multi-query-attention.md (added GQA as source + wikilink + cross-link; GQA-1 is MQA endpoint of spectrum)
+- Updated index.md: added concept entry + raw source; bumped total pages to 89
+- Cross-links: grouped-query-attention ↔ multi-query-attention, kv-caching, transformer, flash-attention, speculative-decoding
+
+## [2026-07-11] update | AGENTS.md consolidated from wiki-ingest skill
+- Reason: user asked to move project-specific wiki conventions out of skills into AGENTS.md; `llm-wiki` skill stays general (not project-specific), `.archive/` left untouched.
+- Rewrote AGENTS.md as the authoritative operating manual for THIS wiki: added full Ingest Protocol (paper stop-check, full-text gate, step-by-step 1-5, orphan guard, external-reference rule, post-ingest verification, re-ingest gap scan, compare-vs-discuss heuristic, consolidated pitfalls).
+- Relocated project-specific scripts from `wiki-ingest` skill into repo: scripts/verify-raw-source.py, scripts/fix-pipe-corruption.py.
+- Removed references/ (held general `llm-wiki` docs — that skill is retained, so docs belong there, not in the project repo).
+- `wiki-ingest` skill still present at ~/.hermes/skills/research/wiki-ingest; pending deletion once user confirms AGENTS.md covers it fully.
+- Total pages unchanged (89).
+
+## [2026-07-11] delete | wiki-ingest skill removed
+- User confirmed AGENTS.md + scripts/ cover the protocol fully. Deleted ~/.hermes/skills/research/wiki-ingest (SKILL.md + scripts/verify-raw-source.py, scripts/fix-pipe-corruption.py — copies now live in repo scripts/).
+- Remaining project skills: none wiki-specific. `llm-wiki` retained as general skill. `.archive/` untouched.
