@@ -976,3 +976,13 @@
 ## [2026-07-11] delete | wiki-ingest skill removed
 - User confirmed AGENTS.md + scripts/ cover the protocol fully. Deleted ~/.hermes/skills/research/wiki-ingest (SKILL.md + scripts/verify-raw-source.py, scripts/fix-pipe-corruption.py — copies now live in repo scripts/).
 - Remaining project skills: none wiki-specific. `llm-wiki` retained as general skill. `.archive/` untouched.
+
+## [2026-07-11] ingest | Mass-Editing Memory in a Transformer (MEMIT)
+- Raw source: `raw/papers/2022-10-meng-memit/` (2210.07229.pdf + meng2022memit.md)
+- arXiv: 2210.07229v2 (ICLR 2023)
+- Authors: Kevin Meng, Arnab Sen Sharma, Alex Andonian, Yonatan Belinkov, David Bau (MIT CSAIL / Northeastern / Technion)
+- Content: Direct successor to ROME. Introduces MEMIT — mass-edits thousands of factual (s,r,o) associations by treating each MLP W_out in the mediating layer range ℛ as a linear associative memory and applying a closed-form batched least-squares update (Δ = R·K1ᵀ(C0+K1K1ᵀ)⁻¹), spreading residuals evenly across ℛ. Scales to 10k edits on GPT-J (6B) and GPT-NeoX (20B); S=85.8 vs ROME 50.3, MEND 23.1 at 10k. Mixing relations yields near-average performance. Limitations: directional relations only, slow (7.4h/12.3h), dual-use risk.
+- Created concept: [[memit-mass-editing|MEMIT (Mass-Editing Memory In Transformer)]] (definition, core idea, method w/ equations, full result tables, ROME-vs-MEMIT comparison, limitations, significance)
+- Updated concept: [[rome-model-editing|ROME]] (added MEMIT as direct successor in Limitations + Cross-Links; bumped updated)
+- Index: added MEMIT to Concepts + Raw Sources (Papers); Total pages 88 → 89
+- PDF verify: PASS (0 errors). Post-ingest checks: no txt artifacts, no pipe corruption.

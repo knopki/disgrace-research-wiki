@@ -1,7 +1,7 @@
 ---
 title: ROME (Rank-One Model Editing)
 created: 2026-06-25
-updated: 2026-06-25
+updated: 2026-07-11
 type: concept
 tags:
   - technique
@@ -102,7 +102,7 @@ Key patterns:
 
 ## Limitations
 
-- **Single-fact editing only:** ROME edits one association at a time. A separate follow-up (Meng et al., 2022, "Mass-Editing Memory in a Transformer") scales to multiple edits.
+- **Single-fact editing only:** ROME edits one association at a time. Its direct successor [[memit-mass-editing|MEMIT]] (Meng et al., ICLR 2023) scales the same causal-localization premise to thousands of edits by spreading batched least-squares updates across the range of mediating MLP layers ℛ.
 - **Directional associations:** "The iconic landmark in Seattle is the Space Needle" and "The Space Needle is the iconic landmark in Seattle" are stored separately — both require independent edits.
 - **Incomplete vector space understanding:** the structure of vector spaces representing learned attributes remains unclear.
 - **Guessing behaviour:** successfully edited models may generate plausible but false new facts.
@@ -122,3 +122,4 @@ ROME provides both a practical tool and a mechanistic hypothesis: factual associ
 - [[transformer|Transformer]] — the architecture being edited
 - [[gpt-3|GPT-3]] — the model family (GPT-2 XL / GPT-J) that ROME is evaluated on
 - [[scaling-laws|Scaling Laws]] — relevant context for why model editing matters (retraining large models is expensive)
+- [[memit-mass-editing|MEMIT]] — direct successor (Meng et al., ICLR 2023); generalizes ROME's causal-localization premise to batched multi-layer mass editing of thousands of facts

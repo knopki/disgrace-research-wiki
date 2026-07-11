@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-07-11 | Total pages: 88
+> Last updated: 2026-07-11 | Total pages: 89
 
 ## Entities
 
@@ -26,6 +26,8 @@
 - [[noam-shazeer|Noam Shazeer]] — Google researcher; co-inventor of the Transformer, foundational formulations of Sparsely-Gated MoE and Multi-Query Attention, and proposed GLU variants (SwiGLU, GEGLU, ReGLU) that became the default Transformer FFN activation
 
 ## Concepts
+
+- [[memit-mass-editing|MEMIT (Mass-Editing Memory In Transformer)]] — scales model editing from single (ROME) to thousands of facts by spreading batched least-squares MLP updates across mediating layers ℛ; S=85.8 at 10k edits on GPT-J vs ROME 50.3 (Meng et al., MIT/Northeastern/Technion, ICLR 2023)
 
 - [[alibi|ALiBi (Attention with Linear Biases)]] — position method eliminating positional embeddings; biases query-key attention scores with a linearly decreasing distance penalty; enables training on short sequences (L=512/1024) with extrapolation to 10,000+ tokens; 11% faster and 11% less memory than sinusoidal at same perplexity (Press et al., UW / FAIR / AI2, ICLR 2022)
 
@@ -219,6 +221,7 @@
 - [LoRA: Low-Rank Adaptation of Large Language Models](raw/papers/2021-06-hu-lora/hu2021lora.md) — PDF at [2106.09685.pdf](raw/papers/2021-06-hu-lora/2106.09685.pdf) — freezes pre-trained weights and injects trainable low-rank decomposition matrices, reducing GPT-3 175B params by 10,000× with zero inference latency (Edward Hu et al., Microsoft, ICLR 2022)
 - [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](raw/papers/2022-01-wei-chain-of-thought/wei2022cot.md) — PDF at [2201.11903.pdf](raw/papers/2022-01-wei-chain-of-thought/2201.11903.pdf) — introduces chain-of-thought prompting with intermediate reasoning steps; demonstrates CoT as emergent ability of model scale; PaLM 540B achieves SOTA on GSM8K surpassing finetuned GPT-3 (Jason Wei et al., Google Research, NeurIPS 2022)
 - [Locating and Editing Factual Associations in GPT](raw/papers/2022-02-meng-rome/meng2022rome.md) — PDF at [2202.05262.pdf](raw/papers/2022-02-meng-rome/2202.05262.pdf) — introduces Causal Tracing to localise factual associations to mid-layer MLP modules processing the subject's last token; develops ROME (Rank-One Model Editing) for inserting new facts via rank-one MLP weight updates; introduces the COUNTERFACT dataset; ROME achieves S=89.2 on GPT-2 XL, simultaneously maintaining generalization (PS=96.4) and specificity (NS=75.4) where other methods sacrifice one or the other (Kevin Meng et al., MIT / Northeastern / Technion, NeurIPS 2022)
+- [Mass-Editing Memory in a Transformer](raw/papers/2022-10-meng-memit/meng2022memit.md) — PDF at [2210.07229.pdf](raw/papers/2022-10-meng-memit/2210.07229.pdf) — introduces MEMIT: scales model editing from single (ROME) to thousands of facts by spreading batched least-squares MLP updates across mediating layers ℛ; S=85.8 at 10k edits on GPT-J vs ROME 50.3, MEND 23.1 (Meng et al., MIT/Northeastern/Technion, ICLR 2023)
 - [Large Language Models are Zero-Shot Reasoners](raw/papers/2022-05-kojima-zero-shot-cot/kojima2022zeroshot.md) — PDF at [2205.11916.pdf](raw/papers/2022-05-kojima-zero-shot-cot/2205.11916.pdf) — introduces Zero-shot-CoT; demonstrates that "Let's think step by step" elicits chain of thought reasoning without few-shot examples; evaluated on 12 reasoning datasets with 17 model variants (Takeshi Kojima et al., University of Tokyo / Google Research, NeurIPS 2022)
 - [Self-Consistency Improves Chain of Thought Reasoning in Language Models](raw/papers/2022-03-wang-self-consistency/wang2022selfconsistency.md) — PDF at [2203.11171.pdf](raw/papers/2022-03-wang-self-consistency/2203.11171.pdf) — replaces greedy decoding in CoT with sample-and-marginalise over diverse reasoning paths; GSM8K +17.9%, SVAMP +11.0%, AQuA +12.2%, StrategyQA +6.4% on PaLM-540B; unsupervised, no training required (Xuezhi Wang et al., Google, ICLR 2023)
 
