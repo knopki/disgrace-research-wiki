@@ -92,6 +92,8 @@ The epsilon entries — pure artifacts of superposition — are attack vectors. 
 2. **Find an overcomplete basis post-hoc** — sparse coding / dictionary learning on layer activations.
 3. **Hybrid approaches** — reduce superposition partially, then decode the remainder.
 
+**Empirical resolution (2023).** *Towards Monosemanticity* (Bricken et al., 2023) tested approach 1 directly and found it insufficient — even models trained with 1-hot or SoLU activations that eliminate superposition still produce [[polysemantic-neurons|polysemantic neurons]], because cross-entropy loss favours representing several features ambiguously in one neuron over ignoring some of them. This refocuses the interpretability programme on approach 2. The paper shows that a [[sparse-autoencoders|sparse autoencoder]] can decompose a one-layer transformer's 512-neuron MLP into thousands of monosemantic features, recovering 79% (at 4k features) to 94.5% (at 131k features) of the MLP's loss contribution. ([Bricken et al., 2023](raw/papers/2023-10-bricken-monosemanticity/bricken2023monosemanticity.md))
+
 Because superposition is a phase change, there exists a regime where it is *totally absent*. The challenge is whether competitive models can operate in that regime.
 
 ## Open Questions

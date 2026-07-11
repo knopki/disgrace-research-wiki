@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-07-11 | Total pages: 89
+> Last updated: 2026-07-11 | Total pages: 90
 
 ## Entities
 
@@ -63,6 +63,7 @@
 - [[grace|GRACE (Graph-RAG Anchored Code Engineering)]] — framework for deterministic LLM code generation in large contexts; dual-purpose semantic markup serving both generative models (top-down synthesis template) and RAG agents (indexed navigation map); ten principles including Intent-First Architecture, Observable AI Belief State, and Governed Autonomy
 
 - [[flex-prompting|FLEX (Few-shot Logit-Enabled XML Prompting)]] — methodology for reliable SLM control using structured XML prompts, few-shot examples, and logit-based verification; validated on Qwen3-0.6B for agentic tool selection
+- [[sparse-autoencoders|Sparse Autoencoders (Feature Extraction)]] — dictionary-learning method decomposing MLP activations into an overcomplete set of monosemantic interpretable features; Bricken et al. (Anthropic, 2023) show features beat neurons on interpretability, are universal across seeds, and recover up to 94.5% of MLP loss
 - [[entities/gpt-3|GPT-3]] — 175B parameter autoregressive language model; demonstrated that scaling up LMs dramatically improves task-agnostic [[in-context-learning|in-context learning]] performance; systematic evaluation across zero/one/few-shot settings on dozens of NLP benchmarks; first systematic data contamination analysis for large-scale LMs
 - [[glu-variants|GLU Variants (GEGLU, SwiGLU, ReGLU)]] — gated feed-forward variants replacing the Transformer FFN activation; GEGLU and SwiGLU achieve best perplexity; SwiGLU became the default FFN activation in post-2022 LLMs (LLaMA, PaLM, Gemma, Mistral, Qwen)
 
@@ -225,6 +226,7 @@
 - [Large Language Models are Zero-Shot Reasoners](raw/papers/2022-05-kojima-zero-shot-cot/kojima2022zeroshot.md) — PDF at [2205.11916.pdf](raw/papers/2022-05-kojima-zero-shot-cot/2205.11916.pdf) — introduces Zero-shot-CoT; demonstrates that "Let's think step by step" elicits chain of thought reasoning without few-shot examples; evaluated on 12 reasoning datasets with 17 model variants (Takeshi Kojima et al., University of Tokyo / Google Research, NeurIPS 2022)
 - [Self-Consistency Improves Chain of Thought Reasoning in Language Models](raw/papers/2022-03-wang-self-consistency/wang2022selfconsistency.md) — PDF at [2203.11171.pdf](raw/papers/2022-03-wang-self-consistency/2203.11171.pdf) — replaces greedy decoding in CoT with sample-and-marginalise over diverse reasoning paths; GSM8K +17.9%, SVAMP +11.0%, AQuA +12.2%, StrategyQA +6.4% on PaLM-540B; unsupervised, no training required (Xuezhi Wang et al., Google, ICLR 2023)
 - [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](raw/papers/2023-12-gu-mamba/gu2023mamba.md) — PDF at [2312.00752.pdf](raw/papers/2023-12-gu-mamba/2312.00752.pdf) — introduces selective SSMs (S6): input-dependent SSM parameters replace LTI dynamics, enabling content-based reasoning; 5× inference throughput vs Transformers, linear scaling in length, quality matches 2× larger Transformers on language; SotA on audio + genomics (Gu & Dao, arXiv 2023)
+- [Towards Monosemanticity: Decomposing Language Models With Dictionary Learning](raw/papers/2023-10-bricken-monosemanticity/bricken2023monosemanticity.md) — HTML at [bricken2023monosemanticity.html](raw/papers/2023-10-bricken-monosemanticity/bricken2023monosemanticity.html) — applies sparse autoencoders to a one-layer transformer's 512-neuron MLP; features are more interpretable than neurons, universal across seeds, explain 79% (4k) to 94.5% (131k) of MLP loss; refutes architectural "no-superposition" strategy (Bricken et al., Anthropic, Transformer Circuits Thread, 2023)
 
 ## Comparisons
 

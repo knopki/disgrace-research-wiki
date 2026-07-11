@@ -997,3 +997,13 @@
 - Updated concept: [[mamba|Mamba / Selective SSM]] - previously a stub anchored on Ivanov RAG/hallucination articles; now re-anchored on the primary paper with S6 mechanism, selective scan, architecture, full empirical results; Ivanov material preserved as secondary thread (plasticity, RAG self-correction, GRACE native interface). Added raw_ingested: true, confidence: high.
 - Index: added Mamba raw source to Raw Sources (Papers); enriched Mamba concept summary line. Total pages: 89 (concept page pre-existed).
 - PDF verify: PASS (0 errors). Post-ingest checks: no txt artifacts, no pipe corruption.
+
+## [2026-07-11] ingest | Towards Monosemanticity: Decomposing Language Models With Dictionary Learning
+- Raw source: raw/papers/2023-10-bricken-monosemanticity/bricken2023monosemanticity.md (HTML-native publication, no PDF; stored bricken2023monosemanticity.html locally per anthropic2022toy precedent)
+- Source: Bricken, Templeton, Batson, Chen, Jermyn, Henighan, Olah et al., Transformer Circuits Thread, 2023-10
+- New concept page: concepts/sparse-autoencoders.md (SAE method + findings)
+- Updated: concepts/superposition.md (empirical resolution of "no-superposition" approach), concepts/polysemantic-neurons.md (SAE as realized approach-2), entities/anthropic.md (added publication + source)
+- Cross-links added: sparse-autoencoders <-> superposition, polysemantic-neurons, privileged-basis, anthropic, cognitive-superposition, word-embeddings
+- Key facts captured: 512-neuron MLP / 8B activation vectors / 1x-256x expansion; features more interpretable than neurons (median rubric 12 vs 0); 79% (4k) to 94.5% (131k) MLP loss recovered; universality median activation corr 0.72 (features) vs 0.46 (neurons); feature splitting, FSA assemblies, token-in-context motifs; architectural no-superposition approaches fail under CE loss.
+- index.md: added concept + raw paper entry; Total pages: 90.
+- Note: verify-raw-source.py reports "No .pdf" — same non-fatal condition as the committed anthropic2022toy paper (HTML-only publication). HTML artifact stored locally.

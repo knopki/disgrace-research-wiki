@@ -52,7 +52,7 @@ A specific polysemantic pattern discovered in the toy model: two neurons form a 
 
 Polysemantic neurons are a core challenge for mechanistic interpretability. If a neuron responds to multiple unrelated features, one cannot simply take the neuron's activation as evidence of a single concept. This forces interpretability methods to either:
 
-- Find an overcomplete basis (dictionary learning) that separates the features
+- Find an overcomplete basis (dictionary learning) that separates the features — realised in practice by [[sparse-autoencoders|sparse autoencoders]] (Bricken et al., 2023), which extract monosemantic features from polysemantic MLP activations
 - Work with models that have less or no superposition
 - Analyse circuits at the level of feature directions rather than individual neurons
 
