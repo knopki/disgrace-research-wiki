@@ -209,6 +209,6 @@ These scaling laws were the first comprehensive empirical framework for predicti
 - [[sparse-transformer|Sparse Transformer]] — cited by Kaplan et al. as enabling large model parallelism
 - [[switch-transformer|Switch Transformer]] — demonstrates a distinct scaling dimension (number of experts) orthogonal to N-D-C; expert count provides quality gains beyond model depth/width scaling
 - [[instruction-tuning|Instruction Tuning]] — technique whose benefits emerge only at sufficient scale (≥68B parameters), confirming and extending the scaling-law framework; models below 8B are harmed by instruction tuning
-|- [[chain-of-thought|Chain-of-Thought Prompting]] — another emergent ability of model scale; improves multi-step reasoning only at ~100B+ parameters, with flat or negative impact below the threshold
-|- [[dario-amodei|Dario Amodei]] — senior author of the paper; provided guidance throughout the project
-|- [[reward-model-overoptimization|Reward Model Overoptimization Scaling Laws]] — a distinct class of scaling laws for RLHF, modelling gold RM score decay as a function of KL divergence and RM size
+- [[chain-of-thought|Chain-of-Thought Prompting]] — another emergent ability of model scale; improves multi-step reasoning only at ~100B+ parameters, with flat or negative impact below the threshold
+- [[dario-amodei|Dario Amodei]] — senior author of the paper; provided guidance throughout the project
+- [[reward-model-overoptimization|Reward Model Overoptimization Scaling Laws]] — a distinct class of scaling laws for RLHF, modelling gold RM score decay as a function of KL divergence and RM size

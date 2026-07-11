@@ -986,3 +986,14 @@
 - Updated concept: [[rome-model-editing|ROME]] (added MEMIT as direct successor in Limitations + Cross-Links; bumped updated)
 - Index: added MEMIT to Concepts + Raw Sources (Papers); Total pages 88 → 89
 - PDF verify: PASS (0 errors). Post-ingest checks: no txt artifacts, no pipe corruption.
+
+
+## [2026-07-11] ingest | Mamba: Linear-Time Sequence Modeling with Selective State Spaces (arXiv:2312.00752)
+
+- Raw source: `raw/papers/2023-12-gu-mamba/` (2312.00752.pdf + gu2023mamba.md)
+- arXiv: 2312.00752v2 (CMU & Princeton; v2 May 2024)
+- Authors: Albert Gu, Tri Dao
+- Content: Introduces selective SSMs (S6) - makes SSM parameters (delta, B, C) input-dependent, lifting prior LTI (time-invariant) structured SSMs to time-varying. Selection gives content-based reasoning (solves Selective Copying + Induction Heads, extrapolates to 1M-length sequences). Hardware-aware parallel scan (kernel fusion + recomputation) makes it 20-40x faster than naive scan, matches FlashAttention memory/token, beats FA-2 speed beyond 2K length. Homogeneous Mamba block = H3 + SwiGLU MLP fused; no attention/MLP blocks. Results: first attention-free model to match Transformer++ on language (scaling laws 125M-1.3B); Mamba-3B beats same-size Transformers, matches 2x larger; 4-5x inference throughput; SotA on DNA (perplexity improves to 1M context) and audio (SC09 FID). Notes LTI (S4) actually better on continuous audio.
+- Updated concept: [[mamba|Mamba / Selective SSM]] - previously a stub anchored on Ivanov RAG/hallucination articles; now re-anchored on the primary paper with S6 mechanism, selective scan, architecture, full empirical results; Ivanov material preserved as secondary thread (plasticity, RAG self-correction, GRACE native interface). Added raw_ingested: true, confidence: high.
+- Index: added Mamba raw source to Raw Sources (Papers); enriched Mamba concept summary line. Total pages: 89 (concept page pre-existed).
+- PDF verify: PASS (0 errors). Post-ingest checks: no txt artifacts, no pipe corruption.
