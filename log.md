@@ -1007,3 +1007,13 @@
 - Key facts captured: 512-neuron MLP / 8B activation vectors / 1x-256x expansion; features more interpretable than neurons (median rubric 12 vs 0); 79% (4k) to 94.5% (131k) MLP loss recovered; universality median activation corr 0.72 (features) vs 0.46 (neurons); feature splitting, FSA assemblies, token-in-context motifs; architectural no-superposition approaches fail under CE loss.
 - index.md: added concept + raw paper entry; Total pages: 90.
 - Note: verify-raw-source.py reports "No .pdf" — same non-fatal condition as the committed anthropic2022toy paper (HTML-only publication). HTML artifact stored locally.
+
+## [2026-07-11] ingest | FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation
+
+- **Raw source:** [min2023factscore.md](raw/papers/2023-05-min-factscore/min2023factscore.md) — PDF at [2305.14251.pdf](raw/papers/2023-05-min-factscore/2305.14251.pdf)
+- **URL:** https://arxiv.org/abs/2305.14251 (v2, EMNLP 2023)
+- **Authors:** Sewon Min, Kalpesh Krishna, Xinxi Lyu, Mike Lewis, Wen-tau Yih, Pang Wei Koh, Mohit Iyyer, Luke Zettlemoyer, Hannaneh Hajishirzi (UW / UMass Amherst / AllenAI / Meta AI)
+- **New concept page:** [[factscore|FActScore]] (concepts/factscore.md)
+- **Cross-links added:** concepts/factscore.md → [[retrieval-augmented-generation]], [[truthfulqa]], [[hallucination-detection-slm]]
+- **Index:** added to Concepts section + Raw Sources (Papers); total pages 90→91
+- **Key findings captured:** atomic-fact decomposition + source-relative precision; human FACTSCOREs 42.5% (InstructGPT) / 58.3% (ChatGPT) / 71.5% (PerplexityAI) vs human ~88.8%; automated estimator (Retrieve→LM + NP) <2% error, Pearson r=0.99 between variants; 6,500-generation scale study of 13 subjects; precision-only limitation.
