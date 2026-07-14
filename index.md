@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-07-11 | Total pages: 91
+> Last updated: 2026-07-15 | Total pages: 93
 
 ## Entities
 
@@ -138,6 +138,10 @@
 - [[truthfulqa|TruthfulQA]] — benchmark of 817 questions measuring LLM truthfulness; largest models show inverse scaling (less truthful as they grow); introduces imitative falsehoods concept and GPT-judge automated metric (Lin, Hilton & Evans, ACL 2022)
 - [[factscore|FActScore (Fine-grained Atomic Evaluation of Factual Precision)]] — metric decomposing long-form generations into atomic facts and scoring the fraction supported by a knowledge source; ChatGPT 58.3% vs human ~88.8% on biographies; automated estimator with <2% error rate (Min et al., UW/Meta/AllenAI, EMNLP 2023)
 
+- [[hallucination-nlg-survey|Survey of Hallucination in NLG (Ji et al.)]] — first comprehensive survey of NLG hallucination; unified intrinsic/extrinsic taxonomy, contributors (data + training/inference), metrics, and mitigation across summarization, dialogue, MT, data-to-text, VL; plus a 2024 LLM section
+
+- [[hallucination-llm-survey|Survey on Hallucination in LLMs (Huang et al.)]] — redefines hallucination for LLMs as factuality vs faithfulness (instruction/context/logical inconsistency); three-stage causal analysis (data/training/inference), detection+benchmarks, cause-linked mitigation, and RAG limitations (TOIS)
+
 ## Raw Sources
 
 ### Articles
@@ -183,6 +187,8 @@
 - [Transformers Represent Belief State Geometry in their Residual Stream](raw/papers/2024-05-shai-belief-state-geometry/shai2025belief.md) (Adam Shai et al., NeurIPS 2024)
 - [Training Language Models to Reason in a Continuous Latent Space](raw/papers/2024-12-hao-coconut/hao2025coconut.md) — abstract, full PDF, and plain-text at [hao2025coconut.md](raw/papers/2024-12-hao-coconut/hao2025coconut.md) (Shibo Hao et al., FAIR at Meta / UC San Diego, arXiv, COLM 2025)
 - [FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation](raw/papers/2023-05-min-factscore/min2023factscore.md) — PDF at [2305.14251.pdf](raw/papers/2023-05-min-factscore/2305.14251.pdf) — decomposes generations into atomic facts and scores the fraction supported by Wikipedia; ChatGPT 58.3%, PerplexityAI 71.5%, human ~88.8% on biographies; automated estimator with <2% error (Min et al., UW/Meta/AllenAI, EMNLP 2023)
+- [Survey of Hallucination in Natural Language Generation](raw/papers/2022-02-ji-hallucination-nlg/ji2022hallucination.md) — PDF at [2202.03629.pdf](raw/papers/2022-02-ji-hallucination-nlg/2202.03629.pdf) — first comprehensive NLG hallucination survey; intrinsic/extrinsic taxonomy, contributors, metrics, mitigation across tasks; 2024 LLM section (Ji et al., HKUST/Amazon, ACM CSUR 2023 / arXiv 2022)
+- [A Survey on Hallucination in Large Language Models: Principles, Taxonomy, Challenges, and Open Questions](raw/papers/2023-11-huang-hallucination-llm/huang2023hallucination.md) — PDF at [2311.05232.pdf](raw/papers/2023-11-huang-hallucination-llm/2311.05232.pdf) — redefines hallucination for LLMs (factuality vs faithfulness), three-stage causes, detection/benchmarks, cause-linked mitigation, RAG limits (Huang et al., HIT/Tencent, TOIS / arXiv 2023)
 - [Generating Long Sequences with Sparse Transformers](raw/papers/2019-04-child-sparse-transformer/1904.10509.pdf) — abstract and details at [child2019sparse](raw/papers/2019-04-child-sparse-transformer/child2019sparse.md) (Rewon Child et al., OpenAI, 2019)
 - [Analyzing Multi-Head Self-Attention: Specialized Heads Do the Heavy Lifting, the Rest Can Be Pruned](raw/papers/2019-05-voita-attention-heads/voita2019attention.md) — PDF at [1905.09418.pdf](raw/papers/2019-05-voita-attention-heads/1905.09418.pdf) (Elena Voita et al., Yandex / UvA / Edinburgh, ACL 2019)
 - [What Does BERT Look At? An Analysis of BERT's Attention](raw/papers/2019-06-clark-bert-attention/clark2019bertattention.md) — PDF at [1906.04341.pdf](raw/papers/2019-06-clark-bert-attention/1906.04341.pdf) (Kevin Clark et al., Stanford / Facebook AI, BlackBoxNLP 2019)

@@ -53,3 +53,4 @@ TruthfulQA results are frequently cited as motivation for [[rlhf|RLHF]] and [[in
 - [[humaneval|HumanEval]] — another benchmark showing LM limitations not solved by scale (functional correctness)  
 - [[scaling-laws|Scaling Laws]] — the paper's inverse scaling finding contrasts with standard scaling-law improvements  
 - [[entities/openai|OpenAI]] — organization behind GPT-3 and InstructGPT models evaluated
+- [[hallucination-nlg-survey|Hallucination in NLG (Ji et al.)]] — notes TruthfulQA measures *truthfulness* (imitation of human falsehoods), a different axis from source-faithfulness

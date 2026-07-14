@@ -121,6 +121,7 @@ Use-case distribution: generation (45.6%), open QA (12.4%), brainstorming (11.2%
 - **[[flex-prompting|FLEX]]** — later methodology for SLM control using structured XML prompts and logit-based verification, related through shared goal of reliable model steering
 - **[[grace|GRACE]]** — later framework for deterministic code generation, which uses Intent-First Architecture similar to RLHF's goal of alignment with user intent
 - **[[reward-model-overoptimization|Reward Model Overoptimization Scaling Laws]]** — systematic characterisation of overoptimization in RLHF; establishes functional forms for gold RM score degradation under PPO and BoN optimization
+- **[[hallucination-llm-survey|Hallucination in LLMs (Huang et al.)]]** — identifies RLHF as one of three causal stages (data, training, inference) of LLM hallucination; relates over-optimization pressure to factual/instruction inconsistencies
 
 ## Limitations
 

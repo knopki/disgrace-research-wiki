@@ -1017,3 +1017,24 @@
 - **Cross-links added:** concepts/factscore.md → [[retrieval-augmented-generation]], [[truthfulqa]], [[hallucination-detection-slm]]
 - **Index:** added to Concepts section + Raw Sources (Papers); total pages 90→91
 - **Key findings captured:** atomic-fact decomposition + source-relative precision; human FACTSCOREs 42.5% (InstructGPT) / 58.3% (ChatGPT) / 71.5% (PerplexityAI) vs human ~88.8%; automated estimator (Retrieve→LM + NP) <2% error, Pearson r=0.99 between variants; 6,500-generation scale study of 13 subjects; precision-only limitation.
+
+## [2026-07-15] ingest | Survey of Hallucination in NLG (Ji et al., 2022/2023)
+- Raw source: `raw/papers/2022-02-ji-hallucination-nlg/` (2202.03629.pdf + ji2022hallucination.md)
+- Source: https://arxiv.org/abs/2202.03629 (v7, arXiv Feb 2022; published ACM Computing Surveys 2023; LLM section added Jan 2024)
+- Authors: Ziwei Ji, Nayeon Lee, Rita Frieske, Tiezheng Yu, Dan Su, Yan Xu, Etsuko Ishii, Yejin Bang, Delong Chen, Wenliang Dai, Ho Shu Chan, Andrea Madotto, Pascale Fung (HKUST / Amazon)
+- Content: First comprehensive survey of NLG hallucination. Unified definition (nonsensical or unfaithful to source) and intrinsic/extrinsic taxonomy. Contributors grouped into data (source-reference divergence) and training/inference modeling choices. Metrics: conventional ROUGE/BLEU/METEOR correlate poorly with faithfulness (~25% hallucination in SOTA summaries per Falke et al. 2019). Mitigation: data-related and modeling/inference methods. Task chapters: summarization, dialogue, GQA, data-to-text, MT, VL; plus 2024 LLM section flagging alignment tax and open questions (scaling correlation, SFT vs RLHF mechanisms).
+- Created concept: hallucination-nlg-survey (definition/taxonomy, contributors, metrics, mitigation, LLM section; cross-links to hallucination-llm-survey, factscore, truthfulqa, rlhf, retrieval-augmented-generation, scaling-laws)
+- Cross-links inbound: factscore, truthfulqa (orphan guard satisfied: 3 inbound)
+
+## [2026-07-15] ingest | A Survey on Hallucination in LLMs (Huang et al., 2023)
+- Raw source: `raw/papers/2023-11-huang-hallucination-llm/` (2311.05232.pdf + huang2023hallucination.md)
+- Source: https://arxiv.org/abs/2311.05232 (v2, arXiv Nov 2023; published ACM TOIS)
+- Authors: Lei Huang, Weijiang Yu, Weitao Ma, Weihong Zhong, Zhangyin Feng, Haotian Wang, Qianglong Chen, Weihua Peng, Xiaocheng Feng, Bing Qin, Ting Liu (HIT / Tencent AI Lab)
+- Content: Redefines hallucination for the LLM era into factuality (factual inconsistency / fabrication) vs faithfulness (instruction / context / logical inconsistency) — absorbs and extends Ji et al.'s intrinsic/extrinsic split. Three-stage causal analysis: data, training (pretrain/SFT/RLHF), inference (decoding, over-confidence). Detection splits factuality vs faithfulness; benchmarks into evaluation vs detection. Cause-linked mitigation. RAG limitations: retrieval failure + generation bottleneck. Open directions: hallucination in LVLMs, knowledge boundaries (latent truthfulness probes by Burns et al. 2022 / Azaria & Mitchell 2023, contested by Levinstein & Herrmann 2023), theoretical foundations.
+- Created concept: hallucination-llm-survey (taxonomy, causes, detection/benchmarks, mitigation, RAG limits, open questions; cross-links to hallucination-nlg-survey, rlhf, retrieval-augmented-generation, factscore, scaling-laws)
+- Cross-links inbound: factscore, rlhf, retrieval-augmented-generation, hallucination-nlg-survey (orphan guard satisfied: 4 inbound)
+
+## [2026-07-15] inbox | marked lines 1-5 done
+- Lines 1-3 (FActScore x2, Self-Consistency) were already ingested earlier (present in index.md) — marked done, no new files.
+- Lines 4-5 (Ji survey, Huang survey) ingested as above.
+- index.md: added 2 concept entries (Hallucinations & Verification section), 2 raw papers (Papers section), bumped total pages 91 -> 93, last-updated 2026-07-15.

@@ -155,3 +155,4 @@ Key finding from RGB benchmarks: at 80%+ noise ratio, accuracy drops significant
 - **BART** — the seq2seq generator component used in the original RAG paper (Lewis et al., 2019)
 - [[bm25|BM25]] — lexical retrieval baseline compared against DPR in the RAG experiments
 - [[bert|BERT]] — the encoder architecture underlying DPR's bi-encoder retriever
+- [[hallucination-llm-survey|Hallucination in LLMs (Huang et al.)]] — analyses two RAG bottleneck classes (retrieval failure, generation bottleneck) as sources of residual hallucination; surveys RAG limitations beyond the faithfulness gains listed above
