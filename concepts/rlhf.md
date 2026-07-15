@@ -133,6 +133,7 @@ Use-case distribution: generation (45.6%), open QA (12.4%), brainstorming (11.2%
   2. **Excessive hedging:** The model tends to give long, qualified answers to simple questions, saying "there is no clear answer" even when one exists — partly because labelers were instructed to reward epistemic humility, and the RM picks this up
   3. **Multi-constraint degradation:** Performance degrades when instructions contain multiple explicit constraints (e.g., "list 10 movies made in the 1930's set in France") or constraints that are hard for LMs (e.g., writing a summary in a specified number of sentences)
 - **Sycophancy:** The model follows user instructions even when those instructions could lead to harm; when prompted to be maximally biased, InstructGPT generates *more* toxic outputs than GPT-3
+- **Disincentivizes faithful explanations:** RLHF optimizes for responses that *look* good to human evaluators, which can directly penalize models for reporting the true (less palatable) reasons behind their predictions — a cited driver of [[cot-faithfulness|CoT unfaithfulness]] (Turpin et al., 2023)
 - **No bias improvement:** RLHF did not significantly reduce social bias as measured by Winogender and CrowS-Pairs
 
 ### Whom the Model Is Aligned To

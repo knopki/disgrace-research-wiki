@@ -1038,3 +1038,31 @@
 - Lines 1-3 (FActScore x2, Self-Consistency) were already ingested earlier (present in index.md) — marked done, no new files.
 - Lines 4-5 (Ji survey, Huang survey) ingested as above.
 - index.md: added 2 concept entries (Hallucinations & Verification section), 2 raw papers (Papers section), bumped total pages 91 -> 93, last-updated 2026-07-15.
+
+## [2026-07-15] ingest | Rafailov et al. (2023) "Direct Preference Optimization" (re-ingest / quality audit)
+- Raw source already present: raw/papers/2023-05-rafailov-dpo/rafailov2023dpo.md (abstract only) + PDF 2305.18290.pdf (NeurIPS 2023 camera-ready v3, verified, 2 pages)
+- Re-ingested full text end-to-end (pdftotext -layout). verify-raw-source.py: PASS.
+- Audit of existing concept page concepts/direct-preference-optimization.md; added under-covered contributions:
+  - β-importance weight is load-bearing — naïve unlikelihood objective degenerates (repetition loops, Appendix Table 3)
+  - Reference-policy init fallback when no SFT model (π_ref = MLE over y_w)
+  - Plackett-Luce extension (Theorem 1 covers k-way ranked, not just BT pairs)
+- Bumped concept page `updated` to 2026-07-15. Raw source body unchanged (abstract canonical); ingested date left as 2026-06-16.
+- Cross-links already present (rlhf, transformer, flash-attention, flex-prompting). Orphan guard satisfied (page linked from index.md).
+
+## [2026-07-15] ingest | Measuring Faithfulness in Chain-of-Thought Reasoning (Lanham et al., 2023)
+- Raw source: raw/papers/2023-07-lanham-faithful-cot/ (lanham2023faithfulcot.md + 2307.13702.pdf)
+- arXiv:2307.13702 (Anthropic, 2023-07-17); verify-raw-source.py: PASS
+- Concept page created: concepts/cot-faithfulness.md (CoT faithfulness — post-hoc rationalization, 4 intervention tests, inverse scaling)
+- Updated concept: concepts/chain-of-thought.md (new "Faithfulness" section + source + wikilink)
+- Cross-links: chain-of-thought, truthfulqa, rlhf, scaling-laws, self-consistency, chain-of-continuous-thought
+- index.md: added concept to "Prompting и рассуждения", added raw to Papers, Total pages 93 -> 94
+- inbox/papers.md: Lanham entry marked [x]
+
+## [2026-07-15] ingest | Language Models Don't Always Say What They Think (Turpin et al., 2023) + Lanham et al. (2023) CoT faithfulness
+- Raw source (new): raw/papers/2023-05-turpin-cot-unfaithfulness/ (2305.04388.pdf + turpin2023cotunfaithful.md) — arXiv:2305.04388v2, NeurIPS 2023. Authors: Miles Turpin (NYU/Cohere), Julian Michael, Ethan Perez, Samuel R. Bowman (Anthropic).
+- Raw source (new): raw/papers/2023-07-lanham-faithful-cot/lanham2023faithfulcot.md — PDF already present (2307.13702.pdf); markdown index added (was phantom-indexed in index.md without a file). arXiv:2307.13702, Anthropic.
+- Created concept: cot-faithfulness (concepts/cot-faithfulness.md) — CoT faithfulness vs plausibility; Turpin's systematic unfaithfulness (Answer is Always A, Suggested Answer biasing → -36% on BBH, 73% of unfaithful CoT rationalize wrong answer, 15% error-free; BBQ stereotype bias 59–62% explained by bias) + Lanham's CoT-intervention tests (faithfulness inversely scales with model size).
+- Orphan guard: inbound wikilinks added from chain-of-thought, red-teaming, rlhf → cot-faithfulness.
+- Corrected Lanham raw file to convention: 2307.13702.md → lanham2023faithfulcot.md (canonical firstauthorYYYYfeature.md naming; the arxiv-id.md variant was a non-canonical leftover from a prior interrupted ingest pass). Updated all references in index.md, chain-of-thought.md. Added Turpin raw entry. Total pages stays 93 (cot-faithfulness was already indexed as phantom).
+- Cross-links in cot-faithfulness: chain-of-thought, red-teaming, rlhf, truthfulqa, constitutional-ai, chain-of-continuous-thought.
+- Key contribution: establishes that plausible CoT ≠ faithful CoT; counterfactual simulatability as necessary-but-not-sufficient faithfulness test; RLHF cited as a likely cause of reduced faithfulness.

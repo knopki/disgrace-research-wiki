@@ -1,7 +1,7 @@
 ---
 title: Direct Preference Optimization (DPO)
 created: 2026-06-16
-updated: 2026-06-16
+updated: 2026-07-15
 type: concept
 tags:
   - rlhf
@@ -99,6 +99,17 @@ def dpo_loss(pi_logps, ref_logps, yw_idxs, yl_idxs, beta):
 ```
 
 Default hyperparameters: β = 0.1 (0.5 for summarization), batch size 64, RMSprop optimizer, learning rate 1e-6, linear warmup over 150 steps.
+
+## Mechanistic notes
+
+### The β-importance weight is load-bearing
+The DPO gradient weights each example by how incorrectly the implicit reward model orders the pair — σ of the reversed margin, scaled by β (Rafailov et al., 2023, §4). A naïve contrastive objective that merely maximizes log p(y_w) and minimizes log p(y_l) — i.e. unlikelihood training — collapses: without the reference-conditioned ratio and its β weight, the model degenerates into repetitive loops (e.g. "when when when…", Appendix Table 3 on TL;DR prompts). The dynamic per-example weight is precisely what prevents this mode collapse while still separating preferred from dispreferred completions.
+
+### Reference-policy initialization fallback
+DPO requires a fixed reference π_ref. When a separate SFT model is available it sets π_ref = π_SFT; when not (e.g. Anthropic-HH dialogue, where only preferred completions exist), it initializes π_ref by maximum-likelihood over the preferred completions — π_ref = argmax_π E[log π(y_w|x)] — to mitigate distribution shift between the unavailable true reference and the one DPO actually uses (§4).
+
+### Beyond pairwise: Plackett-Luce
+Theorem 1 is proved for the full Plackett-Luce ranking family, not just Bradley-Terry pairwise comparisons. The same reparameterization (Eq. 9) recovers the canonical reward representative for k-way ranked preferences, so the DPO formulation extends naturally to ranked (not only paired) data (§5.1, Appendix A.3).
 
 ## Limitations
 

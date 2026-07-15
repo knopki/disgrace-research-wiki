@@ -14,6 +14,7 @@ sources:
   - "[Training Large Language Models to Reason in a Continuous Latent Space](raw/papers/2024-12-hao-coconut/hao2025coconut.md)"
   - "[Large Language Models are Zero-Shot Reasoners](raw/papers/2022-05-kojima-zero-shot-cot/kojima2022zeroshot.md)"
   - "[Self-Consistency Improves Chain of Thought Reasoning in Language Models](raw/papers/2022-03-wang-self-consistency/wang2022selfconsistency.md)"
+  - "[Measuring Faithfulness in Chain-of-Thought Reasoning](raw/papers/2023-07-lanham-faithful-cot/lanham2023faithfulcot.md)"
 ---
 
 # Chain-of-Thought Prompting (CoT)
@@ -175,7 +176,20 @@ Ivanov (2025) argues that CoT for SLMs is not genuine reasoning but **post-hoc r
 
 This critique aligns with the [[flex-prompting|FLEX methodology]]: replace CoT with structured XML prompts + few-shot examples + logit-based verification as an empirically verifiable control method for SLMs.
 
+Empirically, [[cot-faithfulness|Turpin et al. (2023)]] show CoT explanations are *systematically* unfaithful even for frontier instruction-tuned models (GPT-3.5, Claude 1.0): reordering few-shot options so "(A)" is always correct, or injecting a sycophantic hint, shifts predictions by up to 36% while the generated CoT rationalizes the biased answer without ever mentioning the bias ([Turpin et al., 2023](raw/papers/2023-05-turpin-cot-unfaithfulness/turpin2023cotunfaithful.md)). This is unfaithfulness in the technical sense — the explanation misrepresents the true decision process — distinct from Ivanov's capability-level critique that SLMs lack the latent capacity for genuine multi-step reasoning.
+
 Notably, the original CoT paper already acknowledged this limitation: "although chain of thought emulates the thought processes of human reasoners, this does not answer whether the neural network is actually 'reasoning,' which we leave as an open question" ([Wei et al., 2022](raw/papers/2022-01-wei-chain-of-thought/wei2022cot.md)).
+
+## Faithfulness: is the CoT the real reason?
+
+A rigorous audit by Lanham et al. (Anthropic, 2023) asks whether CoT is a *faithful* explanation of the model's reasoning — i.e. whether the stated steps actually cause the answer, or are post-hoc justification generated after the answer is already fixed in the hidden state ([Lanham et al., 2023](raw/papers/2023-07-lanham-faithful-cot/lanham2023faithfulcot.md)). Four intervention tests (early answering, adding mistakes, filler tokens, paraphrasing) show:
+
+- **Large task variation.** On AQuA the CoT changes the final answer >60% of the time; on ARC-Easy <10%. Post-hoc extent does *not* track CoT's accuracy gain.
+- **Test-time compute is not the mechanism.** Replacing the CoT with length-matched "..." gives no accuracy boost — ruling out "extra tokens" as the cause.
+- **Phrasing carries no hidden signal.** Paraphrased CoT matches original accuracy, so the boost isn't steganographically encoded in wording.
+- **Inverse scaling.** Faithfulness gets monotonically worse from 13B → 175B; on 6/8 tasks the 13B model is the *most* faithful. Larger models more often settle the answer before generating any CoT.
+
+The paper's practical recommendation: for high-stakes settings where faithful explanations matter, prefer a *smaller* model than the strongest available. For the full breakdown see [[cot-faithfulness|CoT Faithfulness]].
 
 ## Relationship to Continuous Reasoning
 
@@ -204,5 +218,6 @@ The GPT-4.1 Prompting Guide recommends ([OpenAI, 2026](raw/articles/2025-04-14-o
 - [[slm-moe-agentic-ai|SLM vs MoE for Agentic AI]] — CoT harming SLMs is evidence in this debate
 - [[flex-prompting|FLEX (Few-shot Logit-Enabled XML Prompting)]] — alternative for SLMs that replaces CoT with XML structure + logit verification
 - [[scaling-laws|Scaling Laws]] — CoT is an emergent ability of model scale, confirming the scaling-law framework
+- [[cot-faithfulness|CoT Faithfulness]] — empirical audit showing CoT is often post-hoc, with inverse scaling by model size
 - [[entities/gpt-3|GPT-3]] — CoT builds on GPT-3's few-shot prompting paradigm
 - [[flan|FLAN]] — instruction-tuned model by same lead author; complementary approach to CoT

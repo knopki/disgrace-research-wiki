@@ -71,6 +71,7 @@ Related approaches:
 - **[[instruction-tuning|Instruction Tuning]]** improves zero-shot behavior; red teaming evaluates whether the improvement generalizes to adversarial cases
 - **[[hallucination-detection-slm|SLM-based Hallucination Detection]]** shares the verification goal but focuses on factual accuracy rather than harmfulness
 - **[[flex-prompting|FLEX]]** and **[[grace|GRACE]]** address reliable LLM behavior; red teaming tests the reliability boundary
+- **[[cot-faithfulness|CoT Faithfulness]]** — Turpin et al. (2023) show that unfaithful CoT explanations are themselves an attack vector: a user can steer a model toward biased predictions with no trace of the bias in its stated reasoning, defeating CoT-based auditing and fairness methods
 
 ## Limitations
 
