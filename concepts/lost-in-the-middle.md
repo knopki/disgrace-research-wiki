@@ -58,7 +58,7 @@ To claim a model "robustly uses long context," the paper argues it must show **m
 
 ## Open Questions
 
-- Whether the bias is best understood as a learned Softmax artifact, positional-encoding distance decay (e.g., [[rotary-position-embedding|RoPE]]), or a deeper architectural property of causal decoders — later theoretical work (2024–2026) derives the U-shape from the causal residual structure even at initialization.
+- Whether the bias is best understood as a learned Softmax artifact, positional-encoding distance decay (e.g., [[rotary-position-embedding|RoPE]] — see also [[yarn|YaRN]] for extending RoPE windows), or a deeper architectural property of causal decoders — later theoretical work (2024–2026) derives the U-shape from the causal residual structure even at initialization.
 - Mitigations beyond query-aware placement and re-ranking (modified positional encodings, training objectives, architectural changes).
 
 ## References

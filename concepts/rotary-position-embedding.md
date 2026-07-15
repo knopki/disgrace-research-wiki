@@ -1,14 +1,14 @@
 ---
 title: Rotary Position Embedding (RoPE)
 created: 2026-06-16
-updated: 2026-06-16
+updated: 2026-07-15
 type: concept
 tags:
   - architecture
   - technique
   - training
+  - inference
 sources:
-  - "[RoFormer: Enhanced Transformer with Rotary Position Embedding](raw/papers/2021-04-su-roformer/su2021rope.md)"
 confidence: high
 ---
 
@@ -107,3 +107,4 @@ Its dominance stems from three practical advantages: no learned parameters, no m
 - [[kv-caching|KV Caching]] — modern LLMs use both RoPE and KV caching for efficient inference
 - [[semantic-fractal|Semantic Fractal]] — RoPE participates in the multi-scale encoding hierarchy
 - [[sparse-transformer|Sparse Transformer]] — contrast with learned position embeddings in sparse architectures
+- [[yarn|YaRN]] — efficient RoPE context-window extension method

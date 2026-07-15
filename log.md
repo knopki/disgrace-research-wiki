@@ -1074,3 +1074,39 @@
 - Cross-links added (inbound, orphan guard): retrieval-augmented-generation, in-context-learning
 - Updated: index.md (Concepts + Raw Sources Papers sections, Total pages 93 → 94)
 - Key finding: extended-context models not necessarily better at using context; GPT-3.5-Turbo worst-case multi-doc QA < closed-book baseline
+
+## [2026-07-15] ingest | Peng et al. (2023) "YaRN: Efficient Context Window Extension of Large Language Models"
+- Raw source: raw/papers/2023-08-peng-yarn/ (peng2023yarn.md + 2309.00071v3.pdf)
+- Source: arXiv:2309.00071v3 (2023; v3 2026-02-06); verified full text via PDF extraction (8 pages, ~47K chars)
+- Created concept: concepts/yarn.md (NTK-by-parts interpolation + attention temperature scaling; ~10x fewer tokens / ~2.5x fewer steps than Position Interpolation; drop-in compatible with FlashAttention-2; Dynamic Scaling for tuning-free extension)
+- Cross-links added (inbound, orphan guard): rotary-position-embedding (new +inference tag), lost-in-the-middle
+- Outbound cross-links on yarn.md: rotary-position-embedding, positional-encoding, kv-caching, flash-attention, lost-in-the-middle
+- Updated: index.md (Concepts + Raw Sources Papers sections, Total pages 94 → 95)
+- verify-raw-source.py: PASS
+- Key finding: YaRN = NTK-by-parts + temperature scaling; "trains short, tests long" (64k finetune → 128k extrapolation); 7B 128k context for ~128 A100-h vs PI ~640 A100-h
+
+## [2026-07-15] ingest | Xiao et al. (2023) "Efficient Streaming Language Models with Attention Sinks"
+- Raw source: raw/papers/2023-09-xiao-streamingllm/ (xiao2023streamingllm.md + 2309.17453v4.pdf)
+- Source: arXiv:2309.17453v4 (2023-09-29; ICLR 2024); verified full text via PDF extraction (16 pages, ~73K chars)
+- Created concept: concepts/streaming-llm.md (attention sink phenomenon; StreamingLLM rolling KV cache = attention sinks + rolling window; pre-training with dedicated sink token; 22.2x speedup, stable to 4M tokens on Llama-2/MPT/Falcon/Pythia)
+- Cross-links added (inbound, orphan guard): kv-caching (new link to streaming-llm)
+- Outbound cross-links on streaming-llm.md: rotary-position-embedding, alibi, kv-caching, flash-attention, positional-encoding
+- Updated: index.md (Concepts + Raw Sources Papers sections, Total pages 95 → 96)
+- verify-raw-source.py: PASS
+- Key finding: attention sink = SoftMax must sum to 1 forces LLMs to dump excess attention mass on initial tokens (positional, not semantic); keeping ~4 sink-token KV + rolling window enables infinite-length generation with no finetuning; pre-training a learnable sink token needs only that one token for stable streaming
+
+## [2026-07-15] ingest | YaRN: Efficient Context Window Extension of Large Language Models
+- Raw source: raw/papers/2023-08-peng-yarn/peng2023yarn.md — PDF at [2309.00071.pdf](raw/papers/2023-08-peng-yarn/2309.00071.pdf)
+- Authors: Bowen Peng, Jeffrey Quesnelle, Honglu Fan, Enrico Shippole (Nous Research / EleutherAI / Univ. Geneva), arXiv 2309.00071 (2023-08-31)
+- Concept page created: concepts/yarn.md (YaRN — RoPE context-window extension; NTK-by-parts interpolation + attention temperature scaling; ~10× fewer tokens / ~2.5× fewer steps than Position Interpolation; >2× zero-shot extension via Dynamic-YaRN)
+- Inbound wikilinks added: concepts/rotary-position-embedding.md (cross-link + Sequence Length Flexibility note), index.md (Concepts + Raw Sources)
+- Orphan-guard: inbound from lost-in-the-middle.md, rotary-position-embedding.md, index.md
+- verify-raw-source.py: PASS; post-ingest checks OK (no txt artifacts, no pipe corruption, no post-Abstract sections)
+- Note: concurrent edits detected — parallel agent also marked inbox YaRN [x] and added YaRN index entries; removed duplicate wikilink lines in index.md + rotary page, fixed dead PDF link (2309.00071v3.pdf → 2309.00071.pdf)
+
+## [2026-07-15] update | FlashAttention → FlashAttention-2
+- Raw source added: raw/papers/2023-07-dao-flashattention-2/dao2023flashattention2.md (PDF at 2307.08691.pdf)
+- Updated concept: concepts/flash-attention.md — merged FlashAttention-2 into existing FlashAttention page (same algorithm family, not a new concept): algorithm tweaks (un-scaled accumulator, logsumexp-only backward stats), sequence-length parallelism across thread blocks, warp-level work partitioning (split-Q instead of split-K), causal masking, native MQA/GQA support, micro-benchmarks + end-to-end GPT-style results (up to 225 TFLOPs/s, 72% MFU on A100)
+- Cross-links: grouped-query-attention, multi-query-attention, spargeattn, kv-caching, speculative-decoding, transformer, mamba, chain-of-continuous-thought
+- Source: Tri Dao, "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning", arXiv:2307.08691 (2023)
+- Note: paper's Table 1 caption has a self-referential typo ("1.3× compared to FlashAttention-2"); intended comparison is vs FlashAttention-1 (per Abstract)
