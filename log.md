@@ -1262,3 +1262,25 @@ Files changed:
 - Created concept: concepts/least-to-most-prompting.md — two-stage prompting strategy decomposing complex problems into subproblems; SCAN 99.7% vs CoT 16% under length split
 - Updated: concepts/chain-of-thought.md — added source + wikilink
 - Index: +1 page (214 total), sources.md: +1 entry
+
+## [2026-07-15] ingest | Cognitive Architectures for Language Agents (CoALA)
+- Raw source: raw/papers/2023-09-sumers-coala/sumers2023coala.md
+- PDF: raw/papers/2023-09-sumers-coala/2309.02427.pdf
+- URL: https://arxiv.org/abs/2309.02427
+- Authors: Theodore R. Sumers, Shunyu Yao, Karthik Narasimhan, Thomas L. Griffiths (Princeton)
+- Venue: Transactions on Machine Learning Research (TMLR), 2024
+- Created concept: concepts/coala.md — framework organizing language agents along memory (working/long-term: episodic/semantic/procedural), action space (internal reasoning/retrieval/learning + external grounding), and a propose-evaluate-select decision cycle; Table 2 surveys SayCan, ReAct, Voyager, Generative Agents, ToT
+- Inbound wikilinks added: concepts/react.md, concepts/reflexion.md, concepts/tot.md (CoALA lists these in its taxonomy)
+- Index: +1 page (214 total), sources.md: +1 entry
+- inbox/papers.md line 1 marked [/] → [x]
+
+## [2026-07-15] ingest | Chain-of-Verification (CoVe)
+
+- Raw source: raw/papers/2023-09-dhuliawala-cove/dhuliawala2023cove.md — PDF at 2309.11495v2.pdf
+- Authors: Dhuliawala, Komeili, Xu, Raileanu, Li, Celikyilmaz, Weston (Meta AI; arXiv:2309.11495, 2023)
+- Created concept: concepts/chain-of-verification.md — 4-step self-verification (draft → plan → execute → revise); joint/2-step/factored/factor+revise variants; key result +28% FActScore on biographies, beats InstructGPT/ChatGPT/PerplexityAI under Llama-65B few-shot
+- Inbound wikilinks added: concepts/factscore.md, concepts/hallucination-llm-survey.md, concepts/chain-of-thought.md (CoVe shows plain CoT does NOT reduce targeted hallucination)
+- SCHEMA.md: declared `hallucination` + `prompting` tags under Techniques (hallucination already used by hallucination-* pages)
+- Index: +1 concept page (215 total), sources.md: +1 entry
+- inbox/papers.md lines 6 and 22 (both CoVe entries) marked [ ] -> [x]
+- Concurrency: CoALA (#1) concurrently ingested by another session (log line 1275) — no conflict; PagedAttention (#5) already in wiki, excluded from random pick

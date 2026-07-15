@@ -67,6 +67,8 @@ With only 3,000 bootstrapped correct trajectories, fine-tuned ReAct (PaLM-8B/62B
 
 ## Properties and Limitations
 
+ReAct is the canonical minimal language agent in [[coala|CoALA]]'s taxonomy: it has working memory only (no episodic/semantic memory), an action space of internal reasoning + external grounding, and a fixed propose-only decision cycle with no evaluation/selection stage. CoALA treats it as the baseline that demonstrates the synergizing effect of combined internal and external actions.
+
 ReAct's claimed strengths: (A) intuitive/fast prompt design (annotators just type thoughts atop actions), (B) general/flexible across distinct action spaces, (C) performant/robust from 1–6 exemplars, (D) human-aligned — interpretable, diagnosable, and controllable via "thought editing" at inference time ([Yao et al., 2023](raw/papers/2022-10-yao-react/yao2023react.md)).
 
 Stated limitations:
@@ -80,6 +82,7 @@ Stated limitations:
 - [[chain-of-thought|Chain-of-Thought (CoT)]] — ReAct augments CoT with actions + observations; combining ReAct and CoT-SC is strictly best on knowledge tasks
 - [[self-consistency|Self-Consistency]] — CoT-SC supplies the internal-knowledge component of the best ReAct+CoT-SC hybrid
 - [[tot|Tree of Thoughts (ToT)]] — same lead author; generalizes single-path reasoning/acting into a search tree with self-evaluation
+- [[coala|CoALA]] — ReAct is the canonical minimal agent in CoALA's taxonomy: internal reasoning + external grounding, propose-only decision cycle (Table 2)
 - [[retrieval-augmented-generation|Retrieval-Augmented Generation (RAG)]] — ReAct's Wikipedia-API interaction is a sparse, reasoning-driven retrieval loop; complementary to dense-retriever RAG
 - [[in-context-learning|In-Context Learning]] — ReAct operates as a frozen-LM few-shot prompting method over a thought-action-observation context
 - [[plan-and-solve|Plan-and-Solve (PS) Prompting]] — another CoT variant adding explicit planning; ReAct bakes planning into interleaved thoughts

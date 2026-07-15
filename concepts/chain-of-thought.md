@@ -227,3 +227,4 @@ The GPT-4.1 Prompting Guide recommends ([OpenAI, 2026](raw/articles/2025-04-14-o
 - [[plan-and-solve|Plan-and-Solve (PS) Prompting]] — zero-shot CoT follow-up replacing the trigger with an explicit plan-then-solve instruction; PS+ variant adds calculation guidance
 - [[least-to-most-prompting|Least-to-Most Prompting]] — addresses easy-to-hard generalization by decomposing complex problems into subproblems; solves SCAN length split at 99.7% with 14 exemplars
 - [[react|ReAct (Reasoning + Acting)]] — augments CoT with actions + observations in an interleaved loop; the best prompting method combines ReAct (external retrieval) with CoT-SC (internal knowledge)
+- [[chain-of-verification|Chain-of-Verification (CoVe)]] — deliberation method in the CoT lineage, but the CoVe paper shows plain CoT does *not* reduce the targeted factual hallucination; the independent fact-checking structure is what helps

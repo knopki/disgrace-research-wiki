@@ -67,6 +67,7 @@ Reflexion achieved new SOTA on HumanEval Python and Rust, and LeetcodeHard at ti
 ## Cross-Links
 
 - [[react|ReAct]] — the Actor backbone most used in Reflexion experiments.
+- [[coala|CoALA]] — frames Reflexion's self-reflection + episodic memory loop as a language agent with learning actions (writing reflections to semantic memory) and a propose-evaluate-select decision cycle; CoALA's Table 2 lists it with full internal/external action coverage.
 - [[chain-of-thought|Chain-of-Thought]] — alternative Actor strategy for reasoning-only tasks.
 - [[humaneval|HumanEval]] — primary code generation benchmark where Reflexion set SOTA.
 - [[in-context-learning|In-Context Learning]] — Reflexion operates via in-context learning, not weight updates.

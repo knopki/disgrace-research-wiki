@@ -66,7 +66,10 @@ Strategies are organized by cause: data-level (cleaning, knowledge-boundary
 awareness), training-level (better SFT/RLHF, alignment-data quality), and
 inference-level (controlled decoding, self-reflection, self-consistency
 decoding). The survey stresses that mitigation should map to the identified
-cause — its organizing principle versus prior surveys.
+cause — its organizing principle versus prior surveys. Concretely,
+[[chain-of-verification|Chain-of-Verification (CoVe)]] is an inference-level
+self-reflection method that reduces directly stated factual hallucination by
+having the model plan and answer verification questions about its own draft.
 
 ## RAG limitations
 

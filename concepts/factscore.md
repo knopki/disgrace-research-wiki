@@ -112,7 +112,9 @@ knowledge to reduce hallucination) and contrasts with truthfulness benchmarks
 like [[truthfulqa]] (which measure imitation of human falsehoods rather than
 source-grounded precision). Post-hoc automated factuality checks in the same
 spirit appear in [[hallucination-detection-slm]] (SLM-based verification of RAG
-outputs). Broader taxonomies of the factuality problem live in the surveys
+broader taxonomies of the factuality problem live in the surveys
 [[hallucination-nlg-survey|Ji et al. (NLG)]] and [[hallucination-llm-survey|Huang
-et al. (LLMs)]]. A preliminary editing experiment in the paper also shows retrieved
+et al. (LLMs)]]. [[chain-of-verification|Chain-of-Verification (CoVe)]] is one
+deliberation method that raises FActScore on longform biography generation (55.9 →
+71.4). A preliminary editing experiment in the paper also shows retrieved
 atomic-fact labels let ChatGPT correct its own generations (ErrCorr 16.8→28.3).

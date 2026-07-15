@@ -38,6 +38,8 @@ Any problem is framed as a search over a tree. A **node** (state) is `s = [x, z�
 - **Adaptability** — accommodates different problem properties, LM capabilities, and resource constraints.
 - **Convenience** — no fine-tuning or training; works off-the-shelf with a pre-trained LM ([Yao et al., 2023](raw/papers/2023-05-yao-tree-of-thoughts/yao2023treeofthoughts.md)).
 
+In [[coala|CoALA]]'s taxonomy, ToT is a special-case agent: its only external action is submitting a final answer, it has no long-term memory, and its distinctive feature is a *deliberate* decision procedure — iterative propose → evaluate → select over "thoughts" maintained by tree search (BFS/DFS/MCTS), enabling global exploration and backtracking that a single-pass LLM cannot.
+
 ## Experiments
 
 Three tasks were chosen specifically because they defeat GPT-4 + CoT. All use Chat Completion GPT-4 (temperature 0.7) ([Yao et al., 2023](raw/papers/2023-05-yao-tree-of-thoughts/yao2023treeofthoughts.md)).

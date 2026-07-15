@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-07-15 | Total pages: 213
+> Last updated: 2026-07-15 | Total pages: 214
 
 ## Entities
 
@@ -137,6 +137,8 @@
 - [[v4a-diff-format|V4A Diff Format]] — context-based, line-number-free diff format designed for LLM agent patch application; used by OpenAI GPT-4.1 for SWE-bench Verified (55% SOTA for non-reasoning models)
 - [[chain-of-thought|Chain-of-Thought Prompting (CoT)]] — prompting technique that instructs LLMs to articulate intermediate reasoning steps; introduced by Wei et al. (Google, NeurIPS 2022) demonstrating CoT as an emergent ability of model scale; improves math/logic performance for large models (100B+) but harms SLM accuracy by 15–30%+
 - [[plan-and-solve|Plan-and-Solve (PS) Prompting]] — zero-shot CoT variant (Wang et al., ACL 2023) replacing "Let's think step by step" with a plan-then-solve trigger; PS+ adds variable extraction + calculation guidance; outperforms Zero-shot-CoT across 10 reasoning datasets on GPT-3
+- [[coala|CoALA (Cognitive Architectures for Language Agents)]] — conceptual framework organizing language agents along memory (working/long-term), action space (internal reasoning/retrieval/learning + external grounding), and a propose-evaluate-select decision cycle; casts ReAct, Reflexion, ToT, Voyager, Generative Agents into one taxonomy (Sumers, Yao, Narasimhan & Griffiths, TMLR 2024)
+
 - [[react|ReAct (Reasoning + Acting)]] — prompt paradigm interleaving verbal reasoning traces with actions + observations; synergizes CoT-style reasoning and tool/environment interaction; best prompting method combines ReAct with CoT-SC (Yao et al., Princeton/Google, ICLR 2023; arXiv:2210.03629)
 - [[reflexion|Reflexion (Verbal Reinforcement Learning)]] — verbal reinforcement framework where agents self-reflect on task failures and store reflective text in episodic memory for iterative improvement without weight updates; 91% pass@1 on HumanEval, +22% on AlfWorld, +20% on HotPotQA (Shinn et al., NeurIPS 2023)
 - [[cot-faithfulness|CoT Faithfulness (Unfaithful Explanations)]] — Turpin et al. (2023) show CoT explanations are *systematically* unfaithful: input biasing (Answer-is-Always-A, sycophantic hints) shifts predictions up to -36% while the CoT rationalizes the biased answer without mentioning the bias; Lanham et al. (Anthropic, 2023) intervene on the CoT itself and find faithfulness inversely scales with model size
@@ -150,6 +152,8 @@
 - [[sentencepiece|SentencePiece]] — language-independent subword tokenizer training directly on raw text without pre-tokenization; implements both BPE and Unigram LM segmentation with subword regularization (Kudo & Richardson, Google, EMNLP 2018)
 - [[truthfulqa|TruthfulQA]] — benchmark of 817 questions measuring LLM truthfulness; largest models show inverse scaling (less truthful as they grow); introduces imitative falsehoods concept and GPT-judge automated metric (Lin, Hilton & Evans, ACL 2022)
 - [[factscore|FActScore (Fine-grained Atomic Evaluation of Factual Precision)]] — metric decomposing long-form generations into atomic facts and scoring the fraction supported by a knowledge source; ChatGPT 58.3% vs human ~88.8% on biographies; automated estimator with <2% error rate (Min et al., UW/Meta/AllenAI, EMNLP 2023)
+
+- [[chain-of-verification|Chain-of-Verification (CoVe)]] — deliberation method reducing factual hallucination: draft → plan verification questions → answer them independently → revise; factored variants prevent copying the original hallucination; +28% FActScore on biographies (Dhuliawala et al., Meta AI, arXiv 2023)
 
 - [[hallucination-nlg-survey|Survey of Hallucination in NLG (Ji et al.)]] — first comprehensive survey of NLG hallucination; unified intrinsic/extrinsic taxonomy, contributors (data + training/inference), metrics, and mitigation across summarization, dialogue, MT, data-to-text, VL; plus a 2024 LLM section
 
