@@ -1110,3 +1110,30 @@
 - Cross-links: grouped-query-attention, multi-query-attention, spargeattn, kv-caching, speculative-decoding, transformer, mamba, chain-of-continuous-thought
 - Source: Tri Dao, "FlashAttention-2: Faster Attention with Better Parallelism and Work Partitioning", arXiv:2307.08691 (2023)
 - Note: paper's Table 1 caption has a self-referential typo ("1.3× compared to FlashAttention-2"); intended comparison is vs FlashAttention-1 (per Abstract)
+
+## [2026-07-15] ingest | Ring Attention with Blockwise Transformers for Near-Infinite Context
+- Raw source: raw/papers/2023-10-liu-ring-attention/liu2023ringattention.md — PDF at [2310.01889v4.pdf](raw/papers/2023-10-liu-ring-attention/2310.01889v4.pdf)
+- Authors: Hao Liu, Matei Zaharia, Pieter Abbeel (UC Berkeley), arXiv 2310.01889v4 (2023-10-03, updated 2023-11-27)
+- Concept page created: concepts/ring-attention.md (Ring Attention — distributed exact attention; blockwise compute plus overlapping KV-block ring communication removes per-device memory ceiling; context scales linearly with device count, 30M+ tokens demonstrated; built on blockwise parallel transformers; arithmetic-intensity condition c >= F/B, memory 6bch independent of seq length s)
+- Inbound wikilinks: cross-linked from flash-attention, streaming-llm, kv-caching, sparse-transformer, mamba, transformer (in concept page); index.md (Concepts plus Raw Sources)
+- Orphan-guard: inbound from index.md (Concept plus Raw entries) plus 6 internal cross-links
+- verify-raw-source.py: PASS; post-ingest checks OK (no txt artifacts, no pipe corruption, no post-Abstract sections)
+- Note: concurrent edits detected — parallel agents independently marked Kwon/PagedAttention and Gu+Dao Mamba in progress or done (not mine). Left those untouched; only Liu marked [x].
+
+## [2026-07-15] ingest | PagedAttention & vLLM (Kwon et al., SOSP 2023)
+- Raw source: raw/papers/2023-09-kwon-pagedattention/kwon2023pagedattention.md - PDF at 2309.06180.pdf (3 pp., arXiv:2309.06180, 2023-09-12)
+- Concept page created: concepts/paged-attention.md (PagedAttention = KV cache as non-contiguous paged GPU blocks via OS virtual-memory analogy; block-table mapping, on-demand allocation, copy-on-write sharing; vLLM serving engine -> 2-4x throughput over FasterTransformer/Orca at equal latency; default block size 16; FCFS plus swap/recompute preemption; Megatron-style tensor parallelism)
+- Cross-links: kv-caching (inbound added), flash-attention, transformer, speculative-decoding, MQA, GQA, mamba
+- Inbox: claimed line 6 with [/] before work (Ring Attention line 5 already [/] by another agent); marked [x] on completion
+- verify-raw-source.py: PASS (0 errors, 0 warnings); post-ingest checks OK
+
+
+## [2026-07-15] re-ingest | Mamba: Linear-Time Sequence Modeling with Selective State Spaces (Gu & Dao, arXiv 2312.00752)
+- Mode: audit of existing ingest (raw source dated 2026-07-11; concept page concepts/mamba.md already present).
+- Raw source: raw/papers/2023-12-gu-mamba/gu2023mamba.md - PDF at [2312.00752.pdf](raw/papers/2023-12-gu-mamba/2312.00752.pdf) (6 pp., v2 2024-05-31).
+- GAP FIX: PDF was absent in prior ingest (dangling link) - downloaded full v2 PDF and read end-to-end (pdftotext, 2014 lines).
+- Accuracy audit of existing concept page: every cited figure verified against full text - S6 selection mechanism, 20-40x fused-scan speedup over naive scan, 7x faster than attention at 32K, 4000x extrapolation (1M tokens), Great Apes DNA 81.31% (Mamba-7M) vs 54.87% (HyenaDNA-1.4M), language scaling-law tables (Mamba-1.4B 59.7 / 2.8B 63.3; Pile ppl 6.80), 16 bytes/token activation memory vs 32 for attention+MLP. All confirmed.
+- Repo convention confirmed: raw/*.md holds abstract only (cf. fresh dao2023flashattention2.md) - page's per-figure citations to gu2023mamba.md are entry-point links to the PDF, not abstract-body claims. No fabrication.
+- Orphan-guard: concepts/mamba.md has 10+ inbound wikilinks (mixture-of-experts, kv-caching, s4-structured-state-spaces, grace, paged-attention, retrieval-augmented-generation, hallucination-detection-slm, flash-attention, vladimir-ivanov, index.md). Not orphaned.
+- Actions: removed temp pdftotext mamba.txt; bumped ingested (raw) and updated (concept) to 2026-07-15; added missing Raw Sources entry to index.md (Papers section). verify-raw-source.py: PASS.
+- Inbox: claimed line 3 with [/] before work; marked [x] on completion. Concurrent edits noted - Ring Attention and PagedAttention independently finished by other agents; left untouched.

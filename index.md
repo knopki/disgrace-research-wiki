@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-07-15 | Total pages: 96
+> Last updated: 2026-07-15 | Total pages: 98
 
 ## Entities
 
@@ -129,6 +129,8 @@
 - [[s4-structured-state-spaces|S4 (Structured State Space Sequence Model)]] — first computationally practical deep SSM; NPLR parameterization reducing SSM computation from O(N²L) to Õ(N+L); SotA on LRA (86.09% avg, first to solve Path-X), raw speech (98.32%), and competitive with Transformers on WikiText-103 while 60× faster at generation; foundational to Mamba (Gu, Goel & Ré, Stanford, ICLR 2022 Outstanding Paper HM)
 
 - [[flash-attention|FlashAttention]] — IO-aware exact attention; tiling cuts GPU HBM↔SRAM reads/writes; FlashAttention-2 (Dao, 2023) reworks GPU work partitioning for ~2× over v1, reaching up to 73% of A100 peak / 230 TFLOPs/s; first Transformer to beat chance on Path-X (16K) and Path-256 (64K) (Dao et al., Stanford, NeurIPS 2022)
+- [[ring-attention|Ring Attention]] — distributed exact attention removing the per-device memory ceiling on context length by overlapping KV-block communication with blockwise computation in a ring of hosts; context scales linearly with device count (30M+ tokens demonstrated); built on blockwise parallel transformers (Liu, Zaharia & Abbeel, UC Berkeley, arXiv 2023)
+- [[paged-attention|PagedAttention & vLLM]] — OS-paging-inspired KV-cache memory manager (non-contiguous paged blocks, block-table mapping, copy-on-write sharing) and the vLLM serving engine; 2–4× throughput over FasterTransformer/Orca at equal latency; default block size 16 (Kwon et al., UC Berkeley/UCSD, SOSP 2023; arXiv:2309.06180)
 - [[rotary-position-embedding|Rotary Position Embedding (RoPE)]] — position encoding via rotation matrices that encodes absolute position while naturally incorporating relative position dependency; dominant PE in post-2023 LLMs (LLaMA, Mistral, Qwen, Gemma) (Su et al., Zhuiyi Technology, arXiv 2021)
 - [[yarn|YaRN (Yet another RoPE extensioN)]] — compute-efficient RoPE context-window extension; NTK-by-parts interpolation + attention temperature scaling; 10× fewer tokens / 2.5× fewer steps than Position Interpolation; >2× zero-shot extension via Dynamic-YaRN (Peng et al., Nous Research, arXiv 2023)
 - [[switch-transformer|Switch Transformer]] — Mixture-of-Experts architecture simplifying MoE to single-expert routing; enables trillion-parameter sparsely-activated models with constant compute cost; foundational to modern MoE LLMs (Fedus et al., Google, JMLR 2022)
@@ -244,7 +246,12 @@
 - [Efficient Streaming Language Models with Attention Sinks](raw/papers/2023-09-xiao-streamingllm/xiao2023streamingllm.md) — PDF at [2309.17453v4.pdf](raw/papers/2023-09-xiao-streamingllm/2309.17453v4.pdf) — introduces "attention sink" phenomenon (LLMs over-attend initial tokens because SoftMax must sum to 1) and StreamingLLM: keep a few sink-token KV + rolling window for infinite-length generation without finetuning; 22.2× speedup over sliding-window recompute, stable to 4M tokens on Llama-2/MPT/Falcon/Pythia (Xiao et al., MIT/Meta/CMU/NVIDIA, ICLR 2024)
 - [Towards Monosemanticity: Decomposing Language Models With Dictionary Learning](raw/papers/2023-10-bricken-monosemanticity/bricken2023monosemanticity.md) — HTML at [bricken2023monosemanticity.html](raw/papers/2023-10-bricken-monosemanticity/bricken2023monosemanticity.html) — applies sparse autoencoders to a one-layer transformer's 512-neuron MLP; features are more interpretable than neurons, universal across seeds, explain 79% (4k) to 94.5% (131k) of MLP loss; refutes architectural "no-superposition" strategy (Bricken et al., Anthropic, Transformer Circuits Thread, 2023)
 
+- [Mamba: Linear-Time Sequence Modeling with Selective State Spaces](raw/papers/2023-12-gu-mamba/gu2023mamba.md) — PDF at [2312.00752.pdf](raw/papers/2023-12-gu-mamba/2312.00752.pdf) — first linear-time sequence model to match Transformer quality on language; input-dependent (selective) SSMs (S6) replace LTI dynamics; 5× inference throughput, linear scaling in length, extrapolates to 1M-token sequences; SotA on audio + genomics (Gu & Dao, Columbia/CMU & Princeton, arXiv 2023)
+
 - [YaRN: Efficient Context Window Extension of Large Language Models](raw/papers/2023-08-peng-yarn/peng2023yarn.md) — PDF at [2309.00071.pdf](raw/papers/2023-08-peng-yarn/2309.00071.pdf) — extends the context window of RoPE-based models (LLaMA, GPT-NeoX, PaLM) via NTK-by-parts interpolation + attention temperature scaling; ~10× less data and ~2.5× fewer steps than Position Interpolation, drop-in compatible with FlashAttention-2 (Peng, Quesnelle, Fan & Shippole, Nous Research / EleutherAI, arXiv 2023)
+
+- [Ring Attention with Blockwise Transformers for Near-Infinite Context](raw/papers/2023-10-liu-ring-attention/liu2023ringattention.md) — PDF at [2310.01889v4.pdf](raw/papers/2023-10-liu-ring-attention/2310.01889v4.pdf) — distributes long sequences across a ring of hosts, overlapping KV-block communication with blockwise attention so context length scales linearly with device count (30M+ tokens); exact, no approximation (Liu, Zaharia & Abbeel, UC Berkeley, arXiv 2023)
+- [Efficient Memory Management for LLM Serving with PagedAttention](raw/papers/2023-09-kwon-pagedattention/kwon2023pagedattention.md) — PDF at [2309.06180.pdf](raw/papers/2023-09-kwon-pagedattention/2309.06180.pdf) — introduces PagedAttention (KV cache as non-contiguous paged GPU blocks, OS virtual-memory analogy) and the vLLM serving engine; near-zero KV-cache waste, block-level sharing; 2–4× serving throughput over FasterTransformer/Orca at equal latency (Kwon et al., UC Berkeley/UCSD, SOSP 2023; arXiv 2023)
 
 ## Comparisons
 

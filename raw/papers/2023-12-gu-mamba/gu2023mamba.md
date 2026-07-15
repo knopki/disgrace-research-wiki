@@ -1,6 +1,6 @@
 ---
 source_url: https://arxiv.org/abs/2312.00752
-ingested: 2026-07-11
+ingested: 2026-07-15
 title: "Mamba: Linear-Time Sequence Modeling with Selective State Spaces"
 authors:
   - Albert Gu
