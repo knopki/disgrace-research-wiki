@@ -1183,3 +1183,37 @@
 - Cross-links: chain-of-thought (Zero-shot-CoT + PS+), self-consistency (PS+ + SC Figure 4), in-context-learning, gpt-3, scaling-laws
 - Key finding: replacing "Let's think step by step" with a plan-then-solve trigger; PS+ adds variable extraction + calculation guidance; PS+ avg arithmetic 76.7% vs Zero-shot-CoT 70.4% on GPT-3 (text-davinci-003); outperforms PoT on 5/6 arithmetic sets; nearly matches 8-shot Manual-CoT
 - verify-raw-source.py: PASS
+
+## [2026-07-15] ingest | ReAct: Synergizing Reasoning and Acting in Language Models (Yao et al., ICLR 2023)
+- Raw source: raw/papers/2022-10-yao-react/yao2023react.md — PDF at 2210.03629.pdf (arXiv:2210.03629, ICLR 2023; 33-page full text read end-to-end via PyMuPDF)
+- 7 authors confirmed via arXiv API: Shunyu Yao, Jeffrey Zhao, Dian Yu, Nan Du, Izhak Shafran, Karthik Narasimhan, Yuan Cao (Princeton / Google Research)
+- Concept page created: concepts/react.md (type=concept; tags technique, prompting, agent, tool-use, planning)
+- Orphan guard: inbound wikilinks from concepts/chain-of-thought.md (Related) and concepts/tot.md (Related); not orphaned
+- Cross-links: chain-of-thought, self-consistency (CoT-SC hybrid), tot (same lead author), retrieval-augmented-generation, in-context-learning, plan-and-solve
+- Key findings: interleaves Thought->Action->Observation; ReAct alone ~matches CoT on HotpotQA (27.4 EM) / beats on FEVER (60.9 Acc) while cutting CoT hallucination failures from 56% to 0%; best method is ReAct+CoT-SC hybrid (HotpotQA 35.1 EM, FEVER 64.6 Acc) reaching CoT-SC quality with 3-5 samples vs 21; +34% (ALFWorld 71% vs 45%) and +10% (WebShop 40% vs 30%) success over IL/RL with 1-2 in-context examples; fine-tuned ReAct (3k traj) outperforms all 540B prompting methods
+- verify-raw-source.py: PASS (0 errors, 0 warnings). Post-ingest checks: no txt artifacts in raw/; no pipe corruption in index.md
+- Inbox: line 3 held with [/] before work; marked [x] on completion
+
+## [2026-07-15] ingest | HyDE: Precise Zero-Shot Dense Retrieval without Relevance Labels (Gao et al., ACL 2023)
+- Raw source: raw/papers/2022-12-gao-hyde/gao2022hyde.md — PDF at 2212.10496.pdf (arXiv:2212.10496, ACL 2023; 11-page full text read end-to-end via PyMuPDF)
+- 4 authors confirmed via arXiv API + PDF title page: Luyu Gao, Xueguang Ma, Jimmy Lin, Jamie Callan (CMU / University of Waterloo)
+- Concept page created: concepts/hyde.md (type=concept; tags technique, information-retrieval, architecture; confidence high)
+- Orphan guard: inbound wikilink from concepts/retrieval-augmented-generation.md (Generate-Read pattern); not orphaned
+- Cross-links: retrieval-augmented-generation (Generate-Read retrieval pattern), bm25 (lexical baseline), word-embeddings (dense similarity space)
+- Key findings: zero-shot dense retrieval with NO training and NO relevance labels — generative instruction-following LM (InstructGPT 175B) writes a hypothetical answer, unsupervised contrastive encoder (Contriever/mContriever) embeds it, embedding drives nearest-neighbour search; query-document similarity never explicitly modeled; TREC DL19/20 nDCG@10 Contriever 44.5/42.1 -> HyDE 61.3/57.9 (BM25 50.6/48.0); beats Contriever + BM25 across 6 BEIR low-resource sets (only TREC-COVID 0.2 margin loss vs BM25); multilingual Mr.Tydi MRR@100 sw/ko/ja/bn 38.3/22.3/19.5/35.3 -> 41.7/30.6/30.7/41.3; larger generative LMs give larger gains (FLAN-T5-11B 48.9, Cohere-52B 53.8, GPT-175B 61.3 nDCG@10 DL19)
+- verify-raw-source.py: PASS (0 errors, 0 warnings). Post-ingest checks: no txt artifacts in raw/; no pipe corruption in index.md
+- Inbox: line 10 held with [/] before work; marked [x] on completion
+
+## [2026-07-15] ingest | Toolformer (Schick et al., 2023)
+- Raw source: raw/papers/2023-02-schick-toolformer/ (schick2023toolformer.md + 2302.04761.pdf)
+- Source: arXiv:2302.04761 (NeurIPS 2023) — https://arxiv.org/abs/2302.04761
+- Authors: Timo Schick, Jane Dwivedi-Yu, Roberto Dessì, Roberta Raileanu, Maria Lomeli, Luke Zettlemoyer, Nicola Cancedda, Thomas Scialom (Meta AI Research)
+- Content: Self-supervised tool-use method. Pipeline: (1) sample candidate API calls via in-context learning from a few demos, (2) execute, (3) filter by perplexity reduction (keep if L⁻_i − L⁺_i ≥ τf), (4) interleave into CCNet subset C* and fine-tune GPT-J (6.7B), (5) at inference pause on `→` to call API. Five tools: Atlas QA (RAG), calculator, BM25 Wikipedia search, NLLB MT (200 langs), calendar.
+- Key results (zero-shot, prompted, NO in-context task demos): LAMA SQuAD/Google-RE/T-REx = 33.8/11.5/53.5 (vs GPT-J+CC 19.2/5.6/22.1, GPT-3-175B 26.8/7.0/39.8); Math ASDiv/SVAMP/MAWPS = 40.4/29.4/44.0 (vs GPT-3 19.8/19.8/19.8); QA lags GPT-3 (no interactive search). Perplexity unchanged (WikiText 10.3, CCNet 10.5) — no LM degradation.
+- Scaling: tool-use ability emerges ~775M params (GPT-2 family sweep); gap with/without tools stays large even at 1.6B.
+- Limitations: no chained tool use (1 call/example), no interactive/browsing, prompt-sensitive, sample-inefficient (>1M docs -> few k calc calls), no cost awareness.
+- Created concept: concepts/toolformer.md (slug `toolformer`; method, 5 tools, results table, scaling, limitations, 4 cross-links)
+- Added inbound wikilinks (orphan guard): concepts/in-context-learning.md (ICL = bootstrapping mechanism), concepts/retrieval-augmented-generation.md (QA/search tools = RAG-style)
+- Cross-links: toolformer ↔ in-context-learning, retrieval-augmented-generation, scaling-laws, entities/gpt-3
+- verify-raw-source.py: PASS (0 errors, 0 warnings). Post-ingest checks OK (no txt artifacts, no pipe corruption, raw abstract-only)
+- Inbox: line 9 claimed with [/] before work; marked [x] on completion.

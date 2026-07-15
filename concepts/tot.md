@@ -114,3 +114,4 @@ Zero-shot ToT on easier tasks (GPT-4): GSM8K IO 51 / CoT 86 / **ToT 90**; Strate
 - [[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]] — latent-space search alternative; emergent BFS vs ToT's explicit linguistic tree
 - [[semantic-superposition]] — System 1/System 2 framing; ToT is the deliberate "System 2" search layer
 - [[slm-moe-agentic-ai|SLM vs MoE for Agentic AI]] — ToT's cost argues for smaller-model + search tradeoffs in agentic systems
+- [[react|ReAct (Reasoning + Acting)]] — same lead author (Yao); ReAct is the interleaved thought-action-loop foundation that ToT generalizes into tree search

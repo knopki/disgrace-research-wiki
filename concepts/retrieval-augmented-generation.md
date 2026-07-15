@@ -103,7 +103,7 @@ The most flexible paradigm — specialised modules orchestrated in different pat
 - **Rewrite-Retrieve-Read** — rewrite query before retrieval
 - **Generate-Read** — generate a hypothetical answer first, then retrieve evidence
 - **Recite-Read** — extract specific facts, then search for supporting detail
-- **HyDE** — generate a hypothetical document, embed it, and use its embedding for retrieval
+- [[hyde|HyDE]] — generate a hypothetical document, embed it, and use its embedding for retrieval
 - **Hybrid search** — combine semantic and lexical retrieval
 - **Sub-queries** — decompose complex queries into simpler ones, merge results
 - **FLARE / Self-RAG** — adaptive orchestration where the system decides *when* to retrieve during generation
@@ -157,3 +157,4 @@ Key finding from RGB benchmarks: at 80%+ noise ratio, accuracy drops significant
 - [[bert|BERT]] — the encoder architecture underlying DPR's bi-encoder retriever
 - [[hallucination-llm-survey|Hallucination in LLMs (Huang et al.)]] — analyses two RAG bottleneck classes (retrieval failure, generation bottleneck) as sources of residual hallucination; surveys RAG limitations beyond the faithfulness gains listed above
 - [[lost-in-the-middle|Lost in the Middle]] — shows naive top-K retrieval placing the answer mid-context can degrade output below the closed-book baseline; motivates RAG re-ranking and context-position management
+- [[toolformer|Toolformer]] — self-supervised method that teaches an LM to call RAG-style tools (Atlas QA = retrieval-augmented LM; BM25 Wikipedia search) as interleaved API calls, rather than running retrieval as a fixed pre-generation stage

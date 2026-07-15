@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-07-15 | Total pages: 100
+> Last updated: 2026-07-15 | Total pages: 201
 
 ## Entities
 
@@ -51,6 +51,7 @@
 - [[distributional-semantics|Distributional Semantics]] — Firth's principle that word meaning is entirely determined by context; validated by LLM embeddings
 - [[word-embeddings|Word Embeddings]] — how LLMs represent concepts as vectors in high-dimensional space, superposition catastrophe
 - [[retrieval-augmented-generation|Retrieval-Augmented Generation (RAG)]] — architectural pattern grounding LLM responses in externally retrieved knowledge; introduced by Lewis et al. (FAIR, NeurIPS 2020) as a hybrid parametric (BART) + non-parametric (DPR index) memory architecture with two marginalisation formulations (RAG-Sequence, RAG-Token)
+- [[hyde|HyDE (Hypothetical Document Embeddings)]] — zero-shot dense retrieval that pivots relevance modeling onto a generative instruction-following LM: generate a hypothetical answer, embed it, use the embedding for nearest-neighbour search; no training or relevance labels (Gao et al., ACL 2023)
 - [[rlhf|RLHF (Reinforcement Learning from Human Feedback)]] — technique for fine-tuning language models with human preferences as reward signal; InstructGPT demonstrated 1.3B model outperforming 175B GPT-3
 - [[reward-model-overoptimization|Reward Model Overoptimization Scaling Laws]] — empirical scaling laws characterizing how proxy reward model optimization degrades ground-truth performance via Goodhart's law; functional forms for BoN and RL, smooth coefficient scaling with RM parameters (Gao, Schulman & Hilton, OpenAI, 2022)
 - [[rome-model-editing|ROME (Rank-One Model Editing)]] — method for editing factual associations in GPT via rank-one MLP weight updates; locates decisive mid-layer MLP computations via Causal Tracing and inserts new facts with both generalization and specificity (Meng et al., MIT / Northeastern / Technion, NeurIPS 2022)
@@ -137,9 +138,11 @@
 - [[v4a-diff-format|V4A Diff Format]] — context-based, line-number-free diff format designed for LLM agent patch application; used by OpenAI GPT-4.1 for SWE-bench Verified (55% SOTA for non-reasoning models)
 - [[chain-of-thought|Chain-of-Thought Prompting (CoT)]] — prompting technique that instructs LLMs to articulate intermediate reasoning steps; introduced by Wei et al. (Google, NeurIPS 2022) demonstrating CoT as an emergent ability of model scale; improves math/logic performance for large models (100B+) but harms SLM accuracy by 15–30%+
 - [[plan-and-solve|Plan-and-Solve (PS) Prompting]] — zero-shot CoT variant (Wang et al., ACL 2023) replacing "Let's think step by step" with a plan-then-solve trigger; PS+ adds variable extraction + calculation guidance; outperforms Zero-shot-CoT across 10 reasoning datasets on GPT-3
+- [[react|ReAct (Reasoning + Acting)]] — prompt paradigm interleaving verbal reasoning traces with actions + observations; synergizes CoT-style reasoning and tool/environment interaction; best prompting method combines ReAct with CoT-SC (Yao et al., Princeton/Google, ICLR 2023; arXiv:2210.03629)
 - [[cot-faithfulness|CoT Faithfulness (Unfaithful Explanations)]] — Turpin et al. (2023) show CoT explanations are *systematically* unfaithful: input biasing (Answer-is-Always-A, sycophantic hints) shifts predictions up to -36% while the CoT rationalizes the biased answer without mentioning the bias; Lanham et al. (Anthropic, 2023) intervene on the CoT itself and find faithfulness inversely scales with model size
 - [[self-consistency|Self-Consistency]] — decoding strategy replacing greedy decoding in CoT with sample-and-marginalise over diverse reasoning paths; GSM8K +17.9%, SVAMP +11.0%, AQuA +12.2%, StrategyQA +6.4% and ARC-challenge +3.9% (Wang et al., Google, ICLR 2023)
 - [[tot|Tree of Thoughts (ToT)]] — generalizes CoT from a single reasoning chain to a search tree of "thoughts" with LM self-evaluation (sure/maybe/impossible or vote) as heuristic and BFS/DFS + backtracking; Game of 24 4%→74%; Creative Writing, Mini Crosswords (Yao et al., Princeton/Google DeepMind, NeurIPS 2023)
+- [[toolformer|Toolformer]] — self-supervised method teaching a 6.7B GPT-J to call external tools (QA, calculator, Wikipedia search, MT, calendar) via interleaved API calls; samples calls with in-context learning, filters by perplexity reduction, fine-tunes; beats GPT-3-175B on LAMA/math at 1/26th the size (Schick et al., Meta AI, NeurIPS 2023)
 - [[constitutional-ai|Constitutional AI (CAI)]] — method for training harmless AI assistants via self-critique, revision, and RLAIF using a written constitution; replaces human harmlessness labels with AI feedback guided by ~10-15 principles; achieves Pareto improvement in helpfulness-harmlessness tradeoff (Bai et al., Anthropic, arXiv 2022)
 - [[direct-preference-optimization|Direct Preference Optimization (DPO)]]
 - [[ffn-key-value-memories|Transformer FFN as Key-Value Memories]] — transformer feed-forward layers operate as unnormalized key-value memories where keys detect input patterns and values induce output distributions; lower layers capture shallow patterns, upper layers semantic ones (Geva et al., EMNLP 2021)
@@ -256,6 +259,7 @@
 
 - [Ring Attention with Blockwise Transformers for Near-Infinite Context](raw/papers/2023-10-liu-ring-attention/liu2023ringattention.md) — PDF at [2310.01889v4.pdf](raw/papers/2023-10-liu-ring-attention/2310.01889v4.pdf) — distributes long sequences across a ring of hosts, overlapping KV-block communication with blockwise attention so context length scales linearly with device count (30M+ tokens); exact, no approximation (Liu, Zaharia & Abbeel, UC Berkeley, arXiv 2023)
 - [Efficient Memory Management for LLM Serving with PagedAttention](raw/papers/2023-09-kwon-pagedattention/kwon2023pagedattention.md) — PDF at [2309.06180.pdf](raw/papers/2023-09-kwon-pagedattention/2309.06180.pdf) — introduces PagedAttention (KV cache as non-contiguous paged GPU blocks, OS virtual-memory analogy) and the vLLM serving engine; near-zero KV-cache waste, block-level sharing; 2–4× serving throughput over FasterTransformer/Orca at equal latency (Kwon et al., UC Berkeley/UCSD, SOSP 2023; arXiv 2023)
+- [Toolformer: Language Models Can Teach Themselves to Use Tools](raw/papers/2023-02-schick-toolformer/schick2023toolformer.md) — PDF at [2302.04761.pdf](raw/papers/2023-02-schick-toolformer/2302.04761.pdf) — self-supervised tool use: samples API calls via in-context learning, filters by perplexity reduction, fine-tunes GPT-J (6.7B); beats GPT-3-175B on LAMA/math zero-shot, no LM-degradation (Schick et al., Meta AI, NeurIPS 2023; arXiv:2302.04761)
 
 ## Comparisons
 

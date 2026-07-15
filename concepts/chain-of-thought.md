@@ -223,3 +223,4 @@ The GPT-4.1 Prompting Guide recommends ([OpenAI, 2026](raw/articles/2025-04-14-o
 - [[entities/gpt-3|GPT-3]] — CoT builds on GPT-3's few-shot prompting paradigm
 - [[flan|FLAN]] — instruction-tuned model by same lead author; complementary approach to CoT
 - [[plan-and-solve|Plan-and-Solve (PS) Prompting]] — zero-shot CoT follow-up replacing the trigger with an explicit plan-then-solve instruction; PS+ variant adds calculation guidance
+- [[react|ReAct (Reasoning + Acting)]] — augments CoT with actions + observations in an interleaved loop; the best prompting method combines ReAct (external retrieval) with CoT-SC (internal knowledge)

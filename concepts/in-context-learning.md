@@ -64,6 +64,7 @@ Performance as a function of K (number of demonstrations) shows:
 - **[[chain-of-thought|Chain-of-Thought]]** — extends in-context learning by providing reasoning steps as intermediate context, improving multi-step reasoning primarily at large model scales
 - **[[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]]** — replaces text-based in-context conditioning with latent-space reasoning
 - **[[rlhf|RLHF]]** — fine-tuning technique that aligns models post-hoc; orthogonal to in-context learning but both can be applied to the same base model
+- **[[toolformer|Toolformer]]** — uses ICL directly as the bootstrapping mechanism: a few API demonstrations in-context let the LM propose tool calls, which are then self-supervised-filtered and fine-tuned in
 - **[[flex-prompting|FLEX]]** — structured prompting methodology using XML + logit verification, operating within the in-context learning paradigm
 - **[[grace|GRACE]]** — semantic markup framework providing navigable in-context structure for large-context tasks
 - **[[instruction-tuning|Instruction Tuning]]** — complementary paradigm that achieves task generalization via supervised fine-tuning on instructions rather than inference-time conditioning; instruction tuning works at large scale (≥68B) while ICL works at all scales
