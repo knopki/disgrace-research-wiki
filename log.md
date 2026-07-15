@@ -1175,3 +1175,11 @@
 - Orphan-guard: inbound wikilinks from chain-of-thought (5 sites) + index.md (2 entries). Not orphaned.
 - verify-raw-source.py: PASS (0 errors, 0 warnings). Post-ingest checks OK (no txt artifacts; no pipe corruption).
 - Inbox: line 1 held with [/] before work; marked [x] on completion. Concurrent edits noted - Tree of Thoughts (line 2) independently claimed and ingested by another agent; left untouched.
+
+## [2026-07-15] ingest | Plan-and-Solve Prompting (Wang et al., ACL 2023)
+- Raw source: raw/papers/2023-05-wang-plan-and-solve/wang2023planandsolve.md — PDF at 2305.04091.pdf (arXiv:2305.04091, ACL 2023)
+- Concept page created: concepts/plan-and-solve.md (slug resolves the pre-existing phantom index entry "Plan-and-Solve -> Plan-and-Execute")
+- Inbound wikilinks: concepts/chain-of-thought.md, index.md (Concept bullet)
+- Cross-links: chain-of-thought (Zero-shot-CoT + PS+), self-consistency (PS+ + SC Figure 4), in-context-learning, gpt-3, scaling-laws
+- Key finding: replacing "Let's think step by step" with a plan-then-solve trigger; PS+ adds variable extraction + calculation guidance; PS+ avg arithmetic 76.7% vs Zero-shot-CoT 70.4% on GPT-3 (text-davinci-003); outperforms PoT on 5/6 arithmetic sets; nearly matches 8-shot Manual-CoT
+- verify-raw-source.py: PASS
