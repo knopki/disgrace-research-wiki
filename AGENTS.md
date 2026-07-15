@@ -7,7 +7,8 @@ This directory is an LLM Wiki — a compounding knowledge base of interlinked ma
 Before ingest, query, lint, or any modification:
 1. Read `SCHEMA.md` — domain, conventions, tag taxonomy, page thresholds
 2. Read `index.md` — what pages exist, their types and summaries
-3. Read the last ~30 entries of `log.md` — recent activity
+3. Read `sources.md` — catalog of all ingested raw sources (if adding or referencing sources)
+4. Read the last ~30 entries of `log.md` — recent activity
 
 Skipping orientation causes duplicates, missed cross-references, and contradicted schema.
 
@@ -33,8 +34,8 @@ Skipping orientation causes duplicates, missed cross-references, and contradicte
 
 - **Wikilinks:** always use `[[kebab-name|Page Title]]` format.
 - **`sources:` frontmatter:** use markdown links — `"[Article Title](raw/path/to/article.md)"` — not bare paths or YAML inline array syntax.
-- **index.md Raw Sources:** each raw article listed as `[Title](raw/articles/dir-name/authorYYYYslug.md)` — link to the file, not the directory.
-- **Entity Known Works:** each work links to its raw source index.md, matching the title and path used in `sources:` frontmatter.
+- **sources.md Raw Sources:** each raw article listed as `[Title](raw/articles/dir-name/authorYYYYslug.md)` — link to the file, not the directory.
+- **Entity Known Works:** each work links to its raw source, matching the title and path used in `sources:` frontmatter.
 
 ### raw/ frontmatter — ADD, don't replace
 
@@ -171,11 +172,11 @@ Empty = orphaned. Either add wikilinks from related pages, or merge into an exis
 - Does any number/label/structural feature that *feels* like it belongs actually appear in the source?
 - **Hallucination hotspots:** results tables (numbers mangled by extraction), scaling formulas (math garbled), "first/novel/SOTA" inflation, architecture details (layer counts, dims mis-copied).
 
-### Step 5: Update index.md + log.md
+### Step 5: Update sources.md + index.md + log.md
 
-- Add new page to the correct section (Entities, Concepts, Comparisons, Queries).
-- Add raw source to Raw Sources (Articles or Papers) as `[Title](raw/articles/dir/authorYYYYslug.md)` — file link.
-- Bump "Total pages: N".
+- Add new page to the correct section in `index.md` (Entities, Concepts, Comparisons, Queries).
+- Add raw source to `sources.md` under Articles or Papers as `[Title](raw/articles/dir/authorYYYYslug.md)` — file link.
+- Bump "Total pages: N" in `index.md`.
 - Append to `log.md`: `## [YYYY-MM-DD] ingest | Title` — list raw path, URL, authors, summary, created/updated pages, cross-links.
 - `log.md` is append-only. Never `write_file` over it — use append (Python or `cat >>`). Then verify last 10 lines.
 
@@ -184,13 +185,14 @@ Empty = orphaned. Either add wikilinks from related pages, or merge into an exis
 # 1. No pdftotext .txt artifacts in raw/
 find raw/ -name '*.txt' | grep -q . && echo "WARNING: txt artifacts" || echo "OK"
 # 2. No '|- ' pipe corruption in any .md
-grep -rn '^|-' --include='*.md' concepts/ entities/ comparisons/ queries/ index.md | head -5
-# 3. No bare '|' on empty lines in index.md
-grep -c '^|$' index.md && echo "WARNING: stray pipe" || echo "OK"
+grep -rn '^|-' --include='*.md' concepts/ entities/ comparisons/ queries/ sources.md index.md | head -5
+# 3. No bare '|' on empty lines in index.md or sources.md
+grep -c '^|$' index.md && echo "WARNING: stray pipe in index.md" || echo "OK index"
+grep -c '^|$' sources.md && echo "WARNING: stray pipe in sources.md" || echo "OK sources"
 # 4. Raw source body has no sections after Abstract
 grep -c '^## ' raw/papers/*/$(ls raw/papers/ | tail -1)/*.md | grep -v Abstract && echo "WARNING" || true
 ```
-If check 2 fires, repair with `python3 scripts/fix-pipe-corruption.py index.md` (handles all three corruption patterns, idempotent). Also run it on any other affected file.
+If check 2 fires, repair with `python3 scripts/fix-pipe-corruption.py <file>` (handles all three corruption patterns, idempotent). Also run it on any other affected file.
 
 ### Re-ingest (source already in wiki)
 
@@ -227,7 +229,7 @@ Treat every re-ingest as a quality audit of the existing page, not confirmation 
 
 ## Query
 
-1. Read `index.md` to find relevant pages.
+1. Read `index.md` to find relevant pages. `sources.md` has the raw source catalog.
 2. For 100+ page wikis, also `search_files` for key terms.
 3. Synthesize citing wiki pages: "Based on [[page-a]] and [[page-b]]…".
 4. File substantial answers as `queries/` or `comparisons/` pages (not trivial lookups).
@@ -238,7 +240,7 @@ Treat every re-ingest as a quality audit of the existing page, not confirmation 
 Run all checks, report grouped by severity (broken links > orphans > source drift > contested > stale > style):
 - Orphan pages (no inbound wikilinks)
 - Broken wikilinks (point to non-existent pages)
-- Index completeness (every page in index.md)
+- Index completeness (every wiki page in index.md, every raw source in sources.md)
 - Frontmatter validation (required fields, tags in taxonomy)
 - Stale content (>90 days vs newest related source)
 - Contradictions (`contested: true`, `contradictions:`)

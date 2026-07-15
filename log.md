@@ -1217,3 +1217,22 @@
 - Cross-links: toolformer ↔ in-context-learning, retrieval-augmented-generation, scaling-laws, entities/gpt-3
 - verify-raw-source.py: PASS (0 errors, 0 warnings). Post-ingest checks OK (no txt artifacts, no pipe corruption, raw abstract-only)
 - Inbox: line 9 claimed with [/] before work; marked [x] on completion.
+
+## [2026-07-15] sync | index.md sync to disk
+- After counter error (201 → corrected to 195), ran full index↔disk cross-check.
+- Added 2 missing concept entries: spargeattn, knowledge-distillation
+- Added 6 missing raw paper entries: Okapi/BM25 (1995), S4 (2021), LoRA (2021), Chinchilla (2022), ReAct (2023), HyDE (2023)
+- Fixed pipe-corruption artifact from earlier patch (`|` → `## Raw Sources`)
+- Header counter now 195 = disk reality (109 wiki + 86 raw .md files)
+- All wiki/raw files on disk now referenced in index.md
+- Cross-section slug anomaly noted: `[[entities/gpt-3]]` and `[[concepts/rational-unified-process]]` use path-prefixed slugs (functional, but inconsistent with bare-slug convention)
+
+## [2026-07-15] refactor | Split Raw Sources from index.md into sources.md
+
+Extracted the 112-line Raw Sources section from `index.md` (Articles + Papers) into a dedicated `sources.md` page with YAML frontmatter. `index.md` now has a short cross-link `[[sources.md|Raw Sources Index]]`.
+
+Files changed:
+- `index.md` — removed Raw Sources listing (was lines 158-269), now 167 lines / 28 KB (was 277 / 60 KB)
+- `sources.md` — created with frontmatter (type: summary, tags: [meta, reference]) + all raw source links
+- `SCHEMA.md` — added convention: new raw sources go to sources.md
+- `AGENTS.md` — updated all references: index.md Raw Sources → sources.md; Orientation step 3 = read sources.md; Step 5 now mentions sources.md; lint + verification checks extended to sources.md

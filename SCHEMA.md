@@ -11,7 +11,8 @@ agent frameworks, evaluation benchmarks, and research methodology.
 - Every wiki page starts with YAML frontmatter (see below)
 - Use `[[wikilinks]]` to link between pages (minimum 2 outbound links per page)
 - When updating a page, always bump the `updated` date
-- Every new page must be added to `index.md` under the correct section
+- Every new wiki page must be added to `index.md` under the correct section
+- Every new raw source must be added to `sources.md` under Articles or Papers
 - Every action must be appended to `log.md`
 - **Provenance markers:** On pages that synthesize 3+ sources, append
   `([Author, Year](raw/path/to/index.md))` at the end of paragraphs whose claims come from a
