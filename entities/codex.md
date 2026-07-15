@@ -69,3 +69,4 @@ The paper identifies risks including over-reliance (novice programmers), misalig
 - Powers GitHub Copilot (via [[microsoft|Microsoft]])
 - Evaluated on [[humaneval|HumanEval]] — the 164-problem benchmark introduced in the same paper
 - Related to [[in-context-learning|In-Context Learning]] — Codex inherits GPT-3's in-context learning capabilities
+- Backend for [[pal-program-aided-language-models|PAL (Program-aided Language Models)]] — code-davinci-002 was the default LLM in the PAL paper; PAL's effectiveness is tied to the base model's code-modeling ability

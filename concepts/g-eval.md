@@ -75,3 +75,4 @@ G-Eval is an early, influential reference-free LLM-as-judge method. It predates 
 - [[reward-model-overoptimization|Reward Model Overoptimization Scaling Laws]] — using LLM-evaluator scores as a reward signal risks the same Goodhart/self-reinforcement failure G-Eval's bias analysis warns about
 - [[factscore|FActScore]] — another reference-free evaluation metric, targeting factual precision of long-form generation rather than general NLG quality
 - [[chain-of-verification|Chain-of-Verification (CoVe)]] — related evaluation/verification line; contrasts with LLM-judge scoring
+- [[llm-evaluator-positional-bias|Positional Bias in LLM-as-a-Judge]] — Wang et al. (2023) quantify the positional bias that also affects the pairwise/pointwise judge setups G-Eval uses

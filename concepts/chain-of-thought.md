@@ -229,3 +229,4 @@ The GPT-4.1 Prompting Guide recommends ([OpenAI, 2026](raw/articles/2025-04-14-o
 - [[react|ReAct (Reasoning + Acting)]] — augments CoT with actions + observations in an interleaved loop; the best prompting method combines ReAct (external retrieval) with CoT-SC (internal knowledge)
 - [[chain-of-verification|Chain-of-Verification (CoVe)]] — deliberation method in the CoT lineage, but the CoVe paper shows plain CoT does *not* reduce the targeted factual hallucination; the independent fact-checking structure is what helps
 - [[g-eval|G-Eval]] — repurposes CoT as auto-generated evaluation steps for LLM-as-judge NLG evaluation; CoT raises evaluator–human correlation, especially on fluency
+- [[pal-program-aided-language-models|PAL (Program-aided Language Models)]] — augments CoT by replacing free-text reasoning chains with interleaved NL comments + executable Python code, offloading the solving step to an interpreter; fixes CoT's arithmetic-error failure mode

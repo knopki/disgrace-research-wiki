@@ -1306,3 +1306,41 @@ Files changed:
 - Index: +1 concept (Total pages: 117), sources.md: +1 entry
 - inbox/papers.md line 2 marked [ ] -> [/] on read, -> [x] on completion; duplicate Park entry line 29 also marked [x]
 - Post-Ingest Verification: 0 txt artifacts; no pipe corruption; raw source PASS (0 errors)
+
+## [2026-07-15] ingest | MemGPT (Packer et al., 2023)
+
+- Raw source: raw/papers/2023-10-packer-memgpt/packer2023memgpt.md — PDF at 2310.08560.pdf
+- URL: https://arxiv.org/abs/2310.08560
+- Authors: Charles Packer, Sarah Wooders, Kevin Lin, Vivian Fang, Shishir G. Patil, Ion Stoica, Joseph E. Gonzalez (UC Berkeley)
+- Venue: arXiv preprint v2, 2024-02-12
+- Created concept: concepts/memgpt.md — OS-inspired LLM system giving a fixed-context model the illusion of unbounded context via virtual context management; tiered memory (working/recall/archival) the LLM self-manages through function calls with paging + memory-pressure interrupts + function chaining; key results: deep memory retrieval GPT-4 32.1%→92.5% accuracy, nested KV retrieval completes all depths vs GPT-4 baseline 0% by 3 levels; later became the Letta project
+- Inbound wikilinks added (orphan guard): concepts/paged-attention.md (MemGPT borrows the OS paging analogy one level up from KV-cache to agent working memory), concepts/generative-agents.md (ties MemGPT's tiered memory to the in-window memory-stream idea)
+- SCHEMA.md: declared `memory` tag under Knowledge taxonomy (already used by generative-agents.md etc.)
+- Index: +1 concept page (Total pages: 217), sources.md: +1 entry
+- inbox/papers.md line 1 marked [ ] -> [/] on read, -> [x] on completion
+- Concurrency: Generative Agents (#2) and G-Eval (#7) were concurrently claimed by other sessions (marked [/] at read time); PagedAttention (#3) already in wiki, so picked #1 MemGPT as first free unclaimed paper. Re-read inbox before each write; my [/] lock on #1 survived.
+- Post-Ingest Verification: 0 txt artifacts; verify-raw-source PASS (0 errors/0 warnings); no pipe corruption; all 9 wikilink targets resolve in index.md; memgpt has 3 inbound links (paged-attention, generative-agents, index)
+
+## [2026-07-15] ingest | PAL: Program-aided Language Models (Gao et al., 2023)
+
+- Raw source: raw/papers/2022-11-gao-pal/gao2022pal.md — PDF at 2211.10435.pdf (arXiv:2211.10435, ICML 2023)
+- URL: https://arxiv.org/abs/2211.10435
+- Authors: Luyu Gao, Aman Madaan, Shuyan Zhou, Uri Alon, Pengfei Liu, Yiming Yang, Jamie Callan, Graham Neubig (CMU)
+- Created concept: concepts/pal-program-aided-language-models.md — few-shot prompting that generates interleaved NL comments + Python code as reasoning steps and offloads execution to a Python interpreter; fixes CoT's arithmetic-error failure mode. Key results: GSM8K 72.0% (vs PaLM-540B CoT 56.9%, +15.1 abs; Codex backbone), GSM-HARD 61.2% (vs CoT 23.1%, stays robust on large numbers), Colored Objects 95.1%, Penguins 93.3%, Date 76.2%, Object Counting 96.7%; majority@40 -> 80.4% GSM8K (+1.9 over Minerva-540B).
+- Inbound wikilinks added (orphan guard): concepts/chain-of-thought.md (PAL augments CoT), entities/codex.md (Codex was PAL's default backend)
+- SCHEMA/tags: used existing `technique`, `prompting`, `tool-use` (tool-use already in taxonomy)
+- Index: +1 concept page (Total pages: 217), sources.md: +1 entry
+- Concurrency: re-read inbox before each write; line 2 (PAL) stayed free [ ]; line 6 (Wang "not Fair Evaluators") was concurrently claimed by another session (marked [/] at read time) -> picked PAL instead.
+- Post-Ingest Verification: 0 txt artifacts in raw/; no pipe corruption; verify-raw-source pending (script lives in repo scripts/); all wikilink targets resolve in index.md; PAL has 2 inbound links (chain-of-thought, codex)
+
+## [2026-07-15] ingest | LLM-as-Judge Positional Bias (Wang et al., 2023)
+- Raw source: raw/papers/2023-05-wang-fair-evaluators/wang2023fairevaluators.md — PDF at 2305.17926.pdf (6 pp, v2)
+- URL: https://arxiv.org/abs/2305.17926
+- Authors: Peiyi Wang, Lei Li, Liang Chen, Zefan Cai, Dawei Zhu, Binghuai Lin, Yunbo Cao, Qi Liu, Tianyu Liu, Zhifang Sui (Peking University / Tencent Cloud AI)
+- Venue: arXiv preprint v2, 2023-08-30
+- Created concept: concepts/llm-evaluator-positional-bias.md — LLM judges skew verdicts by response order; GPT-4 favors first slot, ChatGPT the second; position swap alone flips winners (conflict rate up to 82.5% for ChatGPT on Vicuna v.s. ChatGPT); MEC (evidence-first, k=3) + BPC (both positions averaged) + HITLC (BPDE entropy selects top-β for human labels) raise GPT-4/ChatGPT alignment +9.8%/+14.3% over vanilla; HITLC at 20% annotation cost reaches human-level (73.8%/71.3% acc) at 39% lower cost
+- Inbound wikilinks added (orphan guard): concepts/g-eval.md (positional bias hits the same pairwise/pointwise judge setups G-Eval uses)
+- Index: +1 concept page, sources.md: +1 entry
+- inbox/papers.md line 6 marked [ ] -> [/] on read, -> [x] on completion
+- Concurrency: MemGPT (#1) and G-Eval (#7) were concurrently ingested by other sessions; my #6 pick stayed unclaimed, [/] lock survived re-reads
+- Post-Ingest Verification: 0 txt artifacts; verify-raw-source PASS (0 errors/0 warnings); no pipe corruption; wikilink target g-eval resolves in index.md; new page has 1 inbound link (g-eval) + self-links to g-eval, reward-model-overoptimization, factscore

@@ -84,6 +84,7 @@ Full vs prior-SOTA effect size **d = 8.16** (≈ eight standard deviations). All
 ## Relationship to other techniques
 
 - [[coala|CoALA]] — surveys Generative Agents as the most-capable surveyed agent (episodic+semantic memory, digital/agent grounding, reason/retrieve/learn actions, propose-only decision); gains verified by procedural-memory ablation ([Sumers et al., 2023](raw/papers/2023-09-sumers-coala/sumers2023coala.md)).
+- [[memgpt|MemGPT (MemoryGPT)]] — generalizes the in-window memory-stream idea to an explicit tiered hierarchy (working/recall/archival) with eviction and self-editing beyond the window; the two are frequently built on together (the MemGPT project later became *Letta*).
 - [[react|ReAct]] — interleaves reasoning + acting; Generative Agents adds the persistent memory/reflection/planning loop on top of the same LLM-backbone idea.
 - [[reflexion|Reflexion]] — verbal self-reflection writing to memory; Generative Agents' reflection module is the same family of mechanism, generalized to a tree of self-inferences.
 - [[tot|Tree of Thoughts]] — search over reasoning; Generative Agents' reflection tree is a related recursive-synthesis structure, but for self-knowledge rather than problem-solving search.

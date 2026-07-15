@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-07-15 | Total pages: 216
+> Last updated: 2026-07-15 | Total pages: 217
 
 ## Entities
 
@@ -133,6 +133,7 @@
 - [[flash-attention|FlashAttention]] — IO-aware exact attention; tiling cuts GPU HBM↔SRAM reads/writes; FlashAttention-2 (Dao, 2023) reworks GPU work partitioning for ~2× over v1, reaching up to 73% of A100 peak / 230 TFLOPs/s; first Transformer to beat chance on Path-X (16K) and Path-256 (64K) (Dao et al., Stanford, NeurIPS 2022)
 - [[ring-attention|Ring Attention]] — distributed exact attention removing the per-device memory ceiling on context length by overlapping KV-block communication with blockwise computation in a ring of hosts; context scales linearly with device count (30M+ tokens demonstrated); built on blockwise parallel transformers (Liu, Zaharia & Abbeel, UC Berkeley, arXiv 2023)
 - [[paged-attention|PagedAttention & vLLM]] — OS-paging-inspired KV-cache memory manager (non-contiguous paged blocks, block-table mapping, copy-on-write sharing) and the vLLM serving engine; 2–4× throughput over FasterTransformer/Orca at equal latency; default block size 16 (Kwon et al., UC Berkeley/UCSD, SOSP 2023; arXiv:2309.06180)
+- [[pal-program-aided-language-models|PAL (Program-aided Language Models)]] — few-shot prompting that generates interleaved NL comments + Python code as reasoning steps and offloads execution to a Python interpreter; fixes CoT's arithmetic-error failure mode; 72.0% on GSM8K vs PaLM-540B CoT 56.9% (Gao et al., CMU, ICML 2023; arXiv:2211.10435)
 - [[rotary-position-embedding|Rotary Position Embedding (RoPE)]] — position encoding via rotation matrices that encodes absolute position while naturally incorporating relative position dependency; dominant PE in post-2023 LLMs (LLaMA, Mistral, Qwen, Gemma) (Su et al., Zhuiyi Technology, arXiv 2021)
 - [[yarn|YaRN (Yet another RoPE extensioN)]] — compute-efficient RoPE context-window extension; NTK-by-parts interpolation + attention temperature scaling; 10× fewer tokens / 2.5× fewer steps than Position Interpolation; >2× zero-shot extension via Dynamic-YaRN (Peng et al., Nous Research, arXiv 2023)
 - [[switch-transformer|Switch Transformer]] — Mixture-of-Experts architecture simplifying MoE to single-expert routing; enables trillion-parameter sparsely-activated models with constant compute cost; foundational to modern MoE LLMs (Fedus et al., Google, JMLR 2022)
@@ -141,6 +142,8 @@
 - [[plan-and-solve|Plan-and-Solve (PS) Prompting]] — zero-shot CoT variant (Wang et al., ACL 2023) replacing "Let's think step by step" with a plan-then-solve trigger; PS+ adds variable extraction + calculation guidance; outperforms Zero-shot-CoT across 10 reasoning datasets on GPT-3
 - [[coala|CoALA (Cognitive Architectures for Language Agents)]] — conceptual framework organizing language agents along memory (working/long-term), action space (internal reasoning/retrieval/learning + external grounding), and a propose-evaluate-select decision cycle; casts ReAct, Reflexion, ToT, Voyager, Generative Agents into one taxonomy (Sumers, Yao, Narasimhan & Griffiths, TMLR 2024)
 - [[generative-agents|Generative Agents]] — believable simulacra of human behavior; LLM fused with a memory-stream + reflection + planning architecture (recency/relevance/importance retrieval, periodic reflection trees, recursive plan decomposition); Smallville sandbox of 25 agents demonstrates emergent information diffusion, relationship formation, and coordination (Park et al., Stanford/Google, UIST 2023; arXiv:2304.03442)
+
+- [[memgpt|MemGPT (MemoryGPT)]] — OS-inspired LLM system giving a fixed-context model the illusion of unbounded context via virtual context management: tiered memory (working/recall/archival) the LLM self-manages through function calls, with paging + memory-pressure interrupts; beats fixed-context baselines on deep memory retrieval (GPT-4 32%→92.5%) and nested KV retrieval (Packer et al., UC Berkeley, arXiv:2310.08560)
 
 - [[react|ReAct (Reasoning + Acting)]] — prompt paradigm interleaving verbal reasoning traces with actions + observations; synergizes CoT-style reasoning and tool/environment interaction; best prompting method combines ReAct with CoT-SC (Yao et al., Princeton/Google, ICLR 2023; arXiv:2210.03629)
 - [[reflexion|Reflexion (Verbal Reinforcement Learning)]] — verbal reinforcement framework where agents self-reflect on task failures and store reflective text in episodic memory for iterative improvement without weight updates; 91% pass@1 on HumanEval, +22% on AlfWorld, +20% on HotPotQA (Shinn et al., NeurIPS 2023)
@@ -164,6 +167,7 @@
 
 - [[spargeattn|SpargeAttn]] — accurate and training-free sparse attention that uses a two-stage filter (query-aware Top-K with GQA-guided correction) to prune non-essential KV-pairs; zero fine-tuning, plug-in for any model, up to 4.5× KV-cache reduction, 2.1× decoding speedup (Zhang et al., Tsinghua/UC Berkeley, ICML 2025)
 - [[knowledge-distillation|Knowledge Distillation]] — compression technique transferring knowledge from a large teacher model to a smaller student model by training on softened labels produced by the teacher's temperature-scaled softmax; introduced by Hinton, Vinyals & Dean (Google, NIPS Workshop 2014); forms the basis of modern LLM distillation methods (MiniLLM, Orca, DistilBERT)
+- [[llm-evaluator-positional-bias|Positional Bias in LLM-as-a-Judge]] — LLM judges systematically skew verdicts by response order; GPT-4 favors the first slot, ChatGPT the second; a position swap alone flips the winner; Wang et al. (2023) propose MEC+BPC+HITLC calibration that restores human alignment (concepts/llm-evaluator-positional-bias.md)
 
 ## Raw Sources
 
