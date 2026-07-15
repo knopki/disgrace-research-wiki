@@ -94,3 +94,4 @@ Iteration does not affect regressional Goodhart (α term), but increases the fin
 - [[truthfulqa|TruthfulQA]] — another work showing that optimizing for a proxy (truthfulness via scaling) can fail; RLHF improves truthfulness 2x, but overoptimization remains a risk
 - [[constitutional-ai|Constitutional AI]] — alternative approach aiming to reduce reliance on human RM labels by using a written constitution
 - [[direct-preference-optimization|DPO]] — eliminates explicit RM entirely, avoiding the proxy RM overoptimization channel
+- [[g-eval|G-Eval]] — LLM-judge bias analysis: using LLM-evaluator scores as a reward signal risks the same Goodhart/self-reinforcement failure this paper quantifies

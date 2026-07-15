@@ -1284,3 +1284,25 @@ Files changed:
 - Index: +1 concept page (215 total), sources.md: +1 entry
 - inbox/papers.md lines 6 and 22 (both CoVe entries) marked [ ] -> [x]
 - Concurrency: CoALA (#1) concurrently ingested by another session (log line 1275) — no conflict; PagedAttention (#5) already in wiki, excluded from random pick
+
+## [2026-07-15] ingest | G-Eval (Liu et al., 2023)
+- Raw source: raw/papers/2023-03-liu-geval/liu2023geval.md — PDF at 2303.16634.pdf
+- URL: https://arxiv.org/abs/2303.16634
+- Authors: Yang Liu, Dan Iter, Yichong Xu, Shuohang Wang, Ruochen Xu, Chenguang Zhu (Microsoft Cognitive Services Research)
+- Venue: arXiv preprint v3, 2023-05-23
+- Created concept: concepts/g-eval.md — LLM-as-judge NLG evaluator using auto chain-of-thought + form-filling + probability-weighted scoring; GPT-4 reaches Spearman ρ=0.514 on SummEval (prior SOTA UniEval ρ=0.474); flags LLM-judge bias toward LLM-generated text
+- Inbound wikilinks added: concepts/chain-of-thought.md (CoT reused for evaluation steps), concepts/reward-model-overoptimization.md (judge-as-reward self-reinforcement = proxy overoptimization)
+- SCHEMA.md: declared `llm-as-judge` tag under Techniques
+- Index: +1 concept page (216 total), sources.md: +1 entry
+- inbox/papers.md line 7 marked [ ] -> [x] (note: file was modified concurrently by another session mid-ingest; re-read confirmed G-Eval still unclaimed)
+
+## [2026-07-15] ingest | Generative Agents (Park et al., UIST 2023; arXiv:2304.03442)
+
+- Raw source: raw/papers/2023-04-park-generative-agents/park2023generative.md — PDF at 2304.03442.pdf (v2, 22 pp)
+- Authors: Joon Sung Park, Joseph C. O'Brien, Carrie J. Cai, Meredith Ringel Morris, Percy Liang, Michael S. Bernstein (Stanford / Google Research / Google DeepMind; UIST 2023)
+- Created concept: concepts/generative-agents.md — believable human-behavior simulacra; LLM + memory-stream (recency/relevance/importance retrieval) + reflection (periodic trees, threshold 150) + planning (recursive decomposition, react loop); 25-agent Smallville sandbox; controlled eval TrueSkill full 29.89 vs no-memory 21.21 (d=8.16), end-to-end emergent diffusion (1→13 know party), density 0.167→0.74
+- Inbound wikilinks added: concepts/coala.md (3 links: intro, Table 2, "most capable" line) -> resolves orphan guard
+- External-reference rule: dropped ghost [[social-simulacra]] link (no raw source held) -> plain text "Social Simulacra (Park et al., UIST 2022)"
+- Index: +1 concept (Total pages: 117), sources.md: +1 entry
+- inbox/papers.md line 2 marked [ ] -> [/] on read, -> [x] on completion; duplicate Park entry line 29 also marked [x]
+- Post-Ingest Verification: 0 txt artifacts; no pipe corruption; raw source PASS (0 errors)

@@ -18,7 +18,7 @@ confidence: high
 
 CoALA is a conceptual framework proposed by Sumers, Yao, Narasimhan & Griffiths (Princeton University; TMLR 2024) for organizing and designing LLM-based language agents. It draws an explicit analogy between large language models and production systems, and imports the modular structure of classical cognitive architectures (notably Soar) to decompose a language agent into three axes: **memory modules**, a **structured action space**, and a **decision-making procedure** ([Sumers et al., 2023](raw/papers/2023-09-sumers-coala/sumers2023coala.md)).
 
-Unlike empirical agent papers, CoALA is a taxonomy/theory: it retroactively classifies existing agents (SayCan, [[react|ReAct]], Voyager, Generative Agents, [[tot|Tree of Thoughts]]) and prospectively identifies under-explored directions (adaptive retrieval, meta-learning of agent code, metareasoning for planning budgets).
+Unlike empirical agent papers, CoALA is a taxonomy/theory: it retroactively classifies existing agents (SayCan, [[react|ReAct]], Voyager, [[generative-agents|Generative Agents]], [[tot|Tree of Thoughts]]) and prospectively identifies under-explored directions (adaptive retrieval, meta-learning of agent code, metareasoning for planning budgets).
 
 ## Motivation and Positioning
 
@@ -69,10 +69,10 @@ Simple agents ([[react|ReAct]]) use a single reasoning action then a grounding a
 | SayCan (Ahn et al., 2022) | procedural only | physical | — | evaluate |
 | [[react|ReAct]] (Yao et al., 2022) | — | digital | reason | propose |
 | Voyager (Wang et al., 2023) | procedural | digital | reason/retrieve/learn | propose |
-| Generative Agents (Park et al., 2023) | episodic/semantic | digital/agent | reason/retrieve/learn | propose |
+| [[generative-agents|Generative Agents]] (Park et al., 2023) | episodic/semantic | digital/agent | reason/retrieve/learn | propose |
 | [[tot|Tree of Thoughts]] (Yao et al., 2023) | — | digital | reason | propose, evaluate, select |
 
-Voyager and Generative Agents are the most capable in this taxonomy because they possess all four action types plus long-term memory; their gains are empirically verified against ReAct/AutoGPT baselines via ablation of procedural memory.
+Voyager and [[generative-agents|Generative Agents]] are the most capable in this taxonomy because they possess all four action types plus long-term memory; their gains are empirically verified against ReAct/AutoGPT baselines via ablation of procedural memory.
 
 ## Actionable Insights
 

@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-07-15 | Total pages: 214
+> Last updated: 2026-07-15 | Total pages: 216
 
 ## Entities
 
@@ -53,6 +53,8 @@
 - [[retrieval-augmented-generation|Retrieval-Augmented Generation (RAG)]] — architectural pattern grounding LLM responses in externally retrieved knowledge; introduced by Lewis et al. (FAIR, NeurIPS 2020) as a hybrid parametric (BART) + non-parametric (DPR index) memory architecture with two marginalisation formulations (RAG-Sequence, RAG-Token)
 - [[hyde|HyDE (Hypothetical Document Embeddings)]] — zero-shot dense retrieval that pivots relevance modeling onto a generative instruction-following LM: generate a hypothetical answer, embed it, use the embedding for nearest-neighbour search; no training or relevance labels (Gao et al., ACL 2023)
 - [[rlhf|RLHF (Reinforcement Learning from Human Feedback)]] — technique for fine-tuning language models with human preferences as reward signal; InstructGPT demonstrated 1.3B model outperforming 175B GPT-3
+- [[g-eval|G-Eval (NLG Evaluation with LLM + CoT)]] — Microsoft framework using GPT-4 with auto chain-of-thought + form-filling + probability-weighted scoring to evaluate NLG outputs; Spearman ρ=0.514 on SummEval, surpassing prior SOTA; flags LLM-judge bias toward LLM-generated text (Liu et al., 2023)
+
 - [[reward-model-overoptimization|Reward Model Overoptimization Scaling Laws]] — empirical scaling laws characterizing how proxy reward model optimization degrades ground-truth performance via Goodhart's law; functional forms for BoN and RL, smooth coefficient scaling with RM parameters (Gao, Schulman & Hilton, OpenAI, 2022)
 - [[rome-model-editing|ROME (Rank-One Model Editing)]] — method for editing factual associations in GPT via rank-one MLP weight updates; locates decisive mid-layer MLP computations via Causal Tracing and inserts new facts with both generalization and specificity (Meng et al., MIT / Northeastern / Technion, NeurIPS 2022)
 - [[knowledge-graph|Knowledge Graph]] — structured entity-relationship knowledge base for grounding AI answers
@@ -138,6 +140,7 @@
 - [[chain-of-thought|Chain-of-Thought Prompting (CoT)]] — prompting technique that instructs LLMs to articulate intermediate reasoning steps; introduced by Wei et al. (Google, NeurIPS 2022) demonstrating CoT as an emergent ability of model scale; improves math/logic performance for large models (100B+) but harms SLM accuracy by 15–30%+
 - [[plan-and-solve|Plan-and-Solve (PS) Prompting]] — zero-shot CoT variant (Wang et al., ACL 2023) replacing "Let's think step by step" with a plan-then-solve trigger; PS+ adds variable extraction + calculation guidance; outperforms Zero-shot-CoT across 10 reasoning datasets on GPT-3
 - [[coala|CoALA (Cognitive Architectures for Language Agents)]] — conceptual framework organizing language agents along memory (working/long-term), action space (internal reasoning/retrieval/learning + external grounding), and a propose-evaluate-select decision cycle; casts ReAct, Reflexion, ToT, Voyager, Generative Agents into one taxonomy (Sumers, Yao, Narasimhan & Griffiths, TMLR 2024)
+- [[generative-agents|Generative Agents]] — believable simulacra of human behavior; LLM fused with a memory-stream + reflection + planning architecture (recency/relevance/importance retrieval, periodic reflection trees, recursive plan decomposition); Smallville sandbox of 25 agents demonstrates emergent information diffusion, relationship formation, and coordination (Park et al., Stanford/Google, UIST 2023; arXiv:2304.03442)
 
 - [[react|ReAct (Reasoning + Acting)]] — prompt paradigm interleaving verbal reasoning traces with actions + observations; synergizes CoT-style reasoning and tool/environment interaction; best prompting method combines ReAct with CoT-SC (Yao et al., Princeton/Google, ICLR 2023; arXiv:2210.03629)
 - [[reflexion|Reflexion (Verbal Reinforcement Learning)]] — verbal reinforcement framework where agents self-reflect on task failures and store reflective text in episodic memory for iterative improvement without weight updates; 91% pass@1 on HumanEval, +22% on AlfWorld, +20% on HotPotQA (Shinn et al., NeurIPS 2023)
