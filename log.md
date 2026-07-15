@@ -1066,3 +1066,11 @@
 - Corrected Lanham raw file to convention: 2307.13702.md → lanham2023faithfulcot.md (canonical firstauthorYYYYfeature.md naming; the arxiv-id.md variant was a non-canonical leftover from a prior interrupted ingest pass). Updated all references in index.md, chain-of-thought.md. Added Turpin raw entry. Total pages stays 93 (cot-faithfulness was already indexed as phantom).
 - Cross-links in cot-faithfulness: chain-of-thought, red-teaming, rlhf, truthfulqa, constitutional-ai, chain-of-continuous-thought.
 - Key contribution: establishes that plausible CoT ≠ faithful CoT; counterfactual simulatability as necessary-but-not-sufficient faithfulness test; RLHF cited as a likely cause of reduced faithfulness.
+
+## [2026-07-15] ingest | Liu et al. (2023) "Lost in the Middle: How Language Models Use Long Contexts"
+- Raw source: raw/papers/2023-07-liu-lost-in-the-middle/ (liu2023lostinthemiddle.md + 2307.03172.pdf)
+- Source: arXiv:2307.03172v3 (TACL 2023); verified full text via PDF extraction (6 pages, 65K chars)
+- Created concept: concepts/lost-in-the-middle.md (U-shaped position bias: primacy + recency, middle degradation)
+- Cross-links added (inbound, orphan guard): retrieval-augmented-generation, in-context-learning
+- Updated: index.md (Concepts + Raw Sources Papers sections, Total pages 93 → 94)
+- Key finding: extended-context models not necessarily better at using context; GPT-3.5-Turbo worst-case multi-doc QA < closed-book baseline

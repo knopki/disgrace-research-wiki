@@ -67,6 +67,7 @@ Performance as a function of K (number of demonstrations) shows:
 - **[[flex-prompting|FLEX]]** — structured prompting methodology using XML + logit verification, operating within the in-context learning paradigm
 - **[[grace|GRACE]]** — semantic markup framework providing navigable in-context structure for large-context tasks
 - **[[instruction-tuning|Instruction Tuning]]** — complementary paradigm that achieves task generalization via supervised fine-tuning on instructions rather than inference-time conditioning; instruction tuning works at large scale (≥68B) while ICL works at all scales
+- **[[lost-in-the-middle|Lost in the Middle]]** — boundary condition on ICL: a demonstration/fact in the prompt is in principle attendable, but its effective use depends on where it sits (beginning/end ≫ middle)
 - **[[v4a-diff-format|V4A Diff Format]]** — a format specifically designed for in-context code editing tasks
 
 ## Open Questions

@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-07-15 | Total pages: 93
+> Last updated: 2026-07-15 | Total pages: 94
 
 ## Entities
 
@@ -68,6 +68,8 @@
 - [[glu-variants|GLU Variants (GEGLU, SwiGLU, ReGLU)]] — gated feed-forward variants replacing the Transformer FFN activation; GEGLU and SwiGLU achieve best perplexity; SwiGLU became the default FFN activation in post-2022 LLMs (LLaMA, PaLM, Gemma, Mistral, Qwen)
 
 
+
+- [[lost-in-the-middle|Lost in the Middle]] — LLMs use long context non-uniformly: performance peaks when relevant info is at the start (primacy) or end (recency) and degrades in the middle, yielding a U-shaped curve; Liu et al. (TACL 2023)
 
 - [[gelu|Gaussian Error Linear Unit (GELU)]] — activation function introduced by Hendrycks & Gimpel (2016); probabilistically motivated xΦ(x) with smooth curvature; default activation in BERT and GPT due to improved gradient flow and empirical gains over ReLU/ELU
 
@@ -228,7 +230,7 @@
 - [SentencePiece: A simple and language independent subword tokenizer and detokenizer for Neural Text Processing](raw/papers/2018-08-kudo-sentencepiece/kudo2018sentencepiece.md) (Taku Kudo, John Richardson, Google, EMNLP 2018)
 - [Fast Transformer Decoding: One Write-Head is All You Need](raw/papers/2019-11-shazeer-multi-query-attention/shazeer2019multiquery.md) — PDF at [1911.02150.pdf](raw/papers/2019-11-shazeer-multi-query-attention/1911.02150.pdf) — introduces Multi-Query Attention (MQA), sharing keys and values across attention heads to reduce KV cache memory bandwidth by factor h; 12× decoder speedup with minimal quality loss (Noam Shazeer, Google, arXiv:1911.02150, November 2019)
 
-- [LoRA: Low-Rank Adaptation of Large Language Models](raw/papers/2021-06-hu-lora/hu2021lora.md) — PDF at [2106.09685.pdf](raw/papers/2021-06-hu-lora/2106.09685.pdf) — freezes pre-trained weights and injects trainable low-rank decomposition matrices, reducing GPT-3 175B params by 10,000× with zero inference latency (Edward Hu et al., Microsoft, ICLR 2022)
+- [Lost in the Middle: How Language Models Use Long Contexts](raw/papers/2023-07-liu-lost-in-the-middle/liu2023lostinthemiddle.md) — PDF at [2307.03172.pdf](raw/papers/2023-07-liu-lost-in-the-middle/2307.03172.pdf) — performance degrades when relevant info sits in the middle of long contexts (U-shaped position curve); primacy + recency bias across GPT-3.5-Turbo, Claude-1.3, MPT-30B, LongChat-13B; extended context ≠ better context use (Liu et al., Stanford/Samaya AI, TACL 2023)
 - [Chain-of-Thought Prompting Elicits Reasoning in Large Language Models](raw/papers/2022-01-wei-chain-of-thought/wei2022cot.md) — PDF at [2201.11903.pdf](raw/papers/2022-01-wei-chain-of-thought/2201.11903.pdf) — introduces chain-of-thought prompting with intermediate reasoning steps; demonstrates CoT as emergent ability of model scale; PaLM 540B achieves SOTA on GSM8K surpassing finetuned GPT-3 (Jason Wei et al., Google Research, NeurIPS 2022)
 - [Locating and Editing Factual Associations in GPT](raw/papers/2022-02-meng-rome/meng2022rome.md) — PDF at [2202.05262.pdf](raw/papers/2022-02-meng-rome/2202.05262.pdf) — introduces Causal Tracing to localise factual associations to mid-layer MLP modules processing the subject's last token; develops ROME (Rank-One Model Editing) for inserting new facts via rank-one MLP weight updates; introduces the COUNTERFACT dataset; ROME achieves S=89.2 on GPT-2 XL, simultaneously maintaining generalization (PS=96.4) and specificity (NS=75.4) where other methods sacrifice one or the other (Kevin Meng et al., MIT / Northeastern / Technion, NeurIPS 2022)
 - [Mass-Editing Memory in a Transformer](raw/papers/2022-10-meng-memit/meng2022memit.md) — PDF at [2210.07229.pdf](raw/papers/2022-10-meng-memit/2210.07229.pdf) — introduces MEMIT: scales model editing from single (ROME) to thousands of facts by spreading batched least-squares MLP updates across mediating layers ℛ; S=85.8 at 10k edits on GPT-J vs ROME 50.3, MEND 23.1 (Meng et al., MIT/Northeastern/Technion, ICLR 2023)

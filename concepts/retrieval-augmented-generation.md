@@ -156,3 +156,4 @@ Key finding from RGB benchmarks: at 80%+ noise ratio, accuracy drops significant
 - [[bm25|BM25]] — lexical retrieval baseline compared against DPR in the RAG experiments
 - [[bert|BERT]] — the encoder architecture underlying DPR's bi-encoder retriever
 - [[hallucination-llm-survey|Hallucination in LLMs (Huang et al.)]] — analyses two RAG bottleneck classes (retrieval failure, generation bottleneck) as sources of residual hallucination; surveys RAG limitations beyond the faithfulness gains listed above
+- [[lost-in-the-middle|Lost in the Middle]] — shows naive top-K retrieval placing the answer mid-context can degrade output below the closed-book baseline; motivates RAG re-ranking and context-position management
