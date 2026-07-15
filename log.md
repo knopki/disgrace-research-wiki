@@ -1236,3 +1236,29 @@ Files changed:
 - `sources.md` — created with frontmatter (type: summary, tags: [meta, reference]) + all raw source links
 - `SCHEMA.md` — added convention: new raw sources go to sources.md
 - `AGENTS.md` — updated all references: index.md Raw Sources → sources.md; Orientation step 3 = read sources.md; Step 5 now mentions sources.md; lint + verification checks extended to sources.md
+
+## [2026-07-15] ingest | Decomposed Prompting (Khot et al., ICLR 2023)
+- Raw source: [Decomposed Prompting: A Modular Approach for Solving Complex Tasks](raw/papers/2022-10-khot-decomposed-prompting/khot2023decomp.md) — PDF at [2210.02406.pdf](raw/papers/2022-10-khot-decomposed-prompting/2210.02406.pdf)
+- URL: https://arxiv.org/abs/2210.02406
+- Authors: Tushar Khot, Harsh Trivedi, Matthew Finlayson, Yao Fu, Kyle Richardson, Peter Clark, Ashish Sabharwal
+- Created concept: [[decomposed-prompting|Decomposed Prompting (DecomP)]] — modular few-shot prompting: decompose complex tasks into sub-tasks with dedicated handlers; hierarchical/recursive decomposition, external API integration
+- Updated concept: [[chain-of-thought|Chain-of-Thought (CoT)]] — added cross-link to DecomP in Related section
+- Cross-links: decomposed-prompting ↔ chain-of-thought, tot, react
+## [2026-07-15] ingest | Reflexion
+- Raw source: [Reflexion: Language Agents with Verbal Reinforcement Learning](raw/papers/2023-03-shinn-reflexion/shinn2023reflexion.md)
+- URL: https://arxiv.org/abs/2303.11366
+- Authors: Noah Shinn, Federico Cassano, Edward Berman, Ashwin Gopinath, Karthik Narasimhan, Shunyu Yao
+- Concept page created: concepts/reflexion.md
+- Updated: concepts/tot.md (added wikilink)
+- Added to index.md (Concepts), sources.md (Papers)
+- Cross-links: react, chain-of-thought, self-consistency, tot, toolformer, humaneval, in-context-learning
+
+## [2026-07-15] ingest | Least-to-Most Prompting (Zhou et al., ICLR 2023)
+
+- Raw source: raw/papers/2022-05-zhou-least-to-most-prompting/zhou2022leasttomost.md
+- PDF: raw/papers/2022-05-zhou-least-to-most-prompting/2205.10625.pdf
+- URL: https://arxiv.org/abs/2205.10625
+- Authors: Denny Zhou, Nathanael Schärli, Le Hou, Jason Wei, Nathan Scales, Xuezhi Wang, Dale Schuurmans, Claire Cui, Olivier Bousquet, Quoc Le, Ed Chi (Google Research)
+- Created concept: concepts/least-to-most-prompting.md — two-stage prompting strategy decomposing complex problems into subproblems; SCAN 99.7% vs CoT 16% under length split
+- Updated: concepts/chain-of-thought.md — added source + wikilink
+- Index: +1 page (214 total), sources.md: +1 entry

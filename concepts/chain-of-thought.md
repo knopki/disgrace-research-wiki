@@ -15,6 +15,7 @@ sources:
   - "[Large Language Models are Zero-Shot Reasoners](raw/papers/2022-05-kojima-zero-shot-cot/kojima2022zeroshot.md)"
   - "[Self-Consistency Improves Chain of Thought Reasoning in Language Models](raw/papers/2022-03-wang-self-consistency/wang2022selfconsistency.md)"
   - "[Measuring Faithfulness in Chain-of-Thought Reasoning](raw/papers/2023-07-lanham-faithful-cot/lanham2023faithfulcot.md)"
+  - "[Least-to-Most Prompting Enables Complex Reasoning in Large Language Models](raw/papers/2022-05-zhou-least-to-most-prompting/zhou2022leasttomost.md)"
 ---
 
 # Chain-of-Thought Prompting (CoT)
@@ -212,6 +213,7 @@ The GPT-4.1 Prompting Guide recommends ([OpenAI, 2026](raw/articles/2025-04-14-o
 ## Related
 
 - [[self-consistency|Self-Consistency]] — decoding strategy replacing greedy decoding with sample-and-marginalise for CoT; yields large gains on arithmetic and commonsense reasoning
+- [[decomposed-prompting|Decomposed Prompting (DecomP)]] — modular prompting paradigm decomposing complex tasks into sub-tasks with dedicated handlers; even a "rolled out" CoT containing the same decomposition underperforms DecomP, showing that modularity itself helps
 - [[tot|Tree of Thoughts (ToT)]] — generalizes CoT from a single chain to a search tree with LM self-evaluation; the explicit "System 2" extension beyond self-consistency
 - [[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]] — latent-space alternative that excels where CoT fails
 - [[instruction-tuning|Instruction Tuning]] — related technique by the same lead author (Jason Wei); CoT improves reasoning at inference time, instruction tuning improves general instruction-following via training
@@ -223,4 +225,5 @@ The GPT-4.1 Prompting Guide recommends ([OpenAI, 2026](raw/articles/2025-04-14-o
 - [[entities/gpt-3|GPT-3]] — CoT builds on GPT-3's few-shot prompting paradigm
 - [[flan|FLAN]] — instruction-tuned model by same lead author; complementary approach to CoT
 - [[plan-and-solve|Plan-and-Solve (PS) Prompting]] — zero-shot CoT follow-up replacing the trigger with an explicit plan-then-solve instruction; PS+ variant adds calculation guidance
+- [[least-to-most-prompting|Least-to-Most Prompting]] — addresses easy-to-hard generalization by decomposing complex problems into subproblems; solves SCAN length split at 99.7% with 14 exemplars
 - [[react|ReAct (Reasoning + Acting)]] — augments CoT with actions + observations in an interleaved loop; the best prompting method combines ReAct (external retrieval) with CoT-SC (internal knowledge)

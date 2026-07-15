@@ -2,7 +2,7 @@
 
 > Content catalog. Every wiki page listed under its type with a one-line summary.
 > Read this first to find relevant pages for any query.
-> Last updated: 2026-07-15 | Total pages: 195
+> Last updated: 2026-07-15 | Total pages: 213
 
 ## Entities
 
@@ -58,6 +58,8 @@
 - [[knowledge-graph|Knowledge Graph]] — structured entity-relationship knowledge base for grounding AI answers
 - [[knowledge-neurons|Knowledge Neurons]] — specific FFN neurons causally responsible for expressing particular factual knowledge in pretrained Transformers; identified via integrated gradients attribution (Dai et al., Microsoft, ACL 2022)
 - [[corpus-linguistics|Corpus Linguistics]] — branch of linguistics building annotated text corpora; foundational to NLP training data and RAG knowledge bases
+
+- [[decomposed-prompting|Decomposed Prompting (DecomP)]] — modular few-shot prompting paradigm: decompose complex tasks into simpler sub-tasks delegated to dedicated sub-task handlers; supports hierarchical/recursive decomposition and external API integration; outperforms CoT on symbolic reasoning, long-context QA, and open-domain multi-hop QA (Khot et al., AI2/Stony Brook/Edinburgh, ICLR 2023)
 
 - [[pcam|Purpose Centric Agent Methodology (PCAM)]] — agent management paradigm shifting from deterministic plans to purpose-driven guidance; six principles for autonomous goal-oriented agent architecture, plugin-based scalability, and multi-agent feedback loops
 
@@ -136,8 +138,10 @@
 - [[chain-of-thought|Chain-of-Thought Prompting (CoT)]] — prompting technique that instructs LLMs to articulate intermediate reasoning steps; introduced by Wei et al. (Google, NeurIPS 2022) demonstrating CoT as an emergent ability of model scale; improves math/logic performance for large models (100B+) but harms SLM accuracy by 15–30%+
 - [[plan-and-solve|Plan-and-Solve (PS) Prompting]] — zero-shot CoT variant (Wang et al., ACL 2023) replacing "Let's think step by step" with a plan-then-solve trigger; PS+ adds variable extraction + calculation guidance; outperforms Zero-shot-CoT across 10 reasoning datasets on GPT-3
 - [[react|ReAct (Reasoning + Acting)]] — prompt paradigm interleaving verbal reasoning traces with actions + observations; synergizes CoT-style reasoning and tool/environment interaction; best prompting method combines ReAct with CoT-SC (Yao et al., Princeton/Google, ICLR 2023; arXiv:2210.03629)
+- [[reflexion|Reflexion (Verbal Reinforcement Learning)]] — verbal reinforcement framework where agents self-reflect on task failures and store reflective text in episodic memory for iterative improvement without weight updates; 91% pass@1 on HumanEval, +22% on AlfWorld, +20% on HotPotQA (Shinn et al., NeurIPS 2023)
 - [[cot-faithfulness|CoT Faithfulness (Unfaithful Explanations)]] — Turpin et al. (2023) show CoT explanations are *systematically* unfaithful: input biasing (Answer-is-Always-A, sycophantic hints) shifts predictions up to -36% while the CoT rationalizes the biased answer without mentioning the bias; Lanham et al. (Anthropic, 2023) intervene on the CoT itself and find faithfulness inversely scales with model size
 - [[self-consistency|Self-Consistency]] — decoding strategy replacing greedy decoding in CoT with sample-and-marginalise over diverse reasoning paths; GSM8K +17.9%, SVAMP +11.0%, AQuA +12.2%, StrategyQA +6.4% and ARC-challenge +3.9% (Wang et al., Google, ICLR 2023)
+- [[least-to-most-prompting|Least-to-Most Prompting]] — addresses easy-to-hard generalization by decomposing complex problems into subproblems; SCAN 99.7% vs CoT 16% under length split (Zhou et al., Google Research, ICLR 2023)
 - [[tot|Tree of Thoughts (ToT)]] — generalizes CoT from a single reasoning chain to a search tree of "thoughts" with LM self-evaluation (sure/maybe/impossible or vote) as heuristic and BFS/DFS + backtracking; Game of 24 4%→74%; Creative Writing, Mini Crosswords (Yao et al., Princeton/Google DeepMind, NeurIPS 2023)
 - [[toolformer|Toolformer]] — self-supervised method teaching a 6.7B GPT-J to call external tools (QA, calculator, Wikipedia search, MT, calendar) via interleaved API calls; samples calls with in-context learning, filters by perplexity reduction, fine-tunes; beats GPT-3-175B on LAMA/math at 1/26th the size (Schick et al., Meta AI, NeurIPS 2023)
 - [[constitutional-ai|Constitutional AI (CAI)]] — method for training harmless AI assistants via self-critique, revision, and RLAIF using a written constitution; replaces human harmlessness labels with AI feedback guided by ~10-15 principles; achieves Pareto improvement in helpfulness-harmlessness tradeoff (Bai et al., Anthropic, arXiv 2022)
