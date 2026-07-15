@@ -1137,3 +1137,41 @@
 - Orphan-guard: concepts/mamba.md has 10+ inbound wikilinks (mixture-of-experts, kv-caching, s4-structured-state-spaces, grace, paged-attention, retrieval-augmented-generation, hallucination-detection-slm, flash-attention, vladimir-ivanov, index.md). Not orphaned.
 - Actions: removed temp pdftotext mamba.txt; bumped ingested (raw) and updated (concept) to 2026-07-15; added missing Raw Sources entry to index.md (Papers section). verify-raw-source.py: PASS.
 - Inbox: claimed line 3 with [/] before work; marked [x] on completion. Concurrent edits noted - Ring Attention and PagedAttention independently finished by other agents; left untouched.
+
+## [2026-07-15] re-ingest | Self-Consistency Improves Chain of Thought Reasoning in Language Models (Wang et al., arXiv 2203.11171)
+- Mode: audit of existing ingest. Raw source raw/papers/2022-03-wang-self-consistency/wang2022selfconsistency.md + PDF (2203.11171.pdf) and concept concepts/self-consistency.md already committed (39664dd, 2026-06-25) but inbox line 1 was left unchecked.
+- Downloaded/extracted full PDF (24 pp, pypdf - pdftotext unavailable) and read end-to-end for accuracy audit.
+- Audit result: concept page is high-fidelity. All main-result tables (PaLM-540B: GSM8K 56.5->74.4, SVAMP 75.8->86.8, AQuA 39.8->52.0, MultiArith 96.2->100, ASDiv 80.1->87.8; commonsense StrategyQA 73.4->79.8, ARC-c 83.6->87.5, CSQA 79.0->80.7, ARC-e 94.0->96.0) confirmed in Paper Tables 1/3.
+- BUG FIX: Robustness section claimed "zero-shot-CoT + self-consistency achieved 89.0% on MultiArith and 70.1% on GSM8K" - both figures absent from the paper. Corrected to real Table 8 values: zero-shot-CoT + self-consistency = 69.2% on GSM8K (base 43.0, +26.2% absolute, the largest relative gain in the paper). Also expanded the "CoT degrades then self-consistency recovers" claim with real Table 5 numbers (e-SNLI 88.4 vs CoT 81.0 vs standard 85.8; RTE 86.3 vs CoT 79.1 vs standard 84.8).
+- Comparison table (sample-and-rank ~+3, beam degrades, ensembles, fine-tuned verifier ~+15) and "saturates quickly" / weighted-vs-unweighted-majority claims all verified in paper.
+- Orphan-guard: concepts/self-consistency.md has inbound wikilinks from concepts/chain-of-thought.md (x2) and index.md. Not orphaned.
+- Actions: bumped concept updated to 2026-07-15; no raw/index changes needed (already present and correct). verify-raw-source.py: PASS; post-ingest checks OK (no txt artifacts, no pipe corruption, raw abstract-only).
+- Inbox: claimed line 1 with [/] before work; marked [x] on completion. Concurrent edit noted - line 2 (Tree of Thoughts) independently claimed [/] by another agent; left untouched.
+
+## [2026-07-15] ingest | Tree of Thoughts (Yao et al., 2023)
+- Raw source: raw/papers/2023-05-yao-tree-of-thoughts/ (yao2023treeofthoughts.md + 2305.10601.pdf)
+- Source: arXiv:2305.10601v2 (NeurIPS 2023) — https://arxiv.org/abs/2305.10601
+- Authors: Shunyu Yao, Dian Yu, Jeffrey Zhao, Izhak Shafran, Thomas L. Griffiths, Yuan Cao, Karthik Narasimhan (Princeton / Google DeepMind)
+- Content: ToT generalizes CoT from a single reasoning chain to a search tree of "thoughts" with LM self-evaluation (sure/maybe/impossible or vote) as heuristic and BFS (breadth b=5)/DFS with backtracking. Three tasks: Game of 24 (GPT-4+CoT 4% → ToT 74%), Creative Writing (coherency 7.56 vs CoT 6.93; human pref 41/21/38), Mini Crosswords (60% word-level, 4/20 games). Appendix: GSM8K/StrategyQA zero-shot ToT, GPT-3.5 extension (bottleneck = generation not evaluation), cost analysis (5–100× tokens vs CoT).
+- Created concept: tot (framework, 4 design questions, 3 task results tables, extensions, limitations, cross-links)
+- Slug note: tree-of-thoughts reserved in index.md for Graph of Thoughts (Besta) — used `tot` to avoid collision
+- Added inbound wikilinks (orphan guard): chain-of-thought, bfs-vs-dfs, semantic-superposition
+- Cross-links: tot ↔ chain-of-thought, self-consistency, bfs-vs-dfs, chain-of-continuous-thought, semantic-superposition, slm-moe-agentic-ai
+- verify-raw-source.py: PASS (0 errors)
+
+## [2026-07-15] re-ingest | Self-Consistency Improves Chain of Thought Reasoning (Wang et al., ICLR 2023)
+- Mode: quality audit of existing ingest (raw dated 2026-06-25; concept page concepts/self-consistency.md already present). arXiv:2203.11171v4.
+- Raw source: raw/papers/2022-03-wang-self-consistency/ (PDF 2203.11171.pdf present; wang2022selfconsistency.md abstract-only, per repo convention). 8 authors confirmed via arXiv API: Xuezhi Wang, Jason Wei, Dale Schuurmans, Quoc Le, Ed Chi, Sharan Narang, Aakanksha Chowdhery, Denny Zhou (Google Research).
+- Full-text read end-to-end (pdftotext, 1636 lines). Found and FIXED accuracy errors in concept page + chain-of-thought page + 2 index.md lines:
+  (1) Result tables labeled "PaLM-540B" actually mixed in GPT-3 code-davinci-002 rows (SVAMP 86.8, AQuA 52.0, StrategyQA 79.8, ARC-c 87.5 are GPT-3, not PaLM). Split into a by-model table; PaLM-540B headline values (GSM8K 74.4, SVAMP 86.6, AQuA 48.3, StrategyQA 81.6, ARC-c 88.7) are the true abstract/Table-2 figures.
+  (2) Zero-shot-CoT + self-consistency claimed "89.0
+## [2026-07-15] re-ingest | Self-Consistency Improves Chain of Thought Reasoning (Wang et al., ICLR 2023)
+- Mode: quality audit of existing ingest (raw dated 2026-06-25; concept page concepts/self-consistency.md already present). arXiv:2203.11171v4.
+- Raw source: raw/papers/2022-03-wang-self-consistency/ (PDF 2203.11171.pdf present; wang2022selfconsistency.md abstract-only, per repo convention). 8 authors confirmed via arXiv API: Xuezhi Wang, Jason Wei, Dale Schuurmans, Quoc Le, Ed Chi, Sharan Narang, Aakanksha Chowdhery, Denny Zhou (Google Research).
+- Full-text read end-to-end (pdftotext, 1636 lines). Found and FIXED accuracy errors in concept page + chain-of-thought page + 2 index.md lines:
+  (1) Result tables labeled "PaLM-540B" actually mixed in GPT-3 code-davinci-002 rows (SVAMP 86.8, AQuA 52.0, StrategyQA 79.8, ARC-c 87.5 are GPT-3, not PaLM). Split into a by-model table; PaLM-540B headline values (GSM8K 74.4, SVAMP 86.6, AQuA 48.3, StrategyQA 81.6, ARC-c 88.7) are the true abstract/Table-2 figures.
+  (2) Zero-shot-CoT + self-consistency claimed "89.0% MultiArith / 70.1% GSM8K" - both ABSENT from the paper. Correct value: PaLM-540B zero-shot-CoT + SC = 69.2% GSM8K (base 43.0, +26.2% absolute per Table 8). Fixed in concepts/self-consistency.md, concepts/chain-of-thought.md (3 sites), and both index.md Self-Consistency entries.
+- Cross-checked all cited deltas against Tables 1-8: GSM8K +17.9 (PaLM-540B AND GPT-3 cd-002), SVAMP +11.0, AQuA +12.2, StrategyQA +6.4, ARC-c +3.9 all confirmed against the actual model rows.
+- Orphan-guard: inbound wikilinks from chain-of-thought (5 sites) + index.md (2 entries). Not orphaned.
+- verify-raw-source.py: PASS (0 errors, 0 warnings). Post-ingest checks OK (no txt artifacts; no pipe corruption).
+- Inbox: line 1 held with [/] before work; marked [x] on completion. Concurrent edits noted - Tree of Thoughts (line 2) independently claimed and ingested by another agent; left untouched.

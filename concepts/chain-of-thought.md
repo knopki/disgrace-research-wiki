@@ -105,7 +105,7 @@ Zero-shot-CoT evaluated on 12 datasets across arithmetic, commonsense, symbolic,
 | Date Understanding | 49.3% | **67.5%** | +18.2 |
 | Tracking Shuffled Objects | 31.3% | **52.4%** | +21.1 |
 
-Zero-shot-CoT underperforms Few-shot-CoT (e.g., GSM8K 40.7% vs 48.7%) but requires no task-specific exemplars. With self-consistency, PaLM 540B Zero-shot-CoT reached 89.0% on MultiArith and 70.1% on GSM8K.
+Zero-shot-CoT underperforms Few-shot-CoT (e.g., GSM8K 40.7% vs 48.7%) but requires no task-specific exemplars. With self-consistency, PaLM-540B zero-shot-CoT reaches 69.2% on GSM8K (up from 43.0% zero-shot-CoT alone, +26.2%; Wang et al., 2022, Table 8).
 
 ### Scaling and Emergence
 
@@ -129,19 +129,19 @@ Zero-shot-CoT established that LLMs' reasoning ability is not contingent on task
 
 A natural extension to chain-of-thought prompting is **[[self-consistency|Self-Consistency]]** — replacing greedy decoding with a sample-and-marginalise strategy ([Wang et al., ICLR 2023](raw/papers/2022-03-wang-self-consistency/wang2022selfconsistency.md)). Instead of decoding a single reasoning path greedily, the model samples K diverse reasoning paths (typically 40) using temperature/top-k sampling, then selects the most consistent answer by majority vote.
 
-### Key Results (PaLM-540B)
+### Key Results
 
-Self-consistency yields striking gains on top of CoT prompting ([Wang et al., 2022](raw/papers/2022-03-wang-self-consistency/wang2022selfconsistency.md)):
+Self-consistency yields striking gains on top of CoT prompting ([Wang et al., 2022](raw/papers/2022-03-wang-self-consistency/wang2022selfconsistency.md)). GSM8K is PaLM-540B; SVAMP, AQuA, StrategyQA, and ARC-challenge are GPT-3 code-davinci-002 (values match the paper's Table 2/3):
 
-| Task | CoT greedy | +Self-consistency | Δ |
-|------|:---------:|:-----------------:|:-:|
-| GSM8K | 56.5 | 74.4 | **+17.9** |
-| SVAMP | 75.8 | 86.8 | **+11.0** |
-| AQuA | 39.8 | 52.0 | **+12.2** |
-| StrategyQA | 73.4 | 79.8 | **+6.4** |
-| ARC-challenge | 83.6 | 87.5 | **+3.9** |
+| Task | Model | CoT greedy | +Self-consistency | Δ |
+|------|:-----:|:---------:|:-----------------:|:-:|
+| GSM8K | PaLM-540B | 56.5 | 74.4 | **+17.9** |
+| SVAMP | GPT-3 cd-002 | 75.8 | 86.8 | **+11.0** |
+| AQuA | GPT-3 cd-002 | 39.8 | 52.0 | **+12.2** |
+| StrategyQA | GPT-3 cd-002 | 73.4 | 79.8 | **+6.4** |
+| ARC-challenge | GPT-3 cd-002 | 83.6 | 87.5 | **+3.9** |
 
-The gain increases with model scale (+3–6% for UL2-20B, +9–23% for GPT-3/LaMDA-137B). Self-consistency works robustly across sampling strategies, with imperfect prompts, and with zero-shot CoT (PaLM 540B zero-shot-CoT + self-consistency: 89.0% MultiArith, 70.1% GSM8K). It significantly outperforms beam search, sample-and-rank, and prompt-order ensemble methods, while requiring no training or human annotation ([Wang et al., 2022](raw/papers/2022-03-wang-self-consistency/wang2022selfconsistency.md)).
+The gain increases with model scale (+3–6% for UL2-20B, +9–23% for GPT-3/LaMDA-137B). Self-consistency works robustly across sampling strategies, with imperfect prompts, and with zero-shot CoT (PaLM-540B zero-shot-CoT + self-consistency reaches 69.2% on GSM8K, +26.2% over zero-shot-CoT alone; Wang et al., 2022, Table 8). It significantly outperforms beam search, sample-and-rank, and prompt-order ensemble methods, while requiring no training or human annotation ([Wang et al., 2022](raw/papers/2022-03-wang-self-consistency/wang2022selfconsistency.md)).
 
 ### Properties
 
@@ -150,7 +150,7 @@ The gain increases with model scale (+3–6% for UL2-20B, +9–23% for GPT-3/LaM
 - **Cost-performance tradeoff** — 5–10 paths capture most gains; 40 paths near-maximal
 - **Calibration signal** — consistency score (% of decodes agreeing with the final answer) correlates strongly with accuracy, providing built-in uncertainty estimation
 
-The self-consistency result is referenced in context of zero-shot CoT above: With self-consistency, PaLM 540B Zero-shot-CoT reached 89.0% on MultiArith and 70.1% on GSM8K.
+With self-consistency, PaLM-540B zero-shot-CoT reaches 69.2% on GSM8K (+26.2% over zero-shot-CoT alone; Wang et al., 2022, Table 8).
 
 CoT benefit scales with model size. The original paper established that CoT is an **emergent property** — small models produce fluent but illogical chains of thought, leading to lower performance than standard prompting. Shim et al. (2024) later confirmed and quantified this threshold on GPT-2 and GPT-Neo ([Shim et al., 2024](raw/papers/2024-10-09-ship-cot-harms/shim2024cotharms.md)):
 
@@ -212,6 +212,7 @@ The GPT-4.1 Prompting Guide recommends ([OpenAI, 2026](raw/articles/2025-04-14-o
 ## Related
 
 - [[self-consistency|Self-Consistency]] — decoding strategy replacing greedy decoding with sample-and-marginalise for CoT; yields large gains on arithmetic and commonsense reasoning
+- [[tot|Tree of Thoughts (ToT)]] — generalizes CoT from a single chain to a search tree with LM self-evaluation; the explicit "System 2" extension beyond self-consistency
 - [[chain-of-continuous-thought|Chain of Continuous Thought (Coconut)]] — latent-space alternative that excels where CoT fails
 - [[instruction-tuning|Instruction Tuning]] — related technique by the same lead author (Jason Wei); CoT improves reasoning at inference time, instruction tuning improves general instruction-following via training
 - [[in-context-learning|In-Context Learning]] — CoT extends ICL by providing reasoning steps as intermediate context

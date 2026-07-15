@@ -31,6 +31,7 @@ Both algorithms serve as conceptual models for how LLMs explore their solution s
 - **Standard auto-regressive decoding** resembles DFS — the model commits greedily to the first token, then explores ever-deeper conditioned on that choice. This is fast but can miss better solutions that require backtracking.
 - **Latent-space reasoning ([[chain-of-continuous-thought|Coconut]])** enables BFS-like behaviour: the model maintains probability mass over multiple candidate reasoning paths simultaneously, dynamically reweighting them as evidence accumulates. ([Hao et al., 2024](raw/papers/2024-12-hao-coconut/hao2025coconut.md))
 - **[[semantic-superposition]]** exploits the same BFS analogy — delaying semantic collapse allows breadth-first exploration of reasoning branches before committing to a discrete token. ([Ivanov, 2025](raw/articles/2025-07-06-ivanov-kot-shredingera-v-golove-u-gpt-kak-superpoziciya-smyslov-men/ivanov2025superposition.md))
+- **[[tot|Tree of Thoughts (ToT)]]** makes the search explicit: it maintains a tree of partial solutions and runs actual BFS (breadth-limited) or DFS (with backtracking + value-threshold pruning), using the LM's self-evaluation as the node heuristic. ([Yao et al., 2023](raw/papers/2023-05-yao-tree-of-thoughts/yao2023treeofthoughts.md))
 
 ## See Also
 
